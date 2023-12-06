@@ -10,6 +10,7 @@
   * [Overview](website/dashboard/overview.md)
   * [Premium](website/dashboard/premium.md)
   * [Channel Translation](website/dashboard/channel-translation.md)
+  * [Role Translation](website/dashboard/role-translation.md)
 * [Status](website/status.md)
 
 ## Commands

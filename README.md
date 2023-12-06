@@ -15,7 +15,7 @@ Join the [support](https://support.interaction-bot.com) here!
 
 ### To easily use this documentation, here are some details explaining how it is designed.
 
-* A slash command and its arguments are represented like this: <mark style="color:green;">`/test arg1 [arg2 optionnal]`</mark> .
+* A slash command and its arguments are represented like this: <mark style="color:green;">`/test arg1 [arg2 optionnal]`</mark>&#x20;
 * A role is represented like this @role.
 * A channel is represented like this #channel.
 * The website section describes how to use the website and configure the bot, and the commands section explain all command that can be used by the bot.

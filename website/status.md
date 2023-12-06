@@ -16,7 +16,7 @@ The status page is located on [this page,](https://interaction-bot.com/status) y
 
 This section displays the number of servers the bot has, the number of shards used, and the sum of all users on all servers the bot is on.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>statistics of the bot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>statistics of the bot</p></figcaption></figure>
 
 ## Cluster Status
 
@@ -30,7 +30,7 @@ A cluster can have three statuses:
 
 You can check information about the cluster by overlaying your cursor on it, the color of the cluster indicates the status of the cluster.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt="" width="468"><figcaption><p>Cluster Status</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="468"><figcaption><p>Cluster Status</p></figcaption></figure>
 
 ## Find the cluster of my server
 

@@ -24,7 +24,7 @@ Once this is done, you can select the server that you want to configure, click o
 
 Each page of the dashboard can be accessed with the navigation bar on the left of the page.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
 
 For mobile users, you have to click on the burger button at the top left of the page to open the navbar.
 
@@ -34,6 +34,6 @@ You can click on each section to move over different pages.
 
 To return to the server selection, you have to click at the bottom of the navigation bar.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can move over each page to configure the bot for each feature!

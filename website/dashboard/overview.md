@@ -10,7 +10,7 @@ description: >-
 
 The first section lets you obtain some information about your server, like his _**ID**_ that can be used in the status page. You can also localize the cluster that runs the bot on your server.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Overview</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Overview</p></figcaption></figure>
 
 You can disable the _**simultaneous translation warning**_, this warning informs you when you do too many translations for one message
 

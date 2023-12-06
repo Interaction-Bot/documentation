@@ -1,18 +1,18 @@
 ---
-description: Configure channel translation on your server.
+description: Configure the translations in specific channel on your server.
 ---
 
 # Channel Translation
 
 ## Localization
 
-This page is the first section on the navbar in the category _**translation**_ at the left of the page.
+This page is the first section in the navbar in the category _**translation**_ at the left of the page.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
 
-## What channel translation does?
+## What does channel translation do?
 
-When this configuration is activated for a specific channel, each message that is not in the language defined by the configuration will be translated into the target language.&#x20;
+When this setting is enabled for a specific channel, any message in this channel that is not in the language defined by the configuration will be translated to the target language.
 
 ## Translate a new channel
 
@@ -24,9 +24,9 @@ You see a popup that accepts different parameters
 
 <figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
 
-* _**CHANNEL**_: the channel where messages that are not in the target language will be caught.
-* _**SENDING CHANNEL**_: the channel where the translation of the message will be sent.
-* _**LANGUAGE**_: the language where the message will be translated, if the message is in a different language, it will be translated by this language and sent in the channel selected in the option _**Sending channel**_.
+* _**CHANNEL**_: the channel where messages that are not in the target language will be caught and translated.
+* _**SENDING CHANNEL**_: the channel where the translation will be sent.
+* _**LANGUAGE**_: the language where the message will be translated.
 
 You can see more options by clicking on the _**OPTIONS**_.&#x20;
 
