@@ -1,5 +1,5 @@
 ---
-description: Step-by-step guides for the voice features: read a message aloud, TTS channels, manual and automatic transcription, and transcription with translation.
+description: "Step-by-step guides for the voice features: read a message aloud, TTS channels, manual and automatic transcription, and transcription with translation."
 ---
 
 # Voice guides

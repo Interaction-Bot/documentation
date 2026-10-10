@@ -1,5 +1,5 @@
 ---
-description: Reference of the voice commands: text to speech (TTS) and speech to text (transcription) in voice channels.
+description: "Reference of the voice commands: text to speech (TTS) and speech to text (transcription) in voice channels."
 ---
 
 # Voice (TTS and transcription)
