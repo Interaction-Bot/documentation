@@ -118,3 +118,36 @@ These are the limits of the [dashboard](../website/dashboard/translation-groups.
 {% hint style="info" %}
 Groups and [channel translation](../website/dashboard/channel-translation.md) can be used together. A group does not replace the per-channel configuration. For the detailed list of permissions, see [Permissions](../permissions.md).
 {% endhint %}
+
+## Example: an English / French / Spanish server
+
+```
+/group create name:general
+/group set-channel name:general channel:#general-en language:English
+/group set-channel name:general channel:#general-fr language:French
+/group set-channel name:general channel:#general-es language:Spanish
+/group settings name:general style:webhook
+```
+
+A message in `#general-fr` is translated **once per target language** and sent to `#general-en` and `#general-es`. Check the result with `/group list`.
+
+## Good to know
+
+* A channel can be in only one position of a group (it cannot be added twice).
+* If two channels of a group share the same language, the message is translated once and sent to both.
+* A message that is already in the language of the other channels is not translated (unless `always_send`).
+* The messages of bots are ignored, except on premium servers with `translate_bots`.
+* Pause a group with `enabled:false` to keep its configuration.
+* A group counts in the 3 / 20 translations per message limit, together with the other rules ([how it works](../translation/how-it-works.md)).
+
+## Groups or channel translation?
+
+Use **groups** when each channel has its own language and they must stay synchronised. Use [channel translation](../website/dashboard/channel-translation.md) for a one way rule. See [Which method?](../translation/overview.md).
+
+## Troubleshooting
+
+| Symptom                              | What to check |
+| ------------------------------------ | ------------- |
+| Nothing is translated                | `/group list`: is the group enabled, do the channels have different languages, did you reach the limit (1 group of 3 channels on a free server)? |
+| Translations appear as plain text    | The bot cannot create webhooks in the target channel (it falls back to a message). Give *Manage Webhooks*. |
+| Can't create or edit a group         | The commands need the *Manage Server* permission. |
