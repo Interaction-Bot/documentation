@@ -20,15 +20,17 @@ First, you need to invite the bot to your discord server, you have to go to the 
 
 &#x20;First, you can run <mark style="color:green;">`/help`</mark>  to see all current commands available!
 
-<figure><img src=".gitbook/assets/image (43).png" alt=""><figcaption><p>/help command</p></figcaption></figure>
+<figure><img src=".gitbook/assets/discord-help.png" alt="/help command"><figcaption><p>/help command</p></figcaption></figure>
 
 Execute your first translation by sending a basic message and adding a flag emoji below.
 
-<figure><img src=".gitbook/assets/image (45).png" alt=""><figcaption><p>Flag Translation</p></figcaption></figure>
+<figure><img src=".gitbook/assets/discord-flag-reaction.png" alt="Flag reaction"><figcaption><p>Flag Translation: add a flag emoji below a message</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/discord-flag-translation.png" alt="Translation by the bot"><figcaption><p>The bot answers with the translation</p></figcaption></figure>
 
 You can also translate text by using the command <mark style="color:green;">`/translate message [language]`</mark>.
 
-<figure><img src=".gitbook/assets/image (46).png" alt=""><figcaption><p>/translate command</p></figcaption></figure>
+<figure><img src=".gitbook/assets/discord-translate.png" alt="/translate command"><figcaption><p>/translate command</p></figcaption></figure>
 
 There are a lot of other commands like tts and transcribe, which are documented in the commands section of the documentation, you can take a look there!&#x20;
 

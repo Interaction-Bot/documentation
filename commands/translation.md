@@ -10,7 +10,8 @@ There are several ways to translate a message:
 
 * **Command** -> translate a text into a given language (see `/translate`).
 * **Application - Translate** -> right click (or long press) a message, then *Apps* > *Translate*. The target language is your Discord application language. The result is ephemeral: only you can see it.\
-  ![](<../.gitbook/assets/image (26).png>)
+  ![](../.gitbook/assets/discord-apps-menu.png)
+  ![](../.gitbook/assets/discord-apps-translate.png)
 * **Application - Detect** -> *Apps* > *Detect* shows the language of the selected message.
 * **Flag reaction** -> add a flag emoji below a message (see [Flag translation](../website/dashboard/flag-translation.md)).
 * **Automatic** -> translation of the sent messages by [channel](../website/dashboard/channel-translation.md), [role](../website/dashboard/role-translation.md) or [category](../website/dashboard/category-translation.md).
