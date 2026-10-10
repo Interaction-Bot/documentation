@@ -4,6 +4,16 @@
 * [Getting started](getting-started.md)
 * [FAQ](faq.md)
 
+## Translation
+
+* [Overview](translation/overview.md)
+* [Automatic translation](translation/automatic.md)
+* [Flag translation](translation/flags.md)
+* [Commands and menus](translation/commands.md)
+* [Language detection](translation/language-detection.md)
+* [Setup guides](translation/guides.md)
+* [Troubleshooting](translation/troubleshooting.md)
+
 ## Website
 
 * [🌐 Dashboard](website/dashboard/README.md)
@@ -25,7 +35,7 @@
 ## Commands
 
 * [General](commands/general.md)
-* [Translation](commands/translation.md)
+* [Translation commands](commands/translation.md)
 * [Voice (TTS and transcription)](commands/voice.md)
 * [Translation groups](commands/groups.md)
 * [FAQ and /ask](commands/faq.md)
