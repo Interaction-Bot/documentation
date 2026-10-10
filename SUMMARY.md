@@ -60,7 +60,6 @@
 
 * [Changelogs](changelogs/README.md)
   * [October 2026](changelogs/2026-10.md)
-  * [Octobre 2026 (Français)](changelogs/2026-10-fr.md)
 
 ## Links
 
