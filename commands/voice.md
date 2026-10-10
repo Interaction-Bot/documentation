@@ -1,29 +1,43 @@
 ---
-description: Commands that use the voice channels (text to speech and transcription).
+description: Text to speech and speech to text (transcription) in voice channels.
 ---
 
 # Voice (TTS and transcription)
 
 {% hint style="info" %}
-`/connect` and `/tts` require that you voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) in the last 24 hours.
+Voice features work on a **premium** server, or when a member voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) during the last 24 hours (a vote can be done every 12 hours, `/reminder` notifies you). For `/transcribe start`, premium servers do not need the vote.
 {% endhint %}
 
-| Command                 | Description                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/connect [channel]`    | Connect the bot to a voice or stage channel. Without `channel`, the bot joins the channel you are in. If the bot is already connected somewhere, members vote (60 seconds) to move it. |
-| `/disconnect [channel]` | Disconnect the bot from the voice channel. A vote is started if several members are in the channel. The bot also leaves when the channel is empty. |
-| `/tts <query>`          | Text to speech: the bot reads the text (maximum 500 characters) in the voice channel. It joins your voice channel if it is not connected yet. |
-| `/transcribe start [channel]` | Transcribe the voice channel into a text channel (English only, beta).                                                                 |
-| `/transcribe stop`      | Stop the transcription (a vote is started if several members are in the channel).                                                            |
+The bot needs the permissions *Connect* and *Speak* in the voice channel (and *View Channel*, *Send Messages* in the text channel for the transcription).
 
-{% hint style="warning" %}
-The transcription (speech to text, `/transcribe`) is **currently disabled** while it is being rebuilt. The command answers that the feature is disabled.
-{% endhint %}
+## Commands
 
-## Text to speech
+| Command                    | Description                                                                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/connect [channel]`       | Connect the bot to a voice or stage channel (your channel by default). If it is already connected elsewhere, members vote (60 seconds) to move it; administrators do not need the vote.     |
+| `/disconnect [channel]`    | Disconnect the bot (with a vote when several members are in the channel). The bot also leaves 30 seconds after the last human left the channel, and after 5 minutes without speech.             |
+| `/tts <query> [language]`  | Text to speech. The bot reads the text (maximum 500 characters) in your voice channel and joins it if needed. Messages are queued (up to 5 waiting). The language is detected automatically if empty. |
+| `/tts-stop`                | Stop the speech in progress and empty the queue.                                                                                                                                                  |
+| `/tts-channel set <channel> [language] [translate_to]` | Read aloud the messages of a text channel, in the voice channel of their author. The language is detected for each message if empty; `translate_to` translates each message before reading it. Requires *Manage Server*. |
+| `/tts-channel remove <channel>` | Stop reading a channel.                                                                                                                                                                      |
+| `/tts-channel list`        | List the channels read aloud.                                                                                                                                                                     |
+| `/transcribe start [channel] [language] [translate_to] [style]` | Transcribe the voice channel you are in into a text channel. See below.                                                                                                      |
+| `/transcribe stop`         | Stop the transcription (vote needed when several members are in the channel).                                                                                                                     |
+| `/transcribe auto enable [voice_channel] [text_channel]` | Start the transcription automatically when someone joins the voice channel (any voice channel if empty). Requires *Manage Server*.                                          |
+| `/transcribe auto disable` | Disable the automatic transcription.                                                                                                                                                              |
 
-1. Join a voice channel.
-2. Run `/tts query: Hello everyone`.
-3. The bot joins your channel and says the text.
+## Text to speech (TTS)
 
-The bot needs the permissions *Connect* and *Speak* in the voice channel.
+* Supports 52 languages, the language of the text is detected automatically.
+* Links, mentions, code blocks and markdown are cleaned before reading.
+* In a **TTS channel**, messages are read up to 200 characters. Free servers: up to 5 TTS channels, premium: up to 25. A member who sends many messages very quickly is temporarily ignored (anti-spam).
+* TTS channels and their language can also be configured on the dashboard ([TTS channels](../website/dashboard/tts-channels.md)).
+
+## Transcription (speech to text)
+
+* Multilingual: the spoken language is detected automatically, or you can set `language`.
+* `translate_to` also translates what is said (**premium only**). With a translation, only the translation is shown.
+* `style`: how the transcription is posted: `webhook` (default, as if the speaker wrote it), `message` or `embed`.
+* Session length: **30 minutes** on free servers, **2 hours** on premium servers. Sessions are limited per cluster; if the service is busy, retry later.
+* Settings made on the dashboard ([Speech to text](../website/dashboard/speech-to-text.md)) apply live to the running session.
+* The bot leaves an automatic session 30 seconds after the last human left.

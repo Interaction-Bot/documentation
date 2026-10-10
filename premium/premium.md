@@ -4,7 +4,7 @@ description: Information about the premium
 
 # Premium
 
-Interaction Bot Premium adds functionality to the bot on your servers. The offers (1, 3 or 10 servers) are managed on Patreon.
+Interaction Bot Premium adds functionality to the bot on your servers. Offers cover 1, 3 or 10 servers ($3.99, $9.99 or $19.99 per month) and are managed on Patreon; the premium page of the website shows the full comparison.
 
 The offers are available [here](https://www.patreon.com/interactionbot).
 
@@ -12,13 +12,23 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 
 Premium offers allow new features:
 
-| Free                                                     | Premium                                                         |
-| -------------------------------------------------------- | --------------------------------------------------------------- |
-| Up to 3 translations for one message (simultaneous).     | Up to 20 translations for one message.                          |
-| Up to 20 configurations per type (channel, role, category). | Up to 500 configurations per type.                           |
-| Can't translate other bots.                              | Bots translation becomes available.                             |
-| Can't use the blacklist (channels, roles, languages).    | Blacklist available.                                            |
-| Embeds and buttons of a message are not translated.      | Embeds and buttons of the translated messages are translated.   |
+| Feature                                   | Free                          | Premium                                 |
+| ----------------------------------------- | ----------------------------- | --------------------------------------- |
+| Translation quality                       | Best model unless the service is busy | Always the best model, priority when the service is busy |
+| Channels, roles and categories translated | 20 of each                    | 500 of each                             |
+| Translations of one message               | Up to 3                       | Up to 20                                |
+| Translation groups                        | 1 group of 3 channels         | 5 groups of 5 channels                  |
+| Messages of bots translated               | No                            | Yes                                     |
+| Embeds and buttons translated             | No                            | Yes                                     |
+| Blacklist (channels, roles, languages)    | No                            | Yes                                     |
+| Speech to text session                    | 30 minutes                    | 2 hours                                 |
+| Speech to text without a top.gg vote      | No                            | Yes                                     |
+| Speech to text configurations             | 1                             | Unlimited (3 per voice channel)         |
+| Speech to text translation                | No                            | Yes                                     |
+| Text to speech without a top.gg vote      | No                            | Yes                                     |
+| Text to speech channels                   | 5                             | 25                                      |
+| FAQ                                       | 1 group, 5 questions          | 5 groups, 150 questions                 |
+| Premium on several servers                | -                             | With the 3 and 10 servers offers        |
 
 Example: with the role @french translated into English, Japanese, Brazilian and Spanish, a message of a member with this role produces 4 translations: the free version stops at 3 translations per message, the premium one allows up to 20.
 

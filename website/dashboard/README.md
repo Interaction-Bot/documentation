@@ -43,6 +43,9 @@ Now you can move over each page to configure the bot for each feature!
 * [Overview](overview.md): server information and bot language.
 * [Premium](premium.md): enable a premium on your server.
 * [Channel Translation](channel-translation.md), [Role Translation](role-translation.md), [Category Translation](category-translation.md) and [Flag translation](flag-translation.md).
+* [Translation Groups](translation-groups.md): link channels, each with its language.
+* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md) and [FAQ](faq.md) (category *Audio & AI*).
+* [Flag shortcuts](flag-shortcuts.md): flags under every message of a channel.
 * [Language identification](language-identification.md): minimum message size for the detection.
 * [Blacklist](blacklist.md): channels, roles and languages that are not translated (premium).
 

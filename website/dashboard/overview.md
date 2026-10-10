@@ -26,6 +26,6 @@ If your server is not premium and the bot does more than 3 translations for one 
 
 </details>
 
-## Bot language
+## More information
 
-The _**Bot Language**_ section sets the language of the bot's messages (embeds, errors, buttons) on your server. The overview also shows the number of members, channels, categories and roles, whether the server is premium, and the cluster and shard that run your server.
+The overview also shows the number of members, channels, categories and roles, whether the server is premium, and the cluster and shard that run your server.

@@ -33,6 +33,7 @@ You can see more options by clicking on the _**OPTIONS**_.&#x20;
 
 These options accept different parameters
 
+* _**Activated**_ toggle: enable the flag translation in the channel.
 * _**SENDING MODE:**_ The bot will translate messages differently depending on the selected mode. In "Every time" mode, the bot will send the translation each time a reaction is added to the message. In "Once" mode, the bot will only translate the message if it has never been translated previously by the translation flag and a reaction is added.
 * _**AUTO DELETE:**_ If this option is enabled, the translation will be deleted after a delay that changes depending on the length of the message, otherwise the translation will never be deleted.
 
@@ -47,3 +48,7 @@ Once you have made your configuration, you must click on the _**Save**_ button o
 When you have made all your configuration, don't forget to save your configuration by clicking on _**Save**_!
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Want the flags to appear automatically under every message? Use the [Flag shortcuts](flag-shortcuts.md).
+{% endhint %}
