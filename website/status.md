@@ -16,7 +16,7 @@ The status page is located on [this page,](https://interaction-bot.com/status) y
 
 This section displays the number of servers the bot has, the number of shards used, and the sum of all users on all servers the bot is on.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>statistics of the bot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/dash-status.png" alt=""><figcaption><p>statistics of the bot</p></figcaption></figure>
 
 ## Cluster Status
 

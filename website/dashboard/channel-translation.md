@@ -8,7 +8,7 @@ description: Configure the translations in specific channel on your server.
 
 This page is the first section in the navbar in the category _**translation**_ at the left of the page.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-channel-translation.png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
 
 ## What does channel translation do?
 
@@ -22,7 +22,7 @@ To translate a new channel, you need to click on _**Add a Configuration**_ butto
 
 You see a popup that accepts different parameters
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-channel-translation-popup.png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
 
 * _**CHANNEL**_: the channel where messages that are not in the target language will be caught and translated.
 * _**SENDING CHANNEL**_: the channel where the translation will be sent.
@@ -30,7 +30,7 @@ You see a popup that accepts different parameters
 
 You can see more options by clicking on the _**OPTIONS**_.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>options dropdown</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-channel-translation-options.png" alt=""><figcaption><p>options dropdown</p></figcaption></figure>
 
 These options accept different parameters
 

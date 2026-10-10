@@ -4,6 +4,8 @@ description: Link several channels, each with its own language.
 
 # Translation Groups
 
+<figure><img src="../../.gitbook/assets/dash-translation-groups.png" alt="Translation groups page"><figcaption><p>Translation groups page</p></figcaption></figure>
+
 ## Localization
 
 Navbar > category _**Translation**_ > _**Translation Groups**_.

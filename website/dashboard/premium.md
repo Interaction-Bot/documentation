@@ -8,7 +8,7 @@ description: This page let your enable a premium on your server.
 
 This page is the second section on the navbar at the left of the page. Currently, the 1 year subscription is not supported.
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Premium pag</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-premium-dashboard.png" alt=""><figcaption><p>Premium pag</p></figcaption></figure>
 
 ## Premium
 

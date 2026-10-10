@@ -4,6 +4,8 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 # FAQ
 
+<figure><img src="../../.gitbook/assets/dash-faq.png" alt="FAQ page"><figcaption><p>FAQ page</p></figcaption></figure>
+
 ## Localization
 
 Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../commands/faq.md).

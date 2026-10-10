@@ -8,7 +8,7 @@ description: Configure the translation by flag emoji
 
 This page is the third section in the navbar in the category _**translation**_ at the left of the page.
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-flag-translation.png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
 
 ## What does role translation do?
 
@@ -22,14 +22,14 @@ To translate a new role, you need to click on _**Add a Configuration**_ button.
 
 You see a popup that accepts different parameters
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-flag-translation-popup.png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
 
 * _**Channel**_: The channel where the configuration will be applied.
 * _**ACTIVATED**_: Enable or disable flag translation for this channel.
 
 You can see more options by clicking on the _**OPTIONS**_.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption><p>options dropdown</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-flag-translation-options.png" alt=""><figcaption><p>options dropdown</p></figcaption></figure>
 
 These options accept different parameters
 

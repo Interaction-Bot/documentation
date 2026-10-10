@@ -4,6 +4,8 @@ description: Exclude channels, roles and languages from the translation.
 
 # Blacklist
 
+<figure><img src="../../.gitbook/assets/dash-blacklist.png" alt="Blacklist page"><figcaption><p>Blacklist page</p></figcaption></figure>
+
 {% hint style="warning" %}
 The blacklist is a **premium** feature.
 {% endhint %}

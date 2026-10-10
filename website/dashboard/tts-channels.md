@@ -4,6 +4,8 @@ description: Read aloud the messages of text channels in voice channels.
 
 # Text to speech
 
+<figure><img src="../../.gitbook/assets/dash-text-to-speech.png" alt="Text to speech page"><figcaption><p>Text to speech page</p></figcaption></figure>
+
 ## Localization
 
 Navbar > category _**Audio & AI**_ > _**Text to speech**_.

@@ -4,6 +4,8 @@ description: Configure the live transcription of voice channels.
 
 # Speech to text
 
+<figure><img src="../../.gitbook/assets/dash-speech-to-text.png" alt="Speech to text page"><figcaption><p>Speech to text page</p></figcaption></figure>
+
 ## Localization
 
 Navbar > category _**Audio & AI**_ > _**Speech to text**_.

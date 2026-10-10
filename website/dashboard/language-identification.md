@@ -4,6 +4,8 @@ description: Tune the language detection per channel.
 
 # Language identification
 
+<figure><img src="../../.gitbook/assets/dash-language-identification.png" alt="Language identification page"><figcaption><p>Language identification page</p></figcaption></figure>
+
 The bot detects the language of each message before translating it. Short messages are harder to identify, so this page lets you choose, for a channel, the **minimum number of characters** a message must have to be translated automatically.
 
 Click on _**Add a channel**_, choose:

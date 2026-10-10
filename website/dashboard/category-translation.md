@@ -4,6 +4,9 @@ description: Translate every channel of a category.
 
 # Category Translation
 
+
+<figure><img src="../../.gitbook/assets/dash-category-translation.png" alt="Category translation page"><figcaption><p>Category translation page</p></figcaption></figure>
+
 ## Localization
 
 This page is in the navbar, in the category _**translation**_.
@@ -15,6 +18,9 @@ When this setting is enabled for a category, every message sent in a channel of 
 ## Add a configuration
 
 Click on _**Add a Configuration**_ and fill the popup:
+
+<figure><img src="../../.gitbook/assets/dash-category-translation-popup.png" alt="Category translation popup"><figcaption><p>Category translation popup</p></figcaption></figure>
+
 
 * _**CATEGORY**_: the category to translate. Enable the automatic translation for it.
 * _**LANGUAGE**_: the target language of the translation.

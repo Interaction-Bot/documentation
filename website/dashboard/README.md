@@ -24,7 +24,7 @@ Once this is done, you can select the server that you want to configure, click o
 
 Each page of the dashboard can be accessed with the navigation bar on the left of the page.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-navbar.png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
 
 For mobile users, you have to click on the burger button at the top left of the page to open the navbar.
 
