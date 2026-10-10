@@ -1,58 +1,112 @@
 ---
-description: Configure the translations in specific channel on your server.
+description: Configure the automatic translation of the messages of a channel.
 ---
 
 # Channel Translation
 
 ## Localization
 
-This page is the first section in the navbar in the category _**translation**_ at the left of the page.
+This page is the first item of the **Translation** section of the navigation bar. Its title is **Channel translation**.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-channel-translation.png" alt="Channel translation page"><figcaption><p>Channel translation page</p></figcaption></figure>
 
 ## What does channel translation do?
 
-When this setting is enabled for a specific channel, any message in this channel that is not in the language defined by the configuration will be translated to the target language.
+A configuration says: *the messages posted in this **source channel** that are not in this **language** are translated, and the translation is sent to the **sending channel***.
 
-## Translate a new channel
+* It is a **one way** rule. To translate in both directions, create a second configuration in the other direction, or use [translation groups](translation-groups.md). See [Which method should I use?](../../translation/overview.md) and the [recipes](../../translation/guides.md).
+* The source channel and the sending channel can be the same channel.
 
-To translate a new channel, you need to click on _**Add a Configuration**_ button.
+### When is a message not translated?
+
+The bot skips a message for a configuration when:
+
+* the message is already in the **LANGUAGE** of the configuration (unless **ALWAYS SEND** is on);
+* the bot is not sure of the language of the message (unless **ALWAYS SEND** is on);
+* the message is made of one character repeated (for example `aaaaaa`) (unless **ALWAYS SEND** is on);
+* the message was sent by a bot, and **TRANSLATE BOT** is off;
+* the translation is almost identical to the original message (similarity of 0.6 or more) (unless **ALWAYS SEND** is on);
+* the configuration is paused (**Enabled** unchecked);
+* the source channel is in the [blacklist](blacklist.md), or the message is shorter than the minimum of the [language identification](language-identification.md) of this channel.
+
+## Running configurations
+
+The list shows all the configurations of your server.
+
+* The counter at the top right shows how many configurations you have, for example `3/20`. On a premium server, it shows `N/~`: there is no fixed number shown, the server can have up to 500 configurations.
+* The columns are **Source channel**, **Sending channel** and **Language**.
+* **Enabled** (checkbox, on each row): when unchecked, the configuration is kept but does not translate anything. A tooltip shows *Paused: kept but not translating* or *Active*. Use it to pause a configuration without losing its settings. Click on _**Save**_ to apply.
+* _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
+* _**Delete**_: removes the configuration (applied after you click on _**Save**_).
+
+## Add a configuration
+
+Click on _**Add a configuration**_ (under the box *Add a channel*).
 
 <figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
-You see a popup that accepts different parameters
+On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-channel-translation-popup.png" alt="Channel translation popup"><figcaption><p>Channel translation popup</p></figcaption></figure>
 
-* _**CHANNEL**_: the channel where messages that are not in the target language will be caught and translated.
-* _**SENDING CHANNEL**_: the channel where the translation will be sent.
-* _**LANGUAGE**_: the language where the message will be translated.
+The popup has three required fields:
 
-You can see more options by clicking on the _**OPTIONS**_.&#x20;
+* **CHANNEL**: *Enable automatic translation for this channel.* The source channel: the messages posted here are checked.
+* **SENDING CHANNEL**: *Channel where translated message will be sent.* The channel where the translation is posted.
+* **LANGUAGE**: *Set the translation language of this channel.* The language the messages are translated into.
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>options dropdown</p></figcaption></figure>
+Click on _**OPTIONS**_ to show the optional settings.
 
-These options accept different parameters
+<figure><img src="../../.gitbook/assets/dash-channel-translation-options.png" alt="Options dropdown"><figcaption><p>Options</p></figcaption></figure>
 
-* _**STYLE:**_ the style of the message, if the translation will be sent in embed, in a webhook, or just like a regular message
-* _**DELETE MESSAGE:**_ if the language of the message sent by the user is different than the _**Language**_ option, the message will be deleted.
-* _**DELETE TRANSLATION:**_ the bot will delete his translation after a time that depends on the length of the translation (0.13 seconds per character).
-* _**Keep it for (seconds)**_: with _Delete translation_, how long the translation stays (5 s to 24 h, empty = depends on its length).
-* _**TRANSLATE BOT:**_ even if the message is sent by a bot, the bot will translate the message if the language doesn't correspond to the target language.
-* _**ALWAYS SEND:**_ even if the message is in the same language as the LANGUAGE option, the bot will translate the message.
+* **STYLE**: *Change the style of the translation that will be sent.* The choices are:
+  * **Embed** (default): an embed with the name and avatar of the author of the original message, and the two languages in the footer.
+  * **Webhook**: the translation is posted with the name and avatar of the author of the original message, as if the author had written it. The bot creates a webhook in the sending channel. If the webhook cannot be created, the bot posts a normal message instead.
+  * **Message**: a normal message from the bot, without embed.
+* **DELETE MESSAGE** (*Delete the original message.*): the original message is deleted once its translation is sent. If the bot has no permission to delete it, the original message stays.
+* **DELETE TRANSLATION** (*Delete the message sent by the bot.*): the translation is deleted after a time. When it is on, the field **Keep it for (seconds, empty = reading time)** appears:
+  * a value from **5** to **86400** seconds (24 hours). A value outside this range makes the save fail (see [Errors](#errors)).
+  * empty (`auto`): the reading time, 0.13 second per character with a minimum of 25 seconds.
+* **TRANSLATE BOT** (*Translate message send by bot.*): translates the messages sent by bots. **Premium only**: on a server without Premium, clicking on this toggle opens the Premium pop-up.
+* **ALWAYS SEND** (*Sending the translation even if the message is already in the same target language.*): sends the translation even when one of the skip rules above applies.
 
-{% hint style="info" %}
-These parameters can be left blank.
-{% endhint %}
+Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
 
-Once you have made your configuration, you must click on the _**Save**_ button on the popup. You will now see the new configuration that you have added, to post your configurations, follow[ this instruction](channel-translation.md#save-configurations).
+### Example
+
+You want the French messages of #english-chat to be visible in English for French members in #english-chat-fr:
+
+* **CHANNEL**: #english-chat
+* **SENDING CHANNEL**: #english-chat-fr
+* **LANGUAGE**: English
+* Options: **STYLE**: Embed, **DELETE TRANSLATION** on, **Keep it for (seconds, empty = reading time)**: `60`
+
+Messages in English are not translated (they are already in English). Messages in other languages are translated to English and the translation disappears after 60 seconds.
 
 ## Save configurations
 
-When you have configured all the channels that you want to be translated, don't forget to save your configuration!
+When you have configured all the channels that you want to be translated, don't forget to click on _**Save**_ in the bar at the bottom of the page.
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
-## Pause a configuration
+## Errors
 
-Each configuration has an _**Enabled**_ checkbox in the list: unchecked, the configuration is kept but does not translate. Free servers can have 20 configurations, premium servers 500.
+* **Error - You have not completed all the required fields.** (pop-up): one of CHANNEL, SENDING CHANNEL or LANGUAGE is empty. Fill it in and click on _**Save**_ again.
+* **It seems something has gone wrong.** (pop-up, followed by the error, for example `422: Unprocessable Entity`): the save failed, for example because a value is out of range.
+* The bar stays on the screen without any message when the bot refuses the save, for example because a channel no longer exists or *TRANSLATE BOT* is used without Premium. Nothing has been saved: remove or fix the configuration, then click on _**Save**_ again.
+* **You made changes, save them!** (bar): your changes are not active yet, click on _**Save**_.
+
+## Premium
+
+| | Free | Premium |
+| --- | --- | --- |
+| Configurations | 20 | 500 |
+| Translations of one message | 3 | 20 |
+| TRANSLATE BOT | Not available | Available |
+
+## Tips
+
+* To stop a configuration for a while, uncheck **Enabled** instead of deleting it.
+* Keep **ALWAYS SEND** off unless you really need it: it bypasses all the skip rules above.
+* Short messages are often detected wrongly. Use the [Language identification](language-identification.md) page to ignore messages under a number of characters in a channel.
+* To translate a whole category at once, use [Category Translation](category-translation.md). To give a translation to members with a role, use [Role Translation](role-translation.md).

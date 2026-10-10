@@ -3,6 +3,21 @@
 * [📍 Home](README.md)
 * [Getting started](getting-started.md)
 * [FAQ](faq.md)
+* [Permissions](permissions.md)
+* [Security and privacy](security.md)
+
+## Translation
+
+* [Overview](translation/overview.md)
+* [Automatic translation](translation/automatic.md)
+* [Flag translation](translation/flags.md)
+* [Commands and menus](translation/commands.md)
+* [Language detection](translation/language-detection.md)
+* [How translation works](translation/how-it-works.md)
+* [Styles and options](translation/styles-and-options.md)
+* [Setup guides](translation/guides.md)
+* [Languages and flags](translation/languages.md)
+* [Troubleshooting](translation/troubleshooting.md)
 
 ## Website
 
@@ -25,10 +40,14 @@
 ## Commands
 
 * [General](commands/general.md)
-* [Translation](commands/translation.md)
+* [Translation commands](commands/translation.md)
+* [All commands](commands/all-commands.md)
 * [Voice (TTS and transcription)](commands/voice.md)
+  * [Voice guides](commands/voice-guides.md)
+  * [Voice troubleshooting](commands/voice-troubleshooting.md)
 * [Translation groups](commands/groups.md)
 * [FAQ and /ask](commands/faq.md)
+  * [FAQ guides](commands/faq-guides.md)
 * [Flags and diagnostics](commands/flags.md)
 
 ## Premium

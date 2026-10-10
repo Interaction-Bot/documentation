@@ -1,37 +1,24 @@
 ---
-description: All commands about the translation
+description: Reference of the translation commands.
 ---
 
-# Translation
+# Translation commands
 
-Interaction Bot provides many ways to translate messages. The advanced configuration (channels, roles, categories, flags, blacklist...) is done on the [dashboard](../website/dashboard/).
-
-There are several ways to translate a message:
-
-* **Command** -> translate a text into a given language (see `/translate`).
-* **Application - Translate** -> right click (or long press) a message, then *Apps* > *Translate*. The target language is your Discord application language. The result is ephemeral: only you can see it.\
-  ![](<../.gitbook/assets/image (26).png>)
-* **Application - Detect** -> *Apps* > *Detect* shows the language of the selected message.
-* **Flag reaction** -> add a flag emoji below a message (see [Flag translation](../website/dashboard/flag-translation.md)).
-* **Automatic** -> translation of the sent messages by [channel](../website/dashboard/channel-translation.md), [role](../website/dashboard/role-translation.md) or [category](../website/dashboard/category-translation.md).
-
-| Command                           | Description                                                                                          |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `/translate <message> [language]` | Translate the message. Without `language`, your Discord language is used. The answer is ephemeral.   |
-| `/detect <text>`                  | Detect the language of a text.                                                                       |
-| `/languages`                      | Display all the languages supported by Interaction Bot.                                              |
+| Command                            | Description                                                                                          |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `/translate <message> [language]`  | Translate a text. Without `language`, your Discord language is used. The answer is private.          |
+| `/detect <text>`                   | Tell the language of a text.                                                                          |
+| `/languages`                       | List the 100 supported languages.                                                                    |
+| **Apps > Translate**               | Right click a message: private translation in your Discord language.                                 |
+| **Apps > Detect**                  | Right click a message: language of the message.                                                      |
+| `/group ...`                       | Translation groups, see [Translation groups](groups.md).                                              |
+| `/flags set` / `/flags clear`      | Flag shortcuts under the messages of a channel, see [Flags](flags.md).                                |
+| `/check-permissions`               | List the permissions the bot lacks in the configured channels.                                       |
 
 {% hint style="info" %}
-The old `/config` commands no longer exist: everything is configured on the [dashboard](../website/dashboard/).
+Everything about **how translation works** (automatic translation, flags, limits, detection, troubleshooting) is in the [Translation section](../translation/overview.md). Automatic translation by channel, role and category is configured on the [dashboard](../website/dashboard/).
 {% endhint %}
 
-#### Common parameters (dashboard)
-
-| Parameter                | Possible values         | Usage                                                                                   |
-| ------------------------ | ----------------------- | --------------------------------------------------------------------------------------- |
-| Language                 | Any language of `/languages` | The target language of the translation.                                            |
-| Style                    | embed \| webhook \| message | How the translation is sent.                                                      |
-| Delete message           | on \| off               | Delete the original message and keep only the translation.                              |
-| Delete translation       | on \| off               | The bot deletes its translation after a delay depending on its length.                  |
-| Translate bot            | on \| off               | Also translate messages sent by bots (**premium only**).                                |
-| Always send              | on \| off               | Send the translation even if the message is already in the target language.             |
+{% content-ref url="../translation/overview.md" %}
+[overview.md](../translation/overview.md)
+{% endcontent-ref %}

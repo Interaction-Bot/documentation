@@ -1,54 +1,76 @@
 ---
 description: >-
   This page regroups all the information that you need to learn to configure the
-  bot.
+  bot on the dashboard.
 ---
 
 # 🌐 Dashboard
 
-The configurations of the bot are available on the dashboard, the first step is to link your discord account to the bot on the dashboard, and after this, you will be able to use the dashboard and access all feature that the bot offer.
+The configuration of the bot is done on the dashboard. First, link your Discord account, then select the server you want to configure. Each feature has its own page in the navigation bar.
 
 ## Login to the dashboard
 
-You have to go to the website of the bot that you can find at the bottom of this text :)
+Go to the website of the bot, you can find it at the bottom of this text :)
 
 {% embed url="https://interaction-bot.com" %}
 
-Once you are on here, click on the _**Login**_ button that will redirect you to the login page of Discord, be quiet discord doesn't share any sensible information and we don't control your Discord account!
+Click on the _**Login**_ button: you are redirected to the Discord login page. The dashboard only asks Discord for your identity (`identify`) and the list of your servers (`guilds`). Your Discord password is never shared with the bot.
 
 <figure><img src="../../.gitbook/assets/Sans titre.gif" alt="" width="518"><figcaption></figcaption></figure>
 
-Once this is done, you can select the server that you want to configure, click on the _**Configure**_ button and you are now on the configuration page of your server!
+Once you are logged in, select the server that you want to configure and click on the _**Configure**_ button. You are now on the configuration page of your server.
+
+## Who can configure a server
+
+You can change the configuration of a server if you have the **Administrator** permission or the **Manage Server** permission on it, and if the bot is on this server. Otherwise, the dashboard refuses access.
 
 ## Navigate on the dashboard
 
 Each page of the dashboard can be accessed with the navigation bar on the left of the page.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-navbar.png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
 
-For mobile users, you have to click on the burger button at the top left of the page to open the navbar.
+The navigation bar is organized in sections:
+
+* **Overview** and **Premium** at the top.
+* **Translation**: Channel Translation, Translation Groups, Role Translation, Flag Translation and Category Translation.
+* **Audio & AI**: Speech to text, Text to speech and FAQ.
+* **Management**: Language identification, Blacklist and Flag shortcuts.
+
+For mobile users, click on the burger button at the top left of the page to open the navigation bar.
 
 <figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
-You can click on each section to move over different pages.
-
-To return to the server selection, you have to click at the bottom of the navigation bar.
+To return to the server selection, click at the bottom of the navigation bar.
 
 <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-Now you can move over each page to configure the bot for each feature!
+## Save your changes
+
+Nothing is applied to the bot until you save. As soon as you change something on a page, a bar appears at the bottom of the screen with the message **You made changes, save them!** and two buttons:
+
+* _**Cancel**_: removes your unsaved changes and restores the last saved configuration.
+* _**Save**_: sends your configuration to the bot.
+
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved and the bar stays on the screen without any message**. Check the page you are on, see the limits written on each page, then try again.
+
+## Errors
+
+* If the dashboard cannot load or save data, you are sent back to the home page, where a pop-up says **It seems something has gone wrong.** followed by the error (for example `500: Internal Server Error`). Try again, and ask the support if the error stays.
+* If your session has expired or you do not have the permission to configure the server, you are sent to the login page.
 
 ## Pages of the dashboard
 
-* [Overview](overview.md): server information and bot language.
-* [Premium](premium.md): enable a premium on your server.
-* [Channel Translation](channel-translation.md), [Role Translation](role-translation.md), [Category Translation](category-translation.md) and [Flag translation](flag-translation.md).
-* [Translation Groups](translation-groups.md): link channels, each with its language.
+* [Overview](overview.md): server information, bot language and the simultaneous translation warning.
+* [Premium](premium.md): enable Premium on this server with your Patreon offer.
+* [Channel Translation](channel-translation.md), [Translation Groups](translation-groups.md), [Role Translation](role-translation.md), [Flag Translation](flag-translation.md) and [Category Translation](category-translation.md).
 * [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md) and [FAQ](faq.md) (category *Audio & AI*).
-* [Flag shortcuts](flag-shortcuts.md): flags under every message of a channel.
-* [Language identification](language-identification.md): minimum message size for the detection.
-* [Blacklist](blacklist.md): channels, roles and languages that are not translated (premium).
+* [Flag shortcuts](flag-shortcuts.md): flags shown under every message of a channel.
+* [Language identification](language-identification.md): minimum message size for the detection, per channel.
+* [Blacklist](blacklist.md): channels, languages and roles that are not translated (Premium).
 
 {% hint style="info" %}
-Members with the *Administrator* permission can configure the bot of their server.
+Members with the **Administrator** permission or the **Manage Server** permission can configure the bot of their server.
 {% endhint %}

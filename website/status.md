@@ -1,39 +1,79 @@
 ---
 description: >-
-  The status page displays the current status of the bot for each cluster and
-  some statistics about the bot.
+  The status page shows the state of the translation services, the statistics of the
+  bot and the state of each cluster.
 ---
 
 # Status
 
 ## Localization
 
-The status page is located on [this page,](https://interaction-bot.com/status) you can access it with the link below.
+The status page is on the website of the bot. You can access it with the link below. It does not need a login, and it is refreshed every 10 seconds.
 
 {% embed url="https://interaction-bot.com/status" %}
 
-## Statistics
+## Translation services
 
-This section displays the number of servers the bot has, the number of shards used, and the sum of all users on all servers the bot is on.
+This section shows the state of the services used by the bot to translate, detect languages, read text (text to speech) and transcribe voice (speech to text). It is a live check: the page runs a small test request for each service.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>statistics of the bot</p></figcaption></figure>
+Each service shows a colored dot, its name, its state and, when the service answered, its response time in milliseconds (for example `Operational - 420 ms`).
+
+| Name | Meaning |
+| --- | --- |
+| **Translation** | Translates the messages. |
+| **Language detection** | Detects the language of the messages. |
+| **Text to speech** | Reads text in a voice channel. |
+| **Speech to text** | Transcribes the voice of a voice channel. |
+
+The states are:
+
+* <mark style="color:green;">Operational</mark>: the service answers, and the response time is under the limit of the service (1.5 s for language detection, 4 s for translation, 8 s for text to speech and 15 s for speech to text).
+* <mark style="color:yellow;">Degraded</mark>: the service answers too slowly, or it is busy (it refuses some requests for now). Translations can take longer than usual.
+* <mark style="color:red;">Outage</mark>: the service does not answer, or returns a server error. The bot cannot use it.
+* <mark style="color:gray;">Unknown</mark>: the test request was refused, so the state cannot be known for sure, or the service is not configured.
+* <mark style="color:gray;">Checking...</mark>: the first check of the service has not finished yet. The page asks again in a few seconds.
+
+The results are kept for up to 30 seconds, so a change can take a short time to appear.
+
+<figure><img src="../.gitbook/assets/dash-status.png" alt="Status page"><figcaption><p>Status page</p></figcaption></figure>
+
+## Bot statistics
+
+The **Bot stats** section shows:
+
+* **Servers**: the number of servers where the bot is.
+* **Shards**: the total number of shards of the bot. A shard is a connection to Discord that carries a part of the servers.
+* **USERS**: the sum of the member counts of all the servers. A member who is in several servers is counted in each of them, so this is not the number of different people.
+
+## Server localization
+
+Use this section to find where your server runs: enter the **ID** of your server in the **Server ID** field (you can find it in the [Overview](dashboard/overview.md) page of the dashboard), then click on _**Calculate**_.
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+The result says *The guild is located on Cluster N and on the shard M.* The result is calculated from the ID only: it does not check that the bot is on this server.
 
 ## Cluster Status
 
-The next section displays the status of each cluster, one cluster runs multiple servers so if one cluster is down, the bot will not work on servers localized on the cluster.&#x20;
+A **cluster** is a group of shards that runs on one process. A cluster runs up to 10 shards, and the servers of a cluster are only available when this cluster works. The title shows the figures of the bot:
 
-A cluster can have three statuses:
+* *X / Y shards*: the number of shards that are working, out of the total.
+* *X / Y clusters*: the number of clusters that are working, out of the total.
 
-* <mark style="color:green;">Operational:</mark> the cluster is operational for these servers, if your server is on this cluster, you don't have to expect any problems with the bot.e
-* <mark style="color:yellow;">Partial Outage:</mark> the cluster has a big latency, or it doesn't load all servers.
-* <mark style="color:red;">Major Outage:</mark> the cluster is down, all servers on this cluster can't use the bot.
+Each cluster is a square with its number. Its color shows its state:
 
-You can check information about the cluster by overlaying your cursor on it, the color of the cluster indicates the status of the cluster.
+* <mark style="color:green;">Operational</mark> (green): the cluster answers, and its ping is under 150 ms.
+* <mark style="color:yellow;">Partial Outage</mark> (yellow): the cluster answers, but its ping is above 150 ms. The bot is slower for the servers of this cluster.
+* <mark style="color:red;">Major Outage</mark> (red): the cluster does not answer.
 
 <figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="468"><figcaption><p>Cluster Status</p></figcaption></figure>
 
-## Find the cluster of my server
+Place your cursor on a cluster (or tap it on a phone) to see its details:
 
-You can find what cluster runs the bot on your server by entering your server ID on the section and clicking on _**Calculate**_.
+* the range of shards that it runs;
+* its number of servers and members;
+* its ping, in milliseconds.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+For a red cluster, only the estimated range of shards is shown.
+
+To know the cluster of your server, see [Server localization](#server-localization), or the **CLUSTER** field of the [Overview](dashboard/overview.md) page of the dashboard.

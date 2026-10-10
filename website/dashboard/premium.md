@@ -1,33 +1,66 @@
 ---
-description: This page let your enable a premium on your server.
+description: Enable Premium on your server with your Patreon offer.
 ---
 
 # Premium
 
 ## Localization
 
-This page is the second section on the navbar at the left of the page. Currently, the 1 year subscription is not supported.
+This page is the second item of the navigation bar, under **Overview**. Its title is **Premium**.
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Premium pag</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-premium-dashboard.png" alt="Premium page"><figcaption><p>Premium page</p></figcaption></figure>
 
-## Premium
+Premium is set **per server**. Each Patreon offer gives a number of server slots (1, 3 or 10), and each premium server uses one slot. The offers and what they bring are described in [Premium](../../premium/premium.md).
 
-You can discover all premium offers on the page in this section. If you click on button _**-**_ or _**+**_ you can select a different offer.
+## Offers
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+The first part of the page shows the offers.
 
-If you click on the _**Subscribe Monthly**_ button, you will be redirected to the Patreon page of the bot where you can buy a new premium offer.
+* The selector at the top has two options: **1 month** and **1 years**. Only the monthly offer can be used for now: the yearly option is shown but cannot be selected.
+* The **-** and **+** buttons next to the server count choose the offer: **1**, **3** or **10** servers.
+* _**Subscribe Monthly**_ opens the Patreon page of the selected offer in a new tab, so you can buy it.
 
-{% hint style="success" %}
-To learn more about premium subscriptions, you can go to the premium section of the documentation.
-{% endhint %}
+## Compare plans
 
-## Enable a Premium
+Under the offers, the **Compare plans** table shows what a free server and a premium server get. It is the same comparison as in [Premium](../../premium/premium.md).
 
-Once you have bought a new premium on Patreon, you can activate it on the server by clicking on the premium toggle.
+## How to activate premium?
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Premium Toggle</p></figcaption></figure>
+This section is a dropdown with the steps, and a _**Link Patreon**_ button that opens the Patreon connections page.
 
-Don't forget to save your configuration!
+1. Buy an offer on Patreon (see [Subscribe](../../premium/subscribe.md)).
+2. Link your Discord account to your Patreon account on the Patreon connections page. The bot reads your Discord account from your Patreon account.
+3. Refresh the page. If you linked your account less than 10 minutes ago, wait: the bot checks Patreon every 10 minutes, so the premium is usually active after 10 minutes.
+
+## Enable Premium on this server
+
+Once your offer is active, go to the **Premium** section at the bottom of the page.
+
+* **PREMIUM** (toggle): *Enable or disable your premium offers on this server.*
+  * Turn it **on** to use one of your free slots for this server.
+  * Turn it **off** to remove Premium from this server. The slot becomes free again and can be used on another server.
+
+Click on _**Save**_ in the bar at the bottom of the page to apply the change.
+
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Premium toggle</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+
+You can also activate Premium with the `/premium add` command, see [Usage](../../premium/usage.md).
+
+## Errors
+
+* **You don't have enough premiums available!** (pop-up): *Improve your premium offer or deactivate a premium on your servers.* All your slots are used, or your Discord account is not linked to an active Patreon offer. Turn Premium off on a server where you do not need it, or get a bigger offer.
+
+{% hint style="info" %}
+Turning Premium off removes the premium features of this server right away. Premium-only options that are already saved, such as *Translate Bot*, are switched off by the next Patreon check (within about 10 minutes).
+{% endhint %}
+
+## What happens when Premium ends?
+
+If your Patreon offer changes or ends, the premium of your servers is updated at the next Patreon check (every 10 minutes):
+
+* If you have fewer slots than premium servers, Premium is removed from some of your servers until the number of premium servers matches your slots.
+* If your Patreon membership no longer exists, Premium is removed from all your servers.
+
+When a server loses Premium, the *Translate Bot* option is switched off in its channel and category translations.
