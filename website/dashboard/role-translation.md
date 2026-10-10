@@ -8,7 +8,7 @@ description: Configure translation by the user's role on your server.
 
 This page is the second section in the navbar in the category _**translation**_ at the left of the page.
 
-<figure><img src="../../.gitbook/assets/dash-role-translation.png" alt=""><figcaption><p>Channel translation page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-role-translation.png" alt=""><figcaption><p>Role translation page</p></figcaption></figure>
 
 ## What does role translation do?
 
@@ -22,7 +22,7 @@ To translate a new role, you need to click on _**Add a Configuration**_ button.
 
 You see a popup that accepts different parameters
 
-<figure><img src="../../.gitbook/assets/dash-role-translation-popup.png" alt=""><figcaption><p>Channel translation popup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-role-translation-popup.png" alt=""><figcaption><p>Role translation popup</p></figcaption></figure>
 
 * _**Role**_: This role allows you to translate any message sent by a user having it, as long as this message is not in the target language.
 * _**LANGUAGE**_: the language where the message will be translated.

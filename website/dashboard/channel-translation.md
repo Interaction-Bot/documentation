@@ -12,7 +12,9 @@ This page is the first section in the navbar in the category _**translation**_ a
 
 ## What does channel translation do?
 
-When this setting is enabled for a specific channel, any message in this channel that is not in the language defined by the configuration will be translated to the target language.
+When this setting is enabled for a specific channel, any message in this channel that is not in the language defined by the configuration will be translated to the target language and sent in the *sending channel*.
+
+It is a **one way** rule. To translate in both directions, create a second configuration in the other sense, or use [translation groups](translation-groups.md). See [Which method should I use?](../../translation/overview.md) and the [recipes](../../translation/guides.md).
 
 ## Translate a new channel
 

@@ -57,7 +57,7 @@ The footer of an embed-style translation shows the source and target languages (
 
 ## Languages
 
-`/languages` lists all the supported languages. The bot accepts the language name or its code (`fr`, `ja`, `pt`...).
+`/languages` lists all the supported languages, see also [Languages and flags](languages.md). In `/translate`, choose the language by its **name** in the list that appears while you type.
 
 ## Next steps
 
@@ -71,4 +71,12 @@ The footer of an embed-style translation shows the source and target languages (
 
 {% content-ref url="commands.md" %}
 [commands.md](commands.md)
+{% endcontent-ref %}
+
+{% content-ref url="how-it-works.md" %}
+[how-it-works.md](how-it-works.md)
+{% endcontent-ref %}
+
+{% content-ref url="styles-and-options.md" %}
+[styles-and-options.md](styles-and-options.md)
 {% endcontent-ref %}

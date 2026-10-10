@@ -11,7 +11,10 @@
 * [Flag translation](translation/flags.md)
 * [Commands and menus](translation/commands.md)
 * [Language detection](translation/language-detection.md)
+* [How translation works](translation/how-it-works.md)
+* [Styles and options](translation/styles-and-options.md)
 * [Setup guides](translation/guides.md)
+* [Languages and flags](translation/languages.md)
 * [Troubleshooting](translation/troubleshooting.md)
 
 ## Website
