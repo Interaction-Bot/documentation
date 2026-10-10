@@ -7,7 +7,7 @@ description: How to subscribe to a patreon offer.
 1. Go to [patreon](https://www.patreon.com/interactionbot).
 2. Select your offer and click on join
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/patreon-join.png" alt="Patreon: choose a plan and click Join"><figcaption></figcaption></figure>
 
 3\. Enter the requested information.
 

@@ -9,6 +9,8 @@ Interaction Bot Premium adds functionality to the bot on your servers. Offers co
 The offers are available [here](https://www.patreon.com/interactionbot).
 
 <figure><img src="../.gitbook/assets/dash-premium-public.png" alt="Premium page of the website"><figcaption><p>Premium page of the website</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/patreon-offers.png" alt="Patreon page"><figcaption><p>Patreon page</p></figcaption></figure>
+
 
 Premium offers allow new features:
 
