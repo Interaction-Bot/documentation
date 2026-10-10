@@ -56,6 +56,12 @@
 * [Subscribe](premium/subscribe.md)
 * [Usage](premium/usage.md)
 
+## Changelogs
+
+* [Changelogs](changelogs/README.md)
+  * [October 2026](changelogs/2026-10.md)
+  * [Octobre 2026 (Français)](changelogs/2026-10-fr.md)
+
 ## Links
 
 * [Website](https://interaction-bot.com)

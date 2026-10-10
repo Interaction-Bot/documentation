@@ -26,7 +26,7 @@ Interaction Bot is a Discord bot that **breaks language barriers** on your serve
 | **FAQ**                  | Answers to your members' questions, on demand or automatic, in any language                         | [FAQ](commands/faq.md)                        |
 | **Premium**              | Higher limits and extra options                                                                     | [Premium](premium/premium.md)                 |
 
-New here? Start with [Getting started](getting-started.md).
+New here? Start with [Getting started](getting-started.md). What changed lately: [Changelogs](changelogs/README.md).
 
 ### How to read this documentation
 
