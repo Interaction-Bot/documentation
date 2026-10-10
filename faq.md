@@ -60,7 +60,7 @@ Create a group on the dashboard [FAQ](website/dashboard/faq.md), add questions a
 See [Premium](premium/premium.md) and [Subscribe](premium/subscribe.md). Then run `/premium add` on your server.
 
 ### I subscribed but the server is not premium
-Link your Patreon and Discord accounts, wait about 10 minutes, then run `/premium add` on the server. Contact the support if it still does not work.
+Link your Patreon and Discord accounts, click _**Refresh my Patreon status**_ on the Premium page of the dashboard (or wait about 2 minutes), then run `/premium add` on the server. Contact the support if it still does not work.
 
 ## Still need help?
 

@@ -30,7 +30,17 @@ This section is a dropdown with the steps, and a _**Link Patreon**_ button that 
 
 1. Buy an offer on Patreon (see [Subscribe](../../premium/subscribe.md)).
 2. Link your Discord account to your Patreon account on the Patreon connections page. The bot reads your Discord account from your Patreon account.
-3. Refresh the page. If you linked your account less than 10 minutes ago, wait: the bot checks Patreon every 10 minutes, so the premium is usually active after 10 minutes.
+3. Open the **Premium** page of your server and click _**Refresh my Patreon status**_ (see below). Otherwise the bot checks Patreon by itself every 2 minutes, so the premium is active after 2 minutes at most.
+
+## Refresh my Patreon status
+
+In the **Patreon** section at the bottom of the page, the _**Refresh my Patreon status**_ button checks Patreon right now. Use it just after you bought an offer or linked your Discord account to Patreon, instead of waiting for the automatic check.
+
+* **Patreon status updated.**: your offer was read, and your slots are up to date.
+* **Already refreshed a moment ago, try again in X s.**: the check is limited to once every 30 seconds for the whole bot, to protect Patreon. Wait the indicated time, then click again.
+* **Could not reach Patreon, try again later.**: Patreon did not answer. Try again in a few minutes.
+
+If the button says your status is updated but you still have no slots, your Discord account is probably not linked to your Patreon account yet, see [Subscribe](../../premium/subscribe.md).
 
 ## Enable Premium on this server
 
@@ -53,12 +63,12 @@ You can also activate Premium with the `/premium add` command, see [Usage](../..
 * **You don't have enough premiums available!** (pop-up): *Improve your premium offer or deactivate a premium on your servers.* All your slots are used, or your Discord account is not linked to an active Patreon offer. Turn Premium off on a server where you do not need it, or get a bigger offer.
 
 {% hint style="info" %}
-Turning Premium off removes the premium features of this server right away. Premium-only options that are already saved, such as *Translate Bot*, are switched off by the next Patreon check (within about 10 minutes).
+Turning Premium off removes the premium features of this server right away. Premium-only options that are already saved, such as *Translate Bot*, are switched off by the next Patreon check (within about 2 minutes).
 {% endhint %}
 
 ## What happens when Premium ends?
 
-If your Patreon offer changes or ends, the premium of your servers is updated at the next Patreon check (every 10 minutes):
+If your Patreon offer changes or ends, the premium of your servers is updated at the next Patreon check (every 2 minutes):
 
 * If you have fewer slots than premium servers, Premium is removed from some of your servers until the number of premium servers matches your slots.
 * If your Patreon membership no longer exists, Premium is removed from all your servers.

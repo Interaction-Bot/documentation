@@ -21,7 +21,7 @@ The bot answers with an embed. The possible messages are:
 
 * **Premium has been added to the server!**: the server is now Premium.
 * **This server is already premium.**: the server already has Premium.
-* The message says that you are not connected to Patreon, and links to the Premium page of the website: your Discord account is not linked to an active Patreon offer. If you linked your account less than 10 minutes ago, wait 10 minutes.
+* The message says that you are not connected to Patreon, and links to the Premium page of the website: your Discord account is not linked to an active Patreon offer. If you linked your account just now, click _**Refresh my Patreon status**_ on the Premium page of the dashboard, or wait 2 minutes, then try again.
 * **You don't have enough premium slots to add premium to this guild. Upgrade your offer here.**: all your slots are used. Remove Premium from another server, or upgrade your offer.
 * **The guild ID is not valid.**: the `guild_id` is wrong, or the bot is not on this server.
 
