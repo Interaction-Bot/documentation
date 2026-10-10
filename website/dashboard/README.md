@@ -37,3 +37,15 @@ To return to the server selection, you have to click at the bottom of the naviga
 <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can move over each page to configure the bot for each feature!
+
+## Pages of the dashboard
+
+* [Overview](overview.md): server information and bot language.
+* [Premium](premium.md): enable a premium on your server.
+* [Channel Translation](channel-translation.md), [Role Translation](role-translation.md), [Category Translation](category-translation.md) and [Flag translation](flag-translation.md).
+* [Language identification](language-identification.md): minimum message size for the detection.
+* [Blacklist](blacklist.md): channels, roles and languages that are not translated (premium).
+
+{% hint style="info" %}
+Members with the *Administrator* permission can configure the bot of their server.
+{% endhint %}

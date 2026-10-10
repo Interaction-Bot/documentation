@@ -12,12 +12,16 @@
   * [Channel Translation](website/dashboard/channel-translation.md)
   * [Role Translation](website/dashboard/role-translation.md)
   * [Flag translation](website/dashboard/flag-translation.md)
+  * [Category Translation](website/dashboard/category-translation.md)
+  * [Language identification](website/dashboard/language-identification.md)
+  * [Blacklist](website/dashboard/blacklist.md)
 * [Status](website/status.md)
 
 ## Commands
 
 * [General](commands/general.md)
 * [Translation](commands/translation.md)
+* [Voice (TTS and transcription)](commands/voice.md)
 
 ## Premium
 
