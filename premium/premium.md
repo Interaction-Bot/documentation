@@ -4,29 +4,37 @@ description: Information about the premium
 
 # Premium
 
-Interaction Bot offers two premium systems, a version that adds functionality to the bot and another that improves translation quality.
+Interaction Bot Premium adds functionality to the bot on your servers. Offers cover 1, 3 or 10 servers ($3.99, $9.99 or $19.99 per month) and are managed on Patreon; the premium page of the website shows the full comparison.
 
 The offers are available [here](https://www.patreon.com/interactionbot).
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Patreon page</p></figcaption></figure>
 
-The translator offers add google features and the premium offers allow new features:
+Premium offers allow new features:
 
-| Free                                            | Premium                                                                                                                                           |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 channel translation configurable per channel. | 5 channel translation configurable per channel.                                                                                                   |
-| 20 channel translation configurable per server. | Unlimited channel translation configurable per server.                                                                                            |
-| 2 role translation configurable per role.       | 5 role translation configurable per role.                                                                                                         |
-| 20 role translation configurable per guild.     | Unlimited role translation configurable per guild.                                                                                                |
-| 1 category translation configurable per guild.  | Unlimited category translation configurable per guild and the number of configurable category translations per category is increased from 1 to 3. |
-| Can't translate bot.                            | Bots translation becomes available.                                                                                                               |
-| Can't blacklist languages.                      | Possibility of blacklist languages.                                                                                                               |
+| Feature                                   | Free                          | Premium                                 |
+| ----------------------------------------- | ----------------------------- | --------------------------------------- |
+| Translation quality                       | Best model unless the service is busy | Always the best model, priority when the service is busy |
+| Channels, roles and categories translated | 20 of each                    | 500 of each                             |
+| Translations of one message               | Up to 3                       | Up to 20                                |
+| Translation groups                        | 1 group of 3 channels         | 5 groups of 5 channels                  |
+| Messages of bots translated               | No                            | Yes                                     |
+| Embeds and buttons translated             | No                            | Yes                                     |
+| Blacklist (channels, roles, languages)    | No                            | Yes                                     |
+| Speech to text session                    | 30 minutes                    | 2 hours                                 |
+| Speech to text without a top.gg vote      | No                            | Yes                                     |
+| Speech to text configurations             | 1                             | Unlimited (3 per voice channel)         |
+| Speech to text translation                | No                            | Yes                                     |
+| Text to speech without a top.gg vote      | No                            | Yes                                     |
+| Text to speech channels                   | 5                             | 25                                      |
+| FAQ                                       | 1 group, 5 questions          | 5 groups, 150 questions                 |
+| Premium on several servers                | -                             | With the 3 and 10 servers offers        |
 
-exemple: `There is the role @french and I want all posts from members with this role to be translated into English, Japanese and Brazilian. With the free version only the English and Japanese translation could be done but with the premium version I could add the Brazilian.`
+Example: with the role @french translated into English, Japanese, Brazilian and Spanish, a message of a member with this role produces 4 translations: the free version stops at 3 translations per message, the premium one allows up to 20.
 
 
 
-**Refund policy:** Premiums can be refunded but not translator offers if they are used because the used characters have to be paid, but in case of any problem contact the support and we will do it case by case in a transparent way.
+**Refund policy:** In case of any problem, contact the support and we will handle refunds case by case, in a transparent way.
 
 
 

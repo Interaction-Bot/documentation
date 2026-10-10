@@ -25,3 +25,7 @@ For example, if you are in channel #Channel1 and you write _Hello World_, you ha
 If your server is not premium and the bot does more than 3 translations for one message, it will warn you and stop the translation. You need to upgrade to premium to increase this limit. The _**simultaneous translation warning**_ disables the warning of the bot.
 
 </details>
+
+## More information
+
+The overview also shows the number of members, channels, categories and roles, whether the server is premium, and the cluster and shard that run your server.

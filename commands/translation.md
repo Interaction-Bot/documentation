@@ -4,43 +4,34 @@ description: All commands about the translation
 
 # Translation
 
-Interaction bot provides many options to configure the translation. You can see in these pages which commands do what and how to use them.
+Interaction Bot provides many ways to translate messages. The advanced configuration (channels, roles, categories, flags, blacklist...) is done on the [dashboard](../website/dashboard/).
 
 There are several ways to translate a message:
 
-* Command -> translate your message to given language (see `/translate`)
-* Application - Translate -> translate the selected message (target language is based on your discord application language)\
-  This translation is ephemeral, this means its only visible for you.\
+* **Command** -> translate a text into a given language (see `/translate`).
+* **Application - Translate** -> right click (or long press) a message, then *Apps* > *Translate*. The target language is your Discord application language. The result is ephemeral: only you can see it.\
   ![](<../.gitbook/assets/image (26).png>)
-* Automatic -> automatic translation of the send messages (see [Broken link](broken-reference "mention"), [Broken link](broken-reference "mention") and [Broken link](broken-reference "mention"))
+* **Application - Detect** -> *Apps* > *Detect* shows the language of the selected message.
+* **Flag reaction** -> add a flag emoji below a message (see [Flag translation](../website/dashboard/flag-translation.md)).
+* **Automatic** -> translation of the sent messages by [channel](../website/dashboard/channel-translation.md), [role](../website/dashboard/role-translation.md) or [category](../website/dashboard/category-translation.md).
 
-General commands for translate text:
+| Command                           | Description                                                                                          |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `/translate <message> [language]` | Translate the message. Without `language`, your Discord language is used. The answer is ephemeral.   |
+| `/detect <text>`                  | Detect the language of a text.                                                                       |
+| `/languages`                      | Display all the languages supported by Interaction Bot.                                              |
 
-| Commands                          | Description                                        |
-| --------------------------------- | -------------------------------------------------- |
-| `/translate <message> <language>` | Translate the message.                             |
-| `/detect <message>`               | Detects the language of a message.                 |
-| `/languages`                      | Display all supported language by Interaction Bot. |
+{% hint style="info" %}
+The old `/config` commands no longer exist: everything is configured on the [dashboard](../website/dashboard/).
+{% endhint %}
 
-Configuration commands of translation:
+#### Common parameters (dashboard)
 
-| Commands                                                                               | Description                                                                                                                                                                                         |
-| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/config get <option>`                                                                 | Displays the current translation configuration according to the option.                                                                                                                             |
-| `/config detector <char>`                                                              | Sets the minimum number of characters before the message can be automatically translated.                                                                                                           |
-| `/config flag_translation <enable> <#channel> <auto_delete> <mode> <apply_everywhere>` | <p>Configure flag translation for a specific channel.</p><p><code>&#x3C;mode></code> <br>    all -> translates on every reaction</p><p>    one -> will only translate if not translated yet<br></p> |
-
-#### Common Parameter
-
-|                              | Possible values                                                                                 | Usage                                                                                                                                                                                                                        |
-| ---------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<@role>`                    | Any role on the server. Mention role with @role-name                                            | The role that should automaticaly be translated. See [Broken link](broken-reference "mention") for more information                                                                                                          |
-| `<#category>`                | Any category where the Bot has read and write permissions. Mention category with #category-name | The category where every channel underneath should be translated. See [Broken link](broken-reference "mention") for more information                                                                                         |
-| `<#source_channel>`          | Any channel where the Bot has read permissions. Mention channel with #channel-name              | The Channel where the bot should translate from                                                                                                                                                                              |
-| `<#target_channel>`          | Any channel where the Bot has write permissions. Mention channel with #channel-name             | The Channel where the bot should translate to (can be the same as `<#source_channel>`)                                                                                                                                       |
-| `<language>`                 | Any available language. See `/languages`                                                        | The target language the bot should translate to                                                                                                                                                                              |
-| `<enable>`                   | true \| false                                                                                   | activate (true) or deactive (false) the translation for the given combination of `<#source_channel>`, `<#target_channel>` and `<language>`                                                                                   |
-| `<style>`                    | embed \| webhook \| message                                                                     | <p>Changes the styling of the translated message<br><img src="../.gitbook/assets/image (13).png" alt=""><br><img src="../.gitbook/assets/image (20).png" alt=""><br><img src="../.gitbook/assets/image (29).png" alt=""></p> |
-| `<delete_original_message>`  | true \| false                                                                                   | deletes the original message to only keep the translation                                                                                                                                                                    |
-| `<delete_translation>`       | true \| false                                                                                   | the translation will automaticaly be deleted after 30 seconds                                                                                                                                                                |
-| `<translate_bot>`            | true \| false                                                                                   | allow the bot to translate other bots (**premium only**)                                                                                                                                                                     |
+| Parameter                | Possible values         | Usage                                                                                   |
+| ------------------------ | ----------------------- | --------------------------------------------------------------------------------------- |
+| Language                 | Any language of `/languages` | The target language of the translation.                                            |
+| Style                    | embed \| webhook \| message | How the translation is sent.                                                      |
+| Delete message           | on \| off               | Delete the original message and keep only the translation.                              |
+| Delete translation       | on \| off               | The bot deletes its translation after a delay depending on its length.                  |
+| Translate bot            | on \| off               | Also translate messages sent by bots (**premium only**).                                |
+| Always send              | on \| off               | Send the translation even if the message is already in the target language.             |

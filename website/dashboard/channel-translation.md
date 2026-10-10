@@ -37,6 +37,7 @@ These options accept different parameters
 * _**STYLE:**_ the style of the message, if the translation will be sent in embed, in a webhook, or just like a regular message
 * _**DELETE MESSAGE:**_ if the language of the message sent by the user is different than the _**Language**_ option, the message will be deleted.
 * _**DELETE TRANSLATION:**_ the bot will delete his translation after a time that depends on the length of the translation (0.13 seconds per character).
+* _**Keep it for (seconds)**_: with _Delete translation_, how long the translation stays (5 s to 24 h, empty = depends on its length).
 * _**TRANSLATE BOT:**_ even if the message is sent by a bot, the bot will translate the message if the language doesn't correspond to the target language.
 * _**ALWAYS SEND:**_ even if the message is in the same language as the LANGUAGE option, the bot will translate the message.
 
@@ -51,3 +52,7 @@ Once you have made your configuration, you must click on the _**Save**_ button o
 When you have configured all the channels that you want to be translated, don't forget to save your configuration!
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+## Pause a configuration
+
+Each configuration has an _**Enabled**_ checkbox in the list: unchecked, the configuration is kept but does not translate. Free servers can have 20 configurations, premium servers 500.

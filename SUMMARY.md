@@ -11,13 +11,25 @@
   * [Premium](website/dashboard/premium.md)
   * [Channel Translation](website/dashboard/channel-translation.md)
   * [Role Translation](website/dashboard/role-translation.md)
+  * [Translation Groups](website/dashboard/translation-groups.md)
   * [Flag translation](website/dashboard/flag-translation.md)
+  * [Category Translation](website/dashboard/category-translation.md)
+  * [Language identification](website/dashboard/language-identification.md)
+  * [Blacklist](website/dashboard/blacklist.md)
+  * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
+  * [Speech to text](website/dashboard/speech-to-text.md)
+  * [Text to speech](website/dashboard/tts-channels.md)
+  * [FAQ](website/dashboard/faq.md)
 * [Status](website/status.md)
 
 ## Commands
 
 * [General](commands/general.md)
 * [Translation](commands/translation.md)
+* [Voice (TTS and transcription)](commands/voice.md)
+* [Translation groups](commands/groups.md)
+* [FAQ and /ask](commands/faq.md)
+* [Flags and diagnostics](commands/flags.md)
 
 ## Premium
 
