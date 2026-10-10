@@ -3,6 +3,8 @@
 * [📍 Home](README.md)
 * [Getting started](getting-started.md)
 * [FAQ](faq.md)
+* [Permissions](permissions.md)
+* [Security and privacy](security.md)
 
 ## Translation
 
@@ -39,9 +41,13 @@
 
 * [General](commands/general.md)
 * [Translation commands](commands/translation.md)
+* [All commands](commands/all-commands.md)
 * [Voice (TTS and transcription)](commands/voice.md)
+  * [Voice guides](commands/voice-guides.md)
+  * [Voice troubleshooting](commands/voice-troubleshooting.md)
 * [Translation groups](commands/groups.md)
 * [FAQ and /ask](commands/faq.md)
+  * [FAQ guides](commands/faq-guides.md)
 * [Flags and diagnostics](commands/flags.md)
 
 ## Premium

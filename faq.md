@@ -44,7 +44,7 @@ Members with the *Administrator* permission of the server can configure the bot.
 ## Voice
 
 ### How do I use `/tts` or `/connect`?
-These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours, or a premium server. See [Voice](commands/voice.md).
+These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](commands/voice.md).
 
 ### How long can a transcription last?
 30 minutes per session on a free server, 2 hours on premium.

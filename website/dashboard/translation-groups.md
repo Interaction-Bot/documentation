@@ -10,27 +10,63 @@ description: Link several channels, each with its own language.
 
 Navbar > category _**Translation**_ > _**Translation Groups**_.
 
+The counter at the top right shows how many groups you use, for example `1/1` on a free server.
+
 ## How it works
 
-Put several channels in a group and give each one its language. A message sent in one channel is translated into the language of **every other channel** of the group. No need to configure every source/target pair. The same groups can be managed with the [`/group` commands](../../commands/groups.md).
+Put several channels in a group and give each one its language. A message sent in one channel is translated into the language of **every other channel** of the group. No need to configure every source/target pair.
+
+**Example.** A group called `Community` has three channels: `#general` in English, `#general-fr` in French and `#general-es` in Spanish. A message written in `#general-fr` is sent in `#general` in English and in `#general-es` in Spanish. It is not sent back to `#general-fr`.
+
+The same groups can be managed with the [`/group` commands](../../commands/groups.md). The dashboard and the commands always show the same groups.
 
 ## Create a group
 
-Click on _**Add a group**_ (the counter at the top right shows how many groups you use). For each group:
+1. Click _**Add a group**_. A new group named `Group 1` (or the next free number) appears.
+2. Change its settings (see the table below).
+3. Click _**+ Add a channel**_ and choose a channel. The new row uses English by default: change the language if needed.
+4. Repeat step 3 for each channel of the group.
+5. Click _**Save**_ in the popup at the bottom of the page.
 
-* **Group name** (up to 40 characters, unique).
-* **Style**: Embed, Webhook (default) or Message.
-* **Enabled**: pause the whole group without deleting it.
-* **Channels**: click _**+ Add a channel**_, choose the channel and its language. A channel can only appear once in a group.
-* **Delete the original message**: keep only the translations.
-* **Delete translations after a while**: the translations are deleted after _**Keep for (seconds)**_ (from 5 to 86400, empty = automatic, depends on the length of the text).
-* **Translate bots** (**premium**): also translate messages sent by bots.
-* **Always send, even if it looks already translated**.
+If you click _**Add a group**_ or _**+ Add a channel**_ when you are at your limit, the Premium popup opens instead.
 
-A _**Delete group**_ button removes the group. Don't forget to save the changes in the popup that appears at the bottom.
+## Settings of a group
+
+| Field | What it does |
+| ----- | ------------ |
+| **Group name** | Up to 40 characters, unique in the server (upper and lower case are not distinguished). |
+| **Style** | How translations are sent: **Webhook** (default), **Message** or **Embed**. See [Styles and options](../../translation/styles-and-options.md). |
+| **Enabled** | Pause the whole group without deleting it. A paused group keeps its channels and languages. |
+| **Channel** and **Language** | One row per channel. A channel can only appear once in a group, so the channels already used by another row are disabled in the list. |
+| **Delete the original message** | Delete the original message once it has been translated. The bot needs the *Manage Messages* permission in the source channel. |
+| **Delete translations after a while** | The translations are deleted after the duration you give in **Keep for (seconds)**, from 5 to 86400. Leave it empty (*auto*) to use the reading time of the text, with a minimum of 25 seconds. |
+| **Translate bots** (Premium) | Also translate messages sent by bots. Locked on free servers. |
+| **Always send** | Send the translations even when the message looks already translated, or is in the language of the channel. |
+
+The **Delete group** button removes the group, with its channels. Nothing else is changed.
+
+{% hint style="info" %}
+A channel that is deleted from the server is removed from its group automatically.
+{% endhint %}
+
+## Saving
+
+Changes are not saved until you click _**Save**_ in the popup at the bottom of the page. _**Cancel**_ goes back to the last saved configuration.
+
+If the save is refused, the page shows: `Invalid configuration (duplicated name or channel, limit reached, ...)`. Check the names (no two groups with the same name), the channels (no channel twice in a group, only text channels of this server) and the limits. If the page shows `Could not save, try again`, the server did not answer: try again in a moment.
 
 ## Limits
 
 | Free                        | Premium                      |
 | --------------------------- | ---------------------------- |
 | 1 group of up to 3 channels | 5 groups of up to 5 channels |
+
+If Premium ends, the free limits apply again. The dashboard does not let you add groups or channels above them, and it refuses to save a configuration above them. Remove the extra groups or channels, then save.
+
+## Troubleshooting
+
+* **A group does nothing.** Check that the group is **enabled**, and that the bot has its permissions in the channels of the group. Run [`/check-permissions`](../../commands/flags.md#diagnostics-check-permissions) on your server to list the missing permissions.
+* **A message is not translated into one language.** That language is the same as the message's language, or the message is too short or its language is uncertain. Turn on **Always send** to force the translation.
+* **Translations are plain messages, not webhooks.** The bot lacks the *Manage Webhooks* permission.
+
+For the full list of rules, see [Translation groups](../../commands/groups.md).
