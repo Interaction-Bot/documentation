@@ -25,7 +25,9 @@ The bot finds your offer through this link: it only reads the Discord account th
 
 ## 3. Wait for the bot to update
 
-The bot checks Patreon every **10 minutes**. If you linked your Discord account less than 10 minutes ago, wait a little. Then refresh the dashboard page.
+The bot checks Patreon every **10 minutes**. If you linked your Discord account less than 10 minutes ago, you can either wait a little, or click on **Refresh my Patreon status** in the Patreon block of the [Premium page](../website/dashboard/premium.md) of the dashboard to update it right away.
+
+To protect Patreon, the button can only be used about once per minute for the whole bot: if it is greyed out with a countdown, someone just refreshed, so your status is probably already up to date. Wait for the countdown, then try again.
 
 ## 4. Activate Premium on your server
 

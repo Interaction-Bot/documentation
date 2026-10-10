@@ -30,7 +30,13 @@ This section is a dropdown with the steps, and a _**Link Patreon**_ button that 
 
 1. Buy an offer on Patreon (see [Subscribe](../../premium/subscribe.md)).
 2. Link your Discord account to your Patreon account on the Patreon connections page. The bot reads your Discord account from your Patreon account.
-3. Refresh the page. If you linked your account less than 10 minutes ago, wait: the bot checks Patreon every 10 minutes, so the premium is usually active after 10 minutes.
+3. Update your status. If you linked your account less than 10 minutes ago, either wait (the bot checks Patreon every 10 minutes), or use the **Patreon** block described below.
+
+## Patreon: refresh my status
+
+Above the **Premium** section, the **Patreon** block has a _**Refresh my Patreon status**_ button. It asks the bot to check Patreon right now, so a subscription or a Discord link made a moment ago is taken into account without waiting for the 10-minute check. The page then shows _Premium refreshed._ and updates your slots.
+
+The button can only be used about once per minute for the whole bot, to protect Patreon. When it is greyed out, it shows a countdown (_Refresh available in 30s_): wait for it, then click again. If a refresh is already running, you are asked to try again in a few seconds.
 
 ## Enable Premium on this server
 
