@@ -41,3 +41,51 @@ The bot needs the permissions *Connect* and *Speak* in the voice channel (and *V
 * Session length: **30 minutes** on free servers, **2 hours** on premium servers. Sessions are limited per cluster; if the service is busy, retry later.
 * Settings made on the dashboard ([Speech to text](../website/dashboard/speech-to-text.md)) apply live to the running session.
 * The bot leaves an automatic session 30 seconds after the last human left.
+
+## Step by step
+
+### Read a text aloud (`/tts`)
+
+1. Join a voice channel (the bot joins it for you).
+2. Type `/tts query:<text>`. The language is detected, or choose `language`.
+3. The bot reads the text. Several `/tts` are queued (up to 5 waiting). Use `/tts-stop` to cut the speech and empty the queue.
+
+### Read a text channel aloud (TTS channel)
+
+1. Run `/tts-channel set channel:#chat` (or use the [dashboard](../website/dashboard/tts-channels.md)). Optionally set `language` and `translate_to`.
+2. Join a voice channel and write in `#chat`: the bot joins **your** voice channel and reads your message.
+3. `/tts-channel list` shows the channels, `/tts-channel remove` stops one.
+
+{% hint style="info" %}
+Messages longer than 200 characters are not read. A member who sends many messages in a few seconds is ignored for a moment, and a channel that receives a burst of messages is slowed down too.
+{% endhint %}
+
+### Transcribe a voice channel
+
+1. Join the voice channel.
+2. In the text channel where the text must appear, type `/transcribe start`. Optionally set `language` (the language spoken), `translate_to` (premium) and `style`.
+3. Speak: the bot posts what is said, under the name of the speaker (webhook style).
+4. End with `/transcribe stop`, or wait for the end of the session (30 minutes free, 2 hours premium).
+
+To start it **automatically** when someone joins a voice channel, use `/transcribe auto enable` or the [Speech to text](../website/dashboard/speech-to-text.md) page.
+
+## Good to know
+
+| Topic                | Behaviour |
+| -------------------- | --------- |
+| Who can use TTS     | Premium servers, or any member who voted on top.gg in the last 24 hours. |
+| Who can transcribe  | Premium servers, or a member who voted. Premium servers do not need a vote. |
+| Several people speak | Each speaker is transcribed separately, with their own name. |
+| The bot leaves       | 30 seconds after the last human left, after 5 minutes without speech (TTS), or at the end of the session time. |
+| Service busy         | The number of simultaneous transcriptions is limited; retry a bit later. After 5 consecutive failures of the service the session stops by itself. |
+| Commands cooldown   | `/tts` once every 5 seconds per member, `/tts-stop` every 3 seconds. |
+
+## Troubleshooting
+
+| Symptom                                              | What to check |
+| ---------------------------------------------------- | ------------- |
+| The bot does not join                                | *Connect* and *Speak* permissions in the voice channel, and that the channel is not full. |
+| Nothing is read in a TTS channel                     | You must be in a voice channel; the message must be 200 characters or fewer and contain readable text. Check the vote or premium. |
+| "You need to vote" message                           | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote); you can vote every 12 hours, `/reminder enable` notifies you. |
+| The transcription is empty or in the wrong language  | Set the `language` of the speakers; check that the bot has *View Channel* and *Send Messages* (and *Manage Webhooks* for the webhook style). |
+| The transcription stops after a while                | The session reached its limit (30 min free, 2 h premium): start it again. |
