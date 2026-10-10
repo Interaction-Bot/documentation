@@ -47,7 +47,7 @@ Members with the *Administrator* permission of the server can configure the bot.
 These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](commands/voice.md).
 
 ### How long can a transcription last?
-30 minutes per session on a free server, 2 hours on premium.
+30 minutes per day on a free server, 2 hours per day on premium. The time is counted over all the transcriptions of the day.
 
 ## FAQ feature
 

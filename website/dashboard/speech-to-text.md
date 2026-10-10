@@ -33,7 +33,7 @@ Changes to the style, the language, the translation and the text channel apply l
 | Free                       | Premium                                  |
 | -------------------------- | ---------------------------------------- |
 | 1 configuration            | Unlimited configurations                 |
-| Session of 30 minutes      | Session of 2 hours                       |
+| 30 minutes per day         | 2 hours per day                          |
 | Needs a recent top.gg vote | No vote needed                           |
 | No translation             | Translation of the transcription         |
 
