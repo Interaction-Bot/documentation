@@ -4,7 +4,7 @@ description: Information about the premium
 
 # Premium
 
-Interaction Bot Premium adds functionality to the bot on your servers. Offers cover 1, 3 or 10 servers ($3.99, $9.99 or $19.99 per month) and are managed on Patreon; the premium page of the website shows the full comparison.
+Interaction Bot Premium adds functionality to the bot on your servers. Offers cover 1, 3 or 10 servers and are managed on Patreon; the premium page of the website shows the full comparison.
 
 The offers are available [here](https://www.patreon.com/interactionbot).
 
