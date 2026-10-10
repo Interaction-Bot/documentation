@@ -44,7 +44,7 @@ The bot needs these permissions. See also [Permissions](../permissions.md).
 | `/tts-channel remove channel` | Stop reading a text channel aloud. |
 | `/tts-channel list` | List the text channels read aloud. |
 | `/transcribe start [channel] [language] [translate_to] [style]` | Transcribe a voice channel. The transcriptions are posted in `channel` (this channel by default). |
-| `/transcribe stop` | Stop the transcription. See [Session length and stop](#session-length-and-stop). |
+| `/transcribe stop` | Stop the transcription. See [Daily time and stop](#daily-time-and-stop). |
 | `/transcribe auto enable [voice_channel] [text_channel] [language] [translate_to] [style]` | Start a transcription automatically when someone joins a voice channel. Needs *Manage Server*. |
 | `/transcribe auto disable` | Disable the automatic transcription, and stop it if it is running. Needs *Manage Server*. |
 
@@ -115,9 +115,9 @@ The voices of bots are ignored.
 * With a translation, the translation is posted **instead of** the original text.
 * If what is said is already in the target language, nothing is translated. If the translation fails, the original text is posted.
 
-### Session length and stop
+### Daily time and stop
 
-* A session lasts at most **30 minutes** on a free server, and **2 hours** on a premium server. When the limit is reached, the bot leaves the voice channel and posts a message. On a free server this message suggests premium.
+* Transcription time is limited **per day**: **30 minutes a day** on a free server, and **2 hours a day** on a premium server. The time of all the sessions of the day counts. When the limit is reached, the bot leaves the voice channel and posts a message. On a free server this message suggests premium.
 * `/transcribe stop` can be used by:
   * the member who started the transcription;
   * a member with *Manage Server* or *Move Members*;

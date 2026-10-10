@@ -30,7 +30,7 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 | Flag reactions on messages of bots | No | Yes |
 | Embeds and buttons translated | No | Yes |
 | Blacklist (channels, roles, languages) | No | Yes |
-| Speech to text session | 30 minutes | 2 hours |
+| Speech to text time | 30 minutes per day | 2 hours per day |
 | Speech to text without a top.gg vote | No | Yes |
 | Speech to text configurations | 1 | Unlimited (3 per voice channel) |
 | Speech to text translation | No | Yes |

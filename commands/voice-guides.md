@@ -50,7 +50,7 @@ A message is read only if it is 200 characters or less, has text, does not start
    * `language`: the spoken language (detected automatically if empty);
    * `style`: `webhook` (default, under the speaker's name), `message` or `embed`.
 4. Speak. The transcriptions appear in the text channel.
-5. Run `/transcribe stop` when you are done. The session also ends after 30 minutes on a free server, or 2 hours on a premium server.
+5. Run `/transcribe stop` when you are done. The transcription also stops when the daily time is used up: 30 minutes a day on a free server, 2 hours a day on a premium server.
 
 {% hint style="info" %}
 `/transcribe start` needs a premium server, or a vote in the last 24 hours from the member who runs it. Only one transcription runs per server at a time.
