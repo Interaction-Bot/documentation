@@ -12,6 +12,9 @@ Go to [interaction-bot.com](https://interaction-bot.com), click _Add to Discord_
 ### How do I translate a message?
 Add a flag emoji under it, right click > *Apps* > *Translate*, or use `/translate`. For automatic translation, configure the [dashboard](website/dashboard/). See the [translation overview](translation/overview.md).
 
+### Can I use the bot on a server where it is not added?
+Yes, install it on your Discord account (**Add to my account** on the [Account page](website/dashboard/account.md) or in `/invite`). `/translate` and the **Apps** menus then work in any server and in DMs. See [User app](commands/user-app.md).
+
 ### Which languages are supported?
 100 languages. Run `/languages` to list them.
 
@@ -47,7 +50,7 @@ Members with the *Administrator* permission of the server can configure the bot.
 These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](commands/voice.md).
 
 ### How long can a transcription last?
-30 minutes per day on a free server, 2 hours per day on premium. The time is counted over all the transcriptions of the day.
+The limit is per server: 30 minutes per day on a free server, 2 hours per day on premium. The time of all the transcriptions adds up. The "day" is a period of 24 hours that starts with the first transcription (not at midnight). When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](commands/voice.md#daily-time-and-stop).
 
 ## FAQ feature
 

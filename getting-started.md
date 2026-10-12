@@ -40,6 +40,10 @@ There are three quick ways to translate, without any configuration:
 
 3. **The Apps menu**: right click a message > *Apps* > *Translate*.
 
+{% hint style="success" %}
+**You can't add the bot to a server?** Install it on your own Discord account instead: `/translate`, **Apps > Translate** and **Apps > Detect** then work in any server and in DMs. See [User app](commands/user-app.md).
+{% endhint %}
+
 ## :gear: Translate automatically
 
 To translate messages **without anybody doing anything**, configure the bot on the [dashboard](website/dashboard/): log in with Discord, select your server and pick:

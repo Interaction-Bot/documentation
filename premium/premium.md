@@ -16,6 +16,7 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 * Premium is set **per server**, not per member.
 * A slot is used when a server gets Premium, with the `/premium add` command or with the **Premium** toggle of the [dashboard](../website/dashboard/premium.md). Turning Premium off, or running `/premium remove`, frees the slot.
 * To give Premium to another server when all your slots are used, first remove it from a server.
+* Premium is also used by the [user app](../commands/user-app.md): a member whose Discord account is linked to a Patreon offer gets it when using `/translate` and the Apps menus outside the servers where the bot is added.
 * To buy, see [Subscribe](subscribe.md). To activate it, see [Usage](usage.md).
 
 ## What Premium brings
@@ -30,7 +31,7 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 | Flag reactions on messages of bots | No | Yes |
 | Embeds and buttons translated | No | Yes |
 | Blacklist (channels, roles, languages) | No | Yes |
-| Speech to text time | 30 minutes per day | 2 hours per day |
+| Speech to text time (per server, over 24 hours) | 30 minutes | 2 hours |
 | Speech to text without a top.gg vote | No | Yes |
 | Speech to text configurations | 1 | Unlimited (3 per voice channel) |
 | Speech to text translation | No | Yes |

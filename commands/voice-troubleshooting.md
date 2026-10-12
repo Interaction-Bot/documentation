@@ -52,8 +52,9 @@ These are the messages the bot shows, with the exact text.
 | *⛔ I am missing permissions in #channel: I need to send messages there (and to embed links in the embed style). Please give them to me or choose another style.* | The bot cannot post in the chosen channel. Fix the permissions or change the style. |
 | *⛔ The translation of the transcription is reserved for premium servers.* | `translate_to` needs a premium server. Start the transcription without it. |
 | *✅ The transcription has been stopped.* | The transcription ended: stopped by a member, or the bot left the channel. |
-| *⏱️ The time limit of this transcription session has been reached, the transcription has been stopped.* | Premium servers: the 2-hour limit is reached. Start a new session. |
-| *⏱️ The free time limit of 30 minutes per transcription session has been reached, the transcription has been stopped.* | Free servers: the daily limit of 30 minutes is reached. Premium servers can transcribe up to 2 hours per day. |
+| *⏱️ This server has used all its daily transcription time (2 hours), the transcription has been stopped. It will be available again …* | Premium servers: the 2 hours of the day are used. The message gives the time when it is available again. |
+| *⏱️ This server has used its 30 free minutes of transcription for today, the transcription has been stopped. … Premium servers can transcribe up to 2 hours per day.* | Free servers: the 30 minutes of the day are used. The time adds up across sessions and is available again at the time given in the message. |
+| *⏱️ Sorry, this server has used all its daily transcription time. It will be available again …* | `/transcribe start` (or the automatic transcription) was refused because the time of the day is already used. Wait for the time given in the message. |
 | *⛔ I'm not able to use the speech recognition api.* | The speech service failed 5 times in a row, so the transcription stopped. Try again later. |
 
 ## Typical problems
@@ -70,7 +71,7 @@ These are the messages the bot shows, with the exact text.
 | Only some words are transcribed | Very short sounds, quiet sounds and noise are ignored. Speak closer to the microphone, and avoid overlapping voices. The speech service may also skip unclear parts. |
 | Transcriptions are plain messages, not webhooks | The bot lacks **Manage Webhooks** in that channel. Give it the permission, or choose the *message* style. |
 | The translation is not posted | Translation is premium only. On a premium server, the original text is posted when the translation fails. |
-| The transcription stops by itself | The daily time limit was reached (30 minutes a day free, 2 hours a day premium), the bot was disconnected, or the speech service failed 5 times in a row. |
+| The transcription stops by itself | The daily time of the server was used up (30 minutes free, 2 hours premium, counted over 24 hours from the first transcription), the bot was disconnected, or the speech service failed 5 times in a row. |
 | A `/disconnect` vote never completes | When `/disconnect` is run without a channel, the vote buttons do not count the votes. Run `/disconnect` again with the `channel` option filled in, then vote. |
 | The language of the speech is wrong | Set the **language** option (`/transcribe start` or `/transcribe auto enable`), or the language of the configuration on the dashboard. |
 

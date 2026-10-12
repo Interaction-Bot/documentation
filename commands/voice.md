@@ -117,7 +117,9 @@ The voices of bots are ignored.
 
 ### Daily time and stop
 
-* Transcription time is limited **per day**: **30 minutes a day** on a free server, and **2 hours a day** on a premium server. The time of all the sessions of the day counts. When the limit is reached, the bot leaves the voice channel and posts a message. On a free server this message suggests premium.
+* Transcription time is limited **per server and per day**: **30 minutes** on a free server, **2 hours** on a premium server. The time of all the sessions (manual and automatic) adds up.
+* The "day" is a period of **24 hours that starts with the first transcription**, not at midnight. When the limit is reached, the bot leaves the voice channel and posts a message saying when transcription is available again (a Discord countdown such as *in 5 hours*). Until then, `/transcribe start` and the automatic transcription are refused. After this time the counter starts again from 0.
+* On a free server, the message suggests premium. A server that gets premium (or loses it) is measured against the limit of its current offer.
 * `/transcribe stop` can be used by:
   * the member who started the transcription;
   * a member with *Manage Server* or *Move Members*;

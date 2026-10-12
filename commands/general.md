@@ -10,10 +10,12 @@ description: All other commands of Interaction Bot.
 | `/dashboard`     | Get the link of the dashboard.                                              |
 | `/documentation` | Get the documentation link.                                                 |
 | `/help`          | Display the help page with all commands.                                    |
-| `/invite`        | Get the invitation link of the bot.                                         |
+| `/invite`        | Get the invitation link of the bot, and the **Add to my account** button to install it as a [user app](user-app.md). |
 | `/ping`          | Get the ping of the bot.                                                    |
 | `/support`       | Get the Discord link of the support server.                                 |
 | `/reminder enable` | Enable or disable the reminder to vote for the bot on top.gg.             |
+
+`/dashboard`, `/help`, `/invite` and `/support` also work as a [user app](user-app.md), without the bot in the server.
 
 ## Voting
 

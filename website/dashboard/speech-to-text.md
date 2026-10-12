@@ -33,7 +33,7 @@ Changes to the style, the language, the translation and the text channel apply l
 | Free                       | Premium                                  |
 | -------------------------- | ---------------------------------------- |
 | 1 configuration            | Unlimited configurations                 |
-| 30 minutes per day         | 2 hours per day                          |
+| 30 minutes per day (per server) | 2 hours per day (per server)         |
 | Needs a recent top.gg vote | No vote needed                           |
 | No translation             | Translation of the transcription         |
 
