@@ -35,12 +35,14 @@
   * [Speech to text](website/dashboard/speech-to-text.md)
   * [Text to speech](website/dashboard/tts-channels.md)
   * [FAQ](website/dashboard/faq.md)
+  * [Account](website/dashboard/account.md)
 * [Status](website/status.md)
 
 ## Commands
 
 * [General](commands/general.md)
 * [Translation commands](commands/translation.md)
+* [User app](commands/user-app.md)
 * [All commands](commands/all-commands.md)
 * [Voice (TTS and transcription)](commands/voice.md)
   * [Voice guides](commands/voice-guides.md)

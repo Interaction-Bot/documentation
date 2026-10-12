@@ -37,6 +37,8 @@ The navigation bar is organized in sections:
 * **Audio & AI**: Speech to text, Text to speech and FAQ.
 * **Management**: Language identification, Blacklist and Flag shortcuts.
 
+Your personal settings (vote reminder, [user app](../../commands/user-app.md)) are on the [Account page](account.md), which is not linked to a server.
+
 For mobile users, click on the burger button at the top left of the page to open the navigation bar.
 
 <figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
