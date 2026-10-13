@@ -12,7 +12,7 @@ Navbar > category _**Audio & AI**_ > _**Text to speech**_.
 
 ## What it does
 
-Each message posted in a TTS channel is **read aloud in the voice channel of its author**: the bot joins the member's voice channel when needed. Only the members who are in a voice channel are read. The same can be done with the command [`/tts-channel`](../../commands/voice.md#tts-channels).
+Each message posted in a TTS channel is **read aloud in the voice channel of its author**: the bot joins the member's voice channel when needed. Only the members who are in a voice channel are read. The same can be done with the command [`/tts-channel`](../../audio/voice.md#tts-channels).
 
 The page lists the **TTS channels** of the server. The list is saved as a whole: each _Save_ replaces the previous list.
 
@@ -49,5 +49,5 @@ Adding a channel beyond the limit opens the premium window.
 Voice features need a **premium server**, or a **[top.gg vote](https://top.gg/bot/893494390142697493/vote)** from a member of the server in the last 24 hours. When neither is true, the bot posts a message asking for a vote in the TTS channel, at most once a day.
 
 {% hint style="info" %}
-The bot must be able to view the channel and read its messages, and to connect and speak in the voice channels. See [Voice troubleshooting](../../commands/voice-troubleshooting.md) for the messages and fixes, and [Voice guides](../../commands/voice-guides.md#2-read-a-text-channel-aloud-tts-channel) for a step by step setup.
+The bot must be able to view the channel and read its messages, and to connect and speak in the voice channels. See [Voice troubleshooting](../../audio/voice-troubleshooting.md) for the messages and fixes, and [Voice guides](../../audio/voice-guides.md#2-read-a-text-channel-aloud-tts-channel) for a step by step setup.
 {% endhint %}

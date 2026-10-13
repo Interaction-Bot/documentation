@@ -11,9 +11,7 @@ The bot asks Discord for the minimum it needs:
 * **Servers and channels**, to know where to translate;
 * **Messages and their content**, to translate them, detect their language, answer the FAQ;
 * **Reactions**, for the [flag translation](translation/flags.md);
-* **Voice states**, to join voice channels for [text to speech and transcription](commands/voice.md).
-
-It does **not** use the *Server Members* ability, and it ignores direct messages.
+* **Voice states**, to join voice channels for [text to speech and transcription](audio/voice.md).
 
 ## What it keeps
 

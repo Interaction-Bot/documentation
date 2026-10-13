@@ -55,8 +55,8 @@ Not sure which one? Read the [translation overview](translation/overview.md) and
 
 ## :microphone: And more
 
-* **Text to speech** and **speech to text** in voice channels: [Voice](commands/voice.md).
-* A **FAQ** that answers your members' questions: [FAQ and /ask](commands/faq.md).
+* **Text to speech** and **speech to text** in voice channels: [Voice](audio/voice.md).
+* A **FAQ** that answers your members' questions: [FAQ and /ask](qa/faq.md).
 * **Premium** for higher limits and more options: [Premium](premium/premium.md).
 
 {% hint style="info" %}

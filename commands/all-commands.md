@@ -28,7 +28,7 @@ description: Every command of Interaction Bot on one page.
 | `/transcribe start [channel] [language] [translate_to] [style]` / `stop` | Transcribe a voice channel.                              | Everybody     |
 | `/transcribe auto enable\|disable`                               | Transcribe automatically when someone joins a voice channel.     | Manage Server |
 
-See [Voice](voice.md).
+See [Voice](../audio/voice.md).
 
 ## FAQ
 
@@ -37,7 +37,7 @@ See [Voice](voice.md).
 | `/ask <question> [group]`       | Ask the FAQ of the server.                           | Everybody     |
 | `/faq add\|list\|remove`        | Manage the entries of the FAQ.                       | Manage Server |
 
-See [FAQ and /ask](faq.md).
+See [FAQ and /ask](../qa/faq.md).
 
 ## General
 
