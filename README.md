@@ -3,12 +3,8 @@ description: >-
   Welcome to the documentation of Interaction Bot! You can find everything you
   need to configure and use the bot here! If you have trouble with the bot,
   don't hesitate to contact the support.
-cover: .gitbook/assets/interaction-bot-banner.gif
+cover: .gitbook/assets/interaction-bot-banner-cover.gif
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
 ---
 
 # 📍 Home
