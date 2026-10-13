@@ -8,17 +8,17 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 ## Localization
 
-Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../commands/faq.md).
+Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../qa/faq.md).
 
 The counter at the top right shows how many groups you use, for example `1/1` on a free server.
 
 ## How it works
 
-Add questions and answers to a **group**, then choose the channels where the bot uses them. Members search the group with [`/ask`](../../commands/faq.md). With **Auto reply** on, the bot also answers by itself, in the channels of the group, when it is sure enough of the answer.
+Add questions and answers to a **group**, then choose the channels where the bot uses them. Members search the group with [`/ask`](../../qa/faq.md). With **Auto reply** on, the bot also answers by itself, in the channels of the group, when it is sure enough of the answer.
 
 The bot never writes answers: it only sends the answers you wrote. When a question is in another language, the answer is translated into that language.
 
-For the questions members usually ask about this feature, read [FAQ guides](../../commands/faq-guides.md).
+For the questions members usually ask about this feature, read [FAQ guides](../../qa/faq-guides.md).
 
 ## Create a group
 
@@ -53,7 +53,7 @@ The default of 84% is a good start. Change it only after you have read some auto
 | **Question** | Up to 200 characters. Write it the way members ask it, as a full sentence. |
 | **Answer** | Up to 1800 characters. Put the most useful information first. Links and channel mentions are kept when the answer is translated. |
 
-Each question needs an answer: the page shows `Every question needs an answer.` if one is missing. The complete advice is in [How do I write a good question?](../../commands/faq-guides.md#how-do-i-write-a-good-question).
+Each question needs an answer: the page shows `Every question needs an answer.` if one is missing. The complete advice is in [How do I write a good question?](../../qa/faq-guides.md#how-do-i-write-a-good-question).
 
 ## Limits
 
@@ -61,7 +61,7 @@ Each question needs an answer: the page shows `Every question needs an answer.` 
 | ------------------------------------------------- | ---------------------------------------------------- |
 | 1 group, 3 channels and 5 questions per group     | 5 groups, 10 channels and 150 questions per group    |
 
-If Premium ends, the extra groups are switched off and the extra questions and channels are not used by the bot, but nothing is deleted. The dashboard does not let you add more than the free limits. See [What happens when Premium ends?](../../commands/faq-guides.md#what-happens-when-premium-ends).
+If Premium ends, the extra groups are switched off and the extra questions and channels are not used by the bot, but nothing is deleted. The dashboard does not let you add more than the free limits. See [What happens when Premium ends?](../../qa/faq-guides.md#what-happens-when-premium-ends).
 
 ## Messages you may see
 

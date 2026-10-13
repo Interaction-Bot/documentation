@@ -12,7 +12,7 @@ Navbar > category _**Audio & AI**_ > _**Speech to text**_.
 
 ## Transcription
 
-The bot transcribes the speech of voice channels and posts the transcriptions in a text channel, a forum or the chat of the voice channel. The spoken language is detected automatically. You can also use [`/transcribe`](../../commands/voice.md#transcription-speech-to-text).
+The bot transcribes the speech of voice channels and posts the transcriptions in a text channel, a forum or the chat of the voice channel. The spoken language is detected automatically. You can also use [`/transcribe`](../../audio/voice.md#transcription-speech-to-text).
 
 Use the _**Enabled / Disabled**_ toggle to enable the transcription on the server, then click _**Add a configuration**_. For each configuration:
 
@@ -53,5 +53,5 @@ Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/8934
 | _The configuration could not be saved._ | Try again. |
 
 {% hint style="info" %}
-The page only saves the configuration. For the permissions the bot needs and the messages posted during a session, see [Voice](../../commands/voice.md#transcription-speech-to-text) and [Voice troubleshooting](../../commands/voice-troubleshooting.md). A step by step setup is in [Voice guides](../../commands/voice-guides.md#4-transcribe-automatically-when-someone-joins-transcribe-auto).
+The page only saves the configuration. For the permissions the bot needs and the messages posted during a session, see [Voice](../../audio/voice.md#transcription-speech-to-text) and [Voice troubleshooting](../../audio/voice-troubleshooting.md). A step by step setup is in [Voice guides](../../audio/voice-guides.md#4-transcribe-automatically-when-someone-joins-transcribe-auto).
 {% endhint %}

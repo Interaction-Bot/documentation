@@ -34,7 +34,7 @@ These commands and menus work everywhere once the app is on your account:
 | `/dashboard` | Link of the dashboard. |
 | `/support` | Link of the support server. |
 
-Everything that needs the bot **inside the server** is not available as a user app: [translation groups](groups.md), [flag shortcuts](flags.md), [text to speech and speech to text](voice.md), the [FAQ](faq.md), `/premium`, `/check-permissions` and the automatic translation of channels, roles and categories. These need the bot to be added to the server by an administrator.
+Everything that needs the bot **inside the server** is not available as a user app: [translation groups](groups.md), [flag shortcuts](flags.md), [text to speech and speech to text](../audio/voice.md), the [FAQ](../qa/faq.md), `/premium`, `/check-permissions` and the automatic translation of channels, roles and categories. These need the bot to be added to the server by an administrator.
 
 ## Your settings
 

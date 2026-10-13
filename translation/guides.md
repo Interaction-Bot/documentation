@@ -49,12 +49,12 @@ A message in any of the channels is translated into the other two. Free servers 
 ## 6. Read the messages of a channel aloud
 
 1. Join a voice channel and run `/connect`, or just `/tts`.
-2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Voice](../commands/voice.md).
+2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Voice](../audio/voice.md).
 
 ## 7. Transcribe a voice channel
 
-Run `/transcribe start` in a text channel while in a voice channel, or enable `/transcribe auto enable` to start it when someone joins. See [Voice](../commands/voice.md) and the dashboard page [Speech to text](../website/dashboard/speech-to-text.md).
+Run `/transcribe start` in a text channel while in a voice channel, or enable `/transcribe auto enable` to start it when someone joins. See [Voice](../audio/voice.md) and the dashboard page [Speech to text](../website/dashboard/speech-to-text.md).
 
 ## 8. A FAQ that answers by itself
 
-Create a group on the dashboard page [FAQ](../website/dashboard/faq.md), add questions and answers, choose the channels and turn on _Auto reply_. See [FAQ and /ask](../commands/faq.md).
+Create a group on the dashboard page [FAQ](../website/dashboard/faq.md), add questions and answers, choose the channels and turn on _Auto reply_. See [FAQ and /ask](../qa/faq.md).

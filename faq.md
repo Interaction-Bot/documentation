@@ -47,15 +47,15 @@ Members with the *Administrator* permission of the server can configure the bot.
 ## Voice
 
 ### How do I use `/tts` or `/connect`?
-These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](commands/voice.md).
+These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](audio/voice.md).
 
 ### How long can a transcription last?
-The limit is per server: 30 minutes per day on a free server, 2 hours per day on premium. The time of all the transcriptions adds up. The "day" is a period of 24 hours that starts with the first transcription (not at midnight). When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](commands/voice.md#daily-time-and-stop).
+The limit is per server: 30 minutes per day on a free server, 2 hours per day on premium. The time of all the transcriptions adds up. The "day" is a period of 24 hours that starts with the first transcription (not at midnight). When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](audio/voice.md#daily-time-and-stop).
 
 ## FAQ feature
 
 ### How do I make the bot answer questions on my server?
-Create a group on the dashboard [FAQ](website/dashboard/faq.md), add questions and answers, and use `/ask` or turn on the automatic reply. See [FAQ and /ask](commands/faq.md).
+Create a group on the dashboard [FAQ](website/dashboard/faq.md), add questions and answers, and use `/ask` or turn on the automatic reply. See [FAQ and /ask](qa/faq.md).
 
 ## Premium
 

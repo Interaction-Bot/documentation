@@ -19,6 +19,22 @@
 * [Languages and flags](translation/languages.md)
 * [Troubleshooting](translation/troubleshooting.md)
 
+## Audio
+
+* [Overview](audio/overview.md)
+* [Voice (TTS and transcription)](audio/voice.md)
+* [Voice guides](audio/voice-guides.md)
+* [Voice troubleshooting](audio/voice-troubleshooting.md)
+* [Speech to text (dashboard)](website/dashboard/speech-to-text.md)
+* [Text to speech (dashboard)](website/dashboard/tts-channels.md)
+
+## Q&A
+
+* [Overview](qa/overview.md)
+* [FAQ and /ask](qa/faq.md)
+* [FAQ guides](qa/faq-guides.md)
+* [FAQ (dashboard)](website/dashboard/faq.md)
+
 ## Website
 
 * [🌐 Dashboard](website/dashboard/README.md)
@@ -32,9 +48,6 @@
   * [Language identification](website/dashboard/language-identification.md)
   * [Blacklist](website/dashboard/blacklist.md)
   * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
-  * [Speech to text](website/dashboard/speech-to-text.md)
-  * [Text to speech](website/dashboard/tts-channels.md)
-  * [FAQ](website/dashboard/faq.md)
   * [Account](website/dashboard/account.md)
 * [Status](website/status.md)
 
@@ -44,12 +57,7 @@
 * [Translation commands](commands/translation.md)
 * [User app](commands/user-app.md)
 * [All commands](commands/all-commands.md)
-* [Voice (TTS and transcription)](commands/voice.md)
-  * [Voice guides](commands/voice-guides.md)
-  * [Voice troubleshooting](commands/voice-troubleshooting.md)
 * [Translation groups](commands/groups.md)
-* [FAQ and /ask](commands/faq.md)
-  * [FAQ guides](commands/faq-guides.md)
 * [Flags and diagnostics](commands/flags.md)
 
 ## Premium
