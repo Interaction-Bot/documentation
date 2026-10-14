@@ -24,7 +24,7 @@ Limits are checked by the dashboard and by the bot when you save. See [Premium](
 
 ### How do I create a group?
 
-Groups are created on the dashboard only: `/faq add` needs an existing group, and `/faq list` tells you to create one on the dashboard when there is none.
+Groups are created on the dashboard, or in Discord with the **Create a group** button of `/faq manage`. `/faq add` needs an existing group, and `/faq list` tells you to create one when there is none.
 
 1. Open the [FAQ](../website/dashboard/faq.md) page and click **Create group**.
 2. Give it a name (up to 40 characters, unique).

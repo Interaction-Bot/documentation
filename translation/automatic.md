@@ -4,7 +4,7 @@ description: Translate messages automatically by channel, role, category or grou
 
 # Automatic translation
 
-Automatic translation is configured on the [dashboard](../website/dashboard/) (and for groups, also with commands). Once saved, the bot translates the messages **by itself**, nobody has to do anything.
+Automatic translation is configured on the [dashboard](../website/dashboard/) or with the [configuration commands](../commands/configuration.md) (`/channel-translation manage`, `/role-translation manage`, `/category-translation manage`, `/group manage`). Once saved, the bot translates the messages **by itself**, nobody has to do anything.
 
 Four kinds of automatic translation exist. They can be combined: when several apply to the same message, the bot handles them in this order: **channel, group, category, role**.
 
@@ -21,7 +21,7 @@ Four kinds of automatic translation exist. They can be combined: when several ap
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Language**          | Target language of the translation.                                                                                                           |
 | **Sending channel**   | Where the translation is posted. Empty = the channel of the original message (role and category).                                             |
-| **Style**             | *Embed* (a card with the author, the translation and the languages), *Webhook* (sent under the author's name and avatar), *Message* (plain message). |
+| **Style**             | *Embed* (a card with the author, the translation and the languages), *Webhook* (sent under the author's name and avatar), *Message* (plain message), *Thread* (the translations in a thread under the message, see [Translation in threads](threads.md)). |
 | **Delete message**    | The original message is deleted, only the translation stays.                                                                                  |
 | **Delete translation**| The translation is deleted after a delay: the duration you set (5 seconds to 24 hours), or by default a reading time (0.13 s per character, 25 s minimum). |
 | **Translate bot**     | Also translate messages of bots (**premium**).                                                                                                |

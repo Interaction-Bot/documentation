@@ -12,6 +12,7 @@ description: Reference of the translation commands.
 | **Apps > Translate**               | Right click a message: private translation in your default or Discord language. Works as a [user app](user-app.md).                                 |
 | **Apps > Detect**                  | Right click a message: language of the message.                                                      |
 | `/group ...`                       | Translation groups, see [Translation groups](groups.md).                                              |
+| `/channel-translation`, `/role-translation`, `/category-translation` | Automatic translation set up from Discord (`set`, `remove`, `list`, `manage` panel), thread style included, see [Configuration commands](configuration.md). |
 | `/flags set` / `/flags clear`      | Flag shortcuts under the messages of a channel, see [Flags](flags.md).                                |
 | `/check-permissions`               | List the permissions the bot lacks in the configured channels.                                       |
 

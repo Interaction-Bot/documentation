@@ -14,6 +14,7 @@ The answers are never generated: the bot only sends the answers your moderators 
 | `/faq add group:<group>` | *Manage Server* | Open a form to add a question and its answer to a group. |
 | `/faq list [group]` | *Manage Server* | List the entries, with their numbers. |
 | `/faq remove entry:<entry>` | *Manage Server* | Remove an entry. |
+| `/faq manage` | *Manage Server* | Open a panel (buttons and menus) to manage the groups and the entries without typing options. See [Configuration commands](../commands/configuration.md#faq). |
 
 Groups, linked channels and the automatic replies are managed on the dashboard, see [FAQ](../website/dashboard/faq.md). For everything step by step, from A to Z, read [FAQ guides](faq-guides.md).
 

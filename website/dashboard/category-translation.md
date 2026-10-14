@@ -44,7 +44,7 @@ The popup has two required fields:
 
 Click on _**OPTIONS**_ to show the optional settings:
 
-* **STYLE**: *Change the style of the translation that will be sent.* **Embed** (default), **Webhook** or **Message**. See [Channel Translation](channel-translation.md#add-a-configuration).
+* **STYLE**: *Change the style of the translation that will be sent.* **Embed** (default), **Webhook**, **Message** or **Thread** (the translations in a thread under the original message, with the options **LOOK IN THE THREAD**, **ARCHIVE THE THREAD AFTER** and **SHOW THE LANGUAGE**: see [Translation in threads](../../translation/threads.md)). See [Channel Translation](channel-translation.md#add-a-configuration).
 * **SENDING CHANNEL**: *Change the channel where translation will be send.* Optional. If it is empty, the translation is posted in the channel where the original message was posted.
 * **DELETE MESSAGE** (*Delete the original message.*): the original message is deleted once its translation is sent.
 * **DELETE TRANSLATION** (*Delete the message sent by the bot.*): the translation is deleted after the reading time (0.13 second per character, minimum 25 seconds). This page has no option to choose another delay.

@@ -33,7 +33,7 @@ This section shows the state of the bot on your server.
 
 ## Bot Language
 
-This section sets the language of the bot messages on this server, with the **LANGUAGE** list. For the moment, only **English** is available.
+This section sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **LANGUAGE** list. **Automatic** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
 
 ## Warning
 
