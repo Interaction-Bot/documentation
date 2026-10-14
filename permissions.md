@@ -20,6 +20,7 @@ Give them to the bot role, then check the **permission overrides** of the channe
 | Translation sent as **embed**             | Target          | View Channel, Send Messages, Embed Links, Attach Files                  |
 | Translation sent as **webhook**           | Target          | View Channel, Send Messages, **Manage Webhooks**, Attach Files          |
 | Translation sent as **message**           | Target          | View Channel, Send Messages, Attach Files                               |
+| Translation sent in a **thread**          | Source          | View Channel, Read Message History, **Create Public Threads**, **Send Messages in Threads** (plus Manage Webhooks for the webhook look, Manage Threads to reopen a locked thread) |
 | *Delete message* option                   | Source          | Manage Messages                                                         |
 | Flag reaction translation                 | Message channel | View Channel, Read Message History, Send Messages (the bot replies)     |
 | Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions, Read Message History                       |
@@ -28,7 +29,7 @@ Give them to the bot role, then check the **permission overrides** of the channe
 | Transcription output                      | Text channel    | Send Messages, plus Embed Links (embed) or Manage Webhooks (webhook)    |
 | FAQ replies (`/ask`, automatic)           | Channel         | View Channel, Read Message History, Send Messages, Embed Links (Send Messages in Threads in a thread) |
 
-If the bot lacks *Manage Webhooks*, it falls back to a plain message.
+If the bot lacks *Manage Webhooks*, it falls back to a plain message. If it lacks the thread permissions, the translation is sent as a webhook message in the channel (see [Translation in threads](translation/threads.md#permissions)).
 
 ## Who can use the commands?
 
@@ -36,7 +37,7 @@ If the bot lacks *Manage Webhooks*, it falls back to a plain message.
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | `/translate`, `/detect`, `/languages`, Apps > Translate / Detect, `/help`, `/about`, `/ping`, `/invite`, `/support`, `/documentation`, `/dashboard`, `/reminder`, `/ask` | Everybody |
 | `/tts`, `/tts-stop`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`                    | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
-| `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/check-permissions`                       | Members with **Manage Server**        |
+| `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/check-permissions`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
 | `/premium add`, `/premium remove`                                                                          | The member who owns the premium (see [Usage](premium/usage.md)) |
 | Dashboard                                                                                                  | Members with **Administrator**        |
 

@@ -41,6 +41,7 @@ Running `/group set-channel` again with a channel that is already in the group o
 | `/group set-channel <name> <channel> <language>` | Add a channel to a group, or change the language of a channel already in it. |
 | `/group remove-channel <name> <channel>` | Remove a channel from a group. The channel itself is not deleted. |
 | `/group settings <name> [options]` | Change the settings of the group. Only the options you give are changed. |
+| `/group manage` | Open an interactive panel (buttons and menus) to create and edit the groups. See [Configuration commands](configuration.md#translation-groups). |
 | `/group list` | List the groups of the server, with their state (🟢 enabled, ⏸️ paused), style and channels. |
 
 ## Settings

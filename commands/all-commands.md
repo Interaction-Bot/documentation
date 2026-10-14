@@ -8,13 +8,21 @@ description: Every command of Interaction Bot on one page.
 
 ## Translation
 
+The configuration commands are described on one page: [Configuration commands](configuration.md).
+
 | Command                                                  | Description                                                              | Who          |
 | -------------------------------------------------------- | ------------------------------------------------------------------------ | ------------ |
 | `/translate <message> [language]` 👤                      | Translate a text (private answer by default).                                     | Everybody    |
 | `/detect <text>` 👤                                      | Tell the language of a text.                                              | Everybody    |
 | `/languages` 👤                                          | List the 100 supported languages.                                         | Everybody    |
 | Apps > **Translate** / **Detect** 👤                     | Right click a message.                                                    | Everybody    |
-| `/group create\|delete\|set-channel\|remove-channel\|settings\|list` | [Translation groups](groups.md).                                  | Manage Server |
+| `/channel-translation set\|remove\|list\|manage` | Automatic translation by channel, with the [Thread style](../translation/threads.md). [Details](configuration.md#channel-translation). | Manage Server |
+| `/role-translation set\|remove\|list\|manage` | Automatic translation by role. [Details](configuration.md#role-translation). | Manage Server |
+| `/category-translation set\|remove\|list\|manage` | Automatic translation by category. [Details](configuration.md#category-translation). | Manage Server |
+| `/group create\|delete\|set-channel\|remove-channel\|settings\|list\|manage` | [Translation groups](groups.md).                                  | Manage Server |
+| `/flag-translation set\|remove\|list\|manage` | Translation by flag reaction. [Details](configuration.md#flag-translation). | Manage Server |
+| `/language-detection set\|reset\|list\|manage` | Minimum number of characters to translate, per channel. | Manage Server |
+| `/blacklist add\|remove\|list\|manage` | Roles, channels and languages never translated (Premium). | Manage Server |
 | `/flags set <channel> <flags>` / `/flags clear <channel>` | [Flag shortcuts](flags.md).                                              | Manage Server |
 | `/check-permissions`                                     | List the permissions the bot lacks in the configured channels.            | Manage Server |
 
@@ -35,7 +43,7 @@ See [Voice](../audio/voice.md).
 | Command                         | Description                                          | Who           |
 | ------------------------------- | ---------------------------------------------------- | ------------- |
 | `/ask <question> [group]`       | Ask the FAQ of the server.                           | Everybody     |
-| `/faq add\|list\|remove`        | Manage the entries of the FAQ.                       | Manage Server |
+| `/faq add\|list\|remove\|manage` | Manage the groups and the entries of the FAQ.        | Manage Server |
 
 See [FAQ and /ask](../qa/faq.md).
 
@@ -51,6 +59,8 @@ See [FAQ and /ask](../qa/faq.md).
 | `/documentation` | Link of this documentation.                                       |
 | `/dashboard` 👤     | Link of the dashboard.                                            |
 | `/reminder <enable>` | Be reminded when you can vote again on top.gg.                |
+| `/bot-language [language]` | Language of the replies of the bot in the server (Manage Server). See [Configuration commands](configuration.md#language-of-the-bot). |
+| `/server-settings [warning]` | Server settings of the dashboard overview (Manage Server). |
 
 ## Premium
 

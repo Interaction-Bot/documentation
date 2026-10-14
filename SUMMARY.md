@@ -15,6 +15,7 @@
 * [Language detection](translation/language-detection.md)
 * [How translation works](translation/how-it-works.md)
 * [Styles and options](translation/styles-and-options.md)
+* [Translation in threads](translation/threads.md)
 * [Setup guides](translation/guides.md)
 * [Languages and flags](translation/languages.md)
 * [Troubleshooting](translation/troubleshooting.md)
@@ -55,6 +56,7 @@
 
 * [General](commands/general.md)
 * [Translation commands](commands/translation.md)
+* [Configuration commands](commands/configuration.md)
 * [User app](commands/user-app.md)
 * [All commands](commands/all-commands.md)
 * [Translation groups](commands/groups.md)

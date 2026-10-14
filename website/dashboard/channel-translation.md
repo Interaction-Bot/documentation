@@ -41,6 +41,10 @@ The list shows all the configurations of your server.
 
 ## Add a configuration
 
+{% hint style="info" %}
+You can also manage the configurations in Discord, with `/channel-translation manage`: see [Configuration commands](../../commands/configuration.md#channel-translation).
+{% endhint %}
+
 Click on _**Add a configuration**_ (under the box *Add a channel*).
 
 <figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
@@ -63,7 +67,14 @@ Click on _**OPTIONS**_ to show the optional settings.
   * **Embed** (default): an embed with the name and avatar of the author of the original message, and the two languages in the footer.
   * **Webhook**: the translation is posted with the name and avatar of the author of the original message, as if the author had written it. The bot creates a webhook in the sending channel. If the webhook cannot be created, the bot posts a normal message instead.
   * **Message**: a normal message from the bot, without embed.
-* **DELETE MESSAGE** (*Delete the original message.*): the original message is deleted once its translation is sent. If the bot has no permission to delete it, the original message stays.
+  * **Thread**: the translations are sent in a **thread under the original message**, which stays in the channel. See [Translation in threads](../../translation/threads.md). When you choose it, the sending channel is not needed and three options appear:
+
+<figure><img src="../../.gitbook/assets/dashboard-channel-translation-thread.png" alt="Thread style options"><figcaption><p>Options of the Thread style</p></figcaption></figure>
+
+    * **LOOK IN THE THREAD**: *Webhook* (name and avatar of the author, default), *Message* or *Embed*.
+    * **ARCHIVE THE THREAD AFTER**: inactivity before the thread is archived: 1 hour, 24 hours (default), 3 days or 7 days.
+    * **SHOW THE LANGUAGE**: writes the language above each translation (on by default).
+* **DELETE MESSAGE** (*Delete the original message.*): the original message is deleted once its translation is sent. If the bot has no permission to delete it, the original message stays. Not available with the **Thread** style, which keeps the original message.
 * **DELETE TRANSLATION** (*Delete the message sent by the bot.*): the translation is deleted after a time. When it is on, the field **Keep it for (seconds, empty = reading time)** appears:
   * a value from **5** to **86400** seconds (24 hours). A value outside this range makes the save fail (see [Errors](#errors)).
   * empty (`auto`): the reading time, 0.13 second per character with a minimum of 25 seconds.
