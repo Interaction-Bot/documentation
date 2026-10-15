@@ -24,7 +24,9 @@ Give them to the bot role, then check the **permission overrides** of the channe
 | *Delete message* option                   | Source          | Manage Messages                                                         |
 | Flag reaction translation                 | Message channel | View Channel, Read Message History, Send Messages (the bot replies)     |
 | Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions, Read Message History                       |
-| `/tts`, `/connect`, TTS channels          | Voice channel   | View Channel, Connect, Speak                                            |
+| `/tts start`, `/tts say`, `/connect`, TTS channels | Voice channel | View Channel, Connect, Speak                                 |
+| Recording (`/record`)                     | Voice channel   | View Channel, Connect (the bot records, stage channels are not recorded) |
+| Temporary voice channels (`/tempvoice`)   | Category        | Manage Channels, Move Members, Connect (checked by `/tempvoice setup`)  |
 | Transcription (`/transcribe`)             | Voice channel   | View Channel, Connect (the bot listens)                                 |
 | Transcription output                      | Text channel    | Send Messages, plus Embed Links (embed) or Manage Webhooks (webhook)    |
 | FAQ replies (`/ask`, automatic)           | Channel         | View Channel, Read Message History, Send Messages, Embed Links (Send Messages in Threads in a thread) |
@@ -36,8 +38,9 @@ If the bot lacks *Manage Webhooks*, it falls back to a plain message. If it lack
 | Commands                                                                                                  | Who                                   |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | `/translate`, `/detect`, `/languages`, Apps > Translate / Detect, `/help`, `/about`, `/ping`, `/invite`, `/support`, `/documentation`, `/dashboard`, `/reminder`, `/ask` | Everybody |
-| `/tts`, `/tts-stop`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`                    | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
-| `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/check-permissions`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
+| `/tts start`, `/tts stop`, `/tts say`, `/tts voice`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`, `/transcribe live`, `/record start`, `/record stop`, `/record list`, `/limits` | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)). The server can limit `/tts start`, `/tts stop`, `/tts voice` and `/record start` to chosen roles and members, see [Text to speech settings](website/dashboard/tts-settings.md) and [Voice recording](website/dashboard/voice-recording.md). |
+| `/tempvoice panel`, `/voice ...`, `/find`, `/join` | Everybody, with the rights of the channel owner (see [Temporary voice channels](commands/tempvoice.md)) |
+| `/group`, `/faq`, `/flags`, `/tts-channel`, `/tts settings`, `/transcribe auto`, `/tempvoice setup`, `/tempvoice config`, `/check-permissions`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
 | `/premium add`, `/premium remove`                                                                          | The member who owns the premium (see [Usage](premium/usage.md)) |
 | Dashboard                                                                                                  | Members with **Administrator**        |
 

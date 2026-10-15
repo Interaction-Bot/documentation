@@ -46,11 +46,17 @@ Members with the *Administrator* permission of the server can configure the bot.
 
 ## Voice
 
-### How do I use `/tts` or `/connect`?
-These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](audio/voice.md).
+### How do I make the bot read a message aloud?
+Run `/tts say` with your text, or `/tts start` to have the messages of the chat read for as long as you want. `/tts say` needs a [top.gg vote](https://top.gg/bot/893494390142697493/vote) from you in the last 24 hours, even on a premium server. `/tts start` needs a premium server, or a vote from a member of the server. See [Text to speech commands](commands/tts.md).
 
 ### How long can a transcription last?
-The limit is per server: 30 minutes per day on a free server, 2 hours per day on premium. The time of all the transcriptions adds up. The "day" is a period of 24 hours that starts with the first transcription (not at midnight). When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](audio/voice.md#daily-time-and-stop).
+The limit is per server and per day: 30 minutes on a free server, 3 hours on premium. The time of all the transcriptions adds up, and the day restarts at midnight UTC. When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily limits](audio/limits.md) and [Daily time and stop](audio/voice.md#daily-time-and-stop).
+
+### Can I record a voice channel?
+Yes, with `/record start`. The bot records one track per speaker, announces the recording to the members who join, and sends the link in private messages to the member who started it. Recordings are kept 7 days on a free server and 30 days on premium. See [Recording commands](commands/record.md).
+
+### Where can I see how much time the server has left?
+Run `/limits`. It shows the time used, the time left and the reset time for transcription, text to speech and recording. See [Daily limits](audio/limits.md).
 
 ## FAQ feature
 

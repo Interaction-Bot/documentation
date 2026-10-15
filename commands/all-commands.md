@@ -31,12 +31,48 @@ The configuration commands are described on one page: [Configuration commands](c
 | Command                                                          | Description                                                      | Who           |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------- |
 | `/connect [channel]` / `/disconnect [channel]`                   | Move the bot to a voice channel or make it leave.                | Everybody     |
-| `/tts <query> [language]` / `/tts-stop`                          | Read a text aloud / stop the speech.                             | Everybody     |
-| `/tts-channel set\|remove\|list`                                 | Read the messages of a channel aloud.                            | Manage Server |
+| `/tts start` / `/tts stop`                                       | Read the chat aloud during a session / end the session.          | Allowed by the server (everybody by default) |
+| `/tts say <query> [language]`                                    | Read one text aloud, once.                                       | Everybody     |
+| `/tts voice [voice] [reset]`                                     | Choose the voice that reads your messages.                       | Allowed by the server |
+| `/tts settings`                                                  | Settings of the text to speech, with buttons.                    | Manage Server |
+| `/tts-channel set\|remove\|list\|manage`                         | Read the messages of a channel aloud.                            | Manage Server |
 | `/transcribe start [channel] [language] [translate_to] [style]` / `stop` | Transcribe a voice channel.                              | Everybody     |
-| `/transcribe auto enable\|disable`                               | Transcribe automatically when someone joins a voice channel.     | Manage Server |
+| `/transcribe live`                                               | Open the live transcription (Activity) of your voice channel.    | Everybody     |
+| `/transcribe record start` / `stop`                              | Record the transcript (text only) of the running transcription.  | Allowed by the server |
+| `/transcribe auto enable\|disable\|manage`                       | Transcribe automatically when someone joins a voice channel.     | Manage Server |
 
-See [Voice](../audio/voice.md).
+See [Voice](../audio/voice.md) and [Text to speech commands](tts.md).
+
+## Recording
+
+| Command                                     | Description                                                              | Who                |
+| ------------------------------------------- | ------------------------------------------------------------------------ | ------------------ |
+| `/record start [continuous]`                | Record the voice channel you are in, one track per speaker. `continuous` (premium) keeps it going when the channel is empty. | Allowed by the server |
+| `/record stop`                              | Stop the recording of the server.                                        | The starter, or Manage Server / Move Members |
+| `/record list`                              | Your recordings on this server, with their links.                        | Everybody          |
+
+See [Recording commands](record.md).
+
+## Temporary voice channels
+
+| Command                                     | Description                                                              | Who                |
+| ------------------------------------------- | ------------------------------------------------------------------------ | ------------------ |
+| `/tempvoice setup`                          | Create the creator channel and turn the feature on.                      | Manage Server      |
+| `/tempvoice config [...]`                   | Vote kick share, moderation log, and roles allowed to create a room.     | Manage Server      |
+| `/tempvoice panel`                          | Post the control panel in the chat of your channel.                      | The owner          |
+| `/voice name\|limit\|privacy\|status\|waiting\|password\|thread\|invite\|region\|bitrate\|info\|claim\|transfer\|delete\|reset` | Control your temporary channel (the owner). | The owner |
+| `/voice user trust\|untrust\|block\|unblock\|invite\|kick <member>` | Trust, block, invite or kick a member of your channel.           | The owner (kick: vote for the others) |
+| `/find <member>` / `/join <password>`       | Find the channel of a member / get into a channel with its password.    | Everybody          |
+
+See [Temporary voice channels](tempvoice.md).
+
+## Limits
+
+| Command      | Description                                                                 | Who        |
+| ------------ | --------------------------------------------------------------------------- | ---------- |
+| `/limits`    | Daily time of transcription, text to speech and recording: used, left, reset. | Everybody |
+
+See [Daily limits](../audio/limits.md).
 
 ## FAQ
 

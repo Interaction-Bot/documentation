@@ -8,6 +8,7 @@ Every update of Interaction Bot is listed here, newest first.
 
 | Update | Date | Highlights |
 | ------ | ---- | ---------- |
+| [Unreleased](unreleased.md) | Not yet released | Audio: daily limits, `/tts start`, voices, recording, temporary voice channels, commands page |
 | [October 2026](2026-10.md) | 10 October 2026 | Translation groups, speech to text, text to speech, FAQ, flag shortcuts, `/check-permissions`, typing indicator, new dashboard pages, new translation engine |
 
 {% hint style="info" %}
