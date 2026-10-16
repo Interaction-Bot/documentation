@@ -57,14 +57,26 @@ See [Recording commands](record.md).
 
 | Command                                     | Description                                                              | Who                |
 | ------------------------------------------- | ------------------------------------------------------------------------ | ------------------ |
-| `/tempvoice setup`                          | Create the creator channel and turn the feature on.                      | Manage Server      |
-| `/tempvoice config [...]`                   | Vote kick share, moderation log, and roles allowed to create a room.     | Manage Server      |
+| `/tempvoice setup`                          | Create the creator channel (category and room) and turn the feature on.  | Manage Server      |
+| `/tempvoice config [vote_kick] [log] [role] [role_action]` | Vote kick share (10 to 100 %), moderation log, and roles allowed to create a room. | Manage Server |
 | `/tempvoice panel`                          | Post the control panel in the chat of your channel.                      | The owner          |
-| `/voice name\|limit\|privacy\|status\|waiting\|password\|thread\|invite\|region\|bitrate\|info\|claim\|transfer\|delete\|reset` | Control your temporary channel (the owner). | The owner |
-| `/voice user trust\|untrust\|block\|unblock\|invite\|kick <member>` | Trust, block, invite or kick a member of your channel.           | The owner (kick: vote for the others) |
-| `/find <member>` / `/join <password>`       | Find the channel of a member / get into a channel with its password.    | Everybody          |
+| `/tempvoice interface [channel]`            | Post the control panel in a text channel (this one by default).          | Manage Server      |
+| `/voice name <name>`                        | Rename your channel (64 characters at most).                             | The owner          |
+| `/voice limit <limit>` / `/voice bitrate <kbps>` / `/voice region <region>` | User limit, audio quality, voice region.  | The owner          |
+| `/voice privacy <mode>`                     | Public, Locked / Unlock, Hide / Unhide, Lock chat / Unlock chat.         | The owner          |
+| `/voice status [text]` / `/voice thread`    | Status under the channel / chat thread on or off.                        | The owner          |
+| `/voice waiting` / `/voice password [password]` | Waiting room on or off / password for `/join` (locked channels only). | The owner     |
+| `/voice invite [message] [channel]`         | Post a public invitation with a link in a public text channel.           | The owner          |
+| `/voice info`                               | Owner, privacy, password, chat, waiting room, trusted and blocked members. | Members of the channel |
+| `/voice claim` / `/voice transfer <member>` / `/voice delete` | Take over a channel whose owner left / give it to a member / delete it. | Claim: anyone in the channel; others: the owner |
+| `/voice reset`                              | Back to the defaults of the creator (removes trusted, blocked, password, waiting room). | The owner |
+| `/voice user trust\|untrust\|block\|unblock <member> [member2] [member3]` | Trust, untrust, block or unblock up to 3 members. | The owner |
+| `/voice user invite <member>`               | Send a member a private message with an invitation.                      | The owner          |
+| `/voice user kick <member> [member2] [member3]` | Disconnect up to 3 members, or start a vote kick (for a non-owner).  | The owner, or any member for a vote |
+| `/find <member>` / `/join <password>`       | Find the channel of a member / get into a locked channel with its password. | Everybody        |
+| Apps > **Disconnect**, **Transfer Ownership**, **Send Invite** | Right click on a member.                              | The owner          |
 
-See [Temporary voice channels](tempvoice.md).
+See [Temporary voice channels](tempvoice.md) and [Temp voice](../website/dashboard/temp-voice.md).
 
 ## Limits
 

@@ -38,8 +38,12 @@ The audio changes below are being prepared. They are listed here as they are in 
 
 ## Temporary voice channels
 
-* `/tempvoice setup` creates a **Join to create** channel. Each member who joins it gets a voice channel of their own, with a control panel of 15 buttons.
-* 21 `/voice` subcommands for the owner, `/find`, `/join`, context menus, a vote kick between the members of the channel, and a moderation log.
+* `/tempvoice setup` creates a **Join to create** channel. Each member who joins it gets a voice channel of their own, with a control panel of 15 buttons, in the chat of the room or in a text channel (`/tempvoice interface`).
+* A **welcome message** per creator: off, with notification or silent, with placeholders.
+* 21 `/voice` subcommands for the owner, including `/voice invite` (public invitation with a link) and `/voice info`, `/find`, `/join`, and context menus.
+* Privacy is split into lock, hide and chat lock. Kick is instant for the owner, and a vote for the other members (10 to 100 %, by steps of 5).
+* A waiting room with Accept and Refuse, passwords on locked channels, up to 3 members per trust or block command.
+* Name templates with date, number, random word and role placeholders, censored words, and a minimum and maximum user limit per creator.
 * Settings on the [Temp voice](../website/dashboard/temp-voice.md) page. No top.gg vote is needed.
 * See [Temporary voice channels](../commands/tempvoice.md).
 
