@@ -48,8 +48,8 @@ A message in any of the channels is translated into the other two. Free servers 
 
 ## 6. Read the messages of a channel aloud
 
-1. Join a voice channel and run `/connect`, or just `/tts`.
-2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Voice](../audio/voice.md).
+1. Join a voice channel and run `/tts start` in the text channel: the messages of this chat are read aloud for as long as the session lasts. To read one text only, run `/tts say`.
+2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Text to speech commands](../commands/tts.md).
 
 ## 7. Transcribe a voice channel
 

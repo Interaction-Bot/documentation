@@ -34,7 +34,7 @@ The navigation bar is organized in sections:
 
 * **Overview** and **Premium** at the top.
 * **Translation**: Channel Translation, Translation Groups, Role Translation, Flag Translation and Category Translation.
-* **Audio & AI**: Speech to text, Text to speech and FAQ.
+* **Audio & AI**: Speech to text, Text to speech, Text to speech settings, Voice recording, Temp voice and FAQ.
 * **Management**: Language identification, Blacklist and Flag shortcuts.
 
 Your personal settings (vote reminder, [user app](../../commands/user-app.md)) are on the [Account page](account.md), which is not linked to a server.
@@ -68,7 +68,7 @@ If the bot refuses the change (for example a premium-only option on a server wit
 * [Overview](overview.md): server information, bot language and the simultaneous translation warning.
 * [Premium](premium.md): enable Premium on this server with your Patreon offer.
 * [Channel Translation](channel-translation.md), [Translation Groups](translation-groups.md), [Role Translation](role-translation.md), [Flag Translation](flag-translation.md) and [Category Translation](category-translation.md).
-* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md) and [FAQ](faq.md) (category *Audio & AI*).
+* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md), [Text to speech settings](tts-settings.md), [Voice recording](voice-recording.md), [Temp voice](temp-voice.md) and [FAQ](faq.md) (category *Audio & AI*).
 * [Flag shortcuts](flag-shortcuts.md): flags shown under every message of a channel.
 * [Language identification](language-identification.md): minimum message size for the detection, per channel.
 * [Blacklist](blacklist.md): channels, languages and roles that are not translated (Premium).

@@ -11,7 +11,7 @@ The bot asks Discord for the minimum it needs:
 * **Servers and channels**, to know where to translate;
 * **Messages and their content**, to translate them, detect their language, answer the FAQ;
 * **Reactions**, for the [flag translation](translation/flags.md);
-* **Voice states**, to join voice channels for [text to speech and transcription](audio/voice.md).
+* **Voice states**, to join voice channels for [text to speech, transcription and recording](audio/overview.md).
 
 ## What it keeps
 
@@ -25,8 +25,11 @@ The bot keeps **your configuration** (channels, roles, languages, options, FAQ e
 
 ## Voice features
 
-* The bot listens to a voice channel **only while a transcription is running** (started by a command, or by the automatic mode you enabled).
-* Transcription time is limited per server and per day (30 minutes on a free server, 2 hours on premium, over 24 hours from the first transcription) and the bot leaves when no human remains.
+* The bot listens to a voice channel **only while a transcription or a recording is running** (started by a command, by the automatic mode you enabled, or by a member with the permission you gave). Text to speech plays the messages it is given; it does not listen to the voice channel.
+* Transcription time is limited per server and per day, from midnight UTC (30 minutes on a free server, 3 hours on premium), and the bot leaves when no human remains. See [Daily limits](audio/limits.md).
+* A **recording** is announced: the bot posts a message in the text channel, and says it out loud, each time someone joins. The bot does not record its own announcements.
+* The audio of a recording is **encrypted** on the server, with a key of its own for each recording. It is kept 7 days on a free server and 30 days on premium, then deleted. Only the member who started the recording can download it, after logging in with Discord.
+* A transcription can also keep a **text** transcript, only if the server turned it on. No audio is kept with it.
 
 ## Report a problem
 

@@ -12,9 +12,11 @@ Navbar > category _**Audio & AI**_ > _**Text to speech**_.
 
 ## What it does
 
-Each message posted in a TTS channel is **read aloud in the voice channel of its author**: the bot joins the member's voice channel when needed. Only the members who are in a voice channel are read. The same can be done with the command [`/tts-channel`](../../audio/voice.md#tts-channels).
+Each message posted in a TTS channel is **read aloud in the voice channel of its author**: the bot joins the member's voice channel when needed. Only the members who are in a voice channel are read. The same can be done with the command [`/tts-channel`](../../commands/tts.md#tts-channels).
 
 The page lists the **TTS channels** of the server. The list is saved as a whole: each _Save_ replaces the previous list.
+
+The settings that apply to every reading (saying the author, prefix, emojis, voices, permissions) are on the page [Text to speech settings](tts-settings.md). Reading a session with `/tts start` is described in [Text to speech commands](../../commands/tts.md).
 
 ## Configure a TTS channel
 
@@ -43,11 +45,12 @@ Adding a channel beyond the limit opens the premium window.
 * Links are removed and mentions are read as names.
 * A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A channel that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.
 * Messages are read one after the other. Up to 5 messages can wait in the queue of the voice channel.
+* The daily text to speech time of the server is shared with `/tts start` and `/tts say`: 30 minutes per day on a free server, 3 hours on premium, reset at midnight UTC. See [Daily limits](../../audio/limits.md).
 
 ## Access
 
 Voice features need a **premium server**, or a **[top.gg vote](https://top.gg/bot/893494390142697493/vote)** from a member of the server in the last 24 hours. When neither is true, the bot posts a message asking for a vote in the TTS channel, at most once a day.
 
 {% hint style="info" %}
-The bot must be able to view the channel and read its messages, and to connect and speak in the voice channels. See [Voice troubleshooting](../../audio/voice-troubleshooting.md) for the messages and fixes, and [Voice guides](../../audio/voice-guides.md#2-read-a-text-channel-aloud-tts-channel) for a step by step setup.
+The bot must be able to view the channel and read its messages, and to connect and speak in the voice channels. See [Voice troubleshooting](../../audio/voice-troubleshooting.md) for the messages and fixes, and [Voice guides](../../audio/voice-guides.md#4-read-a-text-channel-aloud-tts-channel) for a step by step setup.
 {% endhint %}

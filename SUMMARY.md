@@ -23,11 +23,15 @@
 ## Audio
 
 * [Overview](audio/overview.md)
-* [Voice (TTS and transcription)](audio/voice.md)
+* [Voice (connection and transcription)](audio/voice.md)
+* [Daily limits](audio/limits.md)
 * [Voice guides](audio/voice-guides.md)
 * [Voice troubleshooting](audio/voice-troubleshooting.md)
 * [Speech to text (dashboard)](website/dashboard/speech-to-text.md)
 * [Text to speech (dashboard)](website/dashboard/tts-channels.md)
+* [Text to speech settings (dashboard)](website/dashboard/tts-settings.md)
+* [Voice recording (dashboard)](website/dashboard/voice-recording.md)
+* [Temp voice (dashboard)](website/dashboard/temp-voice.md)
 
 ## Q&A
 
@@ -61,6 +65,9 @@
 * [All commands](commands/all-commands.md)
 * [Translation groups](commands/groups.md)
 * [Flags and diagnostics](commands/flags.md)
+* [Text to speech commands](commands/tts.md)
+* [Recording commands](commands/record.md)
+* [Temporary voice channels](commands/tempvoice.md)
 
 ## Premium
 
@@ -71,6 +78,7 @@
 ## Changelogs
 
 * [Changelogs](changelogs/README.md)
+  * [Unreleased](changelogs/unreleased.md)
   * [October 2026](changelogs/2026-10.md)
 
 ## Links

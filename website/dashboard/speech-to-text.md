@@ -28,12 +28,32 @@ Click _**Remove**_ on a configuration to delete it. When there are unsaved chang
 
 Changes to the style, the language, the translation and the text channel apply live to a running session. A change of voice channel applies to the next session.
 
+## Live transcription (Activity)
+
+The section **Live transcription (Activity)** controls the live view opened with [`/transcribe live`](../../audio/voice.md#live-transcription-activity). The text appears line by line in the Discord Activity, with the profile picture of each speaker. From the same Activity, the **Record the audio** button starts an audio recording (one track per speaker), described in [Recording commands](../../commands/record.md#start-from-the-activity). The continuous mode is offered on premium servers.
+
+* **Live view enabled**: switches the live view on or off for the server.
+* **Who can open it**: anyone in the voice channel, or only the members who can manage the server.
+* **Show profile pictures**: shows the avatar of each speaker.
+* **Show the translation**: shows the translation next to the text, when the transcription is translated (premium).
+* **Lines kept on screen**: how many lines stay visible in the live view.
+
+## Transcript recording
+
+The section **Transcript recording** saves **who said what, as text only**, during a transcription. No audio is kept. Everyone in the voice channel is warned in the text channel when a recording starts.
+
+* **Recording enabled**: allows `/transcribe record start` and the button of the live view.
+* **Who can record**: anyone, or only the members who can manage the server.
+* **Keep the transcripts**: how many days the transcripts are kept, from 1 to 30 days.
+
+For audio recordings with one track per speaker, use [`/record`](../../commands/record.md) instead.
+
 ## Limits
 
 | Free                       | Premium                                  |
 | -------------------------- | ---------------------------------------- |
 | 1 configuration            | Unlimited configurations                 |
-| 30 minutes per day (per server) | 2 hours per day (per server)         |
+| 30 minutes per day (per server, from midnight UTC) | 3 hours per day (per server) |
 | Needs a recent top.gg vote | No vote needed                           |
 | No translation             | Translation of the transcription         |
 
@@ -53,5 +73,5 @@ Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/8934
 | _The configuration could not be saved._ | Try again. |
 
 {% hint style="info" %}
-The page only saves the configuration. For the permissions the bot needs and the messages posted during a session, see [Voice](../../audio/voice.md#transcription-speech-to-text) and [Voice troubleshooting](../../audio/voice-troubleshooting.md). A step by step setup is in [Voice guides](../../audio/voice-guides.md#4-transcribe-automatically-when-someone-joins-transcribe-auto).
+The page only saves the configuration. For the permissions the bot needs and the messages posted during a session, see [Voice](../../audio/voice.md#transcription-speech-to-text) and [Voice troubleshooting](../../audio/voice-troubleshooting.md). A step by step setup is in [Voice guides](../../audio/voice-guides.md#6-transcribe-automatically-when-someone-joins-transcribe-auto).
 {% endhint %}
