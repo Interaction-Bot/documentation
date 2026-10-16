@@ -20,7 +20,7 @@ A recording can also be started from the **live transcription Activity** of your
 
 * You must be in a **voice channel** (stage channels cannot be recorded), otherwise the bot answers *Join a voice channel first.*
 * The bot joins your channel and announces the recording in the text channel of the command. Everyone who joins the channel afterwards is warned too (see below).
-* While it records, the bot's nickname on the server is *🔴 Recording*. The previous nickname is restored at the end.
+* While it records, the bot's nickname on the server is *Recording - Interaction Bot*. The previous nickname is restored at the end.
 * Only **one recording per server** can run at a time (*A recording is already running on this server.*).
 * A recording and a transcription cannot share the bot's voice connection on a server: while one runs, the other is refused with *The bot is busy on this server*.
 * Access: the server is premium, **or** a member of the server has voted on [top.gg](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (*Recording needs a vote on top.gg...*). When the vote is missing, the bot asks for it in the text channel, at most once a day.
