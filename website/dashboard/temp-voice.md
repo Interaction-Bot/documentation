@@ -1,5 +1,5 @@
 ---
-description: Configure the temporary voice channels (Join to create): the creator channels, the rooms, who can use what, votes, log, placeholders and the control panel.
+description: "Configure the temporary voice channels (Join to create): the creator channels, the rooms, who can use what, votes, log, placeholders and the control panel."
 ---
 
 # Temp voice

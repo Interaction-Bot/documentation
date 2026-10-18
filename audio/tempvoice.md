@@ -1,5 +1,5 @@
 ---
-description: Temporary voice channels (Join to create): how they work, the commands of the owner, the control panel, votes, waiting room, permissions and limits.
+description: "Temporary voice channels (Join to create): how they work, the commands of the owner, the control panel, votes, waiting room, permissions and limits."
 ---
 
 # Temporary voice channels
