@@ -4,10 +4,6 @@ description: "Temporary voice channels (Join to create): how they work, the comm
 
 # Temporary voice channels
 
-{% hint style="warning" %}
-**Rolling out.** The commands of this page appear in Discord when the bot publishes its new command list. Until then, Discord still shows the previous commands.
-{% endhint %}
-
 Temporary voice channels let each member of a server get **their own voice channel**, which they control, and which is **deleted automatically** when everyone has left.
 
 * Quick setup: [Set up in 2 minutes](#set-up-in-2-minutes).

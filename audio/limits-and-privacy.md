@@ -4,10 +4,6 @@ description: The daily audio limits of a server (/limits), the vote reminder (/r
 
 # Limits and privacy
 
-{% hint style="warning" %}
-**Rolling out.** `/limits` and `/privacy` appear in Discord when the bot publishes its new command list. The limits and the Account page already apply.
-{% endhint %}
-
 Three commands explain the limits and your data:
 
 | Command | What it does | Who |

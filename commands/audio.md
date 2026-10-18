@@ -6,10 +6,6 @@ description: Reference of the audio commands - text to speech, transcription, re
 
 `<arg>` is required, `[arg]` is optional. The **Needs** column tells what a command needs: **Vote** = a recent [top.gg](https://top.gg/bot/893494390142697493/vote) vote or a premium server (the exact rule is in [Limits and privacy](../audio/limits-and-privacy.md) and [Voice](../audio/voice.md#access)); **Premium\*** = a premium server is needed for the command or for some of its options.
 
-{% hint style="warning" %}
-**Rolling out.** The commands of the audio update (`/record`, `/tempvoice`, `/voice`, `/tts say|start|stop|voice|settings|clone`, `/transcribe live`, `/transcribe auto manage`, `/limits`, `/privacy`, `/join`, `/find`) appear in Discord once the bot publishes its new command list. Until then, Discord still shows the previous commands.
-{% endhint %}
-
 ## Text to speech and voice connection
 
 See [Voice (TTS and transcription)](../audio/voice.md) and [Voices and voice cloning](../audio/voices-and-cloning.md).

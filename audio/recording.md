@@ -4,10 +4,6 @@ description: Record the audio of a voice channel with /record, one encrypted tra
 
 # Voice recording
 
-{% hint style="warning" %}
-**Rolling out.** The commands of this page appear in Discord when the bot publishes its new command list. Until then, Discord still shows the previous commands.
-{% endhint %}
-
 The bot can record a voice channel: it joins the channel, keeps the voice of each speaker on **its own track**, and keeps a **mix** of the whole channel. The recording is encrypted while it is kept, and the people who started it get a link to listen to and download it.
 
 <figure><img src="../.gitbook/assets/discord-record-panel.png" alt="Recording panel posted in a text channel"><figcaption><p>The recording panel, posted in the text channel when a recording starts</p></figcaption></figure>

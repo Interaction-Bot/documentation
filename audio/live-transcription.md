@@ -4,10 +4,6 @@ description: The live transcription Activity of a voice channel - how to open it
 
 # Live transcription (Activity)
 
-{% hint style="warning" %}
-**Rolling out.** `/transcribe live` appears in Discord when the bot publishes its new command list, and the Activity needs the bot to be reconnected to the website. Until then, the Activity may not show the transcription.
-{% endhint %}
-
 The live transcription is a **Discord Activity** (an embedded app in the voice channel) that shows the transcription of the voice channel as it happens: the sentences appear line by line, with the profile picture of each speaker. It uses the **same transcription** as [`/transcribe start`](voice.md#transcription-speech-to-text): the bot does not make any extra speech request for the Activity, and the time spent counts in the [daily transcription time](limits-and-privacy.md#daily-limits) of the server.
 
 <figure><img src="../.gitbook/assets/discord-activity-live-lines.png" alt="Live transcription Activity showing the lines of two speakers"><figcaption><p>The live transcription Activity: lines of the speakers, finished sentences and the sentence being spoken.</p></figcaption></figure>

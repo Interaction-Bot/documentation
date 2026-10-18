@@ -4,10 +4,6 @@ description: Choose the voice that reads your messages, understand the voice cat
 
 # Voices and cloning
 
-{% hint style="warning" %}
-**Rolling out.** The commands of this page appear in Discord when the bot publishes its new command list, and voice cloning depends on the speech service being enabled. Until then, they may be missing or refused.
-{% endhint %}
-
 The bot reads text with a **voice**. A voice is chosen from the **catalogue** of the speech service, either by you (with `/tts voice`) or by the server. Premium members can also create a **cloned voice** from a recording of their own voice, and use it on Discord and on the website.
 
 * Commands and limits of the voice features: [Voice (TTS and transcription)](voice.md).
