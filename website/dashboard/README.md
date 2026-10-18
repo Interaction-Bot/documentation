@@ -26,26 +26,48 @@ You can change the configuration of a server if you have the **Administrator** p
 
 ## Navigate on the dashboard
 
-Each page of the dashboard can be accessed with the navigation bar on the left of the page.
+The dashboard has a left sidebar, a top bar and a content area.
 
-<figure><img src="../../.gitbook/assets/dash-navbar.png" alt=""><figcaption><p>Navigation bar</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-overview.png" alt="Overview page with the sidebar"><figcaption><p>The sidebar (left) and the Overview page</p></figcaption></figure>
 
-The navigation bar is organized in sections:
+* **Server picker** (top of the sidebar): shows the server you are configuring. Click it to switch to another server without going back to the list. The picker lists your servers.
+* **Sidebar**, organized in sections:
+  * **Overview** and **Premium** at the top.
+  * **Translation**: Channel Translation, Translation Groups, Role Translation, Flag Translation and Category Translation.
+  * **Audio & AI**: Speech to text, Text to speech, FAQ, Voice recording and Temp voice.
+  * **Management**: Language identification, Blacklist and Flag shortcuts.
+* **Top bar**: your name opens the user menu: **My servers**, the **language** of the website and **Log out**. The language only changes the website, not the language of the bot (see [Bot Language](overview.md#bot-language)).
 
-* **Overview** and **Premium** at the top.
-* **Translation**: Channel Translation, Translation Groups, Role Translation, Flag Translation and Category Translation.
-* **Audio & AI**: Speech to text, Text to speech and FAQ.
-* **Management**: Language identification, Blacklist and Flag shortcuts.
+You can fold a section of the sidebar with the arrow on its right. Click the **name of a section** to open its page.
 
-Your personal settings (vote reminder, [user app](../../commands/user-app.md)) are on the [Account page](account.md), which is not linked to a server.
+Your personal settings (vote reminder, [user app](../../commands/user-app.md), recordings, privacy) are on the [Account page](account.md), which is not linked to a server.
 
-For mobile users, click on the burger button at the top left of the page to open the navigation bar.
+For mobile users, the sidebar is hidden: tap the burger button at the top left of the page to open it, and the cross to close it. The pages are made to be used on a phone, without horizontal scrolling.
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+To return to the server selection, open the user menu and click _**My servers**_.
 
-To return to the server selection, click at the bottom of the navigation bar.
+### Your servers
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+The _**Your servers**_ page (`interaction-bot.com/servers`) lists the servers where you can configure the bot. _**Configure**_ opens the dashboard of the server, and _**Invite me**_ opens the invitation of the bot for a server where it is not present yet. A server where you just added the bot appears without waiting.
+
+<figure><img src="../../.gitbook/assets/dash-servers.png" alt="Your servers page"><figcaption><p>Your servers</p></figcaption></figure>
+
+## Category pages and extensions
+
+Each feature of the bot is an **extension**: it can be turned on or off on each server, and it has its own page. Click a **section name** in the sidebar (_Translation_, _Audio & AI_, _Management_) to see all its extensions as cards.
+
+<figure><img src="../../.gitbook/assets/dash-extensions-audio.png" alt="Audio and AI category page"><figcaption><p>A category page: one card per extension</p></figcaption></figure>
+
+Each card shows:
+
+* the **icon** and the **name** of the extension, with a short explanation (click the arrow next to the name to read it);
+* a **switch** to turn the extension on or off for this server;
+* a **status**: _Enabled_, _Disabled_, _Not added_ (the extension was never set up on this server) or _Missing permission_ (the extension is on, but the bot lacks a Discord permission it needs: the page of the extension says which one and gives a button to reinvite the bot with the right permissions);
+* the **Configure** button, which opens the page of the extension.
+
+When an extension is turned off, the bot does not use it **but your settings are kept**: turn it on again and everything is as you left it. A disabled extension stays in the sidebar (greyed out), and its page shows a banner with an **Enable** button.
+
+Turning an extension on or off is a change like the others: it is applied when you click _Save_ (see below). All your switches are saved together.
 
 ## Save your changes
 
@@ -68,7 +90,7 @@ If the bot refuses the change (for example a premium-only option on a server wit
 * [Overview](overview.md): server information, bot language and the simultaneous translation warning.
 * [Premium](premium.md): enable Premium on this server with your Patreon offer.
 * [Channel Translation](channel-translation.md), [Translation Groups](translation-groups.md), [Role Translation](role-translation.md), [Flag Translation](flag-translation.md) and [Category Translation](category-translation.md).
-* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md) and [FAQ](faq.md) (category *Audio & AI*).
+* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md), [FAQ](faq.md), [Voice recording](voice-recording.md) and [Temp voice](temp-voice.md) (category *Audio & AI*).
 * [Flag shortcuts](flag-shortcuts.md): flags shown under every message of a channel.
 * [Language identification](language-identification.md): minimum message size for the detection, per channel.
 * [Blacklist](blacklist.md): channels, languages and roles that are not translated (Premium).

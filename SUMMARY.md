@@ -24,10 +24,17 @@
 
 * [Overview](audio/overview.md)
 * [Voice (TTS and transcription)](audio/voice.md)
+* [Voices and voice cloning](audio/voices-and-cloning.md)
+* [Live transcription (Activity)](audio/live-transcription.md)
+* [Voice recording](audio/recording.md)
+* [Temporary voice channels](audio/tempvoice.md)
+* [Limits and privacy](audio/limits-and-privacy.md)
 * [Voice guides](audio/voice-guides.md)
 * [Voice troubleshooting](audio/voice-troubleshooting.md)
 * [Speech to text (dashboard)](website/dashboard/speech-to-text.md)
 * [Text to speech (dashboard)](website/dashboard/tts-channels.md)
+* [Voice recording (dashboard)](website/dashboard/voice-recording.md)
+* [Temp voice (dashboard)](website/dashboard/temp-voice.md)
 
 ## Q&A
 
@@ -50,6 +57,10 @@
   * [Blacklist](website/dashboard/blacklist.md)
   * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
   * [Account](website/dashboard/account.md)
+* [Feature pages](website/features.md)
+* [Commands page](website/commands.md)
+* [My recordings](website/recordings.md)
+* [My voice](website/my-voice.md)
 * [Status](website/status.md)
 
 ## Commands
@@ -61,6 +72,7 @@
 * [All commands](commands/all-commands.md)
 * [Translation groups](commands/groups.md)
 * [Flags and diagnostics](commands/flags.md)
+* [Audio commands](commands/audio.md)
 
 ## Premium
 
@@ -71,6 +83,7 @@
 ## Changelogs
 
 * [Changelogs](changelogs/README.md)
+  * [October 2026 - audio update](changelogs/2026-10-audio.md)
   * [October 2026](changelogs/2026-10.md)
 
 ## Links

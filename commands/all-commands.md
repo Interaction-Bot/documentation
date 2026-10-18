@@ -28,13 +28,22 @@ The configuration commands are described on one page: [Configuration commands](c
 
 ## Voice
 
-| Command                                                          | Description                                                      | Who           |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------- |
-| `/connect [channel]` / `/disconnect [channel]`                   | Move the bot to a voice channel or make it leave.                | Everybody     |
-| `/tts <query> [language]` / `/tts-stop`                          | Read a text aloud / stop the speech.                             | Everybody     |
-| `/tts-channel set\|remove\|list`                                 | Read the messages of a channel aloud.                            | Manage Server |
-| `/transcribe start [channel] [language] [translate_to] [style]` / `stop` | Transcribe a voice channel.                              | Everybody     |
-| `/transcribe auto enable\|disable`                               | Transcribe automatically when someone joins a voice channel.     | Manage Server |
+The audio commands have their own page with every option: [Audio commands](audio.md).
+
+| Command | Description | Who |
+| --- | --- | --- |
+| `/connect [channel]` / `/disconnect [channel]` | Move the bot to a voice channel or make it leave. | Everybody |
+| `/tts say <query> [language] [voice]` | Read a text aloud in your voice channel. | Everybody |
+| `/tts start` / `/tts stop` | Read the messages of this chat aloud / leave and cut the speech. | Everybody |
+| `/tts voice [voice]` | Choose the voice that reads your messages. | Everybody |
+| `/tts clone create\|list\|delete` | Your cloned voices (Premium). [Details](../audio/voices-and-cloning.md). | Everybody |
+| `/tts settings` / `/tts-channel set\|remove\|list\|manage` | TTS settings and the channels read aloud. | Manage Server |
+| `/transcribe start [channel] [language] [translate-to] [style]` / `stop` | Transcribe a voice channel. | Everybody |
+| `/transcribe live` | Open the [live transcription Activity](../audio/live-transcription.md). | Everybody |
+| `/transcribe auto enable\|disable\|manage` | Transcribe automatically when someone joins a voice channel. | Manage Server |
+| `/record start\|stop\|test\|list\|note\|transcribe`, `/record auto on\|off\|view` | [Voice recording](../audio/recording.md). | Everybody (auto: Manage Server) |
+| `/tempvoice setup\|config\|panel\|interface`, `/voice …`, `/join`, `/find` | [Temporary voice channels](../audio/tempvoice.md). | Setup: Manage Server |
+| `/limits`, `/privacy` | [Daily audio limits and privacy](../audio/limits-and-privacy.md). | Everybody |
 
 See [Voice](../audio/voice.md).
 

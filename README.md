@@ -24,6 +24,10 @@ Interaction Bot is a Discord bot that **breaks language barriers** on your serve
 | **Text to speech**       | The bot reads text in a voice channel, or the messages of a channel                                 | [Audio](audio/overview.md)                 |
 | **Speech to text**       | Live transcription of a voice channel, with optional translation                                    | [Audio](audio/overview.md)                 |
 | **FAQ**                  | Answers to your members' questions, on demand or automatic, in any language                         | [Q&A](qa/overview.md)                      |
+| **Voice recording**      | One track per speaker, announced in the channel, with a page to listen and download                   | [Recording](audio/recording.md)               |
+| **Temp voice**           | Members create their own temporary voice channels, with a control panel                              | [Temp voice](audio/tempvoice.md)              |
+| **Live transcription**   | A Discord Activity that shows the transcription live, in the language of each viewer                  | [Activity](audio/live-transcription.md)       |
+| **Voice cloning**        | Read messages with a voice created from your own voice (Premium)                                     | [Voices](audio/voices-and-cloning.md)         |
 | **Premium**              | Higher limits and extra options                                                                     | [Premium](premium/premium.md)                 |
 
 New here? Start with [Getting started](getting-started.md). What changed lately: [Changelogs](changelogs/README.md).
