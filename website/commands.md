@@ -4,6 +4,8 @@ description: The commands page of the website lists every slash command, with se
 
 # Commands page
 
+<figure><img src="../.gitbook/assets/dash-commands-page.png" alt="Commands page of the website"><figcaption><p>The Commands page</p></figcaption></figure>
+
 The **Commands** page (`interaction-bot.com/commands`) lists every slash command of Interaction Bot, grouped by feature. It needs no login. The list comes from the bot itself, so it always matches the commands of the running version.
 
 {% embed url="https://interaction-bot.com/commands" %}

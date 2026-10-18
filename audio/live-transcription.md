@@ -10,7 +10,7 @@ description: The live transcription Activity of a voice channel - how to open it
 
 The live transcription is a **Discord Activity** (an embedded app in the voice channel) that shows the transcription of the voice channel as it happens: the sentences appear line by line, with the profile picture of each speaker. It uses the **same transcription** as [`/transcribe start`](voice.md#transcription-speech-to-text): the bot does not make any extra speech request for the Activity, and the time spent counts in the [daily transcription time](limits-and-privacy.md#daily-limits) of the server.
 
-<figure><img src="../.gitbook/assets/discord-activity-live-lines.png" alt="Live transcription Activity showing the lines of two speakers"><figcaption><p>The live transcription Activity: lines of the speakers, finished sentences and the sentence being spoken. The screenshot is taken from the French interface.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/discord-activity-live-lines.png" alt="Live transcription Activity showing the lines of two speakers"><figcaption><p>The live transcription Activity: lines of the speakers, finished sentences and the sentence being spoken.</p></figcaption></figure>
 
 * Access rules, daily limits and posting styles of the transcription: [Voice](voice.md).
 * Settings of the Activity on the website: [Speech to text](../website/dashboard/speech-to-text.md).
@@ -59,8 +59,6 @@ The Activity can also be turned off on the dashboard (**Live view enabled**). Th
 * **Start transcription**: shown on the start screen while no transcription runs. Starting from the Activity needs the *Manage Server* permission. Other members get *You are not allowed to start the transcription on this server.* They can still start it with `/transcribe live`.
 * **Stop transcription**: shown to members with *Manage Server* only, while a transcription runs. It asks for a confirmation: the first click changes the button to **Confirm the stop?** for 4 seconds, the second click stops the transcription for everyone.
 
-<figure><img src="../.gitbook/assets/discord-activity-stop-confirmation.png" alt="Stop transcription button asking for confirmation"><figcaption><p>The stop button waits for a second click: <i>Confirm the stop?</i> (French interface in this capture).</p></figcaption></figure>
-
 A stop from the Activity works like `/transcribe stop`: the transcription ends for everyone. The bot stays in the voice channel until it is empty (30 seconds after the last member left). Starts and stops are limited to one request every 5 seconds per member.
 
 ## What you see
@@ -94,7 +92,7 @@ If the transcription itself is translated (`translate_to`, see [Translation](voi
 
 The Activity can also start and stop an audio recording of the voice channel (the same recording as `/record`, one track per speaker). It is not a transcript: it is the audio.
 
-<figure><img src="../.gitbook/assets/discord-activity-recording-panel.png" alt="Recording panel of the Activity"><figcaption><p>The recording panel: the button <i>Start recording</i> and the notice that every member is told. The screenshot is taken from the French interface.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/discord-activity-recording-panel.png" alt="Recording panel of the Activity"><figcaption><p>The recording panel: the button <i>Start recording</i> and the notice that every member is told.</p></figcaption></figure>
 
 * **Start**: the button **Record audio** opens a panel. **Start recording** starts it, and the text channel of the recording is told. A member who does not agree can leave the channel.
 * **Who may start**: members who may use the recording permission of the server (by default everyone, the dashboard can restrict it), and members with *Manage Server*. A vote on top.gg or a premium server is needed, as for transcription.

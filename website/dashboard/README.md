@@ -42,7 +42,9 @@ You can fold a section of the sidebar with the arrow on its right. Click the **n
 
 Your personal settings (vote reminder, [user app](../../commands/user-app.md), recordings, privacy) are on the [Account page](account.md), which is not linked to a server.
 
-For mobile users, the sidebar is hidden: tap the burger button at the top left of the page to open it, and the cross to close it. The pages are made to be used on a phone, without horizontal scrolling.
+For mobile users, the sidebar is hidden: tap the burger button at the top left of the page to open it, and the cross to close it.
+
+<figure><img src="../../.gitbook/assets/dash-mobile-sidebar.png" alt="Dashboard sidebar on a phone" width="320"><figcaption><p>The sidebar on a phone</p></figcaption></figure> The pages are made to be used on a phone, without horizontal scrolling.
 
 To return to the server selection, open the user menu and click _**My servers**_.
 

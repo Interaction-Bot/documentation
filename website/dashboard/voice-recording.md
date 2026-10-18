@@ -4,6 +4,8 @@ description: Configure the voice recording of your server - who can record, the 
 
 # Voice recording
 
+<figure><img src="../../.gitbook/assets/dash-voice-recording.png" alt="Voice recording page"><figcaption><p>Voice recording page</p></figcaption></figure>
+
 The Voice recording page controls the [`/record`](../../audio/recording.md) command of your server: whether members can record, who can start a recording, what the default downloads and video exports look like, and the automatic recording.
 
 ## Localization

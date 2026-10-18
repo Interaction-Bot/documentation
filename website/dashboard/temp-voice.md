@@ -4,6 +4,8 @@ description: "Configure the temporary voice channels (Join to create): the creat
 
 # Temp voice
 
+<figure><img src="../../.gitbook/assets/dash-temp-voice.png" alt="Temp voice page"><figcaption><p>Temp voice page</p></figcaption></figure>
+
 Configure the temporary voice channels of the server: the **Join to create** channels, the rooms they make, and the rules of the rooms. How the feature works for members is explained in [Temporary voice channels](../../audio/tempvoice.md).
 
 Navbar > category _**Audio & AI**_ > _**Temp voice**_.

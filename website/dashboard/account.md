@@ -30,6 +30,8 @@ The **Open my recordings** button opens the [My recordings](../recordings.md) pa
 
 ## Privacy
 
+<figure><img src="../../.gitbook/assets/dash-account.png" alt="Privacy card of the Account page"><figcaption><p>The Privacy card of the Account page</p></figcaption></figure>
+
 The **Privacy** card lets you control what the bot keeps about you. It shows how much is stored about you right now (recordings where you speak, recordings you started, notes, personal settings and cloned voices) and offers:
 
 * **Don't process my messages (opt-out)**: the bot no longer translates, reads aloud or analyses your new messages, and refuses to translate them. Messages already processed are not deleted, and your own commands are not blocked. This change is applied when you save.

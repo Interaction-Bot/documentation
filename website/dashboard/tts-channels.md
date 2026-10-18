@@ -32,6 +32,8 @@ After a save, the bot reloads the channels at once: no restart is needed.
 
 ## Settings
 
+<figure><img src="../../.gitbook/assets/dash-tts-settings.png" alt="Settings tab of the Text to speech page"><figcaption><p>The Settings tab</p></figcaption></figure>
+
 The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar:
 
 | Option | Default | What it does |
