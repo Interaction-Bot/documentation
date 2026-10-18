@@ -26,7 +26,7 @@ The bot keeps **your configuration** (channels, roles, languages, options, FAQ e
 ## Voice features
 
 * The bot listens to a voice channel **only while a transcription is running** (started by a command, or by the automatic mode you enabled).
-* Transcription time is limited per server and per day (30 minutes on a free server, 2 hours on premium, over 24 hours from the first transcription) and the bot leaves when no human remains.
+* Transcription time is limited per server and per day (30 minutes on a free server, 3 hours on premium, per UTC day, reset at midnight UTC) and the bot leaves when no human remains.
 
 ## Report a problem
 

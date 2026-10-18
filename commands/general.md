@@ -19,7 +19,7 @@ description: All other commands of Interaction Bot.
 
 ## Voting
 
-Some voice commands ([`/connect`, `/tts`](../audio/voice.md)) require that you voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) during the last 24 hours. You can vote every 12 hours, and `/reminder` can notify you when it is possible again.
+Some voice commands ([`/connect`, `/tts say`](../audio/voice.md)) require that you voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) during the last 24 hours. You can vote every 12 hours, and `/reminder` can notify you when it is possible again.
 
 ## Premium
 

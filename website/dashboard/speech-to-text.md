@@ -1,5 +1,5 @@
 ---
-description: Configure the live transcription of voice channels.
+description: Configure the speech to text (transcription) of voice channels, and the live transcription Activity.
 ---
 
 # Speech to text
@@ -12,7 +12,7 @@ Navbar > category _**Audio & AI**_ > _**Speech to text**_.
 
 ## Transcription
 
-The bot transcribes the speech of voice channels and posts the transcriptions in a text channel, a forum or the chat of the voice channel. The spoken language is detected automatically. You can also use [`/transcribe`](../../audio/voice.md#transcription-speech-to-text).
+The bot transcribes the speech of voice channels and posts the transcriptions in a text channel, a forum or the chat of the voice channel. The spoken language is detected automatically. You can also use [`/transcribe`](../../audio/voice.md#transcription-speech-to-text), and follow the transcription live in the Activity with `/transcribe live`, see [Live transcription](../../audio/live-transcription.md).
 
 Use the _**Enabled / Disabled**_ toggle to enable the transcription on the server, then click _**Add a configuration**_. For each configuration:
 
@@ -33,13 +33,27 @@ Changes to the style, the language, the translation and the text channel apply l
 | Free                       | Premium                                  |
 | -------------------------- | ---------------------------------------- |
 | 1 configuration            | Unlimited configurations                 |
-| 30 minutes per day (per server) | 2 hours per day (per server)         |
+| 30 minutes per day (per server, UTC day) | 3 hours per day (per server, UTC day) |
 | Needs a recent top.gg vote | No vote needed                           |
 | No translation             | Translation of the transcription         |
 
 At most 3 configurations can listen to the same voice channel. _All voice channels_ counts as one voice channel in this rule.
 
 Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours. The session stops after its limit, and the bot leaves the voice channel.
+
+## Live transcription (Activity)
+
+The section **Live transcription (Activity)** sets the Activity of [`/transcribe live`](../../audio/live-transcription.md). It applies to the whole server. It is saved and cancelled with the bar of the page, like the configurations.
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| **Live view enabled** | On | Turns the Activity on or off. When off, the Activity cannot be opened. The other settings are hidden. |
+| **Who can open it** | Anyone in the voice channel | *Anyone in the voice channel* or *Only members who can manage the server*. |
+| **Show profile pictures** | On | Shows the picture of each speaker. |
+| **Show the translation (if the transcription is translated)** | On | Shows the server's translation of the transcription in the *Original* view. It does not change the language a viewer picks. |
+| **Lines kept on screen** | 60 | 30, 60, 100 or 200 finished lines. |
+
+Changes to the pictures and to the translation apply at once to an open Activity. The other settings apply the next time someone opens it.
 
 ## Messages of the page
 
