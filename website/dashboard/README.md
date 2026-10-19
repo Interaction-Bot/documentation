@@ -24,6 +24,10 @@ Once you are logged in, select the server that you want to configure and click o
 
 You can change the configuration of a server if you have the **Administrator** permission or the **Manage Server** permission on it, and if the bot is on this server. Otherwise, the dashboard refuses access.
 
+The bot checks this right again at **every save**: a change is only applied if you still have the permission at that moment, even when the page showed you the server a few minutes earlier.
+
+The list of your servers is kept for **10 minutes**, so that the dashboard does not ask Discord for it at every click (several open tabs would otherwise reach the Discord limit). A permission you lost can therefore still show in the pages for a few minutes, but it is refused when you save. The _My servers_ page refreshes the list (at most every 15 seconds), so a server where you just added the bot appears at once.
+
 ## Navigate on the dashboard
 
 The dashboard has a left sidebar, a top bar and a content area.
@@ -33,9 +37,9 @@ The dashboard has a left sidebar, a top bar and a content area.
 * **Server picker** (top of the sidebar): shows the server you are configuring. Click it to switch to another server without going back to the list. The picker lists your servers.
 * **Sidebar**, organized in sections:
   * **Overview** and **Premium** at the top.
-  * **Translation**: Channel Translation, Translation Groups, Role Translation, Flag Translation and Category Translation.
-  * **Audio & AI**: Speech to text, Text to speech, FAQ, Voice recording and Temp voice.
-  * **Management**: Language identification, Blacklist and Flag shortcuts.
+  * **Translation**: Channel Translation, Mirror Translation, Role Translation, Flag Translation, Category Translation, Voice messages, Language identification, Blacklist and Flag shortcuts.
+  * **Audio & AI**: Transcription, Text to speech, FAQ, Voice recording and Temp voice.
+  * **Management**: Welcome, Invitations and Honeypot.
 * **Top bar**: your name opens the user menu: **My servers**, the **language** of the website and **Log out**. The language only changes the website, not the language of the bot (see [Bot Language](overview.md#bot-language)).
 
 You can fold a section of the sidebar with the arrow on its right. Click the **name of a section** to open its page.
@@ -82,6 +86,16 @@ Nothing is applied to the bot until you save. As soon as you change something on
 
 If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved and the bar stays on the screen without any message**. Check the page you are on, see the limits written on each page, then try again.
 
+## AI assistant
+
+The **AI assistant** helps you configure the bot in plain words. Open it with the _**Open the assistant**_ card on the Overview page,: it opens as a panel on the right of the dashboard, and it stays open or closed the next time you come back.
+
+* Describe what you want (for example, translating your main channel into French, or turning on transcription for voice channels). The assistant reads the current settings of the server, then writes the **exact plan** of the changes it will make and asks you to confirm it.
+* **Nothing is changed until you answer the plan with a yes.** The changes then go through the same dashboard routes and checks as a click on the page, so the assistant has no more rights than you.
+* After a change, an **Undo** button is shown on the step.
+* The conversation is kept in the browser of this device, for each server (the last 40 messages). **New conversation** starts a new one.
+* The number of requests is limited per day: per server, and per person across all the servers. The panel shows how many requests are left. The assistant can make mistakes, and your requests are processed by an AI provider.
+
 ## Errors
 
 * If the dashboard cannot load or save data, you are sent back to the home page, where a pop-up says **It seems something has gone wrong.** followed by the error (for example `500: Internal Server Error`). Try again, and ask the support if the error stays.
@@ -91,11 +105,10 @@ If the bot refuses the change (for example a premium-only option on a server wit
 
 * [Overview](overview.md): server information, bot language and the simultaneous translation warning.
 * [Premium](premium.md): enable Premium on this server with your Patreon offer.
-* [Channel Translation](channel-translation.md), [Translation Groups](translation-groups.md), [Role Translation](role-translation.md), [Flag Translation](flag-translation.md) and [Category Translation](category-translation.md).
-* [Speech to text](speech-to-text.md), [Text to speech](tts-channels.md), [FAQ](faq.md), [Voice recording](voice-recording.md) and [Temp voice](temp-voice.md) (category *Audio & AI*).
-* [Flag shortcuts](flag-shortcuts.md): flags shown under every message of a channel.
-* [Language identification](language-identification.md): minimum message size for the detection, per channel.
-* [Blacklist](blacklist.md): channels, languages and roles that are not translated (Premium).
+* [Channel Translation](channel-translation.md), [Mirror Translation](translation-groups.md), [Role Translation](role-translation.md), [Flag Translation](flag-translation.md), [Category Translation](category-translation.md), [Voice messages](voice-messages.md), [Language identification](language-identification.md), [Blacklist](blacklist.md) and [Flag shortcuts](flag-shortcuts.md) (category *Translation*).
+* [Transcription](speech-to-text.md), [Text to speech](tts-channels.md), [FAQ](faq.md), [Voice recording](voice-recording.md) and [Temp voice](temp-voice.md) (category *Audio & AI*).
+* [Welcome](welcome.md), [Invitations](invites.md) and [Honeypot](honeypot.md) (category *Management*). The features behind them: [Welcome and goodbye](../../management/welcome-and-goodbye.md), [Invite tracker](../../management/invite-tracker.md) and [Honeypot](../../management/honeypot.md).
+* The features of the voice messages: [Voice messages](../../audio/voice-messages.md).
 
 {% hint style="info" %}
 Members with the **Administrator** permission or the **Manage Server** permission can configure the bot of their server.

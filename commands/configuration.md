@@ -80,7 +80,7 @@ With `style:Thread`, leave `target` empty (or the same channel as `source`), and
 
 ## Translation groups
 
-`/group create | delete | set-channel | remove-channel | settings | list | manage` (dashboard: [Translation Groups](../website/dashboard/translation-groups.md))
+`/group create | delete | set-channel | remove-channel | settings | list | manage` (dashboard: [Mirror Translation](../website/dashboard/translation-groups.md))
 
 <figure><img src="../.gitbook/assets/discord-group-manage.png" alt="/group manage"><figcaption><p><code>/group manage</code>: create and edit the groups with buttons and menus</p></figcaption></figure>
 

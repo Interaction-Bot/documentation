@@ -8,7 +8,7 @@ The bot can read text aloud in a voice channel (**text to speech**, TTS) and wri
 
 * Step-by-step examples: [Voice guides](voice-guides.md).
 * Something does not work: [Voice troubleshooting](voice-troubleshooting.md).
-* Settings on the website: [Text to speech](../website/dashboard/tts-channels.md) and [Speech to text](../website/dashboard/speech-to-text.md).
+* Settings on the website: [Text to speech](../website/dashboard/tts-channels.md) and [Transcription](../website/dashboard/speech-to-text.md).
 
 ## Access
 
@@ -151,7 +151,7 @@ The voices of bots are ignored.
 * It only starts when the bot can connect and speak in the voice channel, and can send messages in the text channel. **If a permission is missing, nothing is posted**: check the permissions first.
 * The automatic transcription **leaves 30 seconds after the last human** left the channel, and stays if someone comes back.
 * `language`, `translate_to` and `style` work as for `/transcribe start`.
-* The settings on the dashboard page [Speech to text](../website/dashboard/speech-to-text.md) apply to a running session. Style, language, translation and text channel change at once. The voice channel is used for the next session.
+* The settings on the dashboard page [Transcription](../website/dashboard/speech-to-text.md) apply to a running session. Style, language, translation and text channel change at once. The voice channel is used for the next session.
 
 ## Live transcription (Activity)
 

@@ -28,6 +28,11 @@ Interaction Bot is a Discord bot that **breaks language barriers** on your serve
 | **Temp voice**           | Members create their own temporary voice channels, with a control panel                              | [Temp voice](audio/tempvoice.md)              |
 | **Live transcription**   | A Discord Activity that shows the transcription live, in the language of each viewer                  | [Activity](audio/live-transcription.md)       |
 | **Voice cloning**        | Read messages with a voice created from your own voice (Premium)                                     | [Voices](audio/voices-and-cloning.md)         |
+| **Welcome and goodbye**  | Welcome, goodbye and private messages with banners, and roles given on arrival                       | [Welcome](management/welcome-and-goodbye.md)  |
+| **Invite tracker**       | Who invited whom, a ranking of inviters and fake account detection                                   | [Invites](management/invite-tracker.md)       |
+| **Honeypot**             | Trap channels that catch spam bots and punish them at once                                           | [Honeypot](management/honeypot.md)            |
+| **AI setup**             | Configure the bot by talking to an AI, in a channel (`/ai setup`) or on the dashboard                | [AI setup](management/ai-setup.md)            |
+| **Voice messages**       | Transcribe, translate and dub Discord voice messages                                                 | [Voice messages](audio/voice-messages.md)     |
 | **Premium**              | Higher limits and extra options                                                                     | [Premium](premium/premium.md)                 |
 
 New here? Start with [Getting started](getting-started.md). What changed lately: [Changelogs](changelogs/README.md).
@@ -36,7 +41,7 @@ New here? Start with [Getting started](getting-started.md). What changed lately:
 
 * A slash command and its arguments are written like this: <mark style="color:green;">`/test arg1 [arg2 optional]`</mark>. `<arg>` is required, `[arg]` is optional.
 * A role is written @role and a channel #channel.
-* The **Translation** section explains how the translation works, the **Website** section describes the dashboard, the **Audio** and **Q&A** sections cover voice and the FAQ, the **Commands** section lists every command and **Premium** explains the offers.
+* The **Translation** section explains how the translation works, the **Website** section describes the dashboard, the **Audio** and **Q&A** sections cover voice and the FAQ, the **Server management** section covers the welcome messages, the invite tracker, the honeypot and the AI setup, the **Commands** section lists every command and **Premium** explains the offers.
 
 {% hint style="info" %}
 Advice is shown in boxes like this one.

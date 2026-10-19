@@ -10,126 +10,152 @@ Configure the temporary voice channels of the server: the **Join to create** cha
 
 Navbar > category _**Audio & AI**_ > _**Temp voice**_.
 
-## Enable and set up
+The page has four tabs: _**Rooms**_, _**Control panel**_, _**Who can do what**_ and _**Moderation**_.
 
-The switch at the top, _**Temporary voice channels are on**_, turns the feature on or off for the whole server. It stays off until a **Join to create channel** exists.
+## Turn it on and set it up
 
-Under _**Set up**_:
+The switch next to the title turns temporary voice channels on or off for the whole server. It needs a **Join to create channel** first: without one, the switch says _Create a Join to create channel below first._
 
-* **Category of the Join to create channel**: where the new Join to create channel is created. Default: _No category (top of the server)_.
-* _**Create the Join to create channel**_: creates it. You can add several (see _Join to create channels_ below).
+Turning the feature off stops the creation of new rooms. The rooms already open are not deleted.
+
+When the server has no Join to create channel yet, the page shows the **Quick setup** card:
+
+* _**Set up automatically**_ prepares the installation: a category called `TempVoice`, a text channel `interface` with the control panel, and a voice channel `Create your channel` to join. The feature is turned on. Nothing is created on Discord until you click _**Save**_.
+* _**Use an existing category instead**_ opens a manual setup: choose the category of the Join to create channel (default: _No category (top of the server)_), then click _**Create the Join to create channel**_. The channel is created when you save.
+
+Once a Join to create channel exists, the **Setup** card lists three steps, with a ✓ when each one is done:
+
+1. A Join to create channel exists.
+2. The control panel is posted in a channel (the button _**Post the panel**_ opens the _Control panel_ tab).
+3. Temporary voice channels are on.
+
+When the three steps are done, the card folds into one line, _All set up_, that you can open again.
 
 The `/tempvoice setup` command does the same thing, and also creates a control panel channel. See [Temporary voice channels](../../audio/tempvoice.md#set-up-in-2-minutes).
 
-{% hint style="info" %}
-Turning the feature off stops the creation of new rooms. The rooms already open are not deleted.
-{% endhint %}
-
-## Join to create channels
+## Rooms tab
 
 Each Join to create channel has its own card. A member who joins it gets a room, and the settings of the card are the defaults of that room. The owner can then change them with the [commands](../../audio/tempvoice.md#commands) and the [control panel](../../audio/tempvoice.md#control-panel).
 
-Click _**Save this channel**_ to save the card. _**Delete**_ removes the Join to create channel; the rooms already open are not deleted.
+Each card shows:
 
-### Room settings
+* the **name** of the channel and its category (or _Top of the server_), with a _Modified_ badge when it has unsaved changes;
+* a sentence that sums up the default room, for example _Each member who joins gets a room called "Alex's Channel", 5 places, public._;
+* the **room name** with a live example underneath;
+* the **user limit** (slider, 0 to 99; 0 means no limit);
+* the **privacy by default**: _Public_ (everyone can see and join), _Locked_ (everyone sees it, nobody joins without an invite) or _Hidden_ (nobody sees it without an invite).
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| Room name | `{OWNER_NICKNAME}'s Channel` | The name of the new room. Placeholders are listed in [Placeholders](#placeholders). |
-| User limit | `0` | Number of members allowed in the room. `0` means no limit (99 at most). |
-| Bitrate (kbps) | Server default (empty) | Audio quality, from 8 to 384 kbps. _Highest possible_ uses the highest value the boost level of the server allows. |
-| Privacy by default | Public | _Public_, _Locked_ or _Hidden_ when the room is created. |
-| Category of the temporary rooms | Same category as the Join to create channel | Where the new rooms are created. |
-| Fallback categories (**Premium**) | None | Used when the category above is full (50 channels). Up to 10 categories. |
-| Position of the room | End of the category | _End of the category_, _Just below the Join to create channel_ or _Top of the category_. |
-| Public invitations channel | No channel | The public text channel where `/voice invite` posts its message and link. It must be a public channel. |
-| Minimum user limit | `0` | The lowest limit the owner can choose. |
-| Maximum user limit | `99` | The highest limit the owner can choose. `0` (no limit) is allowed only when the minimum is `0`. |
-| Waiting room name | Empty (the default text of the bot) | Name of the waiting room. Same placeholders as the room name, except `{CUSTOM}` and `{PRIVACY}`. |
-| Permissions of the owner | Manage Channels, Move Members | Permissions given to the owner while they control the room. The bot only gives the ones it has itself. |
-| Permissions of the rooms | None | Copies the role permissions of the Join to create channel, of its category, or none. Connect, View and Send Messages for everyone are never copied. |
-| Members without an access role | Hidden | Only applies when access roles are set (see below). _Hidden_: they do not see the rooms. _Locked_: they see them but cannot join. |
-| Restore the owner's settings | All on | For the next room of the same owner: name, user limit, trusted and blocked lists, privacy. Turn off what must start again from the defaults. |
-| Age-restricted voice chat | Off | Marks the rooms as age-restricted. |
-| Rooms managed by their owner | On | When off, there is no owner: nobody can customise or moderate the rooms, there is no panel and no command. Empty rooms are deleted. |
-| Temporary voice role | None | A role given while a member is in a room of this creator, then taken back. Use a dedicated role: the bot must be above it. |
-| Who gets it | Every member in a room | _Every member in a room_ or _The owner only_. |
-| Welcome message: sending | Silent | _Off_: no message. _With notification (mentions the owner)_: the owner is notified. _Silent_: no notification. |
-| Welcome message: text | Empty | The message posted in the new room, 1900 characters at most. Empty: only the control panel, if it is ticked. |
-| Welcome message: include the control panel | On | The control panel is part of the welcome message. |
+Click _**Customize**_ to open the editor of the card. It has five tabs: _Name_, _Members_, _Owner_, _Placement_ and _Message_, and a preview of the room in the channel list. _**Done**_ closes the editor (the Escape key does too). The changes are saved with the bar at the bottom of the page.
 
-{% hint style="warning" %}
-The owner permissions _Manage Permissions_ and _Manage Roles_ let the owner change the permissions of the module. The page asks for a confirmation before saving them. _Move Members_ also lets the owner move, and so kick from the room, the moderators of the server.
-{% endhint %}
+### Name tab
 
-### Restore the owner's settings
+* **Room name**: the template of the name, 100 characters at most. A warning lists the variables the server does not know.
+* **Templates**: five examples to start from: _Owner nickname_ (`{OWNER_NICKNAME}'s Channel`), _Privacy and nickname_ (`{PRIVACY} {OWNER_NICKNAME}`), _Numbered_ (`Voice {NUMBER}`), _Roman number and highest role_ (`{NUMBER_ROMAN} - {ROLE_HIGHEST}`) and _Random word_ (`{RANDOM} lounge`).
+* **Insert a variable**: click a variable to insert it at the cursor. They are listed in [Placeholders](#placeholders).
+* **Icons and words used by the variables**: the three privacy icons, the default text of `{CUSTOM}`, the text used when the owner has no role, and the words of `{RANDOM}`.
+* **Censored words**: words hidden in the names, the statuses and the invitations of the creator's rooms. Type a word, then press Enter. A word has no spaces and 32 characters at most, and the list keeps 100 words at most. A `*` is a wildcard: `word*` covers every word that starts with it, `*word` every word that ends with it, `*word*` every word that contains it.
+* **Waiting room name**: the name of the waiting room. Same variables as the room name, except `{CUSTOM}` and `{PRIVACY}`. Empty: the default text of the bot.
+
+### Members tab
+
+* **User limit**, and the **minimum** and **maximum** user limit: the range the owner can choose in the room. 0 (no limit) is only allowed when the minimum is 0.
+* **Privacy by default**: the same three choices as on the card.
+* **Members without an access role**: shown only when access roles are chosen in _Who can do what_. _Hidden_: they do not see the rooms. _Locked_: they see them but cannot join.
+* **Age-restricted voice chat** (off by default): marks the rooms as age-restricted. Members must confirm they are adults to read the messages.
+* **Temporary voice role**: a role given while a member is in a room of this creator, then taken back. _Who gets it_ is _Every member in a room_ (default) or _The owner only_. Use a dedicated role: the bot must be above it.
+
+### Owner tab
+
+* **Rooms managed by their owner** (on by default): when off, there is no owner: nobody can customise or moderate the rooms, there is no control panel and no command. Empty rooms are deleted.
+* **Permissions of the owner**: _Basic_ (the owner renames, limits and locks the room, nothing more), _Moderator_ (also moves, mutes and deafens members in the room), _Full_ (also manages the channel, messages, threads and invitations) or _Custom_, where you pick each permission. The default is Manage Channels and Move Members.
+
+  {% hint style="warning" %}
+  _Manage Permissions_ lets the owner change every permission of the room, including the ones of this module. _Move Members_ also lets the owner move, and so kick from the room, the moderators of the server. The page asks you to confirm the risk before saving one of these two permissions.
+  {% endhint %}
+
+* **Permissions of the rooms**: the role permissions copied to each new room: _None_ (default), _Those of the Join to create channel_, or _Those of its category_. Connect, View and Send Messages for everyone are never copied.
+
+#### Restore the owner's settings
 
 When an owner creates a new room, the settings the owner had in their previous room come back, depending on the switches of this card: the name, the user limit, the trusted and blocked lists, and the privacy (locked, hidden). The bitrate and the region are not remembered.
 
+### Placement tab
+
+* **Category of the temporary rooms**: where the new rooms are created. Default: _Same category as the Join to create channel_.
+* **Position of the room**: _End of the category_ (default), _Just below the Join to create channel_ or _Top of the category_. Discord can move a room a little when many rooms are created at once.
+* **Fallback categories** (**Premium**): used when the category above is full (50 channels). Up to 10 categories.
+* **Bitrate**: _Server default_ (default), _Highest possible_ (the highest value the boost level of the server allows), or a value from 8 to 384 kbps.
+* **Public invitations channel**: the public text channel where the `/voice invite` command posts its message and link. It must be a public channel. Default: _No channel_.
+
+### Message tab
+
+The message is written in the chat of each new room.
+
+* **Sending**: _No message_, _With a mention_ (mentions the owner, who gets a notification) or _Silent_ (writes the message without notifying anyone). Default: _Silent_.
+* **Message text**: 1900 characters at most. Empty: only the control panel is sent, if it is ticked. Click a placeholder to insert it at the cursor. The message also accepts `{OWNER_MENTION}`, `{OWNER_ID}`, `{GUILD_ID}` and `{CHANNEL_ID}`.
+* **Include the control panel** (on by default): adds the buttons to rename, lock or invite right in the message.
+
+The preview under the message shows how it looks in Discord, with an example owner.
+
+## Adding and deleting a Join to create channel
+
+Under the cards, the section _**Add a Join to create channel**_ shows the category of the new channel: the category of the first Join to create channel, or the top of the server. Click _**Choose another category**_ to pick another one. Click _**Add a Join to create channel**_ to prepare it: it appears in the bar at the bottom of the page, with an _Undo_ button.
+
+_**Delete**_ on a card prepares the deletion, with an _Undo_ button. The rooms already open are not deleted.
+
+Nothing is created or deleted on Discord until you click _**Save**_ in the bar at the bottom of the page.
+
 ## Who can create a room
 
-Under _**Who can create a room**_, choose the roles allowed to join a Join to create channel. Leave it empty to let everyone create a room.
+On the _Who can do what_ tab, under _**Who can create a room**_, choose the roles allowed to join a Join to create channel. Leave it empty to let everyone create a room.
 
 A member without one of these roles gets a private message saying that they need one of the roles the server allows, and no room is created.
 
 ## Who can use each function
 
-For the owner of a room, choose **who can use each function**. Each function has one of three rules:
+On the _Who can do what_ tab, each function of a room has one of three rules, chosen with the buttons _Everyone_, _Chosen roles_ or _Nobody_:
 
 | Rule | Meaning |
 | --- | --- |
 | Everyone | Default. Any owner can use the function. |
-| Nobody | No owner can use the function. |
 | Chosen roles | Only the members with one of the chosen roles. Up to 10 roles per function. |
+| Nobody | No owner can use the function. |
 
 Members with **Manage Server** can always use every function.
 
-| Function | Controls |
-| --- | --- |
-| Rename | `/voice name`, Name button |
-| User limit | `/voice limit`, Limit button |
-| Lock and unlock | Locked privacy (`/voice privacy lock`, `unlock`) |
-| Hide and unhide | Hidden privacy (`/voice privacy hide`, `unhide`) |
-| Waiting room | `/voice waiting`, Waiting room button |
-| Chat | Lock chat (`/voice privacy chat`, `unchat`) |
-| Chat of the room | The chat of the voice channel for the chosen roles only (see note below) |
-| Trust and untrust | `/voice user trust`, `untrust`, Trust and Untrust buttons |
-| Block and unblock | `/voice user block`, `unblock`, Block and Unblock buttons |
-| Invite | `/voice user invite`, Send Invite menu, Invite button |
-| Send an invite to a public chat | `/voice invite` |
-| Kick | `/voice user kick` (owner), Kick button |
-| Vote kick | Starting a vote kick (`/voice user kick` by a member, Kick button) |
-| Room info | `/voice info` |
-| Region | `/voice region`, Region button |
-| Bitrate | `/voice bitrate` |
-| Thread | `/voice thread`, Chat thread button |
-| Password | `/voice password` |
-| Status | `/voice status` |
-| Claim ownership | `/voice claim`, Claim button |
-| Transfer ownership | `/voice transfer`, Transfer button and menu |
-| Delete | `/voice delete`, Delete button |
-| Reset settings | `/voice reset` |
+The functions are grouped in five families:
 
-When a member is refused a function, the bot says whether the function is disabled for everyone, or which roles may use it.
+| Family | Functions |
+| --- | --- |
+| Customize the room | Rename, User limit, Bitrate, Region, Status, Thread, Room info |
+| Privacy and access | Lock and unlock, Hide and unhide, Password, Waiting room, Chat, Chat of the room |
+| People | Trust and untrust, Block and unblock, Invite, Send an invite to a public chat, Kick, Vote kick |
+| Ownership | Claim ownership, Transfer ownership |
+| Upkeep | Delete, Reset settings |
+
+Two presets set all the rules at once: _**Everyone can do everything**_ and _**Essentials only**_. Essentials keeps Rename, User limit, Status, Room info, Lock and unlock, Hide and unhide, Waiting room, Chat, Chat of the room, Trust and untrust, Block and unblock, Invite, Send an invite to a public chat and Kick on _Everyone_, and sets the other functions to _Nobody_.
+
+The commands and buttons each function controls are listed in [Commands](../../audio/tempvoice.md#commands) and [Control panel](../../audio/tempvoice.md#control-panel). When a member is refused a function, the bot says whether the function is disabled for everyone, or which roles may use it.
 
 {% hint style="info" %}
-_Chat of the room_ controls who can write in the chat of the voice channel. With _Nobody_ or chosen roles, @everyone is refused in the chat; with chosen roles, those roles can write. The exact effect of _Nobody_ on the owner is not confirmed (see the open questions of the documentation team).
+_Chat of the room_ controls who can write in the chat of the voice channel. With _Nobody_ or chosen roles, @everyone is refused in the chat; with chosen roles, those roles can write.
 {% endhint %}
 
-## Vote kick
+## Control panel
 
-Under _**Vote kick**_, set the **share of votes** needed to remove a member: **50 %** by default. The share goes from **10 %** to **100 %**, by steps of **5 %**.
+On the _**Control panel**_ tab, choose a **text channel**. The page shows the channel where the panel is posted now, if any. The panel is posted when you click _**Save**_: choosing another channel and saving posts it there.
 
-The number of yes votes needed is the share of the members who can vote, rounded up (at least one). See [Vote kick](../../audio/tempvoice.md#vote-kick) for the rules.
+The bot needs the View Channel, Send Messages and Embed Links permissions in that channel.
 
-## Log channel
+The preview shows the buttons the members will have. The buttons turned off in _Who can do what_ are crossed out, and a line gives the number of buttons available.
 
-Under _**Log channel**_, choose the **text channel** where the events of the temporary rooms are written: creations, deletions, renamings, limits, privacy changes, kicks and blocks, votes, changes of owner. Default: _No log channel_.
+## Moderation
 
-## Name moderation and censored words
+On the _**Moderation**_ tab:
 
-* **Name moderation** (default on): hides insults, links and mass mentions in the names and the statuses of the rooms. Links and mentions are always neutralised, even when it is off.
-* **Censored words**: words hidden in the names, the statuses and the invitations of the creator's rooms. Type a word, then press Enter. A word has no spaces and 32 characters at most. A `*` is a wildcard: `word*` covers every word that starts with it, `*word` every word that ends with it, `*word*` every word that contains it. The list keeps 100 words at most. The censored words still apply when name moderation is off.
+* **Name moderation** (on by default): automatically hides insults, links and mass mentions in the names and statuses of the rooms. Links and mentions are always neutralised, even when it is off. The censored words still apply when name moderation is off.
+* **Log channel**: the text channel where the events of the temporary rooms are written: creations, deletions, renamings, limits, privacy changes, kicks and blocks, votes, changes of owner. Default: _No log channel_.
+* **Vote kick**: the **share of votes** needed to remove a member, **50 %** by default. The share goes from **10 %** to **100 %**, by steps of **5 %**. The number of yes votes needed is the share of the members who can vote, rounded up (at least one). See [Vote kick](../../audio/tempvoice.md#vote-kick) for the rules.
 
 ## Placeholders
 
@@ -156,32 +182,19 @@ The room name, the waiting room name and the welcome message use placeholders wr
 | `{ROLE_HIGHEST}` | The highest role of the owner. |
 | `{ROLE_HOIST}` | The highest role of the owner, shown apart in the member list. |
 
-The welcome message also accepts `{OWNER_MENTION}`, `{OWNER_ID}`, `{GUILD_ID}` and `{CHANNEL_ID}`.
+## Saving
 
-### Name templates
+Everything on the page is prepared, then applied when you click _**Save**_ in the bar _**You made changes, save them!**_ at the bottom of the page. _**Cancel**_ removes the unsaved changes and goes back to the last saved configuration.
 
-The page offers five templates: _Owner nickname_ (`{OWNER_NICKNAME}'s Channel`), _Privacy and nickname_ (`{PRIVACY} {OWNER_NICKNAME}`), _Numbered_ (`Voice {NUMBER}`), _Roman number and highest role_ (`{NUMBER_ROMAN} - {ROLE_HIGHEST}`) and _Random word_ (`{RANDOM} lounge`).
+On _Save_, the page does the following, in this order:
 
-### Icons and words
+1. the quick setup, if it was chosen;
+2. the control panel, if its channel changed;
+3. the deletions of Join to create channels;
+4. the creations of Join to create channels;
+5. the settings of the page and the changes of each card.
 
-Under _**Placeholder icons and words**_:
-
-| Setting | Default |
-| --- | --- |
-| Privacy icon: locked | 🔒 |
-| Privacy icon: unlocked | 🔓 |
-| Privacy icon: hidden | 🕶️ |
-| Default text of `{CUSTOM}` | Empty (the text of the bot) |
-| Text when the owner has no role | Empty (the text of the bot) |
-| Words for `{RANDOM}` | Empty (a fallback icon) |
-
-Each icon takes 16 characters at most, and the default text of `{CUSTOM}` 64 characters at most.
-
-## Control panel in a channel
-
-Under _**Control panel in a channel**_, choose a **text channel** and click _**Post the panel**_. The control panel is posted there. Its buttons act on the temporary room the member is connected to. You can post it several times.
-
-The bot needs the View Channel, Send Messages and Embed Links permissions in that channel.
+If one step is refused, the page shows the message and keeps what was not done.
 
 ## Limits
 
@@ -208,6 +221,7 @@ The bot needs the View Channel, Send Messages and Embed Links permissions in tha
 | _The welcome message is too long (1900 characters at most) or uses an unknown placeholder._ | Shorten the message, or fix the placeholder. |
 | _The public invitations channel must be a public text channel._ | Choose a public text channel, or _No channel_. |
 | _The waiting room name uses an unknown variable or is too long._ | Fix the name. |
+| _Confirm the risk before giving the owner a dangerous permission._ | Tick the confirmation under the owner permissions. |
 | _The bot cannot write in this channel. Give it the View Channel, Send Messages and Embed Links permissions._ | Give the permissions in that channel. |
 | _The settings could not be saved._ | Try again. |
 

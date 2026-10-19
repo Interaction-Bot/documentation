@@ -9,7 +9,7 @@ The live transcription is a **Discord Activity** (an embedded app in the voice c
 <figure><img src="../.gitbook/assets/discord-activity-live-lines.png" alt="Live transcription Activity showing the lines of two speakers"><figcaption><p>The live transcription Activity: lines of the speakers, finished sentences and the sentence being spoken.</p></figcaption></figure>
 
 * Access rules, daily limits and posting styles of the transcription: [Voice](voice.md).
-* Settings of the Activity on the website: [Speech to text](../website/dashboard/speech-to-text.md).
+* Settings of the Activity on the website: [Transcription](../website/dashboard/speech-to-text.md).
 * Step by step: [Voice guides](voice-guides.md).
 
 ## Requirements
@@ -17,7 +17,7 @@ The live transcription is a **Discord Activity** (an embedded app in the voice c
 | What | Rule |
 | --- | --- |
 | Bot on the server | Interaction Bot must be on the server. Without it, the Activity shows how to invite the bot, then connects by itself once it is added. |
-| Speech to text enabled | The **Speech to text** extension must be on in the dashboard. A disabled extension refuses the command and links to the dashboard. |
+| Speech to text enabled | The **Transcription** extension must be on in the dashboard. A disabled extension refuses the command and links to the dashboard. |
 | Access | The server is **premium**, or a vote on [top.gg](https://top.gg/bot/893494390142697493/vote) is valid (see [Access](voice.md#access) for the exact rule of each way to start). |
 | Bot permissions | **Connect** and **Speak** in the voice channel. The text channel of the transcription needs the permissions of its [posting style](voice.md#posting-styles). |
 
@@ -105,7 +105,7 @@ The Activity does not save a transcript and has **no download button**. The line
 
 ## Dashboard settings
 
-The settings are on the dashboard page [Speech to text](../website/dashboard/speech-to-text.md), section **Live transcription (Activity)**. They apply to the Activity of the whole server.
+The settings are on the dashboard page [Transcription](../website/dashboard/speech-to-text.md), section **Live transcription (Activity)**. They apply to the Activity of the whole server.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
@@ -165,5 +165,5 @@ For the messages of the commands, see [Voice troubleshooting](voice-troubleshoot
 
 * [Voice](voice.md): access, commands, posting styles and the transcription rules.
 * [Limits and privacy](limits-and-privacy.md): daily limits, `/limits`, `/privacy` and `/reminder`.
-* [Speech to text](../website/dashboard/speech-to-text.md): the dashboard page.
+* [Transcription](../website/dashboard/speech-to-text.md): the dashboard page.
 * [Premium](../premium/premium.md): what changes on a premium server.

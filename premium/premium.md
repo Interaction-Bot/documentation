@@ -38,12 +38,16 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 | Text to speech without a top.gg vote | No | Yes |
 | Text to speech channels | 5 | 25 |
 | FAQ | 1 group, 5 questions | 5 groups, 150 questions |
+| Voice messages: transcription of one message | Up to 2 minutes | Up to 15 minutes |
+| Voice messages: translation and voice dubbing | No | Yes |
 | Premium on several servers | - | With the 3 and 10 servers offers |
 
 Without a top.gg vote, a free server can use speech to text and text to speech when a member of the server has voted for the bot in the last 24 hours.
 
+The [welcome and goodbye messages](../management/welcome-and-goodbye.md), the [invite tracker](../management/invite-tracker.md), the [honeypot](../management/honeypot.md), [`/ai setup`](../management/ai-setup.md) (within its daily credit) and the [temporary voice channels](../audio/tempvoice.md) are available to **every server**, without Premium.
+
 Example: with the role @french translated into English, Japanese, Brazilian and Spanish, a message of a member with this role produces 4 translations. The free version is limited to 3 translations per message, the Premium version to 20. The limit and the warning shown when it is exceeded are explained on the [Overview](../website/dashboard/overview.md) page.
 
-Where to configure each feature: [Channel Translation](../website/dashboard/channel-translation.md), [Role Translation](../website/dashboard/role-translation.md), [Category Translation](../website/dashboard/category-translation.md), [Translation Groups](../website/dashboard/translation-groups.md), [Flag Translation](../website/dashboard/flag-translation.md), [Blacklist](../website/dashboard/blacklist.md), [Speech to text](../website/dashboard/speech-to-text.md), [Text to speech](../website/dashboard/tts-channels.md) and [FAQ](../website/dashboard/faq.md).
+Where to configure each feature: [Channel Translation](../website/dashboard/channel-translation.md), [Role Translation](../website/dashboard/role-translation.md), [Category Translation](../website/dashboard/category-translation.md), [Mirror Translation](../website/dashboard/translation-groups.md), [Flag Translation](../website/dashboard/flag-translation.md), [Blacklist](../website/dashboard/blacklist.md), [Transcription](../website/dashboard/speech-to-text.md), [Text to speech](../website/dashboard/tts-channels.md) and [FAQ](../website/dashboard/faq.md).
 
 **Refund policy:** In case of any problem, contact the support and we will handle refunds case by case, in a transparent way.

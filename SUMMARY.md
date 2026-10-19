@@ -29,12 +29,20 @@
 * [Voice recording](audio/recording.md)
 * [Temporary voice channels](audio/tempvoice.md)
 * [Limits and privacy](audio/limits-and-privacy.md)
+* [Voice messages](audio/voice-messages.md)
 * [Voice guides](audio/voice-guides.md)
 * [Voice troubleshooting](audio/voice-troubleshooting.md)
-* [Speech to text (dashboard)](website/dashboard/speech-to-text.md)
+* [Transcription (dashboard)](website/dashboard/speech-to-text.md)
 * [Text to speech (dashboard)](website/dashboard/tts-channels.md)
 * [Voice recording (dashboard)](website/dashboard/voice-recording.md)
 * [Temp voice (dashboard)](website/dashboard/temp-voice.md)
+
+## Server management
+
+* [Welcome and goodbye](management/welcome-and-goodbye.md)
+* [Invite tracker](management/invite-tracker.md)
+* [Honeypot](management/honeypot.md)
+* [AI setup](management/ai-setup.md)
 
 ## Q&A
 
@@ -50,12 +58,16 @@
   * [Premium](website/dashboard/premium.md)
   * [Channel Translation](website/dashboard/channel-translation.md)
   * [Role Translation](website/dashboard/role-translation.md)
-  * [Translation Groups](website/dashboard/translation-groups.md)
+  * [Mirror Translation](website/dashboard/translation-groups.md)
   * [Flag translation](website/dashboard/flag-translation.md)
   * [Category Translation](website/dashboard/category-translation.md)
   * [Language identification](website/dashboard/language-identification.md)
   * [Blacklist](website/dashboard/blacklist.md)
   * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
+  * [Voice messages](website/dashboard/voice-messages.md)
+  * [Welcome](website/dashboard/welcome.md)
+  * [Invitations](website/dashboard/invites.md)
+  * [Honeypot](website/dashboard/honeypot.md)
   * [Account](website/dashboard/account.md)
 * [Feature pages](website/features.md)
 * [Commands page](website/commands.md)
@@ -83,6 +95,7 @@
 ## Changelogs
 
 * [Changelogs](changelogs/README.md)
+  * [October 2026 - server management](changelogs/2026-10-management.md)
   * [October 2026 - audio update](changelogs/2026-10-audio.md)
   * [October 2026](changelogs/2026-10.md)
 

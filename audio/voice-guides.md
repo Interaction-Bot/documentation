@@ -67,9 +67,9 @@ A message is read only if it is 200 characters or less, has text, does not start
 4. When a member joins the voice channel, the bot says *Transcription started* in the voice channel (spoken) and transcribes the channel. Nothing is posted in the text channel for the start.
 5. The bot leaves 30 seconds after the last human left. To turn the feature off, run `/transcribe auto disable`.
 
-The same settings are on the dashboard page **Speech to text**: switch on *Enabled*, click *Add a configuration*, set the fields, then *Save*. A free server has **one** configuration on this page; a premium server has no limit. Up to 3 configurations can listen to the same voice channel.
+The same settings are on the dashboard page **Transcription**: switch on *Enabled*, click *Add a configuration*, set the fields, then *Save*. A free server has **one** configuration on this page; a premium server has no limit. Up to 3 configurations can listen to the same voice channel.
 
-<figure><img src="../.gitbook/assets/dash-speech-to-text.png" alt="Speech to text page"><figcaption><p>Speech to text page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/dash-speech-to-text.png" alt="Transcription page"><figcaption><p>Transcription page</p></figcaption></figure>
 
 {% hint style="info" %}
 If the bot does not start, the permissions of the channels are the first thing to check: when a permission is missing, nothing is posted. See [Voice troubleshooting](voice-troubleshooting.md).
@@ -81,7 +81,7 @@ The translation of a transcription is a **premium** feature. Only the translatio
 
 1. Make sure the server is premium.
 2. For a one-time transcription, run `/transcribe start` with the option `translate_to`, and pick the target language from the suggestions.
-3. For an automatic transcription, run `/transcribe auto enable` with the same option. You can also set *Translate to* on the dashboard page **Speech to text**.
+3. For an automatic transcription, run `/transcribe auto enable` with the same option. You can also set *Translate to* on the dashboard page **Transcription**.
 4. What is said in the target language is not translated again. If the translation fails, the original text is posted.
 
 {% hint style="info" %}
@@ -97,7 +97,7 @@ On a free server, `/transcribe start translate_to:...` answers *The translation 
 5. A member with *Manage Server* can stop the transcription from the Activity: click **Stop transcription**, then **Confirm the stop?** within 4 seconds.
 
 {% hint style="info" %}
-The live view can be turned off or limited to members who can manage the server on the dashboard page Speech to text. See [Live transcription](live-transcription.md).
+The live view can be turned off or limited to members who can manage the server on the dashboard page Transcription. See [Live transcription](live-transcription.md).
 {% endhint %}
 
 ## Next steps
