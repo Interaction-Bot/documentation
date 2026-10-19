@@ -1,5 +1,5 @@
 ---
-description: The Welcome page of the dashboard, tab by tab: welcome and goodbye messages, private message, banners, automatic roles, preview and test, with the default value of each setting.
+description: "The Welcome page of the dashboard, tab by tab: welcome and goodbye messages, private message, banners, automatic roles, preview and test, with the default value of each setting."
 ---
 
 # Welcome
