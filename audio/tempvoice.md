@@ -1,5 +1,5 @@
 ---
-description: "Temporary voice channels (Join to create): how they work, the commands of the owner, the control panel, votes, waiting room, permissions and limits."
+description: "Temporary voice channels (Join to create): how they work, the commands of the owner, the control panel, vote kick, waiting room, permissions and limits."
 ---
 
 # Temporary voice channels
@@ -12,34 +12,38 @@ Temporary voice channels let each member of a server get **their own voice chann
 
 ## How it works
 
-1. An admin creates a **Join to create channel** (a voice channel named `➕ Create your channel` by `/tempvoice setup`, or from the dashboard).
+1. An admin creates a **Join to create channel** (a voice channel named `➕ Create your channel`, by `/tempvoice setup`, or from the dashboard with **Set up automatically** or **Create the Join to create channel**).
 2. A member joins it. The bot creates a new voice channel for this member, moves the member into it, and makes the member its **owner**.
 3. The owner controls the channel: name, user limit, privacy, members, and so on. The owner's commands are `/voice ...`, the buttons of the control panel, and the context menus of a member.
 4. When the **last human leaves**, the channel is deleted at once. A temporary channel left empty while the bot was offline is deleted when the bot starts again.
 
+The feature is **on by default**: a server that never set it up has temporary channels on, but no room is made until a Join to create channel exists. The switch of the dashboard turns the feature off for the whole server; the rooms already open are not deleted.
+
 Each new channel gets the name of the template of its Join to create channel (default `{OWNER_NICKNAME}'s Channel`). The owner's remembered name, limit, privacy and lists can come back in the next channel of the same owner (see the dashboard, section _Restore the owner's settings_).
 
-Temporary voice channels are **free**: no vote on [top.gg](https://top.gg/bot/893494390142697493/vote) and no premium server are needed. The only premium option is the fallback categories of the dashboard (see [Temp voice](../website/dashboard/temp-voice.md)).
+Temporary voice channels are **free**: no vote on [top.gg](https://top.gg/bot/893494390142697493/vote) and no premium server are needed. No command asks for a vote. The only premium option is the fallback categories of the dashboard (see [Temp voice](../website/dashboard/temp-voice.md)).
 
 ## Permissions
 
-The administrator sets the feature up with `/tempvoice setup` or `/tempvoice config` (Manage Server). The other commands need the owner role of the channel, see [Commands](#commands).
+The administrator sets the feature up with `/tempvoice setup` or `/tempvoice config` (Manage Server), or on the dashboard. The other commands need the owner role of the channel, see [Commands](#commands).
 
 | Who | Can do |
 | --- | --- |
 | Members with **Manage Server** | Everything, in every channel, whatever the function rules of the dashboard. |
 | Owner of a temporary channel | The `/voice` commands and the control panel, as allowed by the [function roles](../website/dashboard/temp-voice.md#who-can-use-each-function) of the server. |
-| Other members of a temporary channel | `/voice user kick` and the vote kick (see [Vote kick](#vote-kick)), `/find`, `/join`. |
+| Other members of a temporary channel | `/voice user kick` and the vote kick (see [Vote kick](#vote-kick)), `/voice info` (when the Room info function allows it), `/voice claim` once the owner has left, `/find`, `/join`. |
 | Members without an access role | Cannot create a channel (see [Who can create a room](../website/dashboard/temp-voice.md#who-can-create-a-room)). |
 
 ## Set up in 2 minutes
 
 1. **Invite the bot with the permissions of the feature.** The list is in [Permissions needed](#permissions-needed). Without them, the setup refuses and tells you what is missing.
-2. **Run `/tempvoice setup`** (you need Manage Server). The bot shows a confirmation with an **Install** button. The button is valid for 3 minutes and only you can press it.
+2. **Start the installation, in one of two ways:**
+   * **On the dashboard:** open [Temp voice](../website/dashboard/temp-voice.md) and press **Set up automatically**. Nothing is created yet: the installation is applied to your Discord server when you **save** the page.
+   * **With a command:** run **`/tempvoice setup`** (you need Manage Server). The bot shows a confirmation with an **Install** button. The button is valid for 3 minutes and only you can press it.
 
    <figure><img src="../.gitbook/assets/discord-tempvoice-setup-confirm.png" alt="Confirmation of /tempvoice setup"><figcaption><p>The confirmation of <code>/tempvoice setup</code></p></figcaption></figure>
 
-3. **Press Install.** The bot creates:
+3. **Install.** The bot creates:
    * a category **TempVoice**;
    * a text channel **interface**, read only for everyone, with the control panel;
    * the voice channel **➕ Create your channel** (the Join to create channel).
@@ -50,6 +54,8 @@ The administrator sets the feature up with `/tempvoice setup` or `/tempvoice con
 
 4. **Try it.** Join **➕ Create your channel**. You are moved to your own channel, and the control panel is posted in its chat.
 5. **Optional, in one command:** send the moderation log to a text channel with `/tempvoice config log:#journal`, and check the vote share with `/tempvoice config` (see the options of `/tempvoice config` above).
+
+On the dashboard, a Join to create channel can also be added on its own, in the category of your choice, without the rest of the installation.
 
 Everything else (names, roles, placement, greeting) is set on the [dashboard](../website/dashboard/temp-voice.md).
 
@@ -82,10 +88,10 @@ Each command of this table can also be run from the buttons of the control panel
 | `/voice name <name>` | Renames the channel (64 characters at most). Two renames need **5 minutes** between them. |
 | `/voice limit <0-99>` | Sets the user limit. `0` means no limit. |
 | `/voice privacy <mode>` | `Public`, `Locked` (lock), `Unlock`, `Hide`, `Unhide`, `Lock chat`, `Unlock chat`. Lock and hide are independent: both can be on at once. |
-| `/voice claim` | Takes over the channel when its owner has left (refused while the owner is still connected). |
+| `/voice claim` | Takes over the channel when its owner has left (refused while the owner is still connected). Any member of the channel can run it. |
 | `/voice transfer <member>` | Gives the channel to a member who is in it. A bot cannot be an owner. |
 | `/voice delete` | Deletes the channel for everyone. A confirmation button appears, valid 60 seconds. |
-| `/voice info` | Shows the owner, the creation date, whether there is a password, the locks, the chat lock, the waiting room, the limit, and the trusted and blocked members. Only you see it. |
+| `/voice info` | Shows the owner, the creation date, whether there is a password, the locks, the chat lock, the waiting room, the limit, and the trusted and blocked members. Only you see it. Any member of the channel can run it, when the Room info function allows it. |
 | `/voice status [text]` | Sets the status shown under the channel (500 characters at most, censored). Empty clears it. |
 | `/voice waiting` | Turns the waiting room on or off. The channel stays locked while it is on. |
 | `/voice password [password]` | Sets a password for `/join` (8 characters at most). It needs a locked channel. Empty removes it. |
@@ -123,7 +129,7 @@ Each command of this table can also be run from the buttons of the control panel
 
 ### Control panel
 
-The panel is a message with **15 buttons**, posted in the chat of the channel (`/voice panel`, or when the channel is created if the greeting includes it) or in a text channel (`/tempvoice interface`). The buttons are:
+The panel is a message with **15 buttons**, posted in the chat of the channel (`/voice panel`, or when the channel is created if the greeting includes it) or in a text channel (`/tempvoice interface`). A panel posted in a text channel acts on the temporary channel the member is connected to. The buttons are:
 
 | Button | Action |
 | --- | --- |
@@ -143,7 +149,7 @@ The panel is a message with **15 buttons**, posted in the chat of the channel (`
 | Transfer | Gives the channel to a member who is in it. |
 | Delete | Deletes the channel (with confirmation). |
 
-Only the owner can use the buttons, except **Kick** (a member can start a vote kick) and **Claim**. The panel is refreshed after each change and shows the state of the channel (owner, limit, privacy, region, bitrate, chat, waiting room, thread, password).
+Only the owner can use the buttons, except **Kick** (a member can start a vote kick) and **Claim** (any member, once the owner has left). The panel is refreshed after each change and shows the state of the channel (owner, limit, privacy, region, bitrate, chat, waiting room, thread, password).
 
 ## Waiting room
 
@@ -160,9 +166,9 @@ A waiting room is a second voice channel attached to a locked channel.
 A vote kick removes a member from a channel when enough of the members agree.
 
 * **Who starts it:** any member of the channel, with the **Vote kick** function of the server (see [Who can use each function](../website/dashboard/temp-voice.md#who-can-use-each-function)). The owner also gets it when the owner's instant kick is not allowed. When both are open, the owner chooses between _Kick now_ and _Start a vote_.
-* **Conditions:** the channel must be **locked**, **hidden** or have a **user limit**. The target must be in the channel, must not be the owner, and must not be a **moderator** (a member with Kick Members, Ban Members or Timeout Members). A second vote cannot run in the same channel at once.
-* **Votes:** the members of the channel who are not bots vote **Yes** or **No**, for **2 minutes**. The target cannot vote. The starter's vote is a yes.
-* **Number of yes votes needed:** the vote share of the server (default **50 %**, see `/tempvoice config vote_kick`) applied to the number of voters, rounded up, and at least one. For example, with 5 eligible voters and a share of 50 %, 3 yes votes are needed.
+* **Conditions:** the channel must be **locked**, **hidden** or have a **user limit**. The target must be in the channel, must not be the owner, and must not be a **moderator** (a member with Kick Members, Ban Members or Timeout Members). There must be at least one other member besides the target (the starter counts). A second vote cannot run in the same channel at once.
+* **Votes:** the members of the channel who are not bots and are connected to it vote **Yes** or **No**, for **2 minutes**. The target cannot vote. The starter's vote is a yes.
+* **Number of yes votes needed:** the vote share of the server (default **50 %**, see `/tempvoice config vote_kick`) applied to the number of voters, rounded up, and at least one (and never more than the number of voters). For example, with 5 eligible voters and a share of 50 %, 3 yes votes are needed. If the starter's yes already reaches that number, the vote is decided at once.
 * **Result:** the target is disconnected when the yes votes reach the number needed. The vote fails when the no votes make it impossible to reach that number. If nobody answers in 2 minutes, it expires.
 * If the target becomes the owner during the vote (for example by a claim), the vote is cancelled.
 * No top.gg vote is asked for a vote kick.
@@ -196,7 +202,7 @@ When the server has a log channel (`/tempvoice config log`, or the dashboard), t
 | Vote kick | 2 minutes, share from 10 % to 100 % by steps of 5 (default 50 %). |
 | Channel creation | 5 seconds between two channels for the same member. A member gets a private message when a channel cannot be created, at most once a minute. |
 | Server | 500 channels (Discord). When the server has 500 channels, nothing is created and the members are told. |
-| Category | 50 channels (Discord). When the category is full, a new category `TempVoice 2`, `TempVoice 3`... is used (on premium servers, the fallback categories of the dashboard are used first). |
+| Category | 50 channels (Discord). When the category is full, the fallback categories of the dashboard are used first (Premium servers only), else a new category `TempVoice 2`, `TempVoice 3`... |
 | `/join` | 3 seconds between two tries. After 5 wrong tries in 10 minutes, no try is accepted for a while. |
 | Greeting message | 1900 characters. |
 | Confirmation of `/voice delete` | 60 seconds. |
@@ -233,17 +239,26 @@ The setup and the dashboard say when a permission is missing. The bot also needs
 | Message or problem | What to do |
 | --- | --- |
 | _I need to see, write and embed links in that channel to post the panel there._ | Give the bot View Channel, Send Messages and Embed Links in that text channel. |
-| _Discord refused to create your temporary channel._ | Check the Manage Channels permission of the bot, and the permissions of the category. |
-| _No temporary channel can be created: Discord limits how many channels can be created._ | Discord's channel creation limit is reached. Try again in a few minutes. |
+| _Discord refused to create your temporary channel. Ask a server admin to check the bot's permissions._ | Check the Manage Channels permission of the bot, and the permissions of the category. |
+| _No temporary channel can be created for now: Discord limits how many channels can be created. Try again in a few minutes._ | Discord's channel creation limit is reached. Try again in a few minutes. |
+| _No temporary channel can be created: the server reached Discord's limit of 500 channels._ | Delete channels that are no longer used. |
 | _You cannot create a temporary channel: you need one of the roles this server allows._ | Give yourself one of the roles of [Who can create a room](../website/dashboard/temp-voice.md#who-can-create-a-room), or ask an admin. |
 | _Join a temporary channel first._ | The command works only inside a temporary channel. |
 | _Only the owner of this channel can do that._ | Ask the owner, or use `/voice claim` if the owner has left. |
 | _The owner is still in the channel._ | `/voice claim` works only when the owner has left. |
-| _Discord allows two renames per 10 minutes..._ | Wait the number of seconds given, then rename again. |
+| _Discord allows two renames per 10 minutes: try again in {seconds} s._ | Wait the number of seconds given, then rename again. |
 | _Your roles do not allow this action on this server._ | An admin gives your role the function, on the dashboard. |
 | _This function is disabled on this server._ | An admin enables it on the dashboard. |
+| _This function is reserved to: {roles}._ | Get one of the roles listed, or ask an admin. |
+| _This channel has no owner: the server manages it, nobody can change it._ | The room is run by the server ("Rooms managed by their owner" is off on the dashboard). Ask an admin. |
+| _A waiting room cannot be turned on while the channel is hidden._ | Unhide the channel first. |
+| _Lock the channel first: a password only works on a locked channel._ | Lock the channel, then set the password. |
 | _No temporary channel has this password._ | Check the password with the owner. Too many wrong tries block `/join` for a while. |
 | _A vote kick is already running in this channel._ | Wait for the running vote to end. |
+| _A member can be kicked only when the channel is locked, hidden or has a user limit._ | Lock or hide the channel, or set a user limit. |
+| _Moderators cannot be kicked._ | Moderators are never kicked, neither by vote nor by the owner. |
+| _This channel is not public (everyone must see and write in it), or you cannot write in it._ | Choose a public text channel for the invitation. |
+| _Wait {seconds} s before inviting again._ | Wait the number of seconds given. |
 | The channel was not deleted when everyone left | Check that the bot has Manage Channels, and look at the log channel. |
 | The members of a channel are not moved | Check that the bot has Move Members. |
 

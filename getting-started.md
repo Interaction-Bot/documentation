@@ -16,6 +16,12 @@ First, invite the bot to your Discord server from the website [<mark style="colo
 #### After clicking on _Continue_ for the next steps, you have invited Interaction Bot, congratulations!
 {% endhint %}
 
+## :wave: The welcome message of the bot
+
+When the bot joins your server, it posts a message in a channel where it can write. It presents what the bot does, then asks **what you want to do first**. Pick a goal in the menu (translate messages, transcribe a voice channel, read the chat aloud, record a voice channel or temporary voice channels): the message turns into a short guide of at most three steps, with the commands to type and a link to the matching page of the dashboard. For the goals that start from a command (read the chat aloud, transcribe, record), a blue button runs the real command for you while you are in a voice channel.
+
+The **Set up with AI** button starts [`/ai setup`](management/ai-setup.md): tell the bot what you want, and it configures it for you, after your confirmation. It needs the *Manage Server* permission. Buttons also lead to the dashboard, the documentation and the support server.
+
 ## :key: Give the bot its permissions
 
 The bot works with the permissions it receives when you invite it. For translation it needs, in the channels it uses: **View Channel, Read Message History, Send Messages, Embed Links, Attach Files**, plus **Manage Webhooks** for the webhook style and **Manage Messages** to delete original messages. If something does not work, run `/check-permissions`: it tells you which permission is missing in which channel. Details: [Troubleshooting](translation/troubleshooting.md#permissions).

@@ -11,7 +11,7 @@ Step by step recipes. Each one uses the [dashboard](../website/dashboard/) unles
 **Goal**: members write in their own language, in their own channel, and read everybody.
 
 1. Create the channels `#english`, `#francais`, `#espanol`.
-2. Use a [translation group](../commands/groups.md): `/group create name:Community`, then `/group set-channel` for each channel with its language (or use the dashboard page _Translation Groups_).
+2. Use a [translation group](../commands/groups.md): `/group create name:Community`, then `/group set-channel` for each channel with its language (or use the dashboard page _Mirror Translation_).
 3. Check with `/check-permissions` that the bot can read and write in the three channels.
 
 A message in any of the channels is translated into the other two. Free servers can have 1 group of 3 channels, premium servers 5 groups of 5.
@@ -53,7 +53,7 @@ A message in any of the channels is translated into the other two. Free servers 
 
 ## 7. Transcribe a voice channel
 
-Run `/transcribe start` in a text channel while in a voice channel, or enable `/transcribe auto enable` to start it when someone joins. See [Voice](../audio/voice.md) and the dashboard page [Speech to text](../website/dashboard/speech-to-text.md).
+Run `/transcribe start` in a text channel while in a voice channel, or enable `/transcribe auto enable` to start it when someone joins. See [Voice](../audio/voice.md) and the dashboard page [Transcription](../website/dashboard/speech-to-text.md).
 
 ## 8. A FAQ that answers by itself
 

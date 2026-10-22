@@ -62,7 +62,7 @@ A group links several channels, each with **its own language**. A message writte
 
 Example: group "Community" with `#english` (English), `#francais` (French), `#espanol` (Spanish). A message in `#francais` is translated into English and Spanish and sent to the two other channels.
 
-Details, commands and limits: [Translation groups](../commands/groups.md) and the dashboard page [Translation Groups](../website/dashboard/translation-groups.md).
+Details, commands and limits: [Translation groups](../commands/groups.md) and the dashboard page [Mirror Translation](../website/dashboard/translation-groups.md).
 
 ## Bots, webhooks and edits
 

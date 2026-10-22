@@ -47,6 +47,17 @@ The audio commands have their own page with every option: [Audio commands](audio
 
 See [Voice](../audio/voice.md).
 
+## Server management
+
+| Command | Description | Who |
+| --- | --- | --- |
+| `/ai setup` | Start a conversation with an AI in this channel to configure the bot. [AI setup](../management/ai-setup.md). | Manage Server |
+| `/invites [user]` | How many people a member invited. [Invite tracker](../management/invite-tracker.md). | Everybody |
+| `/invite-leaderboard` | Who invited the most people. | Everybody |
+| Apps > **Transcribe voice message** | Right click a voice message. [Voice messages](../audio/voice-messages.md). | Everybody |
+
+The welcome messages and the honeypot have no command: they are set on the dashboard, see [Welcome and goodbye](../management/welcome-and-goodbye.md) and [Honeypot](../management/honeypot.md).
+
 ## FAQ
 
 | Command                         | Description                                          | Who           |

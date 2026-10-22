@@ -2,13 +2,13 @@
 description: Configure the speech to text (transcription) of voice channels, and the live transcription Activity.
 ---
 
-# Speech to text
+# Transcription
 
-<figure><img src="../../.gitbook/assets/dash-speech-to-text.png" alt="Speech to text page"><figcaption><p>Speech to text page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-speech-to-text.png" alt="Transcription page"><figcaption><p>Transcription page</p></figcaption></figure>
 
 ## Localization
 
-Navbar > category _**Audio & AI**_ > _**Speech to text**_.
+Navbar > category _**Audio & AI**_ > _**Transcription**_.
 
 ## Transcription
 

@@ -29,7 +29,7 @@ Interaction Bot can **speak** in a voice channel (text to speech, TTS) and **wri
 
 ## Where to configure
 
-* On the dashboard: [Text to speech](../website/dashboard/tts-channels.md) (tabs *Reading channels*, *Settings* and *Permissions*) and [Speech to text](../website/dashboard/speech-to-text.md), including the settings of the live view.
+* On the dashboard: [Text to speech](../website/dashboard/tts-channels.md) (tabs *Reading channels*, *Settings* and *Permissions*) and [Transcription](../website/dashboard/speech-to-text.md), including the settings of the live view.
 * On Discord: `/tts settings` for the text to speech settings of the server, and `/tts-channel manage` for the TTS channels.
 * With commands: the full reference is [Voice (TTS and transcription)](voice.md).
 
