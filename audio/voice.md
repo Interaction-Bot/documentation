@@ -104,6 +104,14 @@ A TTS channel reads **every message** posted in it. By default the message is re
 * `/tts-channel list` shows one line per channel, with its language (`auto` when detected), its translation target if any, its destination (🔊 channel) if any, and *disabled* when it is switched off.
 * The same settings are available on the dashboard page [Text to speech](../website/dashboard/tts-channels.md).
 
+## Reading the translations aloud (Premium)
+
+On a **Premium** server, text to speech also reads the **translations made by the bot**: in a session started with `/tts start` and in the [TTS channels](#tts-channels), each translation is read **after the original message**, with the voice of the server (not the voice of the author). Messages of other bots and webhooks stay ignored.
+
+* The setting is **Read translations**, **on by default**. Change it with the **Read translations** button of `/tts settings` or with the switch on the [TTS page of the dashboard](../website/dashboard/tts-channels.md#settings). Turn it off to read only the original messages.
+* On a free server the translations are never read, whatever the setting.
+* Links are removed from the text before reading, and a translation that starts with a command prefix is not read.
+
 ## Transcription (speech to text)
 
 ### `/transcribe start`
