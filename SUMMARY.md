@@ -68,6 +68,8 @@
   * [Welcome](website/dashboard/welcome.md)
   * [Invitations](website/dashboard/invites.md)
   * [Honeypot](website/dashboard/honeypot.md)
+  * [Event log](website/dashboard/event-log.md)
+  * [Journal](website/dashboard/journal.md)
   * [Account](website/dashboard/account.md)
 * [Feature pages](website/features.md)
 * [Commands page](website/commands.md)
