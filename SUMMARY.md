@@ -62,7 +62,7 @@
   * [Flag translation](website/dashboard/flag-translation.md)
   * [Category Translation](website/dashboard/category-translation.md)
   * [Language identification](website/dashboard/language-identification.md)
-  * [Blacklist](website/dashboard/blacklist.md)
+  * [Blacklist (Exceptions)](website/dashboard/blacklist.md)
   * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
   * [Voice messages](website/dashboard/voice-messages.md)
   * [Welcome](website/dashboard/welcome.md)

@@ -1,8 +1,12 @@
 ---
-description: Translate messages automatically by channel, role, category or group.
+description: Translate messages automatically with translation rules, by server, channel, category, role or link.
 ---
 
 # Automatic translation
+
+{% hint style="info" %}
+**Translation rules.** Servers are moving to **translation rules**: one page on the dashboard (**Translation rules**) and one family of commands, [`/translation`](../commands/translation.md#translation-rules), for the whole server, a channel or category, two languages in a channel, or linked channels (the former *groups* and *mirror translation*). A server holds up to **30 rules** (200 on Premium). The former commands (`/channel-translation`, `/role-translation`, `/category-translation`, `/group`) and pages still work on servers that are not converted yet, and redirect to the new ones on converted servers. The sections below describe the former configurations.
+{% endhint %}
 
 Automatic translation is configured on the [dashboard](../website/dashboard/) or with the [configuration commands](../commands/configuration.md) (`/channel-translation manage`, `/role-translation manage`, `/category-translation manage`, `/group manage`). Once saved, the bot translates the messages **by itself**, nobody has to do anything.
 
@@ -46,7 +50,7 @@ A role configuration translates **everything the members who have this role writ
 
 Example: members with the role `@french` write in French, and you want everybody to read English: create a role configuration `@french` -> English. If you add Japanese too, each message gets 2 translations.
 
-The [blacklist](../website/dashboard/blacklist.md) lets you exclude channels (role and category translation are not applied there).
+The [blacklist](../website/dashboard/blacklist.md) (called **Exceptions** on the new dashboard) lets you exclude channels (role and category translation are not applied there).
 
 Dashboard page: [Role translation](../website/dashboard/role-translation.md).
 
@@ -69,7 +73,7 @@ Details, commands and limits: [Translation groups](../commands/groups.md) and th
 * The bot never translates **its own** messages, nor the webhook messages it sends.
 * Messages of other bots are translated only if _Translate bot_ is on (premium).
 * Role translation does not apply to webhook messages.
-* Editing a message does not trigger a new translation.
+* Editing a message **updates its translations** (setting **Follow edited messages** of the [Overview](../website/dashboard/overview.md), on by default; at most 5 retranslations per message and per hour). This applies to the translation rules.
 
 ## Good practices
 

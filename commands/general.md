@@ -10,7 +10,7 @@ description: All other commands of Interaction Bot.
 | `/dashboard`     | Get the link of the dashboard.                                              |
 | `/documentation` | Get the documentation link.                                                 |
 | `/help`          | Display the help page with all commands.                                    |
-| `/invite`        | Get the invitation link of the bot, and the **Add to my account** button to install it as a [user app](user-app.md). |
+| `/invite`        | A card with five buttons: add the bot to a server, add it to your account (to install it as a [user app](user-app.md)), the support server, the dashboard and the vote. |
 | `/ping`          | Get the ping of the bot.                                                    |
 | `/support`       | Get the Discord link of the support server.                                 |
 | `/reminder enable` | Enable or disable the reminder to vote for the bot on top.gg.             |
@@ -24,3 +24,7 @@ Some voice commands ([`/connect`, `/tts say`](../audio/voice.md)) require that y
 ## Premium
 
 `/premium add` and `/premium remove` are described in the [premium usage](../premium/usage.md) page.
+
+## Who sees the answer
+
+The answers of the commands are shown to the whole channel, errors included. The commands that are private by nature answer only to you: `/privacy`, `/personal-language`, `/tts clone`, `/record list`, the temporary voice menus, and the right-click menus **Translate**, **Detect** and the one of voice messages. The answers to buttons and menus keep their own setting.
