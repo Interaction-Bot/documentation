@@ -29,7 +29,9 @@ These commands and menus work everywhere once the app is on your account:
 | `/detect <text>` | [Tell the language of a text](../translation/commands.md#detect). |
 | **Apps > Detect** | Right click a message to tell its language. |
 | `/languages` | List the supported languages. |
+| `/personal-language <language>` | Choose the language of your own translations (**Apps > Translate** and `/translate`). |
 | `/help` | Help page. |
+| `/documentation` | Link of the documentation. |
 | `/invite` | Invitation links of the bot, with the **Add to my account** button. |
 | `/dashboard` | Link of the dashboard. |
 | `/support` | Link of the support server. |
@@ -38,20 +40,19 @@ Everything that needs the bot **inside the server** is not available as a user a
 
 ## Your settings
 
-Two personal settings are on the [Account page](../website/dashboard/account.md) of the dashboard. They apply wherever you use the bot as a user app:
+A personal setting is on the [Account page](../website/dashboard/account.md) of the dashboard. It applies wherever you use the bot as a user app:
 
-* **Default language**: the language used by `/translate` (when you do not choose one) and by **Apps > Translate**. By default, the language of your Discord application is used.
-* **Public replies**: by default, the answers of `/translate` and **Apps > Translate** are **private** (only you see them). Turn this on to show them to everyone in the channel.
+* **Default language**: the language used by `/translate` (when you do not choose one) and by **Apps > Translate**. By default, your Discord language is used.
 
-The answers of `/detect` and **Apps > Detect** are always private.
+The answers of `/detect`, **Apps > Detect** and **Apps > Translate** are always private. `/translate` answers are posted in the channel.
 
-If the settings cannot be read, the defaults are used (your Discord language, private replies): the commands keep working.
+If the settings cannot be read, the defaults are used (your Discord language): the commands keep working.
 
 ## Premium
 
 In a user app, the bot uses **Premium** when either:
 
-* your Discord account is linked to a [Patreon offer](../premium/subscribe.md) (Premium of the member), or
+* your account has Premium: a [Patreon offer](../premium/subscribe.md) linked to it, a Stripe subscription bought on the website, or a Discord premium subscription, or
 * you are in a server where the bot is added and that server has [Premium](../premium/premium.md).
 
 On a free account, the bot does not translate the messages of other bots (**Apps > Translate** on a bot message answers that Premium is needed).

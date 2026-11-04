@@ -82,7 +82,7 @@ The **Translation** button (the language picker of the Activity) lets each viewe
 The server translates into **at most 4 different languages at the same time**. If more viewers pick different languages, only four of them are translated (the codes are taken in alphabetical order); the other viewers see the original text of the lines.
 {% endhint %}
 
-If the transcription itself is translated (`translate_to`, see [Translation](voice.md#translation)), the Activity also shows that translation in the **Original** view, unless the dashboard option **Show the translation** is off.
+If the transcription itself is translated (`translate-to`, see [Translation](voice.md#translation)), the Activity shows that translation under each line, in the **Original** view, for every viewer.
 
 ## Recording from the Activity
 
@@ -112,10 +112,9 @@ The settings are on the dashboard page [Transcription](../website/dashboard/spee
 | **Live view enabled** | On | Turns the Activity on or off. When off, the Activity cannot be opened. |
 | **Who can open it** | Anyone in the voice channel | See [Who can open it](#who-can-open-it). |
 | **Show profile pictures** | On | Shows the picture of each speaker. Off: the name only. |
-| **Show the translation** | On | Shows the translation of the transcription (`translate_to`) in the **Original** view. It does not change the translation a viewer picks in the language picker. |
 | **Lines kept on screen** | 60 | How many finished lines a viewer gets and keeps on screen: 30, 60, 100 or 200. |
 
-**Show profile pictures** and **Show the translation** apply at once to an Activity that is already open. **Who can open it**, **Live view enabled** and **Lines kept on screen** apply the next time someone opens the Activity.
+**Show profile pictures** applies at once to an Activity that is already open. **Who can open it**, **Live view enabled** and **Lines kept on screen** apply the next time someone opens the Activity.
 
 ## Privacy
 

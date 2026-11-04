@@ -63,7 +63,8 @@ A conversation also ends by itself, for these reasons. The bot then posts a shor
 | You press **Stop** | AI setup stopped. Start it again with `/ai setup` whenever you want. |
 | Nobody wrote for 5 minutes | AI setup ended because nobody wrote for a while. Start it again with `/ai setup`. |
 | The assistant judges the work finished | AI setup finished. Start it again with `/ai setup` if you need more. |
-| The server has used its AI requests for the day (or you have reached your own daily limit) | AI setup ended: this server has used all its AI requests for today. Try again tomorrow, or get Premium for more. |
+| The server has used its AI requests for the day | AI setup ended: this server has used all its AI requests for today. Try again tomorrow, or get Premium for more. |
+| You have used your own AI requests for the day | AI setup ended: you have used all your AI requests for today (a limit per person, all servers together). Try again tomorrow. |
 | The AI service has reached its daily capacity | AI setup ended: the AI service has reached its daily capacity. Try again tomorrow. |
 | You no longer have Manage Server | AI setup ended: you no longer have the Manage Server permission. |
 | You opted out of message processing | AI setup ended: you opted out of message processing, so your messages are no longer read. |
@@ -85,10 +86,10 @@ If you start a conversation and then stop it with **Stop**, you can start a new 
 
 * **Each request to the assistant uses one credit.** A request is one of your messages that the assistant answers.
 * **The credit is per server, per day.** The `/ai setup` conversations and the dashboard assistant share the same credit for a server.
-* **Free and Premium servers have different daily credits.** A Premium server has the larger one. The number of requests left is shown in the status line of the dashboard assistant. The conversation in the channel ends when the credit is used up.
-* **Each person has a daily limit too, across all servers.** It applies to the dashboard and to `/ai setup` together.
+* **Free and Premium servers have different daily credits.** A free server has **15** requests a day, a Premium server **150**. The number of requests left is shown in the status line of the dashboard assistant. The conversation in the channel ends when the credit is used up.
+* **Each person has a daily limit too, across all servers:** **40** requests a day. It applies to the dashboard and to `/ai setup` together.
 * **The AI service has a daily budget shared by all servers.** When it is used up, the assistant is not available until the next day.
-* **A message is limited to 4000 characters.**
+* **A longer message is cut to 4000 characters.** The assistant reads only the first 4000 characters.
 * **One answer at a time.** Send the next message when the assistant has answered.
 
 The `/ai setup` command itself does not need Premium. The settings the assistant changes keep their own rules: for example, translating voice messages is a Premium feature, see [Premium](../website/dashboard/premium.md).

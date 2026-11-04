@@ -13,7 +13,7 @@ See [Voice (TTS and transcription)](../audio/voice.md) and [Voices and voice clo
 | Command | Description | Needs |
 | --- | --- | --- |
 | `/connect [channel]` | Connects the bot to a voice channel. | Vote |
-| `/disconnect [channel]` | Disconnects the bot from the voice channel. | — |
+| `/disconnect` | Disconnects the bot from the voice channel. | — |
 | `/tts clone create <audio> <name>` | Create a voice from your recording (premium) | Premium* |
 | `/tts clone delete <voice>` | Delete one of your cloned voices | — |
 | `/tts clone list` | Show your cloned voices | — |
@@ -54,7 +54,7 @@ See [Voice recording](../audio/recording.md). `/record stop` can be used by the 
 | `/record start [continuous]` | Record the voice channel you are in | Vote, Premium* |
 | `/record stop` | Stop the recording of this server | — |
 | `/record test` | Checks that a recording will work here, without starting one | — |
-| `/record transcribe [recording]` | Transcribe a recording of this server, in the background (free) | — |
+| `/record transcribe [recording]` | Transcribe a recording of this server, in the background (1 every 30 days free, 1 every 24 hours with Premium) | — |
 | `/record transcribe-cancel` | Cancel your running transcription on this server | — |
 
 ## Temporary voice channels
@@ -73,7 +73,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | `/voice claim` | Takes over a channel whose owner left | — |
 | `/voice delete` | Deletes your temporary channel | — |
 | `/voice info` | Shows the owner, privacy and lists of your channel | — |
-| `/voice invite [message] [channel]` | Posts an invite to your channel in its chat | — |
+| `/voice invite [message] [channel]` | Posts an invite to your channel in a public text channel (`channel`, else the public invitations channel of the dashboard, else this one) | — |
 | `/voice limit <limit>` | Sets the user limit (0 = no limit) | — |
 | `/voice name <name>` | Renames your temporary channel | — |
 | `/voice password [password]` | Sets a password for /join (empty = remove it) | — |
@@ -84,7 +84,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | `/voice thread` | Turns the chat thread of your channel on or off | — |
 | `/voice transfer <member>` | Gives your channel to a member in it | — |
 | `/voice user block <member> [member2] [member3]` | Keeps a member out of your channel | — |
-| `/voice user invite <member>` | Sends a member a DM with an invite to your channel (vote) | — |
+| `/voice user invite <member>` | Sends a member a DM with an invite to your channel | — |
 | `/voice user kick <member> [member2] [member3]` | Disconnects a member (owner), or starts a vote kick | — |
 | `/voice user trust <member> [member2] [member3]` | Lets a member in while the channel is locked or hidden | — |
 | `/voice user unblock <member> [member2] [member3]` | Removes the block of a member | — |

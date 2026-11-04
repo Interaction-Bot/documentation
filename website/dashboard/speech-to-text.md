@@ -18,11 +18,12 @@ Use the _**Enabled / Disabled**_ toggle to enable the transcription on the serve
 
 * **Voice channel**: listen to a specific voice channel, or to _All voice channels_ (default).
 * **Text channel**: where the transcriptions are posted: a text channel, a forum, or the chat of a voice channel. Default: _Chat of the voice channel being transcribed_.
-* **Translate to** (**premium**): translate each transcription into this language. Only the translation is posted. Default: _No translation_. On a free server, the field reads _No translation (premium only)_.
+* **Translate to** (**premium**): translate each transcription into this language. Only the translation is posted. Default: _No translation_. On a free server, the field is locked and its help text reads _Reserved for premium servers._
 * **Style**:
   * _Embed_: a card with the speaker's name and avatar, and the transcription (or its translation). Needs *Embed Links*.
   * _Message_: a plain message, speaker name followed by the text. Needs no embed permission.
   * _Webhook_ (default): sent under the speaker's name and avatar. Needs the *Manage Webhooks* permission, otherwise a plain message is used.
+* **Display** (when a translation is set): _Translation only_ (default for a new configuration) posts only the translation; _Original + translation_ posts the transcription, then its translation.
 
 Click _**Remove**_ on a configuration to delete it. When there are unsaved changes, a bar at the bottom of the page says _You made changes, save them!_ with _Save_ and _Cancel_ buttons: _Save_ applies them, _Cancel_ restores the last saved configurations. The message _Configuration saved._ confirms the save.
 
@@ -50,10 +51,9 @@ The section **Live transcription (Activity)** sets the Activity of [`/transcribe
 | **Live view enabled** | On | Turns the Activity on or off. When off, the Activity cannot be opened. The other settings are hidden. |
 | **Who can open it** | Anyone in the voice channel | *Anyone in the voice channel* or *Only members who can manage the server*. |
 | **Show profile pictures** | On | Shows the picture of each speaker. |
-| **Show the translation (if the transcription is translated)** | On | Shows the server's translation of the transcription in the *Original* view. It does not change the language a viewer picks. |
 | **Lines kept on screen** | 60 | 30, 60, 100 or 200 finished lines. |
 
-Changes to the pictures and to the translation apply at once to an open Activity. The other settings apply the next time someone opens it.
+Changes to the pictures apply at once to an open Activity. The other settings apply the next time someone opens it.
 
 ## Messages of the page
 

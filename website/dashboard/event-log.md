@@ -10,7 +10,7 @@ The event log is **off by default**. To use it, choose a **default log channel**
 
 ## Default log channel
 
-Every category that has no channel of its own is written here. The bot needs to see the channel, write in it and embed links; the page tells you when something is missing, and when the bot paused itself after Discord refused its messages (it tries again after a few minutes, or when you click _**Check again**_).
+Every category that has no channel of its own is written here. The bot needs to see the channel, write in it and embed links; the page tells you when something is missing, and when the bot paused itself after Discord refused its messages (it tries again after 10 minutes, or when you click _**Check again**_).
 
 ## What is written
 

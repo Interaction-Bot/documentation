@@ -151,7 +151,7 @@ If one of these is not true, the bot stays silent.
 
 ### What is the minimum confidence?
 
-It is the score an entry must reach to be used, between **80%** and **95%** (84% by default). The percentage shown in the footer of an automatic reply is that score.
+It is the score an entry must reach to be used, between **80%** and **95%** (85% by default). The percentage shown in the footer of an automatic reply is that score.
 
 * **Higher** (for example 92%): fewer replies, but only for very close questions.
 * **Lower** (for example 82%): more replies, with a higher risk of an answer that does not fit the question.
@@ -201,7 +201,7 @@ Run `/check-permissions` to see the missing permissions of every configured chan
 
 ### Who can manage the FAQ?
 
-Members with *Manage Server* can use `/faq`, and the dashboard can be used by members with *Administrator*. Anybody can use `/ask`.
+Members with *Manage Server* can use `/faq`, and the dashboard can be used by members with *Manage Server* or *Administrator*. Anybody can use `/ask`.
 
 ### How are the automatic replies limited?
 

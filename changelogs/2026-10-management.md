@@ -17,11 +17,11 @@ The third update of October 2026. It adds tools to welcome and protect your comm
 ### Invite tracker
 * Know **who invited each member**, with a ranking of the best inviters, a journal, fake account detection and corrections you can undo.
 * `/invites [user]` and `/invite-leaderboard`. Invite labels can give a role. Variables `{inviter}`, `{invites}` and `{invite_label}` for the welcome message.
-* Off by default, free for every server. See [Invite tracker](../management/invite-tracker.md) and the dashboard page [Invitations](../website/dashboard/invites.md).
+* Off by default, free for every server. Premium servers can also ignore the members who have some roles. See [Invite tracker](../management/invite-tracker.md) and the dashboard page [Invitations](../website/dashboard/invites.md).
 
 ### Honeypot
 * **Trap channels** that catch spam bots and hacked accounts: kick and clean up, report, ban or timeout, with a pinned warning, a report in a log channel, a history with the message as evidence, and a protection that pauses the trap when real members fall into it.
-* Free for every server. See [Honeypot](../management/honeypot.md) and the dashboard page [Honeypot](../website/dashboard/honeypot.md).
+* Free for every server. Premium servers can also choose the deletion and timeout durations and a role to ping. See [Honeypot](../management/honeypot.md) and the dashboard page [Honeypot](../website/dashboard/honeypot.md).
 
 ### AI setup
 * `/ai setup` opens a conversation in a channel: say what you want, the AI proposes a plan and applies it after your confirmation. The same assistant is available on the dashboard. See [AI setup](../management/ai-setup.md).
@@ -37,8 +37,8 @@ The third update of October 2026. It adds tools to welcome and protect your comm
 ## Improvements
 
 * **Temp voice page redesigned**: 4 tabs (Rooms, Control panel, Who can do what, Moderation), one card per Join to create channel, an editor with a preview, and the installation applied when you save. See [Temp voice](../website/dashboard/temp-voice.md).
-* **Translation groups are now called Mirror Translation** in the dashboard and the bot (the commands `/group ...` do not change). **Speech to text** is now called **Transcription** on the dashboard.
-* The **dashboard menu** is regrouped: Language identification, Blacklist and Flag shortcuts are under Translation, and Welcome, Invitations and Honeypot are under Management.
+* **Translation groups are now called Mirror Translation** in the dashboard and the bot (the commands `/group ...` do not change). **Speech to text** is now called **Transcription** on the dashboard. _Since then, Mirror Translation is the **Linked channels** section of **Translation rules**._
+* The **dashboard menu** is regrouped: Language identification, Blacklist and Flag shortcuts are under Translation, and Welcome, Invitations and Honeypot are under Management. _Since then, the Translation menu has four pages: Translation rules, Flags, Exceptions and Voice messages._
 * The dashboard keeps your server list for 10 minutes and the bot **confirms every change** against your Discord permissions (Administrator or Manage Server).
 * The voice recording is more robust against lost network packets, and a track now plays from the right position on its page.
 * The bot now uses the **Server Members** ability, for the welcome messages and the invite tracker.

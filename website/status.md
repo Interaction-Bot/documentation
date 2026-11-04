@@ -12,9 +12,9 @@ The status page is on the website of the bot. You can access it with the link be
 
 {% embed url="https://interaction-bot.com/status" %}
 
-## Translation services
+## Platform
 
-This section shows the state of the services used by the bot to translate, detect languages, read text (text to speech) and transcribe voice (speech to text). It is a live check: the page runs a small test request for each service.
+The translation services (Translation, Language detection, Text to speech, Speech to text) are listed in the **Platform** section, with the Website, the Dashboard and the Bot link. They are the services used by the bot to translate, detect languages, read text (text to speech) and transcribe voice (speech to text). The Website backend tests each service with a small real request about every minute; the page shows the latest result.
 
 Each service shows a colored dot, its name, its state and, when the service answered, its response time in milliseconds (for example `Operational - 420 ms`).
 
@@ -33,7 +33,7 @@ The states are:
 * <mark style="color:gray;">Unknown</mark>: the test request was refused, so the state cannot be known for sure, or the service is not configured.
 * <mark style="color:gray;">Checking...</mark>: the first check of the service has not finished yet. The page asks again in a few seconds.
 
-The results are kept for up to 30 seconds, so a change can take a short time to appear.
+The results are refreshed about every minute, so a change can take up to a minute to appear.
 
 <figure><img src="../.gitbook/assets/dash-status.png" alt="Status page"><figcaption><p>Status page</p></figcaption></figure>
 
@@ -63,8 +63,8 @@ A **cluster** is a group of shards that runs on one process. A cluster runs up t
 Each cluster is a square with its number. Its color shows its state:
 
 * <mark style="color:green;">Operational</mark> (green): the cluster answers, and its ping is under 150 ms.
-* <mark style="color:yellow;">Partial Outage</mark> (yellow): the cluster answers, but its ping is above 150 ms. The bot is slower for the servers of this cluster.
-* <mark style="color:red;">Major Outage</mark> (red): the cluster does not answer.
+* <mark style="color:yellow;">Degraded</mark> (yellow): the cluster answers, but its ping is above 150 ms. The bot is slower for the servers of this cluster.
+* <mark style="color:red;">Outage</mark> (red): the cluster does not answer.
 
 <figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="468"><figcaption><p>Cluster Status</p></figcaption></figure>
 
@@ -74,6 +74,6 @@ Place your cursor on a cluster (or tap it on a phone) to see its details:
 * its number of servers and members;
 * its ping, in milliseconds.
 
-For a red cluster, only the estimated range of shards is shown.
+For a red cluster, the range of shards and the last known figures are shown.
 
-To know the cluster of your server, see [Server localization](#server-localization), or the **CLUSTER** field of the [Overview](dashboard/overview.md) page of the dashboard.
+To know the cluster of your server, see [Server localization](#server-localization).

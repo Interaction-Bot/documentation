@@ -23,7 +23,7 @@ Click on _**Add a channel**_ and set:
 * **Channel**: a text channel of the server. A channel can be used only once.
 * **Language of the messages**: _Auto-detect_ (default) or a language. With _Auto-detect_, the language is detected for each message.
 * **Translate to** (optional): translate each message into this language before it is read. Default: _No translation_.
-* **Destination** (optional): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
+* **Voice channel for reading** (optional): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
 * **Enabled**: switch a channel off without removing it. A disabled channel is kept in the list but not read.
 
 Click _**Remove**_ to stop reading a channel. When you are done, click _**Save**_. _**Cancel**_ restores the last saved list.
@@ -36,16 +36,18 @@ After a save, the bot reloads the channels at once: no restart is needed.
 
 The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar. During a session (`/tts start`) the bot always reads the messages of the chat and the chat of its voice channel: these two options no longer exist.
 
+The options *Say who wrote*, *Ignore the audience of stages*, *The author must be in the voice channel*, *Skip emojis* and *Prefix* apply to the `/tts start` sessions only. *Members can choose their voice*, *Cloned voices allowed* and *Read translations aloud* apply to both.
+
 | Option | Default | What it does |
 | --- | --- | --- |
-| Say who wrote | On | Says "Alex said" when the author changes. |
+| Say who wrote | On | Says "Alex said" when the author changes, or after 60 seconds without a message from them. |
 | Ignore bots | On | Messages written by bots are not read. |
 | Ignore the audience of stages | On | Messages from the audience of a stage channel are not read. |
 | The author must be in the voice channel | On | Only reads the members who are in the bot's voice channel. |
 | Skip emojis | Off | Emojis are removed before reading. |
 | Members can choose their voice | On | `/tts voice` works on the server. |
 | Cloned voices allowed | On | Premium members can read with their own cloned voice. |
-| Read translations | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
+| Read translations aloud | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
 
 Also the **Prefix** field (10 characters maximum): when set, only the messages that start with it are read, and the prefix is not said.
 
@@ -71,11 +73,11 @@ Adding a channel beyond the limit opens the premium window. The translation of m
 
 ## What is read
 
-* Messages are read **up to 200 characters**. A longer message is not read.
+* Messages are read **up to 4000 characters**. A longer message is cut to 4000 characters.
 * Messages from bots, messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are not read.
 * Links are removed and mentions are read as names.
 * A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A channel that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.
-* Messages are read one after the other. Up to 5 messages can wait in the queue of the voice channel.
+* Messages are read one after the other. Up to 40 clips can wait per server: beyond that, messages are dropped.
 
 ## Access
 

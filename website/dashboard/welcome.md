@@ -40,7 +40,7 @@ The welcome message is posted in a channel when a member joins.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| **Send a message when someone joins** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _Welcome {user} to {server}! 🎉 You are our {member_count.ordinal} member._ is written. |
+| **Send a message when someone joins** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _Welcome {user} to {server}! You are our {member_count.ordinal} member._ is written. |
 | **Channel** | Nothing chosen | A text channel or an announcement channel. A channel is required when the message is on. |
 | **Message** | Empty | The text of the message. Up to **2000** characters. Click a variable button (for example _**Mention the member**_) to insert it where the cursor is. |
 | **Variables** | - | Buttons that insert `{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{member_count.ordinal}`, `{user.name}`, `{account_created}`, `{date}`, `{user.id}`, `{inviter}`, `{inviter.name}`, `{invites}` and `{invite_label}`. |
@@ -54,7 +54,7 @@ The goodbye message is posted in a channel when a member leaves. The member is n
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| **Send a message when someone leaves** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _{user.display_name} left the server. 👋_ is written. |
+| **Send a message when someone leaves** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _{user.display_name} left the server._ is written. |
 | **Channel** | Nothing chosen | A text channel or an announcement channel. A channel is required when the message is on. |
 | **Message** | Empty | Up to **2000** characters. The variable buttons do not show `{user}`. Typing `{user}` still shows the name of the member. |
 | **Show the message as a card** | Off | Same as the Welcome tab. |
@@ -197,6 +197,7 @@ When the save fails, the page shows the reason of the error:
 | Card title | 256 characters |
 | Card text | 4096 characters |
 | Card footer | 2048 characters |
+| Card title, text and footer together | 6000 characters |
 | Banner title and subtitle | 120 characters each |
 | Text in a custom banner | 200 characters |
 | Elements in a custom banner | 20 |

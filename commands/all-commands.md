@@ -12,10 +12,12 @@ The configuration commands are described on one page: [Configuration commands](c
 
 | Command                                                  | Description                                                              | Who          |
 | -------------------------------------------------------- | ------------------------------------------------------------------------ | ------------ |
-| `/translate <message> [language]` 👤                      | Translate a text (private answer by default).                                     | Everybody    |
+| `/translate <message> [language]` 👤                      | Translate a text. The answer is posted in the channel.                                     | Everybody    |
 | `/detect <text>` 👤                                      | Tell the language of a text.                                              | Everybody    |
 | `/languages` 👤                                          | List the 100 supported languages.                                         | Everybody    |
+| `/personal-language <language>` 👤 | Language of your own translations (Translate menu and `/translate`). | Everybody |
 | Apps > **Translate** / **Detect** 👤                     | Right click a message.                                                    | Everybody    |
+| `/translation setup\|server\|channel\|reverse\|link\|list\|delay\|remove\|copy\|options\|help\|manage` | Translation rules for the server, a channel, a category, two languages, or linked channels. [Details](translation.md). | Manage Server |
 | `/channel-translation set\|remove\|list\|manage` | Automatic translation by channel, with the [Thread style](../translation/threads.md). [Details](configuration.md#channel-translation). | Manage Server |
 | `/role-translation set\|remove\|list\|manage` | Automatic translation by role. [Details](configuration.md#role-translation). | Manage Server |
 | `/category-translation set\|remove\|list\|manage` | Automatic translation by category. [Details](configuration.md#category-translation). | Manage Server |
@@ -23,7 +25,7 @@ The configuration commands are described on one page: [Configuration commands](c
 | `/flag-translation set\|remove\|list\|manage` | Translation by flag reaction. [Details](configuration.md#flag-translation). | Manage Server |
 | `/language-detection set\|reset\|list\|manage` | Minimum number of characters to translate, per channel. | Manage Server |
 | `/blacklist add\|remove\|list\|manage` | Roles, channels and languages never translated (Premium). | Manage Server |
-| `/flags set <channel> <flags>` / `/flags clear <channel>` | [Flag shortcuts](flags.md).                                              | Manage Server |
+| `/flags set <channel> <flags>` / `/flags clear <channel>` / `/flags manage` | [Flag shortcuts](flags.md).                                              | Manage Server |
 | `/check-permissions`                                     | List the permissions the bot lacks in the configured channels.            | Manage Server |
 
 ## Voice
@@ -76,17 +78,17 @@ See [FAQ and /ask](../qa/faq.md).
 | `/ping`          | Latency of the bot.                                               |
 | `/invite` 👤        | Invitation link of the bot.                                       |
 | `/support` 👤       | Link of the support server.                                       |
-| `/documentation` | Link of this documentation.                                       |
+| `/documentation` 👤 | Link of this documentation.                                       |
 | `/dashboard` 👤     | Link of the dashboard.                                            |
 | `/reminder <enable>` | Be reminded when you can vote again on top.gg.                |
 | `/bot-language [language]` | Language of the replies of the bot in the server (Manage Server). See [Configuration commands](configuration.md#language-of-the-bot). |
-| `/server-settings [warning]` | Server settings of the dashboard overview (Manage Server). |
+| `/server-settings [warning] [edits]` | Server settings of the dashboard overview (Manage Server). |
 
 ## Premium
 
 | Command                       | Description                                  |
 | ----------------------------- | -------------------------------------------- |
-| `/premium add [guild_id]`     | Enable your premium on a server.             |
-| `/premium remove [guild_id]`  | Remove your premium from a server.           |
+| `/premium add [guild-id]`     | Enable your premium on a server.             |
+| `/premium remove [guild-id]`  | Remove your premium from a server.           |
 
 See [Premium usage](../premium/usage.md).

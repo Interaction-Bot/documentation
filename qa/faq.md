@@ -80,7 +80,7 @@ Example: a member writes in `#help` *"I cannot find the Developer role anywhere,
 **The bot stays silent** (and does not answer) when:
 
 * the message is from a bot or a webhook, starts with `/` or `!`, has fewer than 4 words, or contains only links, emojis or mentions;
-* no entry reaches the group's minimum confidence (80% to 95%, 84% by default);
+* no entry reaches the group's minimum confidence (80% to 95%, 85% by default);
 * two entries match almost equally well, so the bot cannot choose one;
 * the bot cannot send messages or embeds in the channel, or the search is rate limited.
 
@@ -113,7 +113,7 @@ A channel can belong to one group only.
 | `The question must contain between 1 and 200 characters.` | Shorten the question. |
 | `The answer must contain between 1 and 1800 characters.` | Shorten the answer. |
 | `Entry not found.` | The entry was already removed. Run `/faq list` again. |
-| `The translation api seems to be inaccessible. Please try again later.` | The bot could not analyze the question (its language detection failed). Try again later. |
+| `The translation api seems to be inaccessible. Please try again later.` | The bot could not reach its analysis service. Try again later. |
 
 {% hint style="info" %}
 Automatic replies only use the entries of the group, and only when the question is close enough. If the bot never answers, read [FAQ guides](faq-guides.md#why-does-the-bot-never-answer-automatically).

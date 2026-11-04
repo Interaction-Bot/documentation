@@ -6,7 +6,7 @@ description: Let members translate a message with a flag reaction, and configure
 
 ## Localization
 
-This page is the third item of the **Translation** section of the navigation bar, after [Role Translation](role-translation.md). Its title is **Flag translation**.
+This page is the second item of the **Translation** section of the navigation bar. Its title is **Flags**. It has two cards: **React with a flag** (this page) and **Automatically added flags** (see [Flag shortcuts](flag-shortcuts.md)).
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation.png" alt="Flag translation page"><figcaption><p>Flag translation page</p></figcaption></figure>
 
@@ -38,17 +38,18 @@ Click on _**Add a configuration**_ (under the box *Configure a channel*). On a s
 
 The popup has these fields:
 
-* **CHANNEL**: *Select the channel where configuration will be applied.* Each channel can have only one configuration.
-* **ACTIVATED**: *Activate flag translation for this channel.* A new configuration starts **off**: flags do nothing in this channel until you turn this toggle on.
+* **Which channel?**: *Members translate the messages of this channel by reacting with a flag.* Each channel can have only one configuration.
+* **Members can translate by reacting with a flag here**: turns flag translation on or off for this channel. A new configuration starts **on**: flags translate messages in this channel as soon as you save.
 
 Click on _**OPTIONS**_ to show the optional settings.
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation-options.png" alt="Options dropdown"><figcaption><p>Options</p></figcaption></figure>
 
-* **SENDING MODE** (*Choose whether the bot should translate the message for each new reaction.*): choose one of two modes.
-  * **Each time**: each flag reaction makes a new translation, even if the message was already translated.
-  * **One time**: only the first flag reaction on a message is translated. The bot remembers the last 1,000 translated messages. This memory is kept in the bot's memory, so it is cleared when the bot restarts.
-* **AUTO DELETE** (*Delete the translate message automatically.*): when on, the translation is deleted after the reading time (0.13 second per character, minimum 25 seconds). A new configuration starts **off**: the translations then stay in the channel.
+* **Style of the translation** sets how the reply is sent: **Embed** (default), **Webhook**, **Message**, **Thread** or **Private message**. With **Thread**, you also choose the look of the thread messages and how long the thread is kept before it is archived.
+* **How often is it translated?** (*Choose whether the bot should translate the message for each new reaction.*): choose one of two modes.
+  * **Each time someone reacts**: each flag reaction makes a new translation, even if the message was already translated.
+  * **Once per message**: only the first flag reaction on a message is translated. The bot remembers the last 1,000 translated messages. This memory is kept in the bot's memory, so it is cleared when the bot restarts.
+* **Delete the translation automatically** (*Delete the translate message automatically.*): when on, the translation is deleted after the reading time (0.13 second per character, minimum 25 seconds). A new configuration starts with this option **off**: the translations then stay in the channel.
 
 Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
 
@@ -56,15 +57,15 @@ Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bot
 
 In #general, you want the translations to be shown only once per message, and to disappear by themselves:
 
-* **CHANNEL**: #general
-* **ACTIVATED**: on
-* **SENDING MODE**: One time
-* **AUTO DELETE**: on
+* **Which channel?**: #general
+* **Members can translate by reacting with a flag here**: on
+* **How often is it translated?**: Once per message
+* **Delete the translation automatically**: on
 
 In #announcements, you want flags to be disabled:
 
-* **CHANNEL**: #announcements
-* **ACTIVATED**: off
+* **Which channel?**: #announcements
+* **Members can translate by reacting with a flag here**: off
 
 ## Save configurations
 
@@ -93,6 +94,6 @@ On a server without Premium, flags on the messages sent by bots are ignored. A r
 
 ## Tips
 
-* To disable flags in a channel without losing the settings, turn **ACTIVATED** off and save.
+* To disable flags in a channel without losing the settings, turn **Members can translate by reacting with a flag here** off and save.
 * Use **One time** in busy channels: a message is translated once, even when many members add the same flag.
 * Use **AUTO DELETE** in channels where the translations would make the conversation hard to read.

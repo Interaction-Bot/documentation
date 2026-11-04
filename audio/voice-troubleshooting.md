@@ -7,9 +7,9 @@ description: The bot does not join, does not speak, or does not transcribe? Chec
 ## Quick checklist
 
 1. **Does the bot have *Connect* and *Speak*** in the voice channel? See [Permissions](voice.md#permissions).
-2. **Is the feature allowed?** `/tts say` and `/connect` need **your own** vote (even on a premium server). `/transcribe start` and `/transcribe live` need a premium server or your vote. Starting the live transcription from the Activity needs *Manage Server* and a vote from any member of the server (or a premium server). `/tts start`, TTS channels and automatic transcription need a premium server or a vote from a member of the server. `/tts voice` and `/tts clone` need no vote. See [Access](voice.md#access).
+2. **Is the feature allowed?** `/tts say` and `/connect` need a premium server, or a vote from a member of the server (valid 24 hours). `/transcribe start` and `/transcribe live` have the same rule. Starting the live transcription from the Activity needs *Manage Server* and a vote from any member of the server (or a premium server). `/tts start`, TTS channels and automatic transcription need a premium server or a vote from a member of the server. `/tts voice` and `/tts clone` need no vote. See [Access](voice.md#access).
 3. **Is the bot already busy?** It can be connected to another voice channel of the server, or already transcribing.
-4. **Is the text short enough?** `/tts say` refuses texts over 500 characters, TTS channels ignore messages over 200 characters.
+4. **Is the text short enough?** `/tts say` refuses texts over 500 characters. TTS channels read messages up to 4000 characters.
 5. **Is the bot still in the channel?** It leaves 30 seconds after the last human left.
 
 ## Permissions
@@ -53,7 +53,7 @@ These are the messages the bot shows, with the exact text.
 | *⛔ Too many voice channels are being transcribed right now, please try again in a few minutes.* | The service is at its limit of simultaneous transcriptions. Try again later. |
 | *⛔ You do not have permission to execute this command.* | `/transcribe stop` was run by a member who may not stop it. See [Daily time and stop](voice.md#daily-time-and-stop). |
 | *⛔ I am missing permissions in #channel: I need to send messages there (and to embed links in the embed style). Please give them to me or choose another style.* | The bot cannot post in the chosen channel. Fix the permissions or change the style. |
-| *⛔ The translation of the transcription is reserved for premium servers.* | `translate_to` needs a premium server. Start the transcription without it. |
+| *The translation of the transcription is reserved for premium servers. Get premium or start the transcription without `translate-to`.* | `translate-to` needs a premium server. |
 | *✅ The transcription has been stopped.* | The transcription ended: stopped by a member, or the bot left the channel. |
 | *⏱️ This server has used all its daily Transcription time (3 h). It resets in 5 hours.* | Premium servers: the 3 hours of the day are used. The countdown gives the reset, at midnight UTC. |
 | *⏹️ The transcription has stopped: the daily limit is reached.* | The daily time of the server was used up during the transcription. The bot leaves the voice channel. |
@@ -70,18 +70,18 @@ These are the messages the bot shows, with the exact text.
 
 | Symptom | Cause and fix |
 | --- | --- |
-| `/tts say` and `/connect` refuse with the vote message on a premium server | They check the vote of **the member who runs them**. Vote, or ask a member who voted to run the command. `/tts start` accepts a premium server. |
+| `/tts say` and `/connect` refuse with the vote message | The server is not premium and no member of the server has voted in the last 24 hours. Vote, or get a premium server. |
 | The bot does not join | The member is not in a voice channel (see the messages above), or the bot lacks **Connect** in that channel. |
 | The bot joins but says nothing | Missing **Speak**, or the text was refused (see above). Check that the bot is not already reading (`/tts stop` empties the queue). |
 | `/tts say` speaks in another voice channel | `/tts say` reads in the voice channel where the bot already is, when you are not in a voice channel. If you are in another one, the command refuses (*I am already reading in another voice channel.*). Use `/tts stop` (or `/disconnect`) first, then `/tts say`. |
-| The bot does not read a TTS channel message | Check that the author is in a voice channel, that the message has text and is not longer than 200 characters, and that it does not start with `/`, `!`, `.` or `$`. The bot also skips messages while it is connected to another voice channel of the server, and ignores a member who posts 5 messages with an average gap under 1.5 seconds (for 10 seconds). Check also the **destination** of the TTS channel (dashboard or `/tts-channel list`): the message is read there, and only when someone is in that channel. Check that the channel is not switched off (*disabled* in `/tts-channel list`). |
+| The bot does not read a TTS channel message | Check that the author is in a voice channel, that the message has text, and that it does not start with `/`, `!`, `.` or `$`. The bot also skips messages while it is connected to another voice channel of the server, and ignores a member who posts 5 messages with an average gap under 1.5 seconds (for 10 seconds). Check also the **destination** of the TTS channel (dashboard or `/tts-channel list`): the message is read there, and only when someone is in that channel. Check that the channel is not switched off (*disabled* in `/tts-channel list`). |
 | A TTS channel is read in the wrong language | Set the **language** of the channel (`/tts-channel set`, or the dashboard). Automatic detection is used when none is set. |
 | Automatic transcription does not start | A permission is missing (nothing is posted), the server has no vote, the bot is busy in another voice channel or already transcribing, or the member joined another voice channel than the one configured. |
 | Only some words are transcribed | Very short sounds, quiet sounds and noise are ignored. Speak closer to the microphone, and avoid overlapping voices. The speech service may also skip unclear parts. |
 | Transcriptions are plain messages, not webhooks | The bot lacks **Manage Webhooks** in that channel. Give it the permission, or choose the *message* style. |
 | The translation is not posted | Translation is premium only. On a premium server, the original text is posted when the translation fails. |
 | The transcription stops by itself | The daily time of the server was used up (30 minutes free, 3 hours premium, counted per UTC day: the time starts again at midnight UTC), the bot was disconnected, or the speech service failed 5 times in a row. |
-| A `/disconnect` vote never completes | When `/disconnect` is run without a channel, the vote buttons do not count the votes. Run `/disconnect` again with the `channel` option filled in, then vote. |
+| A `/disconnect` vote does not complete | Only members connected to the bot's voice channel can vote, and the vote message disappears after 60 seconds. |
 | The language of the speech is wrong | Set the **language** option (`/transcribe start` or `/transcribe auto enable`), or the language of the configuration on the dashboard. |
 | The live view (`/transcribe live`) does not open, or says *Connecting to Discord…* forever | See [Live transcription: Troubleshooting](live-transcription.md#troubleshooting). |
 | My cloned voice is not used | Creating and using a cloned voice need Premium (you, or the server where you talk). The server may refuse them (*Cloned voices allowed*). See [Voices and cloning](voices-and-cloning.md#who-can-create-and-use-a-cloned-voice). |

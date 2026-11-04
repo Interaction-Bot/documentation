@@ -202,7 +202,7 @@ When the server has a log channel (`/tempvoice config log`, or the dashboard), t
 | Vote kick | 2 minutes, share from 10 % to 100 % by steps of 5 (default 50 %). |
 | Channel creation | 5 seconds between two channels for the same member. A member gets a private message when a channel cannot be created, at most once a minute. |
 | Server | 500 channels (Discord). When the server has 500 channels, nothing is created and the members are told. |
-| Category | 50 channels (Discord). When the category is full, the fallback categories of the dashboard are used first (Premium servers only), else a new category `TempVoice 2`, `TempVoice 3`... |
+| Category | 50 channels (Discord). When the category is full, the fallback categories of the dashboard are used first (Premium servers only), else a new category named after the creator's category with a number (`<category name> 2`, `<category name> 3`...) |
 | `/join` | 3 seconds between two tries. After 5 wrong tries in 10 minutes, no try is accepted for a while. |
 | Greeting message | 1900 characters. |
 | Confirmation of `/voice delete` | 60 seconds. |

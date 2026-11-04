@@ -38,10 +38,10 @@ To avoid floods, the bot also protects itself against servers that send an abnor
 
 ## Flag translation, step by step
 
-1. A member adds a flag emoji (🇫🇷, 🇪🇸, 🇯🇵…) under a message. The flag decides the target language ([171 flags](languages.md) are supported).
+1. A member adds a flag emoji (🇫🇷, 🇪🇸, 🇯🇵…) under a message. The flag decides the target language ([175 flags](languages.md) are supported).
 2. The bot checks the [flag translation](../website/dashboard/flag-translation.md) configuration of the channel. Without any configuration, the flags **work by default**.
 3. Bots are ignored, and messages written by bots are translated on premium servers only.
-4. In **Once** mode, a message is translated only the first time a flag is added. In **Every time** mode, every flag added produces a translation.
+4. In **One time** mode, a message is translated only the first time a flag is added. In **Each time** mode, every flag added produces a translation.
 5. The translation is posted as a **reply** to the message, in an embed that shows the source and target languages. It is deleted after a while unless *Auto delete* is turned off (about 0.13 s per character, at least 25 seconds).
 
 {% hint style="info" %}
@@ -50,7 +50,8 @@ To avoid floods, the bot also protects itself against servers that send an abnor
 
 ## Commands and menus, step by step
 
-* **`/translate`** and **Apps > Translate** detect the language of the message, translate it into the language you choose (or your Discord language) and answer privately (ephemeral message: only you see it, and you can dismiss it).
+* **`/translate`** detects the language of the text, translates it into the language you choose (or your Discord language) and posts the answer in the channel, visible to everyone.
+* **Apps > Translate** does the same for a message you right click, and answers privately (only you see it, and you can dismiss it).
 * **`/detect`** and **Apps > Detect** only tell you the detected language.
 * They are limited to one use every few seconds per member.
 

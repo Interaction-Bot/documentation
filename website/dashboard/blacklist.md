@@ -10,60 +10,61 @@ On the current dashboard this page is called **Exceptions**, in the **Translatio
 
 ## Localization
 
-This page is in the **Management** section of the navigation bar. Its title is **Blacklist Channel**, and the page has three sections below it.
+This page is in the **Translation** section of the navigation bar, under **Exceptions**. Its first section is **Never translate**, with three lists: **Channels**, **Roles** and **Languages**.
 
 <figure><img src="../../.gitbook/assets/dash-blacklist.png" alt="Blacklist page"><figcaption><p>Blacklist page</p></figcaption></figure>
 
 {% hint style="warning" %}
-The blacklist is a **Premium** feature: a server without Premium cannot add new entries. Entries that were saved while the server had Premium are kept, but see the notes of each section below.
+Adding channels, roles or languages to the list is a **Premium** feature: a server without Premium cannot add new entries. Exclusions already in place stay active.
 {% endhint %}
 
-The page has three sections. They share one bar of changes at the bottom of the page.
+The page has one bar of changes at the bottom. It is shared with the [minimum message size](language-identification.md) section.
 
-## Blacklist Channel
+## Never translate
 
-**Add a channel** (*Add a channel that will not be translated by role and category translation.*) adds a channel to the blacklist. Choose the channel in the popup and click on _**Save**_ in the popup. The change is applied when you save the page.
+The section lists the channels, roles and languages whose messages are never translated. These exceptions apply to written messages, not to flags.
 
-* **CHANNEL** (*The channel that will be blacklisted.*): the channel.
+### Channels
 
-A message posted in a blacklisted channel is **not translated at all**: no channel, role, category or group configuration translates it. Flag translations still work in this channel, because they are triggered by a reaction.
+Click _**Add a channel**_, then choose the channel in the popup, under **Which channel?**. Messages in this channel are never translated, whether by a rule, a linked channel or the server rule. You can select several channels at once.
 
-The list shows the channels of the blacklist, with _**Edit**_ and _**Delete**_ buttons on each row.
+Each excluded channel is shown as _Never translate {channel}_, with an _**Edit this channel**_ button.
 
-## Blacklist Language
+A message posted in an excluded channel is **not translated at all**. Flag translations still work in this channel, because they are triggered by a reaction.
 
-**Add a language** (*Add a language that will not be translated when bot detect an new message.*) adds a language to the blacklist. Choose the language in the popup and click on _**Save**_ in the popup. The change is applied when you save the page.
+### Roles
 
-* **LANGUAGE** (*The language that will be blacklisted.*): the language.
+Click _**Add a role**_, then choose the role under **Which role?**. Messages from members with this role are never translated, whatever the rule. Each role is shown as _Ignore messages from {role}_.
 
-When the bot detects this language in a new message, the message is not translated. This is useful when a language is often confused with another one, and you do not want its messages to be translated.
+### Languages
 
-{% hint style="warning" %}
-The language blacklist is only applied while the server has Premium. If Premium ends, the entries are kept but not applied until Premium is active again.
-{% endhint %}
-
-The list shows the blacklisted languages, with _**Edit**_ and _**Delete**_ buttons on each row.
-
-## Blacklist Role
-
-**Add a role** (*Add a role that will not be translated.*) is a list: click on the roles that you want to blacklist, click again to remove one, and use the search field when the list is long. Then save the page with the bar at the bottom.
-
-Messages sent by a member who has one of these roles are **not translated at all**.
+Click _**Add a language**_, then choose the language under **Which language?**. Messages written in this language are never translated. Each language is shown as _Never translate messages in {language}_.
 
 {% hint style="info" %}
-Adding a role to the blacklist is a Premium feature. On a server without Premium, the list is locked and clicking on it opens the Premium pop-up.
+Excluding channels, roles and languages is a Premium feature.
 {% endhint %}
 
-## Save configurations
+## Save
 
-Click on _**Save**_ in the bar at the bottom of the page (*You made changes, save them!*) to apply your changes. _**Cancel**_ removes your unsaved changes.
+Click on _**Save**_ in the bar at the bottom of the page to apply your changes. _**Cancel**_ removes your unsaved changes. The bar says _You made changes, save them!_
 
-If the bot refuses to save a new channel, language or role (because the server has no Premium), nothing is saved and the bar stays on the screen without any message.
+If the bot refuses to save, the page shows _Saving failed. If your server is not Premium, excluding channels, roles and languages is reserved for Premium. Try again._
+
+## Commands
+
+The same list can be managed with the `/blacklist` command:
+
+* `/blacklist add`: add a role, a channel or a language (Premium).
+* `/blacklist remove`: remove a role, a channel or a language.
+* `/blacklist list`: list the roles, channels and languages of the blacklist.
+* `/blacklist manage`: open a panel to manage the blacklist.
+
+By default, only members with the *Manage Server* permission can use these commands.
 
 ## Errors
 
-* **It looks like you found a premium feature!** (pop-up): you clicked on *Add a channel*, *Add a language*, *Edit* or the role list on a server without Premium. *Subscribe* opens the Premium page of the dashboard.
-* **Error - You have not completed all the required fields.** (pop-up): no channel or no language is selected in the popup.
+* _Choose a channel first._, _Choose a role first._ or _Choose a language first._: nothing is selected in the popup.
+* _This channel is already excluded. Edit it instead._ (and the same for a role or a language): the item is already in the list.
 
 ## Premium
 

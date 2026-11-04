@@ -31,7 +31,7 @@ The panel lists the configurations (5 per page, with **Previous** and **Next**).
 
 <figure><img src="../.gitbook/assets/discord-channel-translation-thread-options.png" alt="Edit panel of a channel translation"><figcaption><p>The options of a configuration (here with the Thread style)</p></figcaption></figure>
 
-In the edit panel, the menus choose the **channel to translate**, the **target channel** (optional) and the **style**. The buttons turn *Delete the original*, *Delete the translation*, *Translate bots*, *Always send* and *Active* on or off. **Language** opens the choice of the language, and **Save** applies the configuration.
+In the edit panel, the menus choose the **channel to translate**, the **target channel** (optional) and the **style** (and, for the Thread style, the look and the archive delay). The buttons turn *Delete the original*, *Delete the translation*, *Translate bots*, *Always send* and *Active* on or off. **Language** opens the choice of the language, and **Save** applies the configuration.
 
 `/channel-translation list` shows the same information as a plain list.
 
@@ -92,7 +92,7 @@ With `style:Thread`, leave `target` empty (or the same channel as `source`), and
 
 <figure><img src="../.gitbook/assets/discord-flag-translation-manage.png" alt="/flag-translation manage"><figcaption><p><code>/flag-translation manage</code></p></figcaption></figure>
 
-`/flag-translation set channel:<channel> [enabled] [auto-delete] [mode]`: choose the channels where a flag reaction translates a message, delete the translations automatically, and translate at each new flag or only the first time. See [Flag translation](../translation/flags.md).
+`/flag-translation set channel:<channel> [enabled] [auto-delete] [mode] [style]`: choose the channels where a flag reaction translates a message, delete the translations automatically, and translate at each new flag or only the first time, and how the translation is sent (Embed, Webhook, Message, Thread, Private message). See [Flag translation](../translation/flags.md).
 
 ## Language identification and blacklist
 
@@ -123,7 +123,7 @@ The names of the commands stay in English; their descriptions and the replies fo
 
 ## Server settings
 
-`/server-settings [warning]`: turns on or off the warning posted when a message is translated into more languages than the limit of your offer. This is the **Simultaneous Translation Warning** of the [dashboard overview](../website/dashboard/overview.md#warning). Without option, the command shows the current state.
+`/server-settings [warning] [edits]`: `warning` turns on or off the warning posted when a message is translated into more languages than the limit of your offer (the **Simultaneous Translation Warning** of the [dashboard overview](../website/dashboard/overview.md#warning)). `edits` turns **Follow edited messages** on or off. Without option, the command shows the current state.
 
 ## Related
 
