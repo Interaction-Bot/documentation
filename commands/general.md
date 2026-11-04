@@ -15,11 +15,11 @@ description: All other commands of Interaction Bot.
 | `/support`       | Get the Discord link of the support server.                                 |
 | `/reminder enable` | Enable or disable the reminder to vote for the bot on top.gg.             |
 
-`/dashboard`, `/help`, `/invite` and `/support` also work as a [user app](user-app.md), without the bot in the server.
+`/dashboard`, `/documentation`, `/help`, `/invite`, `/ping`, `/privacy`, `/reminder`, `/support`, `/languages`, `/personal-language`, `/translate` and `/detect` also work as a [user app](user-app.md), without the bot in the server.
 
 ## Voting
 
-Some voice commands ([`/connect`, `/tts say`](../audio/voice.md)) require that you voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) during the last 24 hours. You can vote every 12 hours, and `/reminder` can notify you when it is possible again.
+Some voice commands (such as [`/connect`, `/tts say`](../audio/voice.md)) require that you voted for the bot on [top.gg](https://top.gg/bot/893494390142697493/vote) during the last 24 hours, unless the server has Premium. The vote of any member of the server unlocks them for everyone in that server. You can vote every 12 hours, and `/reminder` can notify you when it is possible again.
 
 ## Premium
 

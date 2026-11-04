@@ -82,7 +82,7 @@ The **Translation** button (the language picker of the Activity) lets each viewe
 The server translates into **at most 4 different languages at the same time**. If more viewers pick different languages, only four of them are translated (the codes are taken in alphabetical order); the other viewers see the original text of the lines.
 {% endhint %}
 
-If the transcription itself is translated (`translate_to`, see [Translation](voice.md#translation)), the Activity also shows that translation in the **Original** view, unless the dashboard option **Show the translation** is off.
+If the transcription itself is translated (`translate-to`, see [Translation](voice.md#translation)), the Activity also shows that translation in the **Original** view.
 
 ## Recording from the Activity
 
@@ -112,10 +112,9 @@ The settings are on the dashboard page [Transcription](../website/dashboard/spee
 | **Live view enabled** | On | Turns the Activity on or off. When off, the Activity cannot be opened. |
 | **Who can open it** | Anyone in the voice channel | See [Who can open it](#who-can-open-it). |
 | **Show profile pictures** | On | Shows the picture of each speaker. Off: the name only. |
-| **Show the translation** | On | Shows the translation of the transcription (`translate_to`) in the **Original** view. It does not change the translation a viewer picks in the language picker. |
 | **Lines kept on screen** | 60 | How many finished lines a viewer gets and keeps on screen: 30, 60, 100 or 200. |
 
-**Show profile pictures** and **Show the translation** apply at once to an Activity that is already open. **Who can open it**, **Live view enabled** and **Lines kept on screen** apply the next time someone opens the Activity.
+**Show profile pictures** applies at once to an Activity that is already open. **Who can open it**, **Live view enabled** and **Lines kept on screen** apply the next time someone opens the Activity.
 
 ## Privacy
 
@@ -151,7 +150,7 @@ When the daily transcription time is used up, the transcription stops, the bot l
 | *Connection lost, retrying…* | The network dropped. The Activity reconnects by itself. |
 | *Start transcription* does nothing, or says *You are not allowed to start the transcription on this server.* | Only members with *Manage Server* start a transcription from the Activity. Use `/transcribe live` instead. |
 | *A transcription is already running on this server.* | The conversation is shown. Nothing to start. |
-| *I'm transcribing another voice channel.* | The bot is busy in another voice channel of the server. Join that channel. |
+| *I'm transcribing another voice channel. Join it to open the live transcription.* | The bot is busy in another voice channel of the server. Join that channel. |
 | *The bot lacks the permissions needed in this voice channel or text channel.* | Give the bot **Connect** and **Speak** in the voice channel, and the permissions of the text channel (see [Requirements](#requirements)). |
 | *The daily transcription time of this server is used up.* | Wait for the reset at midnight UTC, or get [premium](../premium/premium.md). |
 | *Not a premium server: a member must vote for the bot (top.gg) to start the transcription.* | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote), or get premium. |

@@ -6,7 +6,7 @@ description: Configure the automatic translation of the messages of a channel.
 
 ## Localization
 
-This page is the first item of the **Translation** section of the navigation bar. Its title is **Channel translation**.
+On a server that uses the translation rules, this page redirects to **Translation rules**, the first item of the **Translation** section. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Channel translation**.
 
 <figure><img src="../../.gitbook/assets/dash-channel-translation.png" alt="Channel translation page"><figcaption><p>Channel translation page</p></figcaption></figure>
 

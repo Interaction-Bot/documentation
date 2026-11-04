@@ -19,8 +19,8 @@ The bot reminds you to vote for it on [top.gg](https://top.gg/bot/89349439014269
 Install the bot on your Discord account and choose how it answers you. See [User app](../../commands/user-app.md).
 
 * **Add to my account**: opens Discord to install the bot on your account (no server needed).
-* **Default language**: the language used by `/translate` and **Apps > Translate** when you do not pick one. Leave it empty to use the language of your Discord application.
-* **Public replies**: when enabled, the answers of `/translate` and **Apps > Translate** are visible to everyone in the channel instead of only to you.
+* **Language of my translations** (menu Translate, `/translate`, `/personal-language`): the language used by `/translate` and **Apps > Translate** when you do not pick one. The default choice, **Discord language (default)**, uses the language of your Discord application.
+* **Replies visible to everyone**: when enabled, the bot's replies to your commands in a channel are visible to everyone. When disabled, only you see them (ephemeral messages).
 
 The settings are saved as soon as you change them. The message *Saved.* confirms it, and *The settings could not be saved.* tells you that something went wrong.
 

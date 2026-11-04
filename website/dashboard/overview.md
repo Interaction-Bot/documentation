@@ -8,7 +8,7 @@ description: >-
 
 ## Localization
 
-This page is the first item of the navigation bar. Its title is **Server Overview**.
+This page is the first item of the navigation bar. Its title is **Server Overview**. The last part of the page, the **Bot settings** card, holds the language, the warning and the edited messages settings described below.
 
 <figure><img src="../../.gitbook/assets/dash-overview.png" alt="Overview page"><figcaption><p>Overview</p></figcaption></figure>
 
@@ -33,11 +33,11 @@ This section shows the state of the bot on your server.
 
 ## Bot Language
 
-This section sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **LANGUAGE** list. **Automatic** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
+This section sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **Language** list. **Automatic (server language)** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
 
 ## Edited messages
 
-**Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated. The bot retranslates a message at most 5 times per hour. The same setting is available in Discord with `/server-settings edits`.
+**Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated (for a few hours after the message was sent). The bot retranslates a message at most 5 times per hour. The same setting is available in Discord with `/server-settings edits`.
 
 ## Warning
 

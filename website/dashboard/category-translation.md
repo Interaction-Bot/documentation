@@ -6,7 +6,7 @@ description: Translate the messages of every channel of a category.
 
 ## Localization
 
-This page is the third item of the **Translation** section of the navigation bar. Its title is **Category translation**.
+On a server that uses the translation rules, this page redirects to **Translation rules**. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Category translation**.
 
 <figure><img src="../../.gitbook/assets/dash-category-translation.png" alt="Category translation page"><figcaption><p>Category translation page</p></figcaption></figure>
 

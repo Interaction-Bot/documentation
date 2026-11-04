@@ -8,9 +8,9 @@ description: Link several channels, each with its own language.
 
 ## Localization
 
-Navbar > category _**Translation**_ > _**Mirror Translation**_.
+This page is no longer in the menu. On a server that uses the translation rules, it redirects to **Translation rules**, where the mirrors are the **Linked channels** section. For the servers that are not converted yet, it is reached by its address. Its title is **Mirror Translation**.
 
-The counter at the top right shows how many mirrors you use, for example `1/1` on a free server.
+The counter at the top right shows how many mirrors you use, for example `1 group out of 1` on a free server.
 
 ## How it works
 

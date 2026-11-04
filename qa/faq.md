@@ -10,7 +10,7 @@ The answers are never generated: the bot only sends the answers your moderators 
 
 | Command | Who | What it does |
 | ------- | --- | ------------ |
-| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is only visible to the member who asked. |
+| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is posted in the channel. |
 | `/faq add group:<group>` | *Manage Server* | Open a form to add a question and its answer to a group. |
 | `/faq list [group]` | *Manage Server* | List the entries, with their numbers. |
 | `/faq remove entry:<entry>` | *Manage Server* | Remove an entry. |
@@ -80,7 +80,7 @@ Example: a member writes in `#help` *"I cannot find the Developer role anywhere,
 **The bot stays silent** (and does not answer) when:
 
 * the message is from a bot or a webhook, starts with `/` or `!`, has fewer than 4 words, or contains only links, emojis or mentions;
-* no entry reaches the group's minimum confidence (80% to 95%, 84% by default);
+* no entry reaches the group's minimum confidence (80% to 95%, 85% by default);
 * two entries match almost equally well, so the bot cannot choose one;
 * the bot cannot send messages or embeds in the channel, or the search is rate limited.
 

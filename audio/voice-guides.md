@@ -32,13 +32,13 @@ Every message of the channel is read in the voice channel of its author, for the
 **On the dashboard**
 
 1. Open the dashboard of the server, then the page **Text to speech** (category *Audio & AI*). The page has three tabs: *Reading channels*, *Settings* (the reading options and the voices) and *Permissions*.
-2. Click *Add a channel*, choose the channel, then set the *Destination* (optional), the *Language*, the *Translate to* option (premium) and the *Enabled* switch.
+2. Click *Add a channel*, choose the channel, then set *Voice channel for reading* (optional), the *Language*, the *Automatic translation* option (premium) and the *Enabled* switch.
 3. Click *Save*.
 
 <figure><img src="../.gitbook/assets/dash-text-to-speech.png" alt="Text to speech page"><figcaption><p>Text to speech page</p></figcaption></figure>
 
 {% hint style="info" %}
-A message is read only if it is 200 characters or less, has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the channel has a destination where someone is. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
+A message is read only if it has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the channel has a destination where someone is. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
 {% endhint %}
 
 ## 3. Transcribe a voice channel manually (`/transcribe start`)
@@ -61,9 +61,9 @@ A message is read only if it is 200 characters or less, has text, does not start
 1. Make sure you have the *Manage Server* permission.
 2. Check the permissions: the bot must be able to **Connect** and **Speak** in the voice channel, and to **Send Messages** in the text channel. The `embed` style also needs **Embed Links**. The `webhook` style (the default) needs **Manage Webhooks**; without it, plain messages are posted.
 3. Run `/transcribe auto enable`. Optional options:
-   * `voice_channel`: the voice channel that starts the transcription (any voice channel if empty);
-   * `text_channel`: where the transcriptions are posted (this channel if empty);
-   * `language`, `translate_to` and `style`, as in guide 3.
+   * `voice-channel`: the voice channel that starts the transcription (any voice channel if empty);
+   * `text-channel`: where the transcriptions are posted (this channel if empty);
+   * `language`, `translate-to` and `style`, as in guide 3.
 4. When a member joins the voice channel, the bot says *Transcription started* in the voice channel (spoken) and transcribes the channel. Nothing is posted in the text channel for the start.
 5. The bot leaves 30 seconds after the last human left. To turn the feature off, run `/transcribe auto disable`.
 
@@ -80,12 +80,12 @@ If the bot does not start, the permissions of the channels are the first thing t
 The translation of a transcription is a **premium** feature. Only the translation is posted.
 
 1. Make sure the server is premium.
-2. For a one-time transcription, run `/transcribe start` with the option `translate_to`, and pick the target language from the suggestions.
+2. For a one-time transcription, run `/transcribe start` with the option `translate-to`, and pick the target language from the suggestions.
 3. For an automatic transcription, run `/transcribe auto enable` with the same option. You can also set *Translate to* on the dashboard page **Transcription**.
 4. What is said in the target language is not translated again. If the translation fails, the original text is posted.
 
 {% hint style="info" %}
-On a free server, `/transcribe start translate_to:...` answers *The translation of the transcription is reserved for premium servers.* Start the transcription without the option, or get [premium](../premium/premium.md).
+On a free server, `/transcribe start translate-to:...` answers *The translation of the transcription is reserved for premium servers.* Start the transcription without the option, or get [premium](../premium/premium.md).
 {% endhint %}
 
 ## 6. Follow the transcription live (`/transcribe live`)

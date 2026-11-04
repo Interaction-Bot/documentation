@@ -13,7 +13,7 @@ See [Voice (TTS and transcription)](../audio/voice.md) and [Voices and voice clo
 | Command | Description | Needs |
 | --- | --- | --- |
 | `/connect [channel]` | Connects the bot to a voice channel. | Vote |
-| `/disconnect [channel]` | Disconnects the bot from the voice channel. | — |
+| `/disconnect` | Disconnects the bot from the voice channel. | — |
 | `/tts clone create <audio> <name>` | Create a voice from your recording (premium) | Premium* |
 | `/tts clone delete <voice>` | Delete one of your cloned voices | — |
 | `/tts clone list` | Show your cloned voices | — |

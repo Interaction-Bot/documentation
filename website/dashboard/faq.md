@@ -10,7 +10,7 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../qa/faq.md).
 
-The counter at the top right shows how many groups you use, for example `1/1` on a free server.
+The counter at the top right shows how many active groups you use out of your plan's limit, for example `1 active group out of 1` on a free server.
 
 ## How it works
 
@@ -28,7 +28,7 @@ Click _**Create group**_. The new group appears with these settings:
 2. **Enabled**: the toggle pauses the whole group without deleting it.
 3. **Channels**: the text channels where the bot uses this group. A channel belongs to one group only: if you select a channel that another group already uses, the save is refused with the message `A channel can only belong to one group.` (see below). The counter shows how many channels you use, for example `2/3`.
 4. **Auto reply**: off by default. When it is on, the bot answers by itself in the channels of this group, only when it is confident enough.
-5. **Minimum confidence**: the slider goes from **80%** to **95%**, and the default is **84%**. See below.
+5. **Minimum confidence**: the slider goes from **80%** to **95%**, and the default is **85%**. See below.
 6. **Questions and answers**: click _**+ Add a question**_, write the question and its answer, then repeat. Each question needs an answer. The counter shows how many questions the group has, for example `3/5`.
 
 Click _**Save**_ in the popup at the bottom of the page. _**Cancel**_ goes back to the last saved configuration. You can also delete a question with _**Delete this question**_, or a whole group with _**Delete group**_.
@@ -44,7 +44,7 @@ The minimum confidence is the score a question must reach before the bot uses it
 * **Higher values** (for example 92%): fewer answers, but only for very close questions.
 * **Lower values** (for example 82%): more answers, with more risk of a reply that does not fit.
 
-The default of 84% is a good start. Change it only after you have read some automatic replies. The score of each automatic reply is shown in its footer.
+The default of 85% is a good start. Change it only after you have read some automatic replies. The score of each automatic reply is shown in its footer.
 
 ## Questions and answers
 

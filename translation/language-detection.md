@@ -16,11 +16,11 @@ Before translating, the bot has to know **which language the message is written 
 
 ### Minimum message size
 
-On the dashboard, [Language identification](../website/dashboard/language-identification.md) lets you set, per channel, the **minimum number of characters** a message must have to be translated. Raise it if short messages are mistranslated.
+On the dashboard, [Minimum message size](../website/dashboard/language-identification.md) (in the **Exceptions** page) lets you set, per channel, the **minimum number of characters** a message must have to be translated. Raise it if short messages are mistranslated.
 
 ### Blacklist a language (premium)
 
-If a language is often confused with another one in your community, add it to the [blacklist](../website/dashboard/blacklist.md): messages detected in that language are ignored.
+If a language is often confused with another one in your community, add it to the [Exceptions](../website/dashboard/blacklist.md) (languages): messages detected in that language are ignored.
 
 ### Always send
 

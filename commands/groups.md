@@ -20,11 +20,11 @@ Run the commands in this order. Each example shows the reply you should see.
 
 | Step | Command | Expected reply |
 | ---- | ------- | -------------- |
-| 1 | `/group create name:Community` | ``Group **Community** created. Add channels with `/group set-channel`.`` |
-| 2 | `/group set-channel name:Community channel:#general language:English` | `#general is now in group **Community** and receives translations in **English**.` |
-| 3 | `/group set-channel name:Community channel:#general-fr language:French` | `#general-fr is now in group **Community** and receives translations in **French**.` |
-| 4 | `/group set-channel name:Community channel:#general-es language:Spanish` | `#general-es is now in group **Community** and receives translations in **Spanish**.` |
-| 5 | `/group list` | An embed titled *Translation groups* with one field: `🟢 Community (webhook)`, listing the three channels and their languages. |
+| 1 | `/group create name:Community` | ``Mirror **Community** created. Add channels with `/group set-channel`.`` |
+| 2 | `/group set-channel name:Community channel:#general language:English` | `#general is now in mirror **Community** and receives translations in **English (en)**.` |
+| 3 | `/group set-channel name:Community channel:#general-fr language:French` | `#general-fr is now in mirror **Community** and receives translations in **French (fr)**.` |
+| 4 | `/group set-channel name:Community channel:#general-es language:Spanish` | `#general-es is now in mirror **Community** and receives translations in **Spanish (es)**.` |
+| 5 | `/group list` | An embed titled *Mirrors* with one field: `🟢 Community (Webhook)`, listing the three channels and their languages (for example `#general — English (en)`). |
 
 {% hint style="info" %}
 The `language` option accepts a language name (`French`) or an ISO code (`fr`), in any case. Suggestions appear as you type. The `name` option suggests the existing groups of the server.
@@ -52,13 +52,13 @@ Use `/group settings` with the group name and the options you want to change.
 | ------ | ------ | ------- |
 | `enabled` | `false` pauses the group without deleting it. The configuration is kept. | `/group settings name:Community enabled:false` |
 | `style` | How translations are sent: `webhook` (default), `message` or `embed`. | `/group settings name:Community style:embed` |
-| `delete_original` | Delete the original message once it has been translated. | `/group settings name:Community delete_original:true` |
-| `delete_translation` | Delete the translations after a while. | `/group settings name:Community delete_translation:true` |
-| `delete_after` | Seconds before each translation is deleted, from 5 to 86400. Setting it also turns on `delete_translation`. | `/group settings name:Community delete_after:3600` |
-| `translate_bots` | Also translate messages sent by bots. Premium option. | `/group settings name:Community translate_bots:true` |
-| `always_send` | Send the translations even when they look already translated (see the rules below). | `/group settings name:Community always_send:true` |
+| `delete-original` | Delete the original message once it has been translated. | `/group settings name:Community delete-original:true` |
+| `delete-translation` | Delete the translations after a while. | `/group settings name:Community delete-translation:true` |
+| `delete-after` | Seconds before each translation is deleted, from 5 to 86400. Setting it also turns on `delete-translation`. | `/group settings name:Community delete-after:3600` |
+| `translate-bots` | Also translate messages sent by bots. Premium option. | `/group settings name:Community translate-bots:true` |
+| `always-send` | Send the translations even when they look already translated (see the rules below). | `/group settings name:Community always-send:true` |
 
-Every change gets the same reply: `Group settings updated.`
+Every change gets the same reply: `Mirror settings updated.`
 
 **Styles**
 
@@ -69,17 +69,17 @@ Every change gets the same reply: `Group settings updated.`
 **Errors you may see**
 
 * `/group settings name:Community` with no option returns `Invalid settings.`
-* A `delete_after` value outside 5 to 86400 is refused by Discord before the command runs.
+* A `delete-after` value outside 5 to 86400 is refused by Discord before the command runs.
 
 ## What gets translated
 
 For each message posted in a channel of a group, the bot checks these rules before it translates:
 
-* A message from a **bot** is ignored, unless `translate_bots` is on.
-* A message whose language is **not detected reliably**, or that only repeats one character, is ignored, unless `always_send` is on.
-* A target channel that already uses the **same language** as the message is skipped, unless `always_send` is on.
-* A translation that is **almost identical** to the original text (similarity of 60% or more) is not sent, unless `always_send` is on.
-* If the original message is deleted with `delete_original`, it is deleted only when at least one translation was sent.
+* A message from a **bot** is ignored, unless `translate-bots` is on.
+* A message whose language is **not detected reliably**, or that only repeats one character, is ignored, unless `always-send` is on.
+* A target channel that already uses the **same language** as the message is skipped, unless `always-send` is on.
+* A translation that is **almost identical** to the original text (similarity of 60% or more) is not sent, unless `always-send` is on.
+* If the original message is deleted with `delete-original`, it is deleted only when at least one translation was sent.
 * A channel deleted from the server is removed from its group automatically.
 
 {% hint style="info" %}
@@ -96,17 +96,19 @@ These are the limits of the [dashboard](../website/dashboard/translation-groups.
 
 ## Errors and what to do
 
+The messages of the bot call a group a **mirror**.
+
 | Message shown | When it happens | What to do |
 | ------------- | --------------- | ---------- |
 | `The name must contain between 1 and 40 characters.` | The name is empty or too long. | Choose a shorter name. |
-| `You reached the maximum number of groups for this server.` | Creating a group beyond the limit. | Delete a group, or go premium. |
-| `A group with this name already exists.` | Two groups with the same name. | Choose another name. |
-| `Group not found.` | The name does not match an existing group. | Names are matched exactly. Pick the group from the suggestions. |
+| `You reached the maximum number of mirrors for this server.` | Creating a group beyond the limit. | Delete a group, or go premium. |
+| `A mirror with this name already exists.` | Two groups with the same name. | Choose another name. |
+| `Mirror not found.` | The name does not match an existing group. | Names are matched exactly. Pick the group from the suggestions. |
 | `This channel does not belong to this server.` | The channel is from another server. | Pick a channel of this server. |
-| `This group reached its maximum number of channels.` | Adding a channel beyond the limit. | Remove a channel, or go premium. |
-| `#channel is not in this group.` | `/group remove-channel` for a channel that is not in the group. | Check the channel with `/group list`. |
+| `This mirror reached its maximum number of channels.` | Adding a channel beyond the limit. | Remove a channel, or go premium. |
+| `#channel is not in this mirror.` | `/group remove-channel` for a channel that is not in the group. | Check the channel with `/group list`. |
 | `Invalid settings.` | No option given, or an invalid value. | Give at least one option, with a valid value. |
-| ``There is no translation group yet. Create one with `/group create`.`` | `/group list` on a server without groups. | Create a group. |
+| ``There is no mirror yet. Create one with `/group create`.`` | `/group list` on a server without groups. | Create a group. |
 
 ## Common problems
 
@@ -114,7 +116,7 @@ These are the limits of the [dashboard](../website/dashboard/translation-groups.
 * **A message is not translated into one language.** That language is probably the same as the message's language, or the message is too short or uncertain.
 * **Translations are plain messages, not webhooks.** The bot lacks *Manage Webhooks*.
 * **Translations stop after a few messages.** The per-message limit was reached. See [Limits that protect your server](../translation/how-it-works.md#limits-that-protect-your-server).
-* **The translations of a bot are missing.** Bot messages are translated only with `translate_bots` (premium).
+* **The translations of a bot are missing.** Bot messages are translated only with `translate-bots` (premium).
 
 {% hint style="info" %}
 Groups and [channel translation](../website/dashboard/channel-translation.md) can be used together. A group does not replace the per-channel configuration. For the detailed list of permissions, see [Permissions](../permissions.md).
@@ -136,8 +138,8 @@ A message in `#general-fr` is translated **once per target language** and sent t
 
 * A channel can be in only one position of a group (it cannot be added twice).
 * If two channels of a group share the same language, the message is translated once and sent to both.
-* A message that is already in the language of the other channels is not translated (unless `always_send`).
-* The messages of bots are ignored, except on premium servers with `translate_bots`.
+* A message that is already in the language of the other channels is not translated (unless `always-send`).
+* The messages of bots are ignored, except on premium servers with `translate-bots`.
 * Pause a group with `enabled:false` to keep its configuration.
 * A group counts in the 3 / 20 translations per message limit, together with the other rules ([how it works](../translation/how-it-works.md)).
 

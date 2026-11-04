@@ -42,12 +42,12 @@ Yes, on a premium server, with the option _Translate bot_.
 See the [Privacy Policy](https://interaction-bot.com/privacy) and the [Terms of Use](https://interaction-bot.com/tou).
 
 ### Who can use the dashboard?
-Members with the *Administrator* permission of the server can configure the bot. If your server does not appear, check that you are logged in with the right Discord account and that the bot is on the server.
+Members with the *Manage Server* or *Administrator* permission of the server can configure the bot. If your server does not appear, check that you are logged in with the right Discord account and that the bot is on the server.
 
 ## Voice
 
 ### How do I use `/tts say` or `/connect`?
-These commands need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (even on a premium server). See [Voice](audio/voice.md).
+On a premium server these commands work without a vote. On other servers, they need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) by any member of the server in the last 24 hours. See [Voice](audio/voice.md).
 
 ### How long can a transcription last?
 The limit is per server: 30 minutes per day on a free server, 3 hours per day on premium. The time of all the transcriptions adds up. The "day" is the UTC calendar day: the counter starts again at midnight UTC. When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](audio/voice.md#daily-time-and-stop).
@@ -63,7 +63,7 @@ Create a group on the dashboard [FAQ](website/dashboard/faq.md), add questions a
 See [Premium](premium/premium.md) and [Subscribe](premium/subscribe.md). Then run `/premium add` on your server.
 
 ### I subscribed but the server is not premium
-Link your Patreon and Discord accounts, wait about 10 minutes, then run `/premium add` on the server. Contact the support if it still does not work.
+Check that the subscription is active on the [Premium page](https://interaction-bot.com/premium) (**My subscription**). Then run `/premium add` on the server, or use the **Premium** switch of the dashboard. For a Patreon offer, link your Discord account to Patreon and wait about 10 minutes. Contact the support if it still does not work.
 
 ## Still need help?
 

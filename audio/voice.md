@@ -42,7 +42,7 @@ Text to speech also has permissions set by the server (dashboard, tab **Permissi
 | Command | Description |
 | --- | --- |
 | `/connect [channel]` | Connect the bot to a voice or stage channel (yours by default). If the bot is already connected to another channel, members vote to move it. Needs a vote, see [Access](#access). |
-| `/disconnect [channel]` | Disconnect the bot from its voice channel. Members vote when enough of them are in the channel. |
+| `/disconnect` | Disconnect the bot from its voice channel. Members vote when enough of them are in the channel. |
 | `/tts say query language voice` | Read a text aloud in your voice channel (the bot joins it). The text can have up to 500 characters. `voice` chooses the voice for this message, see [Voices and cloning](voices-and-cloning.md). Needs your own vote. |
 | `/tts start` | Join your voice channel and read the messages of this chat and of the chat of the voice channel. Needs a premium server, or a vote from a member of the server. |
 | `/tts stop` | Leave the voice channel, end the session and stop the speech in progress. |
@@ -53,11 +53,11 @@ Text to speech also has permissions set by the server (dashboard, tab **Permissi
 | `/tts-channel remove channel` | Stop reading a text channel aloud. |
 | `/tts-channel list` | List the text channels read aloud. |
 | `/tts-channel manage` | Manage the channels read aloud with buttons and menus. |
-| `/transcribe start [channel] [language] [translate_to] [style]` | Transcribe a voice channel. The transcriptions are posted in `channel` (this channel by default). |
+| `/transcribe start [channel] [language] [translate-to] [style]` | Transcribe a voice channel. The transcriptions are posted in `channel` (this channel by default). |
 | `/transcribe stop` | Stop the transcription. See [Daily time and stop](#daily-time-and-stop). |
 | `/transcribe live` | Open the live transcription Activity of your voice channel. Starts the transcription if none runs, with the checks of `/transcribe start`. See [Live transcription](live-transcription.md). |
 | `/transcribe auto manage` | Manage the automatic transcription with a panel. Needs *Manage Server*. |
-| `/transcribe auto enable [voice_channel] [text_channel] [language] [translate_to] [style]` | Start a transcription automatically when someone joins a voice channel. Needs *Manage Server*. |
+| `/transcribe auto enable [voice-channel] [text-channel] [language] [translate-to] [style]` | Start a transcription automatically when someone joins a voice channel. Needs *Manage Server*. |
 | `/transcribe auto disable` | Disable the automatic transcription, and stop it if it is running. Needs *Manage Server*. |
 
 ## Connecting and leaving
@@ -94,7 +94,7 @@ Before a message is read, links are removed and mentions are read as names. The 
 A TTS channel reads **every message** posted in it. By default the message is read in the voice channel of its author; with a **destination** voice channel, it is read there (see below). A channel can be a text channel, a forum (each post is read), or a voice channel (its chat). A channel can be switched off without being removed (*Enabled* on the dashboard).
 
 * Without destination, the author must be connected to a voice channel: the bot joins it, or ignores the message if it is busy in another voice channel of the server. With a destination, the message is read there when someone is in that channel, whoever writes it.
-* Messages are read when they are **200 characters or less** (after links are removed). Longer messages are ignored.
+* Messages are read in full (after links are removed). A long message is split into parts read one after the other, and only its first 4000 characters are read.
 * Messages from bots, messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are ignored.
 * **Language**: detected for each message, unless a language is set. **Translate to** translates each message before it is read.
 * **Limits**: 5 TTS channels per server, or **25 with premium**. Adding one more shows *You reached the maximum number of TTS channels of this server (5, or 25 with premium).*
@@ -121,7 +121,7 @@ On a **Premium** server, text to speech also reads the **translations made by th
 * Only **one transcription runs per server** at a time (*I'm already transcribing a voice channel.* otherwise).
 * Each bot cluster also limits the number of transcriptions running at the same time. When that limit is reached, the bot answers *Too many voice channels are being transcribed right now, please try again in a few minutes.*
 * `language`: the spoken language. It is **detected automatically** when you leave it empty.
-* `translate_to`: translates what is said. **Premium only**. See [Translation](#translation).
+* `translate-to`: translates what is said. **Premium only**. See [Translation](#translation).
 * `style`: how the transcriptions are posted, see below.
 
 ### Posting styles
@@ -136,7 +136,7 @@ The voices of bots are ignored.
 
 ### Translation
 
-* `translate_to` is a **premium** feature.
+* `translate-to` is a **premium** feature.
 * With a translation, the translation is posted **instead of** the original text.
 * If what is said is already in the target language, nothing is translated. If the translation fails, the original text is posted.
 
@@ -154,11 +154,11 @@ The voices of bots are ignored.
 
 ### Automatic transcription
 
-* `/transcribe auto enable` starts a transcription **when a member joins** a voice channel. Without `voice_channel`, any voice channel of the server works. Without `text_channel`, the current channel is used.
+* `/transcribe auto enable` starts a transcription **when a member joins** a voice channel. Without `voice-channel`, any voice channel of the server works. Without `text-channel`, the current channel is used.
 * When a session starts, the bot says *Transcription started* in the voice channel (spoken). It posts no start message in the text channel.
 * It only starts when the bot can connect and speak in the voice channel, and can send messages in the text channel. **If a permission is missing, nothing is posted**: check the permissions first.
 * The automatic transcription **leaves 30 seconds after the last human** left the channel, and stays if someone comes back.
-* `language`, `translate_to` and `style` work as for `/transcribe start`.
+* `language`, `translate-to` and `style` work as for `/transcribe start`.
 * The settings on the dashboard page [Transcription](../website/dashboard/speech-to-text.md) apply to a running session. Style, language, translation and text channel change at once. The voice channel is used for the next session.
 
 ## Live transcription (Activity)

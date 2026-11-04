@@ -34,7 +34,7 @@ A message in any of the channels is translated into the other two. Free servers 
 
 1. _Role translation_ > _Add a configuration_.
 2. **Role** `@japanese`, **Language** English, choose a **Sending channel** or leave it empty to answer in the same channel.
-3. Add a [blacklist](../website/dashboard/blacklist.md) entry for channels where you don't want translations (premium).
+3. Add an [exception](../website/dashboard/blacklist.md) for the channels where you don't want translations (premium).
 
 ## 4. One-click translation for everybody
 
@@ -52,7 +52,7 @@ A message in any of the channels is translated into the other two. Free servers 
 
 ## 6. Read the messages of a channel aloud
 
-1. Join a voice channel and run `/connect`, or just `/tts`.
+1. Join a voice channel and run `/connect`, then `/tts start` in the text channel (or `/tts say` to read one text).
 2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Voice](../audio/voice.md).
 
 ## 7. Transcribe a voice channel

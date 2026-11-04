@@ -21,9 +21,9 @@ The page lists the **TTS channels** of the server. The list is saved as a whole:
 Click on _**Add a channel**_ and set:
 
 * **Channel**: a text channel of the server. A channel can be used only once.
-* **Language of the messages**: _Auto-detect_ (default) or a language. With _Auto-detect_, the language is detected for each message.
-* **Translate to** (optional): translate each message into this language before it is read. Default: _No translation_.
-* **Destination** (optional): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
+* **Language**: _Auto-detect_ (default) or a language. With _Auto-detect_, the language is detected for each message.
+* **Automatic translation** (optional, premium): translate each message into this language before it is read. Default: _No translation_.
+* **Voice channel for reading** (optional, the destination): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
 * **Enabled**: switch a channel off without removing it. A disabled channel is kept in the list but not read.
 
 Click _**Remove**_ to stop reading a channel. When you are done, click _**Save**_. _**Cancel**_ restores the last saved list.
@@ -45,11 +45,11 @@ The **Settings** tab holds the reading options. Each has a switch, saved with th
 | Skip emojis | Off | Emojis are removed before reading. |
 | Members can choose their voice | On | `/tts voice` works on the server. |
 | Cloned voices allowed | On | Premium members can read with their own cloned voice. |
-| Read translations | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
+| Read translations aloud | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
 
 Also the **Prefix** field (10 characters maximum): when set, only the messages that start with it are read, and the prefix is not said.
 
-Also the **Voices** card: the voices of the server, in the order they are given to the members of a session. Each voice can be enabled, made the default, and moved up or down. At least one voice stays enabled, and the default voice cannot be disabled. Changes are saved with the same *Save* bar. See [Voices and cloning](../../audio/voices-and-cloning.md#the-voice-catalogue).
+Also the **Voices** card: the voices of the server, in the order they are given to the members of a session. Each voice can be enabled or disabled, and moved up or down. The first voice of the list is the default voice. At least one voice stays enabled. Changes are saved with the same *Save* bar. See [Voices and cloning](../../audio/voices-and-cloning.md#the-voice-catalogue).
 
 ## Permissions
 
@@ -67,11 +67,11 @@ Members with *Manage Server* are always allowed.
 | ---------- | ----------- |
 | 5 channels | 25 channels |
 
-Adding a channel beyond the limit opens the premium window. The translation of messages is a premium feature: on a free server the *Translate to* field is locked.
+Adding a channel beyond the limit opens the premium window. The translation of messages is a premium feature: on a free server the *Automatic translation* field is locked.
 
 ## What is read
 
-* Messages are read **up to 200 characters**. A longer message is not read.
+* Messages are read **in full**. A long message is split into parts read one after the other, and only its first 4000 characters are read.
 * Messages from bots, messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are not read.
 * Links are removed and mentions are read as names.
 * A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A channel that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.

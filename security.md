@@ -20,7 +20,7 @@ The bot keeps **your configuration** (channels, roles, languages, options, FAQ e
 ## The dashboard
 
 * You log in with your **Discord account** (OAuth). The bot never sees your Discord password.
-* You can only configure the servers where you have the *Administrator* permission and where the bot is present.
+* You can only configure the servers where you have the *Manage Server* or *Administrator* permission and where the bot is present.
 * The bot only posts in channels **of the server** that owns the configuration.
 
 ## Voice features

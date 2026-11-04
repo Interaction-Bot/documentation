@@ -29,7 +29,7 @@ A voice is a feature of the speech service. The catalogue and the cloning depend
 
 * The voices come from the speech service: the bot does not keep its own list. A voice has a name, a gender and the list of the languages it speaks.
 * A voice that does not speak the language of a text is not used for it: the speech service's default voice for that language reads the text instead.
-* A server can **switch off** voices, change their **order** and choose the **default voice**, on the dashboard page [Text to speech](../website/dashboard/tts-channels.md) (section *Voices*). At least one voice must stay enabled, and the default voice cannot be switched off.
+* A server can **switch off** voices and change their **order**, on the dashboard page [Text to speech](../website/dashboard/tts-channels.md) (section *Voices*). The first voice of the list is the **default voice**, used by `/tts say` and the TTS channels when nobody has chosen one. At least one voice must stay enabled.
 
 ## Choose your voice (`/tts voice`)
 

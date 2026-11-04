@@ -6,7 +6,7 @@ description: Choose, per channel, the minimum size of a message that the bot tra
 
 ## Localization
 
-This page is in the **Management** section of the navigation bar. Its title is **Language Identification**.
+This setting is on the **Exceptions** page of the **Translation** section of the navigation bar, in the card **Minimum message size**. The former **Language Identification** page redirects there.
 
 <figure><img src="../../.gitbook/assets/dash-language-identification.png" alt="Language identification page"><figcaption><p>Language identification page</p></figcaption></figure>
 
@@ -28,18 +28,18 @@ The list shows the channels that have a minimum, with the **Channel** column.
 
 ## Add a configuration
 
-Click on _**Add a configuration**_ (under the box *Add a channel*). On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
+Click on _**Add a channel**_. On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
 The popup has two fields:
 
-* **CHANNEL**: *Select the channel where configuration will be applied.* Each channel can have only one configuration.
-* **MINIMUM CHARACTER**: *The minimum number of characters for a message to be translated.* Type a number from **0** to **500**. A new configuration starts with **5**. Messages with fewer characters are ignored.
+* **Which channel?**: *Messages in this channel that are shorter than the minimum are not translated.* Each channel can have only one configuration.
+* **How many characters at least?**: *A message shorter than this number is not translated. It is a length threshold, not a language detection.* Type a number from **0** to **500**. A new configuration starts with **5**. Messages with fewer characters are ignored.
 
 Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
 
 ### Example
 
-In #general, many short messages are detected in the wrong language. Set **MINIMUM CHARACTER** to `15` for #general: messages of fewer than 15 characters are no longer translated there, and longer messages are translated as before.
+In #general, many short messages are detected in the wrong language. Set **How many characters at least?** to `15` for #general: messages of fewer than 15 characters are no longer translated there, and longer messages are translated as before.
 
 ## Errors
 

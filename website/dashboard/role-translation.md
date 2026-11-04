@@ -6,7 +6,7 @@ description: Translate the messages of the members who have a role.
 
 ## Localization
 
-This page is the second item of the **Translation** section of the navigation bar. Its title is **Role translation**.
+On a server that uses the translation rules, this page redirects to **Translation rules**. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Role translation**.
 
 <figure><img src="../../.gitbook/assets/dash-role-translation.png" alt="Role translation page"><figcaption><p>Role translation page</p></figcaption></figure>
 

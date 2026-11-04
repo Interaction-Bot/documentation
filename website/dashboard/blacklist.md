@@ -10,7 +10,7 @@ On the current dashboard this page is called **Exceptions**, in the **Translatio
 
 ## Localization
 
-This page is in the **Management** section of the navigation bar. Its title is **Blacklist Channel**, and the page has three sections below it.
+This page is the **Exceptions** item of the **Translation** section of the navigation bar. The card **Never translate** has three sections below it: **Channels**, **Roles** and **Languages**. The card **Minimum message size** of the same page is described in [Language identification](language-identification.md).
 
 <figure><img src="../../.gitbook/assets/dash-blacklist.png" alt="Blacklist page"><figcaption><p>Blacklist page</p></figcaption></figure>
 
@@ -20,21 +20,21 @@ The blacklist is a **Premium** feature: a server without Premium cannot add new 
 
 The page has three sections. They share one bar of changes at the bottom of the page.
 
-## Blacklist Channel
+## Channels
 
-**Add a channel** (*Add a channel that will not be translated by role and category translation.*) adds a channel to the blacklist. Choose the channel in the popup and click on _**Save**_ in the popup. The change is applied when you save the page.
+**Add a channel** (*Never translate messages in these channels.*) adds a channel to the list. Choose the channel in the popup and click on _**Add the channel**_. The change is applied when you save the page.
 
-* **CHANNEL** (*The channel that will be blacklisted.*): the channel.
+* **Which channel?** (*Messages in this channel are never translated, whether by a rule, a linked channel or the server rule.*): the channel.
 
 A message posted in a blacklisted channel is **not translated at all**: no channel, role, category or group configuration translates it. Flag translations still work in this channel, because they are triggered by a reaction.
 
 The list shows the channels of the blacklist, with _**Edit**_ and _**Delete**_ buttons on each row.
 
-## Blacklist Language
+## Languages
 
-**Add a language** (*Add a language that will not be translated when bot detect an new message.*) adds a language to the blacklist. Choose the language in the popup and click on _**Save**_ in the popup. The change is applied when you save the page.
+**Add a language** (*Messages detected in this language are never translated.*) adds a language to the list. Choose the language in the popup and click on _**Add the language**_. The change is applied when you save the page.
 
-* **LANGUAGE** (*The language that will be blacklisted.*): the language.
+* **Which language?** (*Messages written in this language are never translated.*): the language.
 
 When the bot detects this language in a new message, the message is not translated. This is useful when a language is often confused with another one, and you do not want its messages to be translated.
 
@@ -44,9 +44,9 @@ The language blacklist is only applied while the server has Premium. If Premium 
 
 The list shows the blacklisted languages, with _**Edit**_ and _**Delete**_ buttons on each row.
 
-## Blacklist Role
+## Roles
 
-**Add a role** (*Add a role that will not be translated.*) is a list: click on the roles that you want to blacklist, click again to remove one, and use the search field when the list is long. Then save the page with the bar at the bottom.
+**Add a role** (*Ignore messages from members with these roles.*) opens a popup: choose the role in **Which role?**, then click _**Add the role**_. Then save the page with the bar at the bottom.
 
 Messages sent by a member who has one of these roles are **not translated at all**.
 
@@ -62,7 +62,7 @@ If the bot refuses to save a new channel, language or role (because the server h
 
 ## Errors
 
-* **It looks like you found a premium feature!** (pop-up): you clicked on *Add a channel*, *Add a language*, *Edit* or the role list on a server without Premium. *Subscribe* opens the Premium page of the dashboard.
+* **It looks like you found a premium feature!** (pop-up): you clicked on *Add a channel*, *Add a language*, *Edit* or *Add a role* on a server without Premium. *Subscribe* opens the Premium page of the dashboard.
 * **Error - You have not completed all the required fields.** (pop-up): no channel or no language is selected in the popup.
 
 ## Premium

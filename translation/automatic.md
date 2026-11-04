@@ -10,7 +10,7 @@ description: Translate messages automatically with translation rules, by server,
 
 Automatic translation is configured on the [dashboard](../website/dashboard/) or with the [configuration commands](../commands/configuration.md) (`/channel-translation manage`, `/role-translation manage`, `/category-translation manage`, `/group manage`). Once saved, the bot translates the messages **by itself**, nobody has to do anything.
 
-Four kinds of automatic translation exist. They can be combined: when several apply to the same message, the bot handles them in this order: **channel, group, category, role**.
+Four kinds of automatic translation exist. They can be combined: when several apply to the same message, the bot handles them in this order: **channel, group, category, role**. On a server converted to [translation rules](../commands/translation.md#translation-rules), only the most precise place rule applies (two languages in one channel, then channel, then category, then the whole server), the role rules are added to it, and a channel linked to others keeps only its role rules. Servers whose former rules added up keep all of them.
 
 | Kind                                  | Applies to                                       | Typical use                                      |
 | ------------------------------------- | ------------------------------------------------ | ------------------------------------------------ |

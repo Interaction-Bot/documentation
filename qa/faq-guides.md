@@ -92,13 +92,13 @@ Yes, on the dashboard: change the question or the answer, then save. When you ch
 
 ### Can members see all the questions?
 
-Not with `/ask`: a member only sees the answer to the question they asked, and the questions that also match (under **See also**). The full list is for moderators: `/faq list` (*Manage Server* permission).
+Not with `/ask`: it shows the answer to the question asked, and the questions that also match (under **See also**). The full list is for moderators: `/faq list` (*Manage Server* permission).
 
 ## /ask
 
 ### Who can use /ask?
 
-Everybody. `/ask` is only visible to the member who uses it.
+Everybody. The answer of `/ask` is posted in the channel, like the answers of the other commands.
 
 ### How many answers can /ask show?
 
@@ -151,7 +151,7 @@ If one of these is not true, the bot stays silent.
 
 ### What is the minimum confidence?
 
-It is the score an entry must reach to be used, between **80%** and **95%** (84% by default). The percentage shown in the footer of an automatic reply is that score.
+It is the score an entry must reach to be used, between **80%** and **95%** (85% by default). The percentage shown in the footer of an automatic reply is that score.
 
 * **Higher** (for example 92%): fewer replies, but only for very close questions.
 * **Lower** (for example 82%): more replies, with a higher risk of an answer that does not fit the question.
@@ -194,14 +194,14 @@ Yes. Click **Not helpful** as a moderator, or change the entry on the dashboard 
 
 | Feature | Permissions |
 | ------- | ----------- |
-| `/ask` and `/faq` | None in the channel: the answers are sent privately to the member. |
+| `/ask` and `/faq` | None: the answers are replies to the command. |
 | Automatic replies | *Send Messages* and *Embed Links* in the channel, plus *Send Messages in Threads* in threads. |
 
 Run `/check-permissions` to see the missing permissions of every configured channel. See [Permissions](../permissions.md) for the full list.
 
 ### Who can manage the FAQ?
 
-Members with *Manage Server* can use `/faq`, and the dashboard can be used by members with *Administrator*. Anybody can use `/ask`.
+Members with *Manage Server* can use `/faq`, and the dashboard can be used by members with *Manage Server* or *Administrator*. Anybody can use `/ask`.
 
 ### How are the automatic replies limited?
 

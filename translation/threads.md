@@ -82,7 +82,7 @@ If the bot lacks *Create Public Threads* or *Send Messages in Threads*, the tran
 ## Limits
 
 * The thread starts under a message of a **text or announcement channel**. Forums, voice channels, DMs and system messages are not concerned.
-* The thread style is not available for [translation groups](../commands/groups.md) and [flag translation](flags.md).
+* The thread style is not available for [translation groups](../commands/groups.md). For [flag translation](flags.md), the *Thread* style puts the translation in a thread under the message that was reacted to.
 * The limits of your offer (number of configurations, number of translations per message) are the same as for the other styles, see [Premium](../premium/premium.md).
 
 ## Troubleshooting

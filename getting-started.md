@@ -40,7 +40,7 @@ There are three quick ways to translate, without any configuration:
 
 <figure><img src=".gitbook/assets/discord-flag-translation.png" alt="Translation by the bot"><figcaption><p>The bot answers with the translation</p></figcaption></figure>
 
-2. **The command** <mark style="color:green;">`/translate message [language]`</mark>. The result is private.
+2. **The command** <mark style="color:green;">`/translate message [language]`</mark>. The result is posted in the channel.
 
 <figure><img src=".gitbook/assets/discord-translate.png" alt="/translate command"><figcaption><p>/translate command</p></figcaption></figure>
 

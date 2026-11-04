@@ -56,6 +56,7 @@
 * [🌐 Dashboard](website/dashboard/README.md)
   * [Overview](website/dashboard/overview.md)
   * [Premium](website/dashboard/premium.md)
+  * [Translation rules](website/dashboard/translation-rules.md)
   * [Channel Translation](website/dashboard/channel-translation.md)
   * [Role Translation](website/dashboard/role-translation.md)
   * [Mirror Translation](website/dashboard/translation-groups.md)
