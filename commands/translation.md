@@ -37,6 +37,16 @@ description: Reference of the translation commands.
 | `/translation help [topic]` | Help on the rules. |
 | `/translation manage` | Points to the [dashboard](../website/dashboard/) where the rules are managed. |
 
+<figure><img src="../.gitbook/assets/discord-translation-server.png" alt="Result of /translation server"><figcaption><p>Result of /translation server</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/discord-translation-channel.png" alt="Result of /translation channel"><figcaption><p>Result of /translation channel</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/discord-translation-list.png" alt="/translation list"><figcaption><p>/translation list</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/discord-translation-options.png" alt="/translation options"><figcaption><p>/translation options</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/discord-translation-manage.png" alt="/translation manage"><figcaption><p>/translation manage</p></figcaption></figure>
+
 A server holds up to **30 rules** (free) or **200** (Premium), links included. A channel has one rule: use `replace` to change it.
 
 The older commands (`/channel-translation`, `/category-translation`, `/role-translation`, `/group`) still exist. On a server whose rules were converted, they do nothing and answer privately with the equivalent `/translation` command.

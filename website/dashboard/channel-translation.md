@@ -47,7 +47,6 @@ You can also manage the configurations in Discord, with `/channel-translation ma
 
 Click on _**Add a configuration**_ (under the box *Add a channel*).
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 

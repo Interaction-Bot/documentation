@@ -4,7 +4,7 @@ description: Add flag reactions under every message of a channel.
 
 # Flag shortcuts
 
-<figure><img src="../../.gitbook/assets/dash-flag-shortcuts.png" alt="Flag shortcuts page"><figcaption><p>Flag shortcuts page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-flags.png" alt="Flags page, with the automatically added flags"><figcaption><p>Flags page, with the automatically added flags</p></figcaption></figure>
 
 ## Localization
 

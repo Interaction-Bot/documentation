@@ -35,7 +35,6 @@ There is no **Enabled** checkbox on this page: to stop a rule, delete it.
 
 Click on _**Add a configuration**_ (under the box *Add a role*). On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/dash-role-translation-popup.png" alt="Role translation popup"><figcaption><p>Role translation popup</p></figcaption></figure>
 

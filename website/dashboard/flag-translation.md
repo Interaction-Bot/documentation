@@ -32,7 +32,6 @@ The list shows the channels that have their own flag translation settings.
 
 Click on _**Add a channel**_. On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation-popup.png" alt="Flag translation popup"><figcaption><p>Flag translation popup</p></figcaption></figure>
 

@@ -39,6 +39,8 @@ This section sets the language of the bot messages on this server (help, errors,
 
 **Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated (for a few hours after the message was sent). The bot retranslates a message at most 5 times per hour. The same setting is available in Discord with `/server-settings edits`.
 
+<figure><img src="../../.gitbook/assets/dash-overview-edits.png" alt="Follow edited messages setting"><figcaption><p>Follow edited messages</p></figcaption></figure>
+
 ## Warning
 
 This section contains one toggle, **Simultaneous Translation Warning** (enabled by default).

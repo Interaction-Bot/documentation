@@ -55,9 +55,7 @@ Once your offer is active, go to the **Manage Premium** section, under the plans
 
 Click on _**Save**_ in the bar at the bottom of the page to apply the change.
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Premium toggle</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 You can also activate Premium with the `/premium add` command, see [Usage](../../premium/usage.md).
 

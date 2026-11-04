@@ -37,6 +37,8 @@ Click **Add a rule** and choose a type, or use the **Add** button of a section:
 
 A channel can only appear once: if it already has a rule, the page offers to **Replace** it.
 
+<figure><img src="../../.gitbook/assets/dash-translation-rule-popup.png" alt="Popup of a translation rule"><figcaption><p>Popup of a translation rule</p></figcaption></figure>
+
 ## Options of a rule
 
 The popup asks for the channel (or category, or role) and the languages, then the details you often change. **More options** holds the rest:
