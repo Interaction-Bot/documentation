@@ -1,7 +1,7 @@
 ---
 description: >-
   The overview page shows information about your server and the bot, and lets you
-  change the simultaneous translation warning.
+  change the simultaneous translation warning and the follow of edited messages.
 ---
 
 # Overview
@@ -34,6 +34,10 @@ This section shows the state of the bot on your server.
 ## Bot Language
 
 This section sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **LANGUAGE** list. **Automatic** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
+
+## Edited messages
+
+**Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated. The bot retranslates a message at most 5 times per hour. The same setting is available in Discord with `/server-settings edits`.
 
 ## Warning
 

@@ -1,5 +1,5 @@
 ---
-description: Enable Premium on your server with your Patreon offer.
+description: Buy Premium and enable it on your server.
 ---
 
 # Premium
@@ -12,7 +12,21 @@ This page is the second item of the navigation bar, under **Overview**. Its titl
 
 Premium is set **per server**. Each Patreon offer gives a number of server slots (1, 3 or 10), and each premium server uses one slot. The offers and what they bring are described in [Premium](../../premium/premium.md).
 
-## Offers
+## Subscribing with Stripe
+
+The **Subscribe** button of the offer opens the Stripe payment page, in your language. After the payment you come back to this page and a **Thank you!** pop-up waits for your subscription to be active (up to about 10 seconds), with a **Choose my servers** button.
+
+* You have one Stripe subscription at a time: 1, 3 or 10 servers. Subscriptions bought on Patreon add to it.
+* **Change plan**: from **My subscription** of the [Account page](account.md). The difference is prorated. Going down is refused while more servers than the new plan allows have Premium: turn Premium off on the extra servers first. Not possible while a cancellation or a payment is pending.
+* **Manage my subscription** opens the Stripe portal (payment method, invoices, cancellation).
+* After a cancellation, Premium stays until the end of the paid period. After a failed payment, Premium is kept for a few days.
+* A full refund suspends Premium and removes it from your servers; a partial refund has no effect. A dispute suspends Premium until it is won.
+
+The yearly option is shown but not available yet.
+
+## Offers (Patreon)
+
+The description below is the Patreon path, still valid for existing Patreon subscriptions.
 
 The first part of the page shows the offers.
 

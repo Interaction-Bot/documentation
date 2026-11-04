@@ -34,19 +34,18 @@ After a save, the bot reloads the channels at once: no restart is needed.
 
 <figure><img src="../../.gitbook/assets/dash-tts-settings.png" alt="Settings tab of the Text to speech page"><figcaption><p>The Settings tab</p></figcaption></figure>
 
-The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar:
+The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar. During a session (`/tts start`) the bot always reads the messages of the chat and the chat of its voice channel: these two options no longer exist.
 
 | Option | Default | What it does |
 | --- | --- | --- |
-| Read messages automatically | On | Reads the messages of allowed members during a session (`/tts start`), without `/tts say` each time. |
 | Say who wrote | On | Says "Alex said" when the author changes. |
-| Read the chat of voice channels | On | Also reads the messages written in the chat of a voice channel the bot is in. |
 | Ignore bots | On | Messages written by bots are not read. |
 | Ignore the audience of stages | On | Messages from the audience of a stage channel are not read. |
 | The author must be in the voice channel | On | Only reads the members who are in the bot's voice channel. |
 | Skip emojis | Off | Emojis are removed before reading. |
 | Members can choose their voice | On | `/tts voice` works on the server. |
 | Cloned voices allowed | On | Premium members can read with their own cloned voice. |
+| Read translations | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
 
 Also the **Prefix** field (10 characters maximum): when set, only the messages that start with it are read, and the prefix is not said.
 
