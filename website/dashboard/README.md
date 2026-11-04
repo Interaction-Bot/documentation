@@ -37,9 +37,10 @@ The dashboard has a left sidebar, a top bar and a content area.
 * **Server picker** (top of the sidebar): shows the server you are configuring. Click it to switch to another server without going back to the list. The picker lists your servers.
 * **Sidebar**, organized in sections:
   * **Overview** and **Premium** at the top.
-  * **Translation**: Channel Translation, Mirror Translation, Role Translation, Flag Translation, Category Translation, Voice messages, Language identification, Blacklist and Flag shortcuts.
+  * **Translation**: four pages on a server using the translation rules: **Translation rules** (server, channel, two languages in a channel, linked channels), **Flags** (react with a flag, flags added automatically), **Exceptions** (formerly Blacklist, with the minimum message size) and **Voice messages**. The former pages (Channel, Role, Category and Mirror Translation) stay for the servers that are not converted yet.
   * **Audio & AI**: Transcription, Text to speech, FAQ, Voice recording and Temp voice.
-  * **Management**: Welcome, Invitations and Honeypot.
+  * **Management**: Welcome, Invitations, Honeypot and Event log.
+  * **Journal**: the history of the changes made to the bot on your server and its problems, see [Journal](journal.md).
 * **Top bar**: your name opens the user menu: **My servers**, the **language** of the website and **Log out**. The language only changes the website, not the language of the bot (see [Bot Language](overview.md#bot-language)).
 
 You can fold a section of the sidebar with the arrow on its right. Click the **name of a section** to open its page.

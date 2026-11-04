@@ -4,7 +4,7 @@ description: Commands and menus to translate or detect a language on demand.
 
 # Translation commands
 
-These tools work **everywhere**, without any configuration. The result of `/translate` and **Apps > Translate** is **private** by default (only you see it); you can make it public in the [Account page](../website/dashboard/account.md). They also work in servers where the bot is not added, once the bot is [installed on your account](../commands/user-app.md).
+These tools work **everywhere**, without any configuration. The answer of **Apps > Translate** is **private** (only you see it). The answer of `/translate` and `/detect` is shown to the channel, like most commands (the **Detect** menu is private). Your language for these translations is set with `/personal-language` or on the [Account page](../website/dashboard/account.md). They also work in servers where the bot is not added, once the bot is [installed on your account](../commands/user-app.md).
 
 ## /translate
 
@@ -32,7 +32,7 @@ Right click (long press on mobile) any message, then **Apps**:
 
 `/detect text`
 
-Tells you the language a text is written in. The answer is private.
+Tells you the language a text is written in. The answer of the command is shown to the channel; the **Apps > Detect** menu answers privately.
 
 ## /languages
 

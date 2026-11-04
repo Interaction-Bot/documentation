@@ -4,9 +4,9 @@ description: What Interaction Bot Premium brings to your servers, and how the sl
 
 # Premium
 
-Interaction Bot Premium adds features and higher limits to the bot on your servers. Premium offers are managed on Patreon. They give a number of **server slots**: **1**, **3** or **10** servers. Each server with Premium uses one slot.
+Interaction Bot Premium adds features and higher limits to the bot on your servers. Premium is bought on the [Premium page](https://interaction-bot.com/premium) of the website, with Stripe (existing Patreon subscriptions keep working). The offers give a number of **server slots**: **1**, **3** or **10** servers. Each server with Premium uses one slot.
 
-The offers are available [here](https://www.patreon.com/interactionbot).
+Monthly prices on the Premium page: **1 server 3.99 EUR**, **3 servers 9.99 EUR**, **10 servers 19.99 EUR** per month (a yearly option is shown but not available yet). Patreon subscribers keep their offer: [Patreon](https://www.patreon.com/interactionbot).
 
 <figure><img src="../.gitbook/assets/dash-premium-public.png" alt="Premium page of the website"><figcaption><p>Premium page of the website</p></figcaption></figure>
 <figure><img src="../.gitbook/assets/patreon-offers.png" alt="Patreon page"><figcaption><p>Patreon page</p></figcaption></figure>
@@ -24,10 +24,12 @@ The offers are available [here](https://www.patreon.com/interactionbot).
 | Feature | Free | Premium |
 | --- | --- | --- |
 | Translation quality | Free tier of the translation service | Premium tier, routed to the best model |
-| Channels, roles and categories translated | 20 of each | 500 of each |
+| Translation rules (server, channel, category, role and links; servers using the new rules) | 30 | 200 |
+| Channels, roles and categories translated (servers still on the former configurations) | 20 of each | 500 of each |
 | Translations of one message | Up to 3 | Up to 20 |
 | Translation groups | 1 group of 3 channels | 5 groups of 5 channels |
 | Messages of bots translated | No | Yes |
+| Text to speech reads the translations of the bot | No | Yes (setting **Read translations**, on by default) |
 | Flag reactions on messages of bots | No | Yes |
 | Embeds and buttons translated | No | Yes |
 | Blacklist (channels, roles, languages) | No | Yes |

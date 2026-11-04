@@ -4,6 +4,10 @@ description: Ready-to-use setups for common situations.
 
 # Setup guides
 
+{% hint style="info" %}
+On a server converted to the [translation rules](../commands/translation.md#translation-rules), use `/translation` (`setup`, `channel`, `link`, `options`...) instead of the former commands named here. The result is the same; the former commands then answer with the matching `/translation` command.
+{% endhint %}
+
 Step by step recipes. Each one uses the [dashboard](../website/dashboard/) unless a command is mentioned.
 
 ## 1. An international community: one channel per language

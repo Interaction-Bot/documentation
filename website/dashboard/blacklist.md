@@ -4,6 +4,10 @@ description: Exclude channels, languages and roles from the translation.
 
 # Blacklist
 
+{% hint style="info" %}
+On the current dashboard this page is called **Exceptions**, in the **Translation** section, and it also holds the **minimum message size** (formerly *Language identification*). Excluding channels, roles and languages is a **Premium** option.
+{% endhint %}
+
 ## Localization
 
 This page is in the **Management** section of the navigation bar. Its title is **Blacklist Channel**, and the page has three sections below it.

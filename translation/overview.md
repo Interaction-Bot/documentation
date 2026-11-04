@@ -53,7 +53,8 @@ The footer of an embed-style translation shows the source and target languages (
 ## Limits
 
 * **Translations per message**: when one message must be translated into several languages (several configurations apply), the bot stops after **3 translations on a free server and 20 on a premium server**. When this happens the bot posts a warning that you can turn off in the [Overview](../website/dashboard/overview.md) of the dashboard (_Simultaneous Translation Warning_).
-* **Configurations**: 20 channel, role and category configurations on a free server (500 on premium). See [Premium](../premium/premium.md) for all the limits.
+* **When the limit is reached**: the translations beyond the limit are **not sent**. On the **Translation rules** page of the dashboard, a notice says it ("A message is translated 3 times at most: the next translations are not sent. Affected channels: N", with a **See Premium** button on a free server), and the **Try** tool shows, for a channel, which rules are not applied or which languages are cut. In Discord, the [simultaneous translation warning](../website/dashboard/overview.md#warning) posts a message in the channel, at most once a day per server.
+* **Configurations**: servers using the translation rules have 30 rules (200 on premium); servers still on the former configurations have 20 channel, role and category configurations (500 on premium). See [Premium](../premium/premium.md) for all the limits.
 
 ## Languages
 
