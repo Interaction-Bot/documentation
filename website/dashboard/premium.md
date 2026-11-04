@@ -16,7 +16,7 @@ Premium is set **per server**. Each Patreon offer gives a number of server slots
 
 The **Subscribe** button of the offer opens the Stripe payment page, in your language. After the payment you come back to this page and a **Thank you!** pop-up waits for your subscription to be active (up to about 10 seconds), with a **Choose my servers** button.
 
-* You have one Stripe subscription at a time: 1, 3 or 10 servers. Subscriptions bought on Patreon add to it.
+* The plans are monthly: **1 server 3.99 EUR**, **3 servers 9.99 EUR**, **10 servers 19.99 EUR**. You have one Stripe subscription at a time: 1, 3 or 10 servers. Subscriptions bought on Patreon add to it.
 * **Change plan**: from **My subscription** of the [Account page](account.md). The difference is prorated. Going down is refused while more servers than the new plan allows have Premium: turn Premium off on the extra servers first. Not possible while a cancellation or a payment is pending.
 * **Manage my subscription** opens the Stripe portal (payment method, invoices, cancellation).
 * After a cancellation, Premium stays until the end of the paid period. After a failed payment, Premium is kept for a few days.

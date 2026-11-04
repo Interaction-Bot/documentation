@@ -4,6 +4,10 @@ description: Send the translations in a thread under the original message, so th
 
 # Translation in threads
 
+{% hint style="info" %}
+On a server converted to the [translation rules](../commands/translation.md#translation-rules), use `/translation` (`setup`, `channel`, `link`, `options`...) instead of the former commands named here. The result is the same; the former commands then answer with the matching `/translation` command.
+{% endhint %}
+
 The **Thread** style sends the translations of a message **in a thread under that message**, instead of posting them in the channel. The original message stays where it is, and all the languages of this message are grouped in one thread that members can open when they want to read them.
 
 <figure><img src="../.gitbook/assets/discord-translation-thread-preview.png" alt="A message with its translation thread"><figcaption><p>The original message, with its translation thread under it</p></figcaption></figure>

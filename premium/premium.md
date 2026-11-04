@@ -6,7 +6,7 @@ description: What Interaction Bot Premium brings to your servers, and how the sl
 
 Interaction Bot Premium adds features and higher limits to the bot on your servers. Premium is bought on the [Premium page](https://interaction-bot.com/premium) of the website, with Stripe (existing Patreon subscriptions keep working). The offers give a number of **server slots**: **1**, **3** or **10** servers. Each server with Premium uses one slot.
 
-The offers are available [here](https://www.patreon.com/interactionbot).
+Monthly prices on the Premium page: **1 server 3.99 EUR**, **3 servers 9.99 EUR**, **10 servers 19.99 EUR** per month (a yearly option is shown but not available yet). Patreon subscribers keep their offer: [Patreon](https://www.patreon.com/interactionbot).
 
 <figure><img src="../.gitbook/assets/dash-premium-public.png" alt="Premium page of the website"><figcaption><p>Premium page of the website</p></figcaption></figure>
 <figure><img src="../.gitbook/assets/patreon-offers.png" alt="Patreon page"><figcaption><p>Patreon page</p></figcaption></figure>

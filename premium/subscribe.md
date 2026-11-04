@@ -5,7 +5,7 @@ description: How to buy a Premium offer and activate it on your server.
 # Subscribe
 
 {% hint style="info" %}
-Premium is now bought on the [Premium page](../website/dashboard/premium.md) of the website, with Stripe. You pay for one plan (1, 3 or 10 servers), monthly. You can change plan from **My subscription** (the difference is prorated; going down is refused while more servers than the new plan allows have Premium) and manage payment and cancellation from the **Manage my subscription** button. Premium stays until the end of the paid period after a cancellation. A full refund or a lost dispute suspends Premium. The steps below describe the Patreon path, which still applies to existing Patreon subscriptions.
+Premium is now bought on the [Premium page](../website/dashboard/premium.md) of the website, with Stripe. You pay for one plan, monthly: 1 server (3.99 EUR), 3 servers (9.99 EUR) or 10 servers (19.99 EUR). You can change plan from **My subscription** (the difference is prorated; going down is refused while more servers than the new plan allows have Premium) and manage payment and cancellation from the **Manage my subscription** button. Premium stays until the end of the paid period after a cancellation. A full refund or a lost dispute suspends Premium. The steps below describe the Patreon path, which still applies to existing Patreon subscriptions.
 {% endhint %}
 
 Buying Premium takes four steps: buy an offer on Patreon, link your Discord account to your Patreon account, wait for the bot to update, then activate Premium on your server.
