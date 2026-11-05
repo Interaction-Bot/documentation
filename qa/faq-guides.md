@@ -216,7 +216,7 @@ When a limit is reached, the bot stays silent for that message.
 
 Nothing is deleted. The limits of the free plan apply again:
 
-* **Groups**: only the oldest groups keep working. The newest groups are switched off, but kept. Switch one on again only when you have fewer groups than the free limit.
+* **Groups**: only the oldest groups keep working. The newest groups are kept, but the bot does not use them. The dashboard does not let you turn on more groups than the free limit.
 * **Channels**: only the first channels of each group (sorted by channel ID) are used. The others are ignored, but kept.
 * **Questions**: only the first questions of each group (in the order they were added) are used. The others are kept, but not used.
 

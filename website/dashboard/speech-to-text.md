@@ -14,7 +14,7 @@ Navbar > category _**Audio & AI**_ > _**Transcription**_.
 
 The bot transcribes the speech of voice channels and posts the transcriptions in a text channel, a forum or the chat of the voice channel. The spoken language is detected automatically. You can also use [`/transcribe`](../../audio/voice.md#transcription-speech-to-text), and follow the transcription live in the Activity with `/transcribe live`, see [Live transcription](../../audio/live-transcription.md).
 
-Use the _**Enabled / Disabled**_ toggle to enable the transcription on the server, then click _**Add a configuration**_. For each configuration:
+Use the _**Enabled / Disabled**_ switch at the top of the page to turn the transcription on or off for the whole server, then click _**Add a configuration**_. Each configuration also has its own _**Enabled / Disabled**_ switch. For each configuration:
 
 * **Voice channel**: listen to a specific voice channel, or to _All voice channels_ (default).
 * **Text channel**: where the transcriptions are posted: a text channel, a forum, or the chat of a voice channel. Default: _Chat of the voice channel being transcribed_.
@@ -44,7 +44,7 @@ Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/8934
 
 ## Live transcription (Activity)
 
-The section **Live transcription (Activity)** sets the Activity of [`/transcribe live`](../../audio/live-transcription.md). It applies to the whole server. It is saved and cancelled with the bar of the page, like the configurations.
+The tab **Live transcription (Activity)** sets the Activity of [`/transcribe live`](../../audio/live-transcription.md). It applies to the whole server. It is saved and cancelled with the bar of the page, like the configurations.
 
 | Setting | Default | What it does |
 | --- | --- | --- |

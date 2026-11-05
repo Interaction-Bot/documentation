@@ -31,6 +31,6 @@ Turn on the categories you need. Each one can write to its own channel.
 
 ## Exclusions
 
-Events that are not written, even when their category is on: up to 50 **ignored channels and roles**, and **Ignore bots**.
+Events that are not written, even when their category is on: up to 50 **ignored channels**, up to 50 **ignored roles**, and **Ignore bots**.
 
 To avoid flooding your channels, the bot writes at most 300 events per 10 minutes on a server.

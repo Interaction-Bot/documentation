@@ -34,7 +34,7 @@ After a save, the bot reloads the channels at once: no restart is needed.
 
 <figure><img src="../../.gitbook/assets/dash-tts-settings.png" alt="Settings tab of the Text to speech page"><figcaption><p>The Settings tab</p></figcaption></figure>
 
-The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar. During a session (`/tts start`) the bot always reads the messages of the chat and the chat of its voice channel: these two options no longer exist.
+The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar. During a session (`/tts start`) the bot always reads the messages of the chat and the chat of its voice channel: these two options no longer exist. The reading options of this tab (*Say who wrote*, *Ignore bots*, *Ignore the audience of stages*, *The author must be in the voice channel*, *Skip emojis* and the prefix) apply to the messages of a `/tts start` session only. TTS channels do not use them, except that they never read messages from bots.
 
 | Option | Default | What it does |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ The **Settings** tab holds the reading options. Each has a switch, saved with th
 | Cloned voices allowed | On | Premium members can read with their own cloned voice. |
 | Read translations aloud | On | **Premium.** On a Premium server, the translations made by the bot are read after the original message, with the voice of the server (`/tts start` and TTS channels). Same switch in `/tts settings`. |
 
-Also the **Prefix** field (10 characters maximum): when set, only the messages that start with it are read, and the prefix is not said.
+Also the **Prefix** field (10 characters maximum): during a session, when set, only the messages that start with it are read, and the prefix is not said.
 
 Also the **Voices** card: the voices of the server, in the order they are given to the members of a session. Each voice can be enabled or disabled, and moved up or down. The first voice of the list is the default voice. At least one voice stays enabled. Changes are saved with the same *Save* bar. See [Voices and cloning](../../audio/voices-and-cloning.md#the-voice-catalogue).
 
@@ -71,11 +71,11 @@ Adding a channel beyond the limit opens the premium window. The translation of m
 
 ## What is read
 
-* Messages are read **in full**. A long message is split into parts read one after the other, and only its first 4000 characters are read.
-* Messages from bots, messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are not read.
-* Links are removed and mentions are read as names.
-* A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A channel that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.
-* Messages are read one after the other. Up to 5 messages can wait in the queue of the voice channel.
+* A long message is split into parts, read one after the other. Only the first 4000 characters of a message are read; the rest is not read.
+* Messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are not read. Messages from other bots are never read in a TTS channel. In a `/tts start` session, they are not read when *Ignore bots* is on (default).
+* Links are removed in a TTS channel. In a `/tts start` session, each link is said as the word "link". Mentions are read as names.
+* A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A server that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.
+* Messages are read one after the other. Up to 40 parts of messages can wait to be read on the server. Beyond that, a new message is not read.
 
 ## Access
 

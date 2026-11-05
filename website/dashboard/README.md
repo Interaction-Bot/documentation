@@ -84,7 +84,7 @@ Nothing is applied to the bot until you save. As soon as you change something on
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
-If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved and the bar stays on the screen without any message**. Check the page you are on, see the limits written on each page, then try again. On the **Translation rules** page, the bar shows *Saving failed. Your changes are still here: try again.* instead.
+If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved**. On some pages a message explains the refusal: *Saving failed. Your changes are still here: try again.* on the **Translation rules**, **Flags** and **Language identification** pages, or *Saving failed. If your server is not Premium, ...* on **Exceptions**. On the pages without an error message (for example **Channel translation**), the bar stays on the screen without any message. Check the page you are on, see the limits written on each page, then try again.
 
 ## AI assistant
 

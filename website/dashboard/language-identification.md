@@ -21,9 +21,11 @@ On this page, you choose for a channel the **minimum number of characters** that
 
 ## Running configurations
 
-The list shows the channels that have a minimum, with the **Channel** column.
+The list shows one sentence per channel that has a minimum, for example *In #general, messages shorter than 15 characters are not translated*.
 
-* _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
+In the **⋯** menu of each row:
+
+* _**Edit**_: opens the configuration in the popup.
 * _**Delete**_: removes the minimum of this channel (applied after you click on _**Save**_).
 
 ## Add a configuration
@@ -32,10 +34,10 @@ Click on _**Add a channel**_. On a server without Premium, when you already have
 
 The popup has two fields:
 
-* **Which channel?**: *Messages in this channel that are shorter than the minimum are not translated.* Each channel can have only one configuration.
+* **Which channel?** (**Which channels?** when you add a configuration: you can tick several channels, and they all get the same minimum): *Messages in this channel that are shorter than the minimum are not translated.* Each channel can have only one configuration.
 * **How many characters at least?**: *A message shorter than this number is not translated. It is a length threshold, not a language detection.* Type a number from **0** to **500**. A new configuration starts with **5**. Messages with fewer characters are ignored.
 
-Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
+Click on _**Add the channel**_ in the popup (_**Validate**_ when you edit a configuration), then click on _**Save**_ in the bar at the bottom of the page.
 
 ### Example
 
@@ -43,9 +45,14 @@ In #general, many short messages are detected in the wrong language. Set **How m
 
 ## Errors
 
-* **Error - You have not completed all the required fields.** (pop-up): no channel is selected.
-* **It seems something has gone wrong.** (pop-up, followed by the error): the save failed.
-* The bar stays on the screen without any message when the bot refuses the save, for example when a channel no longer exists. Nothing has been saved.
+Messages under the popup, which keep the _**Add the channel**_ button disabled:
+
+* **Choose a channel first.**: no channel is selected.
+* **Choose a number between 0 and 500.**: the number is empty or out of range.
+* **This channel already has a minimum size. Edit it instead.**: the channel is already configured.
+* **Maximum 20 channels without premium: N chosen**: the limit of a server without Premium would be exceeded.
+
+When the save fails, the message *Saving failed. Your changes are still here: try again.* appears above the list. Nothing has been saved.
 
 ## Tips
 

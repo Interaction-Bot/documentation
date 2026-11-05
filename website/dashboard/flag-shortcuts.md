@@ -22,7 +22,7 @@ The bot adds the chosen flags under every new message of the channel, so a membe
 4. Add other channels the same way, if you need them.
 5. Click _**Save**_.
 
-Each row needs a channel and at least one flag, and no more than 5 flags. The _**Save**_ button stays disabled until every row is valid. _**Remove**_ removes a row, and _**Cancel**_ goes back to the last saved list.
+Each channel needs at least one flag, and no more than 5 flags. The _**Add the channel**_ button of the popup stays disabled until the channel and the flags are valid. In the **⋯** menu of a row, _**Edit**_ changes the row and _**Remove**_ deletes it. _**Cancel**_ in the bar goes back to the last saved list.
 
 {% hint style="info" %}
 Saving replaces the whole flag shortcut configuration of the server with the rows of the page. A channel that you removed from the page stops getting flags.
@@ -48,4 +48,4 @@ Saving replaces the whole flag shortcut configuration of the server with the row
 
 * **No flags appear under new messages.** Check that the channel is in the list and saved, and that the bot has *Add Reactions* in that channel. Run [`/check-permissions`](../../commands/flags.md#diagnostics-check-permissions) to see what is missing.
 * **The flags appear but a click does nothing.** Check the [Flag translation](flag-translation.md) page for that channel.
-* **Some flags are not in the list.** Only the flags the bot can translate are listed. The pirate flag 🏴‍☠️ is not one of them.
+* **Some flags are not in the list.** The list holds the country and language flags of the bot. The pirate flag 🏴‍☠️ is not in it: it works only as a reaction of its own (see [Flag translation](flag-translation.md)).

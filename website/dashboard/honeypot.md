@@ -25,10 +25,10 @@ The tab shows whether the honeypot works, and what is missing.
 
 | Field | Default | What it does |
 | --- | --- | --- |
-| Toggle (next to the state) | Off | Turns the honeypot on or off. Needs at least one trap channel. Saved with the bar at the bottom. |
+| Toggle (top of the page, next to the title) | Off | Turns the honeypot on or off, from any tab. Needs at least one trap channel. Saved with the bar at the bottom. |
 | State | _The honeypot is off_ | One of: _The honeypot is watching_ (on and ready), _The honeypot is off_, _The honeypot cannot work yet_ (a check fails), _The honeypot is paused_ (see below). |
 | _**Start again**_ | Shown only when paused | Starts the honeypot again after the protection against false alarms paused it. Check the trap channel first. |
-| Checks | Shown when the honeypot is on | One line per condition: a trap channel, the permission of the sanction (Kick Members, Ban Members or Timeout Members), Manage Messages and Pin Messages. A green dot means OK. A red dot means missing, with the fix written under it. |
+| Checks | Shown in the box _The honeypot cannot work yet_, when the honeypot is on | Only the conditions that are missing are listed, each with the fix written under it: a trap channel, the permission of the sanction (Kick Members, Ban Members or Timeout Members), Manage Messages and Pin Messages. The list has no colored dots. |
 
 ### Trap channels
 
@@ -52,7 +52,7 @@ Problems shown under a trap channel:
 | _The bot cannot post in this channel_ | The bot needs View Channel, Send Messages and Embed Links there. The warning is missing. |
 | _The bot lacks the Pin Messages permission here_ | The warning is posted but not pinned. |
 
-The bot also reports here when it cannot post the warning. If the bot does not answer, the page shows _The bot does not answer right now, so its permissions cannot be checked._
+The bot also reports here when it cannot post the warning. While the honeypot is on, if the bot does not answer, the page shows _The bot does not answer right now, so its permissions cannot be checked._
 
 ## Tab Settings
 
