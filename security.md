@@ -15,7 +15,9 @@ The bot asks Discord for the minimum it needs:
 
 ## What it keeps
 
-The bot keeps **your configuration** (channels, roles, languages, options, FAQ entries, premium state) so it can apply it. Messages are processed to be translated, they are not a part of your configuration. For the details and your rights, read the [Privacy Policy](https://interaction-bot.com/privacy) and the [Terms of Use](https://interaction-bot.com/tou).
+The bot keeps **your configuration** (channels, roles, languages, options, FAQ entries, premium state) so it can apply it. Messages are processed to be translated, they are not a part of your configuration.
+
+The bot also keeps: **recordings** (encrypted, kept 24 hours, or 7 days on a premium server), the **cloned voices** you create (kept until 30 days after your Premium ends), the **invitation journal** of a server that turned the invite tracker on (kept 30 to 365 days, as chosen), and the **daily usage counts** of each server. For the details and your rights, read the [Privacy Policy](https://interaction-bot.com/privacy) and the [Terms of Use](https://interaction-bot.com/tou).
 
 ## The dashboard
 
@@ -25,7 +27,7 @@ The bot keeps **your configuration** (channels, roles, languages, options, FAQ e
 
 ## Voice features
 
-* The bot listens to a voice channel **only while a transcription is running** (started by a command, or by the automatic mode you enabled).
+* The bot listens to a voice channel **only while a transcription or a recording is running** (started by a command, by the automatic mode you enabled, or from the Activity).
 * Transcription time is limited per server and per day (30 minutes on a free server, 3 hours on premium, per UTC day, reset at midnight UTC) and the bot leaves when no human remains.
 
 ## Report a problem

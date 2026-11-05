@@ -10,7 +10,7 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../qa/faq.md).
 
-The counter at the top right shows how many active groups you use out of your plan's limit, for example `1 active group out of 1` on a free server.
+The counter at the top right shows how many groups you have out of your plan's limit, for example `1 group out of 1` on a free server.
 
 ## How it works
 

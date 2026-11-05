@@ -38,7 +38,7 @@ Click on _**Add a channel**_. On a server without Premium, when you already have
 The popup has these fields:
 
 * **Which channel?**: *Members translate the messages of this channel by reacting with a flag.* Each channel can have only one configuration.
-* **Members can translate by reacting with a flag here** (switch): a new configuration starts **off**: flags do nothing in this channel until you turn this switch on.
+* **Members can translate by reacting with a flag here** (switch): a new configuration starts **on**: turn this switch off to stop the flags from translating in this channel.
 
 Click on _**OPTIONS**_ to show the optional settings.
 

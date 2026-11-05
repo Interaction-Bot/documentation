@@ -12,7 +12,7 @@ The simplest way to translate: **add a flag emoji** under a message. The bot rep
 
 ## Which flags?
 
-Around 175 flags are supported, one per language (🇫🇷 French, 🇬🇧 or 🇺🇸 English, 🇪🇸 Spanish, 🇩🇪 German, 🇯🇵 Japanese...). Some fun ones:
+Around 175 flags are supported. Several flags can give the same language: for example 🇬🇧, 🇺🇸 and 🇨🇦 all give English. Examples: 🇫🇷 French, 🇪🇸 Spanish, 🇩🇪 German, 🇯🇵 Japanese... Some fun ones:
 
 * 🏴‍☠️ the **pirate flag** translates the message into English, then into "pirate speak".
 * the Hebrew 🇮🇱, Bengali 🇧🇩, Tswana 🇧🇼, Welsh 🏴 and Scottish 🏴 flags are supported.

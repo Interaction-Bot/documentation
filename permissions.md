@@ -23,7 +23,7 @@ Give them to the bot role, then check the **permission overrides** of the channe
 | Translation sent in a **thread**          | Source          | View Channel, Read Message History, **Create Public Threads**, **Send Messages in Threads** (plus Manage Webhooks for the webhook look, Manage Threads to reopen a locked thread) |
 | *Delete message* option                   | Source          | Manage Messages                                                         |
 | Flag reaction translation                 | Message channel | View Channel, Read Message History, Send Messages (the bot replies)     |
-| Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions                                             |
+| Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions, Read Message History                       |
 | `/tts`, `/connect`, TTS channels          | Voice channel   | View Channel, Connect, Speak, and Read Message History in the text channel read aloud |
 | Transcription (`/transcribe`)             | Voice channel   | View Channel, Connect, Speak (the bot listens)                          |
 | Transcription output                      | Text channel    | Send Messages, plus Embed Links (embed) or Manage Webhooks (webhook)    |

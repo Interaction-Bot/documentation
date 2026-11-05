@@ -50,7 +50,7 @@ A role configuration translates **everything the members who have this role writ
 
 Example: members with the role `@french` write in French, and you want everybody to read English: create a role configuration `@french` -> English. If you add Japanese too, each message gets 2 translations.
 
-The [blacklist](../website/dashboard/blacklist.md) (called **Exceptions** on the new dashboard) lets you exclude channels (role and category translation are not applied there).
+The [blacklist](../website/dashboard/blacklist.md) (called **Exceptions** on the new dashboard) excludes channels and roles: a message written in an excluded channel, or by a member with an excluded role, is not translated, whatever the rule.
 
 Dashboard page: [Role translation](../website/dashboard/role-translation.md).
 
@@ -73,7 +73,7 @@ Details, commands and limits: [Translation groups](../commands/groups.md) and th
 * The bot never translates **its own** messages, nor the webhook messages it sends.
 * Messages of other bots are translated only if _Translate bot_ is on (premium).
 * Role translation does not apply to webhook messages.
-* Editing a message **updates its translations** (setting **Follow edited messages** of the [Overview](../website/dashboard/overview.md), on by default; at most 5 retranslations per message and per hour). This applies to the translation rules.
+* Editing a message **updates its translations** (setting **Follow edited messages** of the [Overview](../website/dashboard/overview.md), on by default; at most 5 retranslations per message and per hour). It applies to every automatic translation (channel, category, role, links and rules). The bot keeps the link to a translation for 6 hours after the last translation of the message, and forgets it when it restarts.
 
 ## Good practices
 

@@ -53,7 +53,7 @@ If the settings cannot be read, the default language is used (your Discord langu
 
 In a user app, the bot uses **Premium** when either:
 
-* you have an active [Premium subscription](../premium/subscribe.md) on the website, or a Patreon offer linked to your Discord account (Premium of the member), or
+* you have an active [Premium subscription](../premium/subscribe.md) on the website or through Discord, or a Patreon offer linked to your Discord account (Premium of the member), or
 * you are in a server where the bot is added and that server has [Premium](../premium/premium.md).
 
 On a free account, the bot does not translate the messages of other bots (**Apps > Translate** on a bot message answers that Premium is needed).

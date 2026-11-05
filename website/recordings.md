@@ -10,7 +10,7 @@ My recordings is the page of the website where the member who started a [voice r
 
 ## Localization
 
-* The list is at **/recordings**. Open it from the **My recordings** button of the Account page, from the link in the recording panel, or from the **Download** button of the private message sent when a recording is ready.
+* The list is at **/recordings**. Open it from the **Open my recordings** button of the Account page, from the link in the recording panel, or from the **Download** button of the private message sent when a recording is ready.
 * Each recording has its own page, at **/recordings/** followed by its identifier.
 * You must be signed in with Discord.
 

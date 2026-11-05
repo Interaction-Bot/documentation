@@ -16,7 +16,7 @@ Monthly prices on the Premium page: **1 server €3.99**, **3 servers €9.99**,
 * Premium is set **per server**, not per member.
 * A slot is used when a server gets Premium, with the `/premium add` command or with the **Premium** toggle of the [dashboard](../website/dashboard/premium.md). Turning Premium off, or running `/premium remove`, frees the slot.
 * To give Premium to another server when all your slots are used, first remove it from a server.
-* Premium is also used by the [user app](../commands/user-app.md): a member with an active Premium subscription on the website, or a Patreon offer linked to their Discord account, gets it when using `/translate` and the Apps menus outside the servers where the bot is added.
+* Premium is also used by the [user app](../commands/user-app.md): a member with an active Premium subscription on the website, or a Patreon offer linked to their Discord account, gets it when using `/translate` and the Apps menus, in any server or in direct messages.
 * To buy, see [Subscribe](subscribe.md). To activate it, see [Usage](usage.md).
 
 ## What Premium brings

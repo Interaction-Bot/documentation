@@ -16,11 +16,11 @@ Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/
 
 | Feature | Who can use it |
 | --- | --- |
-| `/connect`, `/tts say` | The member who runs the command must have voted in the last 24 hours. A premium server does **not** replace this vote. |
+| `/connect`, `/tts say` | The server is premium, **or** a member of the server has voted in the last 24 hours (one vote unlocks it for the whole server). |
 | `/tts start` | The server is premium, **or** a member of the server has voted in the last 24 hours (same rule as TTS channels). |
 | `/tts voice`, `/tts clone`, `/tts settings`, `/tts stop` | No vote needed. |
-| `/transcribe start` | The server is premium, **or** the member who runs the command has voted in the last 24 hours. |
-| `/transcribe live` | The server is premium, **or** the member who runs the command has voted in the last 24 hours. Opens the [live transcription](live-transcription.md). |
+| `/transcribe start` | The server is premium, **or** a member of the server has voted in the last 24 hours. |
+| `/transcribe live` | The server is premium, **or** a member of the server has voted in the last 24 hours. Opens the [live transcription](live-transcription.md). |
 | TTS channels (`/tts-channel`), automatic transcription (`/transcribe auto`) and starting the live transcription from the Activity | The server is premium, **or** a member of the server has voted in the last 24 hours. One vote unlocks the feature for the whole server. Starting from the Activity also needs *Manage Server*. |
 | `/disconnect`, `/tts stop`, `/transcribe stop`, `/transcribe auto disable` | No vote needed. |
 
@@ -43,7 +43,7 @@ Text to speech also has permissions set by the server (dashboard, tab **Permissi
 | --- | --- |
 | `/connect [channel]` | Connect the bot to a voice or stage channel (yours by default). If the bot is already connected to another channel, members vote to move it. Needs a vote, see [Access](#access). |
 | `/disconnect` | Disconnect the bot from its voice channel. Members vote when enough of them are in the channel. |
-| `/tts say query language voice` | Read a text aloud in your voice channel (the bot joins it). The text can have up to 500 characters. `voice` chooses the voice for this message, see [Voices and cloning](voices-and-cloning.md). Needs your own vote. |
+| `/tts say query language voice` | Read a text aloud in your voice channel (the bot joins it). The text can have up to 500 characters. `voice` chooses the voice for this message, see [Voices and cloning](voices-and-cloning.md). Needs a premium server, or a vote from a member of the server (see [Access](#access)). |
 | `/tts start` | Join your voice channel and read the messages of this chat and of the chat of the voice channel. Needs a premium server, or a vote from a member of the server. |
 | `/tts stop` | Leave the voice channel, end the session and stop the speech in progress. |
 | `/tts voice [voice] [reset]` | Show or choose your voice. See [Voices and cloning](voices-and-cloning.md#choose-your-voice-tts-voice). |

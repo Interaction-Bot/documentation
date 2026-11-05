@@ -15,7 +15,7 @@ Each guide starts from a server where the bot is installed, with the permissions
 5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves 30 seconds after nobody but bots is left in the channel.
 
 {% hint style="info" %}
-If you have not voted in the last 24 hours, `/tts say` answers *You need to vote for the bot to use this command.* This is true even on a premium server: the vote of the member who runs the command is checked.
+On a premium server, `/tts say` needs no vote. Otherwise, if no member of the server has voted in the last 24 hours, it answers *You need to vote for the bot to use this command.* One vote from any member unlocks it for the whole server.
 {% endhint %}
 
 ## 2. Read a text channel aloud (TTS channel)
@@ -53,7 +53,7 @@ A message is read only if it has text, does not start with `/`, `!`, `.` or `$`,
 5. Run `/transcribe stop` when you are done. The transcription also stops when the daily time of the server is used up: 30 minutes on a free server, 3 hours on a premium server, counted per UTC day (the time starts again at midnight UTC; see [Daily time and stop](voice.md#daily-time-and-stop)).
 
 {% hint style="info" %}
-`/transcribe start` needs a premium server, or a vote in the last 24 hours from the member who runs it. Only one transcription runs per server at a time.
+`/transcribe start` needs a premium server, or a vote in the last 24 hours from a member of the server. Only one transcription runs per server at a time.
 {% endhint %}
 
 ## 4. Transcribe automatically when someone joins (`/transcribe auto`)

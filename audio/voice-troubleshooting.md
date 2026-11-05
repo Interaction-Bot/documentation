@@ -7,7 +7,7 @@ description: The bot does not join, does not speak, or does not transcribe? Chec
 ## Quick checklist
 
 1. **Does the bot have *Connect* and *Speak*** in the voice channel? See [Permissions](voice.md#permissions).
-2. **Is the feature allowed?** `/tts say` and `/connect` need **your own** vote (even on a premium server). `/transcribe start` and `/transcribe live` need a premium server or your vote. Starting the live transcription from the Activity needs *Manage Server* and a vote from any member of the server (or a premium server). `/tts start`, TTS channels and automatic transcription need a premium server or a vote from a member of the server. `/tts voice` and `/tts clone` need no vote. See [Access](voice.md#access).
+2. **Is the feature allowed?** `/tts say`, `/connect`, `/transcribe start`, `/transcribe live`, `/tts start`, TTS channels and automatic transcription need a premium server or a vote from a member of the server (valid 24 hours). Starting the live transcription from the Activity also needs *Manage Server*. `/tts voice` and `/tts clone` need no vote. See [Access](voice.md#access).
 3. **Is the bot already busy?** It can be connected to another voice channel of the server, or already transcribing.
 4. **Is the text short enough?** `/tts say` refuses texts over 500 characters.
 5. **Is the bot still in the channel?** It leaves 30 seconds after the last human left.
@@ -70,7 +70,6 @@ These are the messages the bot shows, with the exact text.
 
 | Symptom | Cause and fix |
 | --- | --- |
-| `/tts say` and `/connect` refuse with the vote message on a premium server | They check the vote of **the member who runs them**. Vote, or ask a member who voted to run the command. `/tts start` accepts a premium server. |
 | The bot does not join | The member is not in a voice channel (see the messages above), or the bot lacks **Connect** in that channel. |
 | The bot joins but says nothing | Missing **Speak**, or the text was refused (see above). Check that the bot is not already reading (`/tts stop` empties the queue). |
 | `/tts say` speaks in another voice channel | `/tts say` reads in the voice channel where the bot already is, when you are not in a voice channel. If you are in another one, the command refuses (*I am already reading in another voice channel.*). Use `/tts stop` (or `/disconnect`) first, then `/tts say`. |

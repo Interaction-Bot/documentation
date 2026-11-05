@@ -43,7 +43,7 @@ To avoid floods, the bot also protects itself against servers that send an abnor
 2. The bot checks the [flag translation](../website/dashboard/flag-translation.md) configuration of the channel. Without any configuration, the flags **work by default**.
 3. Bots are ignored, and messages written by bots are translated on premium servers only.
 4. In **Once per message** mode, a message is translated only the first time a flag is added. In **Each time someone reacts** mode, every flag added produces a translation.
-5. The translation is posted as a **reply** to the message, by default in an embed that shows the source and target languages. It is deleted after a while unless *Auto delete* is turned off (about 0.13 s per character, at least 25 seconds).
+5. The translation is posted as a **reply** to the message, by default in an embed that shows the source and target languages. It is deleted after a while unless *Delete the translation automatically* is turned off (about 0.13 s per character, at least 25 seconds).
 
 {% hint style="info" %}
 🏴‍☠️ the pirate flag translates the message in English and then in pirate speech.

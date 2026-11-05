@@ -55,7 +55,7 @@ Every rule is shown with a sentence that describes it, and can be paused, copied
 ## Limits
 
 * **30 rules** and links per server, **200** with Premium.
-* Up to **25 languages** per rule, but a message is translated into **3 languages** at most (**20** with Premium): the next translations are not sent. If a rule goes over this, a notice at the top of the page lists the affected channels, with a **See Premium** button on a free server.
+* Up to **5 languages** per rule in the form (**20** with Premium), but a message is translated into **3 languages** at most (**20** with Premium): the next translations are not sent. If a rule goes over this, a notice at the top of the page lists the affected channels, with a **See Premium** button on a free server.
 * Linked channels: the page shows the maximum number of channels per link and of links per server.
 
 ## Tools

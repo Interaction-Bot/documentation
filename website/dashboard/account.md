@@ -8,7 +8,7 @@ The **Account** page (`interaction-bot.com/account`) is in the user menu of the 
 
 ## User informations
 
-Your global name, your username and the number of **Premium offers** of your Patreon account.
+Your global name, your username and the number of your **Premium offers** (the slots of your Patreon tiers and of your active Stripe subscription).
 
 ## Vote reminder
 
@@ -22,7 +22,7 @@ Install the bot on your Discord account and choose how it answers you. See [User
 * **Language of my translations** (menu Translate, `/translate`, `/personal-language`): the language used by `/translate` and **Apps > Translate** when you do not pick one. The default choice, **Discord language (default)**, uses the language of your Discord application.
 * **Replies visible to everyone**: when enabled, the bot's replies to your commands in a channel are visible to everyone. When disabled, only you see them (ephemeral messages).
 
-The settings are saved as soon as you change them. The message *Saved.* confirms it, and *The settings could not be saved.* tells you that something went wrong.
+The settings are saved with the **Save** button of the bar at the bottom of the page. The message *Saved.* confirms it, and *The settings could not be saved.* tells you that something went wrong.
 
 ## My recordings
 
