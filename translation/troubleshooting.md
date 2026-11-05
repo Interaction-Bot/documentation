@@ -25,7 +25,7 @@ The bot needs these permissions **in the channels it uses**:
 | Target channel, *webhook* style | View Channel, Send Messages, **Manage Webhooks**, Attach Files         |
 | Target channel, *message* style | View Channel, Send Messages, Attach Files                              |
 | *Delete message* option   | Manage Messages (in the source channel)                                     |
-| Flag shortcuts            | Add Reactions                                                               |
+| Flag shortcuts            | View Channel, Read Message History, Add Reactions                                                               |
 | Voice features            | Connect, Speak                                                              |
 
 {% hint style="info" %}
@@ -39,7 +39,7 @@ The simplest way is to give the bot a role with these permissions, and to check 
 | Nothing happens in a channel                              | Missing permission or configuration not saved: run `/check-permissions`.                              |
 | The translation is in the wrong language                  | The detection was wrong: raise the [minimum size](language-detection.md#minimum-message-size).        |
 | Translations are posted as plain messages, not webhooks   | The bot lacks *Manage Webhooks*; it falls back to plain messages.                                      |
-| "You have exceeded the limit of translation" warning      | More than 3 (or 20) translations for one message: reduce configurations or go premium. You can turn the warning off in the dashboard Overview. |
+| the limit warning ("⚠️ Warning, you have exceeded the limit of translation ...")      | More than 3 (or 20) translations for one message: reduce configurations or go premium. You can turn the warning off in the dashboard Overview. |
 | Messages of a bot are not translated                      | Premium option _Translate bot_.                                                                       |
 | The original message was not deleted                      | The bot lacks *Manage Messages*.                                                                       |
 | A flag reaction does nothing                              | Flag translation is disabled in this channel on the dashboard, or the message is empty / written by a bot (premium only). |

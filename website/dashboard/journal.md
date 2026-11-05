@@ -26,4 +26,4 @@ The journal keeps who made the change (Discord ID and name at the time), when, f
 
 ## Bot problems
 
-The _**Bot problems**_ tab lists what the bot could not do on your server (for example a missing permission), so you can fix it. The number of problems you have not seen yet is shown next to the **Journal** entry of the navigation bar. Problems are kept 30 days. This tab replaces the former error journal.
+The _**Bot problems**_ tab lists what the bot could not do on your server (for example a missing permission), so you can fix it. The number of problems you have not seen yet is shown next to the **Journal** entry of the navigation bar. Problems are kept 30 days. This tab replaces the former error journal. Opening the tab marks the problems as seen. Click _**Clear all**_ to delete every problem of this server; the page asks you to confirm first.

@@ -20,11 +20,11 @@ Run the commands in this order. Each example shows the reply you should see.
 
 | Step | Command | Expected reply |
 | ---- | ------- | -------------- |
-| 1 | `/group create name:Community` | ``Group **Community** created. Add channels with `/group set-channel`.`` |
-| 2 | `/group set-channel name:Community channel:#general language:English` | `#general is now in group **Community** and receives translations in **English**.` |
-| 3 | `/group set-channel name:Community channel:#general-fr language:French` | `#general-fr is now in group **Community** and receives translations in **French**.` |
-| 4 | `/group set-channel name:Community channel:#general-es language:Spanish` | `#general-es is now in group **Community** and receives translations in **Spanish**.` |
-| 5 | `/group list` | An embed titled *Translation groups* with one field: `🟢 Community (webhook)`, listing the three channels and their languages. |
+| 1 | `/group create name:Community` | ``Mirror **Community** created. Add channels with `/group set-channel`.`` |
+| 2 | `/group set-channel name:Community channel:#general language:English` | `#general is now in mirror **Community** and receives translations in **English (en)**.` |
+| 3 | `/group set-channel name:Community channel:#general-fr language:French` | `#general-fr is now in mirror **Community** and receives translations in **French (fr)**.` |
+| 4 | `/group set-channel name:Community channel:#general-es language:Spanish` | `#general-es is now in mirror **Community** and receives translations in **Spanish (es)**.` |
+| 5 | `/group list` | An embed titled *Mirrors* with one field: `🟢 Community (Webhook)`, listing the three channels and their languages. |
 
 {% hint style="info" %}
 The `language` option accepts a language name (`French`) or an ISO code (`fr`), in any case. Suggestions appear as you type. The `name` option suggests the existing groups of the server.
@@ -58,7 +58,7 @@ Use `/group settings` with the group name and the options you want to change.
 | `translate_bots` | Also translate messages sent by bots. Premium option. | `/group settings name:Community translate_bots:true` |
 | `always_send` | Send the translations even when they look already translated (see the rules below). | `/group settings name:Community always_send:true` |
 
-Every change gets the same reply: `Group settings updated.`
+Every change gets the same reply: `Mirror settings updated.`
 
 **Styles**
 
@@ -99,14 +99,14 @@ These are the limits of the [dashboard](../website/dashboard/translation-groups.
 | Message shown | When it happens | What to do |
 | ------------- | --------------- | ---------- |
 | `The name must contain between 1 and 40 characters.` | The name is empty or too long. | Choose a shorter name. |
-| `You reached the maximum number of groups for this server.` | Creating a group beyond the limit. | Delete a group, or go premium. |
-| `A group with this name already exists.` | Two groups with the same name. | Choose another name. |
-| `Group not found.` | The name does not match an existing group. | Names are matched exactly. Pick the group from the suggestions. |
+| `You reached the maximum number of mirrors for this server.` | Creating a group beyond the limit. | Delete a group, or go premium. |
+| `A mirror with this name already exists.` | Two groups with the same name. | Choose another name. |
+| `Mirror not found.` | The name does not match an existing group. | Names are matched exactly. Pick the group from the suggestions. |
 | `This channel does not belong to this server.` | The channel is from another server. | Pick a channel of this server. |
-| `This group reached its maximum number of channels.` | Adding a channel beyond the limit. | Remove a channel, or go premium. |
-| `#channel is not in this group.` | `/group remove-channel` for a channel that is not in the group. | Check the channel with `/group list`. |
+| `This mirror reached its maximum number of channels.` | Adding a channel beyond the limit. | Remove a channel, or go premium. |
+| `#channel is not in this mirror.` | `/group remove-channel` for a channel that is not in the group. | Check the channel with `/group list`. |
 | `Invalid settings.` | No option given, or an invalid value. | Give at least one option, with a valid value. |
-| ``There is no translation group yet. Create one with `/group create`.`` | `/group list` on a server without groups. | Create a group. |
+| ``There is no mirror yet. Create one with `/group create`.`` | `/group list` on a server without groups. | Create a group. |
 
 ## Common problems
 

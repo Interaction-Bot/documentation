@@ -15,17 +15,17 @@ The bot asks Discord for the minimum it needs:
 
 ## What it keeps
 
-The bot keeps **your configuration** (channels, roles, languages, options, FAQ entries, premium state) so it can apply it. Messages are processed to be translated, they are not a part of your configuration. For the details and your rights, read the [Privacy Policy](https://interaction-bot.com/privacy) and the [Terms of Use](https://interaction-bot.com/tou).
+The bot keeps **your configuration** (channels, roles, languages, options, FAQ entries, premium state) so it can apply it. Messages are processed to be translated, they are not a part of your configuration. It also keeps: the voice recordings you are in or started (encrypted, kept 24 hours, 7 days on Premium servers), your cloned voices, the log of actions (up to 90 days), the log of problems (30 days), and the invite journal (retention chosen by the server). For the details and your rights, read the [Privacy Policy](https://interaction-bot.com/privacy) and the [Terms of Use](https://interaction-bot.com/tou).
 
 ## The dashboard
 
 * You log in with your **Discord account** (OAuth). The bot never sees your Discord password.
-* You can only configure the servers where you have the *Administrator* permission and where the bot is present.
+* You can only configure the servers where you have the *Administrator* or *Manage Server* permission (or that you own) and where the bot is present.
 * The bot only posts in channels **of the server** that owns the configuration.
 
 ## Voice features
 
-* The bot listens to a voice channel **only while a transcription is running** (started by a command, or by the automatic mode you enabled).
+* The bot listens to a voice channel **only while a transcription or a recording is running** (started by a command, or by the automatic mode you enabled).
 * Transcription time is limited per server and per day (30 minutes on a free server, 3 hours on premium, per UTC day, reset at midnight UTC) and the bot leaves when no human remains.
 
 ## Report a problem

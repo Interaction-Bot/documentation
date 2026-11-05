@@ -8,7 +8,7 @@ description: >-
 
 ## Localization
 
-This page is the first item of the navigation bar. Its title is **Server Overview**.
+This page is the first item of the navigation bar. Its title is **Overview**.
 
 <figure><img src="../../.gitbook/assets/dash-overview.png" alt="Overview page"><figcaption><p>Overview</p></figcaption></figure>
 
@@ -18,32 +18,33 @@ This section shows information about your Discord server. Nothing can be changed
 
 * **MEMBERS**: the number of members of the server.
 * **CHANNELS**: the number of channels of the server (text, voice and the other channels; categories are not counted).
-* **ID**: the ID of your server. You need it to find the shard of your server on the [status page](../status.md), and to use the `guild_id` option of the [Premium commands](../../premium/usage.md).
+* **ID**: the ID of your server. You need it to find the shard of your server on the [status page](../status.md), and to use the `guild-id` option of the [Premium commands](../../premium/usage.md).
 * **CATEGORIES**: the number of categories of the server.
-* **PREMIUM**: **Yes** if the server has Premium, **No** otherwise. See [Premium](premium.md).
 * **ROLES**: the number of roles of the server.
 
-## Bot
+A **Premium** or **Free** badge at the top of the page tells whether the server has Premium. See [Premium](premium.md).
 
-This section shows the state of the bot on your server.
+## Bot settings
 
-* **NICKNAME**: always shows *Interaction Bot*.
-* **CLUSTER**: the cluster that runs the bot for your server, for example *Cluster 0*. A cluster runs several servers, so if a cluster has a problem, all the servers of this cluster are affected. You can check the state of all clusters on the [status page](../status.md).
-* **SHARD**: the number of shards run by the cluster of your server. To know the exact shard of one server, use the *Server localization* section of the [status page](../status.md).
+This card holds the bot language, the announcements channel, the simultaneous translation warning and the follow of edited messages. The cluster and the shard of your server are shown on the [status page](../status.md#server-localization).
 
-## Bot Language
+### Language
 
-This section sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **LANGUAGE** list. **Automatic** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
+This setting sets the language of the bot messages on this server (help, errors, panels, confirmations), with the **LANGUAGE** list. **Automatic** (default) uses the language of the server on Discord; you can also choose one of the available languages. The same setting is available in Discord with [`/bot-language`](../../commands/configuration.md#language-of-the-bot).
 
-## Edited messages
+### Announcements channel
 
-**Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated. The bot retranslates a message at most 5 times per hour. The same setting is available in Discord with `/server-settings edits`.
+The channel where the bot posts its own messages, such as its welcome message when it joins, the end of a Premium plan, and the messages of a recording started from the Activity. By default, it is the community updates channel of your server, else its system channel, else a private channel created by the bot.
 
-## Warning
+### Edited messages
+
+**Follow edited messages** (enabled by default): when someone edits a message that was translated, the translations are updated. The bot retranslates a message at most 5 times per hour, and only during 6 hours after the last translation of the message. The same setting is available in Discord with `/server-settings edits`.
+
+### Warning
 
 This section contains one toggle, **Simultaneous Translation Warning** (enabled by default).
 
-When a single message is translated into more languages than the limit of your server, the bot posts a warning in the channel. The warning explains that the limit of your offer was exceeded, gives a link to the premium page, and tells how to disable it. The toggle only hides this warning: the limit itself still applies.
+When a single message is translated into more languages than the limit of your server, the bot posts a warning in the channel. The warning is shown at most once a day. The warning explains that the limit of your offer was exceeded, gives a link to the premium page, and tells how to disable it. The toggle only hides this warning: the limit itself still applies.
 
 <details>
 

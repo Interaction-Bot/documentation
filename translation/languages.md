@@ -65,7 +65,7 @@ In Discord, `/languages` shows the same list.
 
 ## Flags
 
-Flag translation understands **171 flag emojis**. A flag stands for the main language chosen for the country, for example 🇫🇷 gives French, 🇬🇧, 🇺🇸 and 🇨🇦 give English, 🇧🇷 and 🇵🇹 give Portuguese, 🇨🇭 gives German and 🇧🇪 gives Dutch.
+Flag translation understands **175 flag emojis**. A flag stands for the main language chosen for the country, for example 🇫🇷 gives French, 🇬🇧, 🇺🇸 and 🇨🇦 give English, 🇧🇷 and 🇵🇹 give Portuguese, 🇨🇭 gives German and 🇧🇪 gives Dutch.
 
 Special flags:
 

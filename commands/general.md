@@ -13,9 +13,9 @@ description: All other commands of Interaction Bot.
 | `/invite`        | A card with five buttons: add the bot to a server, add it to your account (to install it as a [user app](user-app.md)), the support server, the dashboard and the vote. |
 | `/ping`          | Get the ping of the bot.                                                    |
 | `/support`       | Get the Discord link of the support server.                                 |
-| `/reminder enable` | Enable or disable the reminder to vote for the bot on top.gg.             |
+| `/reminder enable:<True or False>` | Enable or disable the reminder to vote for the bot on top.gg.             |
 
-`/dashboard`, `/help`, `/invite` and `/support` also work as a [user app](user-app.md), without the bot in the server.
+`/dashboard`, `/documentation`, `/help`, `/invite` and `/support` also work as a [user app](user-app.md), without the bot in the server.
 
 ## Voting
 
@@ -27,4 +27,4 @@ Some voice commands ([`/connect`, `/tts say`](../audio/voice.md)) require that y
 
 ## Who sees the answer
 
-The answers of the commands are shown to the whole channel, errors included. The commands that are private by nature answer only to you: `/privacy`, `/personal-language`, `/tts clone`, `/record list`, the temporary voice menus, and the right-click menus **Translate**, **Detect** and the one of voice messages. The answers to buttons and menus keep their own setting.
+Most commands answer in the channel. The management commands (`/translation`, `/group`, `/flags`, `/check-permissions`, ...) answer only to you, errors included. The commands that are private by nature answer only to you: `/detect`, `/privacy`, `/personal-language`, `/tts clone`, `/record list`, the temporary voice menus, and the right-click menus **Translate**, **Detect** and the one of voice messages. The answers to buttons and menus keep their own setting.

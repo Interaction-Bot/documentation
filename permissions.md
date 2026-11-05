@@ -41,12 +41,17 @@ If the bot lacks *Manage Webhooks*, it falls back to a plain message. If it lack
 | Commands                                                                                                  | Who                                   |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | `/translate`, `/detect`, `/languages`, Apps > Translate / Detect, `/help`, `/about`, `/ping`, `/invite`, `/support`, `/documentation`, `/dashboard`, `/reminder`, `/ask` | Everybody |
-| `/tts`, `/tts-stop`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`                    | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
-| `/invites`, `/invite-leaderboard`, Apps > **Transcribe voice message** | Everybody |
+| `/tts`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`                    | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
+| Apps > **Transcribe voice message** | Everybody, on a premium server or with a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote) |
+| `/record` | Everybody (recording needs a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
+| `/limits`, `/privacy`, `/personal-language` | Everybody |
+| `/invites`, `/invite-leaderboard` | Everybody |
+| `/translation` (translation rules and their subcommands) | Members with **Manage Server** |
 | `/ai setup`, `/tempvoice setup`, `/tempvoice config` | Members with **Manage Server** |
 | `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/check-permissions`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
-| `/premium add`, `/premium remove`                                                                          | The member who owns the premium (see [Usage](premium/usage.md)) |
-| Dashboard                                                                                                  | Members with **Administrator**        |
+| `/premium add`                                                                          | A member with a Premium subscription (see [Usage](premium/usage.md)) |
+| `/premium remove`                                                                          | A member with **Administrator** on the server whose Premium is removed, or the Patreon owner of this Premium (see [Usage](premium/usage.md)) |
+| Dashboard                                                                                                  | Members with **Administrator** or **Manage Server**, and the server owner |
 
 Server administrators can change who sees a command in *Server Settings > Integrations > Interaction Bot*.
 

@@ -10,7 +10,7 @@ description: Translate messages automatically with translation rules, by server,
 
 Automatic translation is configured on the [dashboard](../website/dashboard/) or with the [configuration commands](../commands/configuration.md) (`/channel-translation manage`, `/role-translation manage`, `/category-translation manage`, `/group manage`). Once saved, the bot translates the messages **by itself**, nobody has to do anything.
 
-Four kinds of automatic translation exist. They can be combined: when several apply to the same message, the bot handles them in this order: **channel, group, category, role**.
+Four kinds of automatic translation exist. They can be combined. On a server that still uses the former configurations, when several apply to the same message, the bot handles them in this order: **channel, group, category, role**. On a server converted to translation rules, only the most precise level that matches a message applies: a channel or reverse rule replaces the category and server rules for that message, and a category rule replaces the server rules. Role rules always apply in addition. A server whose former rules already overlapped keeps the former behaviour, where every matching rule applies.
 
 | Kind                                  | Applies to                                       | Typical use                                      |
 | ------------------------------------- | ------------------------------------------------ | ------------------------------------------------ |
@@ -28,9 +28,9 @@ Four kinds of automatic translation exist. They can be combined: when several ap
 | **Style**             | *Embed* (a card with the author, the translation and the languages), *Webhook* (sent under the author's name and avatar), *Message* (plain message), *Thread* (the translations in a thread under the message, see [Translation in threads](threads.md)). |
 | **Delete message**    | The original message is deleted, only the translation stays.                                                                                  |
 | **Delete translation**| The translation is deleted after a delay: the duration you set (5 seconds to 24 hours), or by default a reading time (0.13 s per character, 25 s minimum). |
-| **Translate bot**     | Also translate messages of bots (**premium**).                                                                                                |
+| **Translate bot**     | Also translate messages of bots (**premium**). Not offered for role translations.                                                                                                |
 | **Always send**       | Translate even if the message already looks like the target language, or if the language is uncertain.                                       |
-| **Enabled**           | Pause a configuration without deleting it (channels and groups).                                                                              |
+| **Enabled**           | Pause a configuration without deleting it (channels, roles, categories and groups).                                                                              |
 
 {% hint style="info" %}
 **Which style?** *Webhook* is the most natural to read: the translation looks like it was written by the author. It needs the *Manage Webhooks* permission; without it the bot falls back to a plain message. *Embed* shows the languages in its footer. *Message* needs the fewest permissions.
@@ -50,7 +50,7 @@ A role configuration translates **everything the members who have this role writ
 
 Example: members with the role `@french` write in French, and you want everybody to read English: create a role configuration `@french` -> English. If you add Japanese too, each message gets 2 translations.
 
-The [blacklist](../website/dashboard/blacklist.md) (called **Exceptions** on the new dashboard) lets you exclude channels (role and category translation are not applied there).
+The [blacklist](../website/dashboard/blacklist.md) (called **Exceptions** on the new dashboard) excludes channels: a message written in a blacklisted channel is not translated, whatever the kind of rule.
 
 Dashboard page: [Role translation](../website/dashboard/role-translation.md).
 

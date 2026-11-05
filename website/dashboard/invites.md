@@ -134,7 +134,7 @@ Each arrival shows:
 * the name of the member. For a member who refused the tracking, the row shows _A member who keeps their data private_;
 * the tag _very recent account_ for a fake account;
 * the tag _left_ when the member has left;
-* the inviter, as _Invited by_ and the name. When there is no inviter, the reason is shown: _Through an invite_, _Through the custom link of the server_, _Invite not found_ or _Came back to the server_;
+* the inviter, as _Invited by_ and the name. When there is no inviter, the reason is shown: _Through an invite_, _Through the custom link of the server_, _Invite not found_, _Came back to the server_ or _Counted for nobody (the inviter earns nothing)_;
 * the label of the invite. When an invite has no label, its code is shown;
 * the date of the arrival.
 
@@ -166,8 +166,8 @@ Click _**Undo**_ to cancel a correction. The row then shows _undone_ and is fade
 | --- | --- |
 | _The settings could not be saved. Try again._ | The settings were not saved. Try again. |
 | _The list could not be loaded. Try again in a moment._ | The page could not read the list. Reload the page. |
-| _Nobody has invited anyone yet. The ranking fills in as members join through invites._ | The ranking is empty. |
-| _No arrival recorded yet._ | The journal is empty. |
+| _Nobody has invited anyone yet. The ranking fills up when members join through invites._ | The ranking is empty. |
+| _No arrivals yet_ | The journal is empty. |
 | _No correction yet._ | The list of corrections is empty. |
 
 {% hint style="info" %}

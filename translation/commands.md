@@ -4,7 +4,7 @@ description: Commands and menus to translate or detect a language on demand.
 
 # Translation commands
 
-These tools work **everywhere**, without any configuration. The answer of **Apps > Translate** is **private** (only you see it). The answer of `/translate` and `/detect` is shown to the channel, like most commands (the **Detect** menu is private). Your language for these translations is set with `/personal-language` or on the [Account page](../website/dashboard/account.md). They also work in servers where the bot is not added, once the bot is [installed on your account](../commands/user-app.md).
+These tools work **everywhere**, without any configuration. The answer of **Apps > Translate** is **private** (only you see it). The answer of `/translate` is shown to the channel, like most commands. The answers of `/detect` and **Apps > Detect** are private: only you see them. Your language for these translations is set with `/personal-language` or on the [Account page](../website/dashboard/account.md). They also work in servers where the bot is not added, once the bot is [installed on your account](../commands/user-app.md).
 
 ## /translate
 
@@ -13,7 +13,7 @@ These tools work **everywhere**, without any configuration. The answer of **Apps
 Translates the text you type.
 
 * `message`: the text to translate.
-* `language`: the target language. Pick it in the autocomplete list (name or code). If you don't set it, your **default language** from the [Account page](../website/dashboard/account.md) is used, or the language of **your Discord application** when none is set.
+* `language`: the target language. Pick it in the autocomplete list (name or code). If you don't set it, your **default language** from the [Account page](../website/dashboard/account.md) is used, or your Discord language when none is set.
 
 <figure><img src="../.gitbook/assets/discord-translate.png" alt="/translate command"><figcaption><p>/translate</p></figcaption></figure>
 
@@ -21,7 +21,7 @@ Translates the text you type.
 
 Right click (long press on mobile) any message, then **Apps**:
 
-* **Translate**: translates the message into your default language (see above). The result is only visible by you, unless you enabled public replies. Translating the message of another bot needs [Premium](../premium/premium.md).
+* **Translate**: translates the message into your default language (see above). The result is only visible by you. Translating the message of another bot needs [Premium](../premium/premium.md).
 * **Detect**: tells you in which language the message is written.
 
 <figure><img src="../.gitbook/assets/discord-apps-menu.png" alt="Apps menu"><figcaption><p>Apps > Translate / Detect</p></figcaption></figure>
@@ -32,7 +32,7 @@ Right click (long press on mobile) any message, then **Apps**:
 
 `/detect text`
 
-Tells you the language a text is written in. The answer of the command is shown to the channel; the **Apps > Detect** menu answers privately.
+Tells you the language a text is written in. The answer is private: only you see it.
 
 ## /languages
 

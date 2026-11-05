@@ -23,7 +23,7 @@ The settings are saved with the _**Save**_ button of the bar at the bottom of th
 * **Record the bot's voice**: the text to speech of the bot is added as a separate track. Off by default. The announcements of the recording itself are never recorded.
 * **Allow transcription of recordings**: members who started a recording can have it transcribed (see [Transcription of a recording](../../audio/recording.md#transcription-of-a-recording)). On by default. Turn it off to refuse all transcriptions on the server.
 * **Default download format**: the format selected on the page of each recording. FLAC by default. The choices are FLAC, M4A, MP3, OGG and WAV.
-* **Consent notice**: a reminder of what the bot does when a recording starts (the members are warned in the text channel and out loud). Nothing to set.
+* **Everyone is warned**: a reminder of what the bot does when a recording starts (the members are warned in the text channel and out loud). Nothing to set.
 
 ### Video export defaults
 

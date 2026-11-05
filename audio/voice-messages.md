@@ -29,7 +29,7 @@ The button works for 5 minutes after the answer.
 | Requirement | Detail |
 | --- | --- |
 | Transcription on | The transcription feature of the server must be on. |
-| Vote or Premium | Premium servers need no vote. Other servers need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours, like the other voice features (see [Transcription](../website/dashboard/speech-to-text.md#limits)). |
+| Vote or Premium | Premium servers need no vote. Other servers need a vote from a member of the server in the last 24 hours, like the other voice features (see [Transcription](../website/dashboard/speech-to-text.md#limits)). |
 | Cooldown | One use every 5 seconds for each person. |
 | Length | See [Limits](#limits). |
 

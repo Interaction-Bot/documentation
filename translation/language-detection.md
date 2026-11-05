@@ -16,7 +16,7 @@ Before translating, the bot has to know **which language the message is written 
 
 ### Minimum message size
 
-On the dashboard, [Language identification](../website/dashboard/language-identification.md) lets you set, per channel, the **minimum number of characters** a message must have to be translated. Raise it if short messages are mistranslated.
+On the dashboard, [Language identification](../website/dashboard/language-identification.md) lets you set, per channel, the **minimum number of characters** a message must have to be translated. Raise it if short messages are mistranslated. A server can set it for 20 channels (500 with Premium).
 
 ### Blacklist a language (premium)
 
