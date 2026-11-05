@@ -42,6 +42,7 @@ When there are unsaved changes, a bar at the bottom of the page says _You made c
 | --- | --- |
 | _Premium only: the translation of voice messages is reserved for premium servers._ | The switch **Translate voice messages** is on, but the server is not Premium. Get Premium, or turn the switch off. |
 | _Premium only: the voice dubbing is reserved for premium servers._ | The switch **Generate translated voice messages** is on, but the server is not Premium. |
+| _Transcription is off: the Transcription extension is turned off on this server, so this option is unavailable._ | Turn on the [Transcription](speech-to-text.md) extension to use **Transcribe voice messages**. |
 | _The configuration could not be saved._ | The settings were not stored. Try again. |
 
 {% hint style="info" %}

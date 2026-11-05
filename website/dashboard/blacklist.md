@@ -22,13 +22,13 @@ The page has three sections. They share one bar of changes at the bottom of the 
 
 ## Channels
 
-**Add a channel** (*Never translate messages in these channels.*) adds a channel to the list. Choose the channel in the popup and click on _**Add the channel**_. The change is applied when you save the page.
+**Add a channel** (*Never translate messages in these channels.*) adds a channel to the list. Choose one or more channels in the popup and click on _**Add the channel**_ (or _**Add N channels**_). The change is applied when you save the page.
 
 * **Which channel?** (*Messages in this channel are never translated, whether by a rule, a linked channel or the server rule.*): the channel.
 
 A message posted in a blacklisted channel is **not translated at all**: no channel, role, category or group configuration translates it. Flag translations still work in this channel, because they are triggered by a reaction.
 
-The list shows the channels of the blacklist, with _**Edit**_ and _**Delete**_ buttons on each row.
+The list shows one sentence per excluded channel (*Never translate #name*). In the **⋯** menu of each row: _**Edit**_ and _**Delete**_.
 
 ## Languages
 
@@ -42,7 +42,7 @@ When the bot detects this language in a new message, the message is not translat
 The language blacklist is only applied while the server has Premium. If Premium ends, the entries are kept but not applied until Premium is active again.
 {% endhint %}
 
-The list shows the blacklisted languages, with _**Edit**_ and _**Delete**_ buttons on each row.
+The list shows one sentence per excluded language (*Never translate messages in Latin*). In the **⋯** menu of each row: _**Edit**_ and _**Delete**_.
 
 ## Roles
 
@@ -58,12 +58,12 @@ Adding a role to the blacklist is a Premium feature. On a server without Premium
 
 Click on _**Save**_ in the bar at the bottom of the page (*You made changes, save them!*) to apply your changes. _**Cancel**_ removes your unsaved changes.
 
-If the bot refuses to save a new channel, language or role (because the server has no Premium), nothing is saved and the bar stays on the screen without any message.
+If the bot refuses to save (for example because the server has no Premium), nothing is saved, and the page shows *Saving failed. If your server is not Premium, excluding channels, roles and languages is reserved for Premium. Try again.*
 
 ## Errors
 
 * **It looks like you found a premium feature!** (pop-up): you clicked on *Add a channel*, *Add a language*, *Edit* or *Add a role* on a server without Premium. *Subscribe* opens the Premium page of the dashboard.
-* **Error - You have not completed all the required fields.** (pop-up): no channel or no language is selected in the popup.
+* Messages under the popup, which keep the add button disabled: **Choose a channel first.**, **Choose a role first.** or **Choose a language first.** (nothing is selected), and **This channel is already excluded. Edit it instead.** (or the same message for a role or a language).
 
 ## Premium
 

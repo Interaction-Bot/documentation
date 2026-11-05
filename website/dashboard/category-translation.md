@@ -29,7 +29,7 @@ The list shows all the category configurations of your server.
 * _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
 * _**Delete**_: removes the configuration (applied after you click on _**Save**_).
 
-There is no **Enabled** checkbox on this page: to stop a rule, delete it.
+Each configuration has an **Enabled** switch. When it is off (*Paused*), the configuration is kept but does not translate anything.
 
 ## Add a configuration
 

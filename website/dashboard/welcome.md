@@ -23,7 +23,7 @@ After the quick start, the page shows the four tabs. Click _**Save**_ to keep th
 
 ## Tabs
 
-The page has four tabs. Each tab has a dot: green when the feature is on, grey when it is off. The tab _**Roles**_ is green when at least one role is chosen.
+The page has four tabs. The tabs have no colored dot. The state of each message is its switch at the top of its tab.
 
 | Tab | Label | Turns on with |
 | --- | --- | --- |
@@ -146,14 +146,13 @@ The Roles tab sets the roles given automatically.
 | **Wait until the member accepts the rules** | On | When the server uses membership screening, the roles are given after the member accepts the rules. Off: the roles are given when the member joins. |
 | **Roles for new bots** | None | Roles given to every new bot. At most **10**. |
 
-You can only choose a role that you could give yourself (*Manage Roles*, below your highest role) and that has no moderation or administration permission. The bot also checks the role at each save (it must be below its own highest role). A warning appears when the bot cannot manage roles yet.
+You can only choose a role that you could give yourself (*Manage Roles*, below your highest role) and that has no moderation or administration permission. The page checks the roles you add when you save. The bot checks its own position when it gives a role, not when you save: a role that is not below the highest role of the bot is skipped, and the Journal of the dashboard says so.
 
-### Intent and permission warnings
+### Intent warning
 
 | Message | Shown when | What to do |
 | --- | --- | --- |
 | _Not available on this bot yet_ | The bot does not have the Server Members intent. | Nothing to do on the page. The settings are saved. See [Server Members intent](../../management/welcome-and-goodbye.md#server-members-intent). |
-| _The bot cannot manage roles yet: give it the permission to manage roles, and put its role above the ones you choose._ | Roles are chosen, and the bot lacks *Manage Roles*. | Give the bot *Manage Roles*, and move its role above the chosen roles. |
 
 ## Test
 

@@ -158,7 +158,7 @@ Click _**Apply the correction**_. The correction is applied at once. The message
 
 The list shows the last 50 corrections, newest first. Each row shows the amount (green for a plus, red for a minus), the member, the reason (or _No reason given_) and the date.
 
-Click _**Undo**_ to cancel a correction. The row then shows _undone_ and is faded. A correction cannot be restored once it is undone.
+Click _**Undo**_ to cancel a correction. The amount is struck through, and the button is replaced by the word _undone_. A correction cannot be restored once it is undone.
 
 ## Messages
 

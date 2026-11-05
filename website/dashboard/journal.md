@@ -24,7 +24,7 @@ The journal keeps who made the change (Discord ID and name at the time), when, f
 | Setting | Default | What it does |
 | --- | --- | --- |
 | **Record actions** | On | Turned off, new changes are no longer recorded; the lines already there stay until they expire. |
-| **Keep for** | 90 days | From 1 to 90 days. Older actions are deleted automatically, and a server keeps at most 1,000 actions. |
+| **Keep for** | 90 days | 7, 30 or 90 days. Older actions are deleted automatically, and a server keeps at most 1,000 actions. |
 
 ## Bot problems
 

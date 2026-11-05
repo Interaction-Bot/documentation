@@ -8,7 +8,7 @@ description: >-
 
 ## Localization
 
-This page is the first item of the navigation bar. Its title is **Server Overview**. The last part of the page, the **Bot settings** card, holds the language, the warning and the edited messages settings described below.
+This page is the first item of the navigation bar. Its title is **Server Overview**. The last part of the page, the **Bot settings** card, holds the language, the warning, the edited messages and the announcements channel settings described below.
 
 <figure><img src="../../.gitbook/assets/dash-overview.png" alt="Overview page"><figcaption><p>Overview</p></figcaption></figure>
 
@@ -20,16 +20,12 @@ This section shows information about your Discord server. Nothing can be changed
 * **CHANNELS**: the number of channels of the server (text, voice and the other channels; categories are not counted).
 * **ID**: the ID of your server. You need it to find the shard of your server on the [status page](../status.md), and to use the `guild_id` option of the [Premium commands](../../premium/usage.md).
 * **CATEGORIES**: the number of categories of the server.
-* **PREMIUM**: **Yes** if the server has Premium, **No** otherwise. See [Premium](premium.md).
+* **Plan**: a **Premium** or **Free** badge is shown next to the name of the server. See [Premium](premium.md).
 * **ROLES**: the number of roles of the server.
 
-## Bot
+## Announcements channel
 
-This section shows the state of the bot on your server.
-
-* **NICKNAME**: always shows *Interaction Bot*.
-* **CLUSTER**: the cluster that runs the bot for your server, for example *Cluster 0*. A cluster runs several servers, so if a cluster has a problem, all the servers of this cluster are affected. You can check the state of all clusters on the [status page](../status.md).
-* **SHARD**: the number of shards run by the cluster of your server. To know the exact shard of one server, use the *Server localization* section of the [status page](../status.md).
+This is where the bot posts its own messages: the welcome message when it joins, the end of a Premium plan, and the messages of a recording started from the Activity. By default, it is the community updates channel, else the system channel, else a private channel created by the bot.
 
 ## Bot Language
 

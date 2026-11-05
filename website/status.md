@@ -8,7 +8,7 @@ description: >-
 
 ## Access
 
-The status page is on the website of the bot. You can access it with the link below. It does not need a login, and it is refreshed every 10 seconds.
+The status page is on the website of the bot. You can access it with the link below. It does not need a login, and it is updated live. If the live connection fails, it falls back to a refresh every 5 seconds.
 
 {% embed url="https://interaction-bot.com/status" %}
 
@@ -64,6 +64,7 @@ Each cluster is a square with its number. Its color shows its state:
 * <mark style="color:green;">Operational</mark> (green): the cluster answers, and its ping is under 150 ms.
 * <mark style="color:yellow;">Degraded</mark> (yellow): the cluster answers, but its ping is above 150 ms. The bot is slower for the servers of this cluster.
 * <mark style="color:red;">Outage</mark> (red): the cluster does not answer.
+* **Update in progress** (orange) and **Restarting** (orange-red): the cluster is being updated or restarted. Its last known figures are shown.
 
 <figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="468"><figcaption><p>Cluster Status</p></figcaption></figure>
 

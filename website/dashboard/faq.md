@@ -10,7 +10,7 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../qa/faq.md).
 
-The counter at the top right shows how many active groups you use out of your plan's limit, for example `1 active group out of 1` on a free server.
+The counter at the top right shows how many groups you have out of your plan's limit, for example `1 group out of 1` on a free server.
 
 ## How it works
 
@@ -61,7 +61,7 @@ Each question needs an answer: the page shows `Every question needs an answer.` 
 | ------------------------------------------------- | ---------------------------------------------------- |
 | 1 group, 3 channels and 5 questions per group     | 5 groups, 10 channels and 150 questions per group    |
 
-If Premium ends, the extra groups are switched off and the extra questions and channels are not used by the bot, but nothing is deleted. The dashboard does not let you add more than the free limits. See [What happens when Premium ends?](../../qa/faq-guides.md#what-happens-when-premium-ends).
+If Premium ends, the bot only uses the groups, channels and questions allowed by the free plan. The others are kept, not deleted, and the dashboard does not let you enable or add more than the free limits. See [What happens when Premium ends?](../../qa/faq-guides.md#what-happens-when-premium-ends).
 
 ## Messages you may see
 

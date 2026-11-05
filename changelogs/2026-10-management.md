@@ -17,11 +17,11 @@ The third update of October 2026. It adds tools to welcome and protect your comm
 ### Invite tracker
 * Know **who invited each member**, with a ranking of the best inviters, a journal, fake account detection and corrections you can undo.
 * `/invites [user]` and `/invite-leaderboard`. Invite labels can give a role. Variables `{inviter}`, `{invites}` and `{invite_label}` for the welcome message.
-* Off by default, free for every server. Premium servers can also ignore the members who have some roles. See [Invite tracker](../management/invite-tracker.md) and the dashboard page [Invitations](../website/dashboard/invites.md).
+* Off by default, free for every server. Premium servers can also ignore the members who have some roles. _Since then, every server has this option._ See [Invite tracker](../management/invite-tracker.md) and the dashboard page [Invitations](../website/dashboard/invites.md).
 
 ### Honeypot
 * **Trap channels** that catch spam bots and hacked accounts: kick and clean up, report, ban or timeout, with a pinned warning, a report in a log channel, a history with the message as evidence, and a protection that pauses the trap when real members fall into it.
-* Free for every server. Premium servers can also choose the deletion and timeout durations and a role to ping. See [Honeypot](../management/honeypot.md) and the dashboard page [Honeypot](../website/dashboard/honeypot.md).
+* Free for every server. Premium servers can also choose the deletion and timeout durations and a role to ping. _Since then, every server has these options._ See [Honeypot](../management/honeypot.md) and the dashboard page [Honeypot](../website/dashboard/honeypot.md).
 
 ### AI setup
 * `/ai setup` opens a conversation in a channel: say what you want, the AI proposes a plan and applies it after your confirmation. The same assistant is available on the dashboard. See [AI setup](../management/ai-setup.md).

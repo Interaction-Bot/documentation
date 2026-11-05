@@ -13,7 +13,7 @@ These tools work **everywhere**, without any configuration. The answer of **Apps
 Translates the text you type.
 
 * `message`: the text to translate.
-* `language`: the target language. Pick it in the autocomplete list (name or code). If you don't set it, your **default language** from the [Account page](../website/dashboard/account.md) is used, or the language of **your Discord application** when none is set.
+* `language`: the target language. Pick it in the autocomplete list (name or code). If you don't set it, your **default language** from the [Account page](../website/dashboard/account.md) is used, or the language of **your Discord client** when none is set.
 
 <figure><img src="../.gitbook/assets/discord-translate.png" alt="/translate command"><figcaption><p>/translate</p></figcaption></figure>
 

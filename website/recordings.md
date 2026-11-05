@@ -10,7 +10,7 @@ My recordings is the page of the website where the member who started a [voice r
 
 ## Localization
 
-* The list is at **/recordings**. Open it from the **My recordings** button of the Account page, from the link in the recording panel, or from the **Download** button of the private message sent when a recording is ready.
+* The list is at **/recordings**. Open it from the **Open my recordings** button of the Account page, from the link in the recording panel, or from the **Download** button of the private message sent when a recording is ready.
 * Each recording has its own page, at **/recordings/** followed by its identifier.
 * You must be signed in with Discord.
 
@@ -40,10 +40,10 @@ Notices explain what you can expect from the files:
 
 | Status | Notice |
 | --- | --- |
-| In progress | The files will be available once the recording is stopped. |
-| Interrupted | The bot restarted or stopped before the end. The audio was recovered up to that moment. |
+| In progress | This recording is still in progress. The files will be available once it is stopped. |
+| Interrupted | The bot stopped before the end (for example during a restart). The audio was recovered up to that moment. |
 | Failed | The recording could not be completed, so no file is available. |
-| Expired | The files were deleted at the end of the retention period. |
+| Expired | The files of this recording were deleted at the end of its retention period. |
 
 ### Listening
 
@@ -61,7 +61,7 @@ If notes were added during the recording (with `/record note` or the panel), the
 
 * Each track and the mix have a **download** button. The file is named after the recording and the speaker.
 * **Download all (ZIP)** gets every track and the mix in one ZIP file, with `notes.txt` (the notes with their time) and `labels.txt` (labels for Audacity: *File > Import > Labels*). It appears when the recording has more than one track.
-* Choose the **format** above the tracks: FLAC (the default of the server), M4A, MP3, OGG or WAV. OGG is the stored file, without a new encoding. The other formats are made from it, so their quality is that of the stored file. See [Downloads and export](../audio/recording.md#downloads-and-export).
+* Choose the **format** above the tracks: FLAC (the default of the server), M4A, MP3, OGG or WAV. The files are stored as Ogg Opus (recent recordings) or FLAC (older recordings). For a recent recording, OGG is the stored file itself, without a new encoding. The other formats are made from the stored file, so their quality is that of the stored file. See [Downloads and export](../audio/recording.md#downloads-and-export).
 
 ### Video export
 

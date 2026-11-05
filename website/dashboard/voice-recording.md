@@ -58,7 +58,7 @@ Members with *Manage Server* can always start a recording. To add a member to th
 | Trigger roles | A member with one of these roles starts a recording alone, whatever the minimum. | None |
 | Panel channel | Where the recording panel is posted. _Automatic_: the first text channel where the bot can write. | Automatic |
 
-On a free server the switch cannot be turned on: the page shows *Automatic recording is a premium feature.* with a link to [Premium](../../premium/premium.md).
+On a free server the switch cannot be turned on: the page shows *Automatic recording is a premium feature. Get premium to turn it on.* with a _See premium_ link to [Premium](../../premium/premium.md).
 
 ## Limits
 

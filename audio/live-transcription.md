@@ -71,7 +71,7 @@ The number of finished lines on screen is set on the dashboard (**Lines kept on 
 
 ## Reading in your own language (premium)
 
-The **Translation** button (the language picker of the Activity) lets each viewer read the conversation in another language. This is a **premium** feature of the server:
+The **Translate** button (the language picker of the Activity) lets each viewer read the conversation in another language. This is a **premium** feature of the server:
 
 * Choose **Original** to read the text as it was said, or pick one of the languages of the list (99 languages, with their names in your language).
 * **Only your view changes**: other members keep their own choice. Your choice is kept on your device.

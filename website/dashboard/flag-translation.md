@@ -24,9 +24,10 @@ Without any configuration, the reply is deleted automatically after the reading 
 
 The list shows the channels that have their own flag translation settings.
 
-* The columns are **Channel** and **Activated** (*Yes* or *No*).
-* _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
-* _**Delete**_: removes the configuration (applied after you click on _**Save**_). The channel then goes back to the default behaviour.
+* Each row is a sentence with the channel, the style and the options that are on (for example *In #general, members translate by reacting with a flag · Embed · once per message*). A switch on the row turns the flag translation of this channel on or off.
+* In the **⋯** menu of each row:
+  * _**Edit**_: opens the configuration in the popup.
+  * _**Delete**_: removes the configuration (applied after you click on _**Save**_). The channel then goes back to the default behaviour.
 
 ## Add a configuration
 
@@ -38,12 +39,18 @@ Click on _**Add a channel**_. On a server without Premium, when you already have
 The popup has these fields:
 
 * **Which channel?**: *Members translate the messages of this channel by reacting with a flag.* Each channel can have only one configuration.
-* **Members can translate by reacting with a flag here** (switch): a new configuration starts **off**: flags do nothing in this channel until you turn this switch on.
+* **Members can translate by reacting with a flag here** (switch): a new configuration starts **on**: turn this switch off to stop the flags from translating in this channel.
 
-Click on _**OPTIONS**_ to show the optional settings.
+Click on _**More options**_ to show the optional settings.
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation-options.png" alt="Options dropdown"><figcaption><p>Options</p></figcaption></figure>
 
+* **Style** (default: _Embed_): how the translation is sent when someone reacts:
+  * _Embed_: a card with the translation (the default).
+  * _Webhook_: the translation is posted with the name and avatar of the author of the message.
+  * _Message_: a plain message.
+  * _Thread_: the translation is sent in a thread under the original message, which is kept. Three options appear: **Look in the thread** (_Webhook_ by default, _Message_ or _Embed_), **Archive the thread after** (_1 h_, _24 h_ by default, _3 d_ or _7 d_) and **Show the language** (on by default).
+  * _Private message_: the translation is sent in a private message to the member who reacted, and nothing is posted in the channel.
 * **How often is it translated?**: choose one of two modes.
   * **Each time someone reacts**: each flag reaction makes a new translation, even if the message was already translated.
   * **Once per message**: only the first flag reaction on a message is translated. The bot remembers the last 1,000 translated messages. This memory is kept in the bot's memory, so it is cleared when the bot restarts.
@@ -77,9 +84,12 @@ Want the flags to appear automatically under every message? Use the [Flag shortc
 
 ## Errors
 
-* **Error - You have not completed all the required fields.** (pop-up): no channel is selected.
-* **It seems something has gone wrong.** (pop-up, followed by the error): the save failed.
-* The bar stays on the screen without any message when the bot refuses the save, for example when a channel is configured twice, or when a channel no longer exists. Nothing has been saved.
+Messages under the popup, which keep the _**Add the channel**_ button disabled:
+
+* **Choose a channel first.**: no channel is selected.
+* **This channel already has a configuration. Edit it instead.**: the channel is already configured.
+
+When the save fails, the message *Saving failed. Your changes are still here: try again.* appears above the list. Nothing has been saved.
 
 ## Premium
 
@@ -92,6 +102,6 @@ On a server without Premium, flags on the messages sent by bots are ignored. A r
 
 ## Tips
 
-* To disable flags in a channel without losing the settings, turn **ACTIVATED** off and save.
-* Use **One time** in busy channels: a message is translated once, even when many members add the same flag.
-* Use **AUTO DELETE** in channels where the translations would make the conversation hard to read.
+* To disable flags in a channel without losing the settings, turn off the switch of the row (or the switch of the popup) and save.
+* Use **Once per message** in busy channels: a message is translated once, even when many members add the same flag.
+* Use **Delete the translation automatically** in channels where the translations would make the conversation hard to read.

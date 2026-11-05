@@ -55,7 +55,7 @@ Use `/group settings` with the group name and the options you want to change.
 | `delete-original` | Delete the original message once it has been translated. | `/group settings name:Community delete-original:true` |
 | `delete-translation` | Delete the translations after a while. | `/group settings name:Community delete-translation:true` |
 | `delete-after` | Seconds before each translation is deleted, from 5 to 86400. Setting it also turns on `delete-translation`. | `/group settings name:Community delete-after:3600` |
-| `translate-bots` | Also translate messages sent by bots. Premium option. | `/group settings name:Community translate-bots:true` |
+| `translate-bots` | Also translate messages sent by bots. Premium option: the dashboard only allows it on premium servers. | `/group settings name:Community translate-bots:true` |
 | `always-send` | Send the translations even when they look already translated (see the rules below). | `/group settings name:Community always-send:true` |
 
 Every change gets the same reply: `Mirror settings updated.`
