@@ -6,7 +6,7 @@ description: Translate the messages of every channel of a category.
 
 ## Localization
 
-This page is part of **Translation rules**, section **Categories**. Servers that are not converted yet still have the former page at its own address. Its title is **Category translation**.
+On a server that uses the translation rules, this page redirects to **Translation rules**. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Category translation**.
 
 <figure><img src="../../.gitbook/assets/dash-category-translation.png" alt="Category translation page"><figcaption><p>Category translation page</p></figcaption></figure>
 
@@ -18,7 +18,6 @@ It works like [Channel Translation](channel-translation.md), but for all the cha
 
 * A channel that you create in the category later is covered automatically.
 * A channel that you move out of the category is no longer covered.
-* A channel with its own rule is not affected by its category's rule.
 * The skip rules are the same as in [Channel Translation](channel-translation.md#when-is-a-message-not-translated).
 
 ## Running configurations
@@ -30,7 +29,7 @@ The list shows all the category configurations of your server.
 * _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
 * _**Delete**_: removes the configuration (applied after you click on _**Save**_).
 
-Each rule has an **Enabled** switch: turn it off to pause the rule without deleting it.
+There is no **Enabled** checkbox on this page: to stop a rule, delete it.
 
 ## Add a configuration
 
@@ -85,5 +84,3 @@ Channels in the [blacklist](blacklist.md) are not translated, even when they bel
 | --- | --- | --- |
 | Configurations | 20 | 500 |
 | TRANSLATE BOT | Not available | Available |
-
-On the **Translation rules** page, the limits are 30 rules (Free) and 200 (Premium), see [Channel Translation](channel-translation.md).

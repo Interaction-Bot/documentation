@@ -6,7 +6,7 @@ description: Set up the translation, the FAQ and the language of the bot with co
 
 Everything you can set up on the [dashboard](../website/dashboard/README.md) can also be set up **in Discord**, with commands. These commands are for members with the **Manage Server** permission, and they work in a server where the bot is added. Their answers are **private**: only you see them.
 
-Each family of commands has the same four commands:
+Most families of commands have the same four commands:
 
 | Command                | What it does                                                                                         |
 | ---------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -19,7 +19,11 @@ Each family of commands has the same four commands:
 The easiest way is **`manage`**: you see the existing configurations, click **Edit** on one, or **New translation**, and choose everything in menus. The commands `set`, `remove` and `list` are handy when you know exactly what you want, or to script a setup.
 {% endhint %}
 
-The same settings are in the dashboard and in the commands: a change made in one is immediately visible in the other. The options and limits (20 configurations, 500 with Premium) are the same too.
+The same settings are in the dashboard and in the commands: a change made in one is immediately visible in the other. The options and limits (20 configurations, 500 with Premium) are the same too, for the former channel, role and category configurations. The translation rules have their own limits (30 rules, 200 with Premium): see [Translation rules](translation.md#translation-rules).
+
+## Translation rules
+
+`/translation` sets up the translation rules of the server, of a channel or a category, two languages in one channel, or linked channels. Its sub-commands are described in [Translation rules](translation.md#translation-rules). `/translation setup` is a guided assistant, and `/translation manage` only points to the dashboard.
 
 ## Channel translation
 
@@ -31,7 +35,7 @@ The panel lists the configurations (5 per page, with **Previous** and **Next**).
 
 <figure><img src="../.gitbook/assets/discord-channel-translation-thread-options.png" alt="Edit panel of a channel translation"><figcaption><p>The options of a configuration (here with the Thread style)</p></figcaption></figure>
 
-In the edit panel, the menus choose the **channel to translate**, the **target channel** (optional) and the **style** (and, for the Thread style, the look and the archive delay). The buttons turn *Delete the original*, *Delete the translation*, *Translate bots*, *Always send* and *Active* on or off. **Language** opens the choice of the language, and **Save** applies the configuration.
+In the edit panel, the menus choose the **channel to translate**, the **target channel** (optional) and the **style**. The buttons turn *Delete the original*, *Delete the translation*, *Translate bots*, *Always send* and *Active* on or off. **Language** opens the choice of the language, and **Save** applies the configuration.
 
 `/channel-translation list` shows the same information as a plain list.
 
@@ -92,12 +96,12 @@ With `style:Thread`, leave `target` empty (or the same channel as `source`), and
 
 <figure><img src="../.gitbook/assets/discord-flag-translation-manage.png" alt="/flag-translation manage"><figcaption><p><code>/flag-translation manage</code></p></figcaption></figure>
 
-`/flag-translation set channel:<channel> [enabled] [auto-delete] [mode] [style]`: choose the channels where a flag reaction translates a message, delete the translations automatically, and translate at each new flag or only the first time, and how the translation is sent (Embed, Webhook, Message, Thread, Private message). See [Flag translation](../translation/flags.md).
+`/flag-translation set channel:<channel> [enabled] [auto-delete] [mode] [style]`: choose the channels where a flag reaction translates a message, delete the translations automatically, translate at each new flag or only the first time, and choose the style of the translation (Embed, Webhook, Message, Thread or Private message). See [Flag translation](../translation/flags.md).
 
 ## Language identification and blacklist
 
-* `/language-detection set | reset | list | manage`: ignore the messages shorter than a number of characters (0 to 500) in a channel. Dashboard: [Language identification](../website/dashboard/language-identification.md).
-* `/blacklist add | remove | list | manage`: roles, channels and languages that are never translated (**Premium**). Dashboard: [Blacklist](../website/dashboard/blacklist.md).
+* `/language-detection set | reset | list | manage`: ignore the messages shorter than a number of characters (0 to 500) in a channel. Dashboard: [Language identification](../website/dashboard/language-identification.md), the **Minimum message size** section of the Exceptions page.
+* `/blacklist add | remove | list | manage`: roles, channels and languages that are never translated (**Premium**). Dashboard: [Blacklist](../website/dashboard/blacklist.md), called **Exceptions** on the dashboard.
 
 ## FAQ
 
@@ -123,7 +127,7 @@ The names of the commands stay in English; their descriptions and the replies fo
 
 ## Server settings
 
-`/server-settings [warning] [edits]`: `warning` turns on or off the warning posted when a message is translated into more languages than the limit of your offer (the **Simultaneous Translation Warning** of the [dashboard overview](../website/dashboard/overview.md#warning)). `edits` turns **Follow edited messages** on or off. Without option, the command shows the current state.
+`/server-settings [warning] [edits]`: turns on or off the warning posted when a message is translated into more languages than the limit of your offer. This is the **Simultaneous Translation Warning** of the [dashboard overview](../website/dashboard/overview.md#warning). `edits` turns on or off the translations that follow the edits of a message (**Follow edited messages** in the [dashboard overview](../website/dashboard/overview.md), on by default). Without option, the command shows the current state.
 
 ## Related
 

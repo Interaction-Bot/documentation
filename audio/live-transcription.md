@@ -82,7 +82,7 @@ The **Translation** button (the language picker of the Activity) lets each viewe
 The server translates into **at most 4 different languages at the same time**. If more viewers pick different languages, only four of them are translated (the codes are taken in alphabetical order); the other viewers see the original text of the lines.
 {% endhint %}
 
-If the transcription itself is translated (`translate-to`, see [Translation](voice.md#translation)), the Activity shows that translation under each line, in the **Original** view, for every viewer.
+If the transcription itself is translated (`translate-to`, see [Translation](voice.md#translation)), the Activity also shows that translation in the **Original** view.
 
 ## Recording from the Activity
 
@@ -150,7 +150,7 @@ When the daily transcription time is used up, the transcription stops, the bot l
 | *Connection lost, retrying…* | The network dropped. The Activity reconnects by itself. |
 | *Start transcription* does nothing, or says *You are not allowed to start the transcription on this server.* | Only members with *Manage Server* start a transcription from the Activity. Use `/transcribe live` instead. |
 | *A transcription is already running on this server.* | The conversation is shown. Nothing to start. |
-| *I'm transcribing another voice channel.* | The bot is busy in another voice channel of the server. Join that channel. |
+| *I'm transcribing another voice channel. Join it to open the live transcription.* | The bot is busy in another voice channel of the server. Join that channel. |
 | *The bot lacks the permissions needed in this voice channel or text channel.* | Give the bot **Connect** and **Speak** in the voice channel, and the permissions of the text channel (see [Requirements](#requirements)). |
 | *The daily transcription time of this server is used up.* | Wait for the reset at midnight UTC, or get [premium](../premium/premium.md). |
 | *Not a premium server: a member must vote for the bot (top.gg) to start the transcription.* | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote), or get premium. |

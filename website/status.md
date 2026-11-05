@@ -6,7 +6,7 @@ description: >-
 
 # Status
 
-## Localization
+## Access
 
 The status page is on the website of the bot. You can access it with the link below. It does not need a login, and it is refreshed every 10 seconds.
 
@@ -30,8 +30,7 @@ The states are:
 * <mark style="color:green;">Operational</mark>: the service answers, and the response time is under the limit of the service (1.5 s for language detection, 4 s for translation, 8 s for text to speech and 15 s for speech to text).
 * <mark style="color:yellow;">Degraded</mark>: the service answers too slowly, or it is busy (it refuses some requests for now). Translations can take longer than usual.
 * <mark style="color:red;">Outage</mark>: the service does not answer, or returns a server error. The bot cannot use it.
-* <mark style="color:gray;">Unknown</mark>: the test request was refused, so the state cannot be known for sure, or the service is not configured.
-* <mark style="color:gray;">Checking...</mark>: the first check of the service has not finished yet. The page asks again in a few seconds.
+* <mark style="color:gray;">Unknown</mark>: the test request was refused, so the state cannot be known for sure, or the service is not configured. It is also shown until the first check of the service has finished.
 
 The results are refreshed about every minute, so a change can take up to a minute to appear.
 

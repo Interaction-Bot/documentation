@@ -6,7 +6,7 @@ description: Translate the messages of the members who have a role.
 
 ## Localization
 
-This page is the **Roles** section of **Translation rules**. Servers that are not converted yet still have the former page at its own address. Its title is **Role translation**.
+On a server that uses the translation rules, this page redirects to **Translation rules**. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Role translation**.
 
 <figure><img src="../../.gitbook/assets/dash-role-translation.png" alt="Role translation page"><figcaption><p>Role translation page</p></figcaption></figure>
 
@@ -29,13 +29,12 @@ The list shows all the role configurations of your server.
 * _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
 * _**Delete**_: removes the configuration (applied after you click on _**Save**_).
 
-Each rule has an **Enabled** switch: turn it off to pause the rule without deleting it.
+There is no **Enabled** checkbox on this page: to stop a rule, delete it.
 
 ## Add a configuration
 
 Click on _**Add a configuration**_ (under the box *Add a role*). On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/dash-role-translation-popup.png" alt="Role translation popup"><figcaption><p>Role translation popup</p></figcaption></figure>
 
@@ -82,8 +81,6 @@ When you have made all your configuration, don't forget to click on _**Save**_ i
 | | Free | Premium |
 | --- | --- | --- |
 | Configurations | 20 | 500 |
-
-On the **Translation rules** page, the limits are 30 rules (Free) and 200 (Premium), see [Channel Translation](channel-translation.md).
 
 ## Tips
 

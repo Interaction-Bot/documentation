@@ -21,9 +21,9 @@ The page lists the **TTS channels** of the server. The list is saved as a whole:
 Click on _**Add a channel**_ and set:
 
 * **Channel**: a text channel of the server. A channel can be used only once.
-* **Language of the messages**: _Auto-detect_ (default) or a language. With _Auto-detect_, the language is detected for each message.
-* **Translate to** (optional): translate each message into this language before it is read. Default: _No translation_.
-* **Voice channel for reading** (optional): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
+* **Language**: _Auto-detect_ (default) or a language. With _Auto-detect_, the language is detected for each message.
+* **Automatic translation** (optional, premium): translate each message into this language before it is read. Default: _No translation_.
+* **Voice channel for reading** (optional, the destination): the voice channel where the messages are read. Default: the voice channel of the person who writes. The bot only joins a channel where someone is.
 * **Enabled**: switch a channel off without removing it. A disabled channel is kept in the list but not read.
 
 Click _**Remove**_ to stop reading a channel. When you are done, click _**Save**_. _**Cancel**_ restores the last saved list.
@@ -36,11 +36,9 @@ After a save, the bot reloads the channels at once: no restart is needed.
 
 The **Settings** tab holds the reading options. Each has a switch, saved with the *Save* bar. During a session (`/tts start`) the bot always reads the messages of the chat and the chat of its voice channel: these two options no longer exist.
 
-The options *Say who wrote*, *Ignore the audience of stages*, *The author must be in the voice channel*, *Skip emojis* and *Prefix* apply to the `/tts start` sessions only. *Members can choose their voice*, *Cloned voices allowed* and *Read translations aloud* apply to both.
-
 | Option | Default | What it does |
 | --- | --- | --- |
-| Say who wrote | On | Says "Alex said" when the author changes, or after 60 seconds without a message from them. |
+| Say who wrote | On | Says "Alex said" when the author changes. |
 | Ignore bots | On | Messages written by bots are not read. |
 | Ignore the audience of stages | On | Messages from the audience of a stage channel are not read. |
 | The author must be in the voice channel | On | Only reads the members who are in the bot's voice channel. |
@@ -51,7 +49,7 @@ The options *Say who wrote*, *Ignore the audience of stages*, *The author must b
 
 Also the **Prefix** field (10 characters maximum): when set, only the messages that start with it are read, and the prefix is not said.
 
-Also the **Voices** card: the voices of the server, in the order they are given to the members of a session. Each voice can be enabled, made the default, and moved up or down. At least one voice stays enabled, and the default voice cannot be disabled. Changes are saved with the same *Save* bar. See [Voices and cloning](../../audio/voices-and-cloning.md#the-voice-catalogue).
+Also the **Voices** card: the voices of the server, in the order they are given to the members of a session. Each voice can be enabled or disabled, and moved up or down. The first voice of the list is the default voice. At least one voice stays enabled. Changes are saved with the same *Save* bar. See [Voices and cloning](../../audio/voices-and-cloning.md#the-voice-catalogue).
 
 ## Permissions
 
@@ -69,15 +67,15 @@ Members with *Manage Server* are always allowed.
 | ---------- | ----------- |
 | 5 channels | 25 channels |
 
-Adding a channel beyond the limit opens the premium window. The translation of messages is a premium feature: on a free server the *Translate to* field is locked.
+Adding a channel beyond the limit opens the premium window. The translation of messages is a premium feature: on a free server the *Automatic translation* field is locked.
 
 ## What is read
 
-* Messages are read **up to 4000 characters**. A longer message is cut to 4000 characters.
+* Messages are read **in full**. A long message is split into parts read one after the other, and only its first 4000 characters are read.
 * Messages from bots, messages without text (attachments only) and messages starting with `/`, `!`, `.` or `$` are not read.
 * Links are removed and mentions are read as names.
 * A member who posts many messages very quickly is **temporarily ignored**: 5 messages with an average gap under 1.5 seconds block this member for 10 seconds. A channel that receives 10 messages with an average gap under 0.5 second is paused for 5 seconds.
-* Messages are read one after the other. Up to 40 clips can wait per server: beyond that, messages are dropped.
+* Messages are read one after the other. Up to 5 messages can wait in the queue of the voice channel.
 
 ## Access
 

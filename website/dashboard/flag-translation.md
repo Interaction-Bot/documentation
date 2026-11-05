@@ -6,7 +6,7 @@ description: Let members translate a message with a flag reaction, and configure
 
 ## Localization
 
-This page is the second item of the **Translation** section of the navigation bar. Its title is **Flags**. It has two cards: **React with a flag** (this page) and **Automatically added flags** (see [Flag shortcuts](flag-shortcuts.md)).
+This page is the **React with a flag** card of the **Flags** page, the second item of the **Translation** section of the navigation bar. The former **Flag translation** page redirects there.
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation.png" alt="Flag translation page"><figcaption><p>Flag translation page</p></figcaption></figure>
 
@@ -30,26 +30,24 @@ The list shows the channels that have their own flag translation settings.
 
 ## Add a configuration
 
-Click on _**Add a configuration**_ (under the box *Configure a channel*). On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
+Click on _**Add a channel**_. On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation-popup.png" alt="Flag translation popup"><figcaption><p>Flag translation popup</p></figcaption></figure>
 
 The popup has these fields:
 
 * **Which channel?**: *Members translate the messages of this channel by reacting with a flag.* Each channel can have only one configuration.
-* **Members can translate by reacting with a flag here**: turns flag translation on or off for this channel. A new configuration starts **on**: flags translate messages in this channel as soon as you save.
+* **Members can translate by reacting with a flag here** (switch): a new configuration starts **off**: flags do nothing in this channel until you turn this switch on.
 
 Click on _**OPTIONS**_ to show the optional settings.
 
 <figure><img src="../../.gitbook/assets/dash-flag-translation-options.png" alt="Options dropdown"><figcaption><p>Options</p></figcaption></figure>
 
-* **Style of the translation** sets how the reply is sent: **Embed** (default), **Webhook**, **Message**, **Thread** or **Private message**. With **Thread**, you also choose the look of the thread messages and how long the thread is kept before it is archived.
-* **How often is it translated?** (*Choose whether the bot should translate the message for each new reaction.*): choose one of two modes.
+* **How often is it translated?**: choose one of two modes.
   * **Each time someone reacts**: each flag reaction makes a new translation, even if the message was already translated.
   * **Once per message**: only the first flag reaction on a message is translated. The bot remembers the last 1,000 translated messages. This memory is kept in the bot's memory, so it is cleared when the bot restarts.
-* **Delete the translation automatically** (*Delete the translate message automatically.*): when on, the translation is deleted after the reading time (0.13 second per character, minimum 25 seconds). A new configuration starts with this option **off**: the translations then stay in the channel.
+* **Delete the translation automatically**: when on, the translation is deleted after the reading time (0.13 second per character, minimum 25 seconds). A new configuration starts **off**: the translations then stay in the channel.
 
 Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
 
@@ -94,6 +92,6 @@ On a server without Premium, flags on the messages sent by bots are ignored. A r
 
 ## Tips
 
-* To disable flags in a channel without losing the settings, turn **Members can translate by reacting with a flag here** off and save.
+* To disable flags in a channel without losing the settings, turn **ACTIVATED** off and save.
 * Use **One time** in busy channels: a message is translated once, even when many members add the same flag.
 * Use **AUTO DELETE** in channels where the translations would make the conversation hard to read.

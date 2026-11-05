@@ -23,9 +23,9 @@ Give them to the bot role, then check the **permission overrides** of the channe
 | Translation sent in a **thread**          | Source          | View Channel, Read Message History, **Create Public Threads**, **Send Messages in Threads** (plus Manage Webhooks for the webhook look, Manage Threads to reopen a locked thread) |
 | *Delete message* option                   | Source          | Manage Messages                                                         |
 | Flag reaction translation                 | Message channel | View Channel, Read Message History, Send Messages (the bot replies)     |
-| Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions, Read Message History                       |
-| `/tts`, `/connect`, TTS channels          | Voice channel   | View Channel, Connect, Speak                                            |
-| Transcription (`/transcribe`)             | Voice channel   | View Channel, Connect (the bot listens)                                 |
+| Flag shortcuts (`/flags`)                 | Channel         | View Channel, Add Reactions                                             |
+| `/tts`, `/connect`, TTS channels          | Voice channel   | View Channel, Connect, Speak, and Read Message History in the text channel read aloud |
+| Transcription (`/transcribe`)             | Voice channel   | View Channel, Connect, Speak (the bot listens)                          |
 | Transcription output                      | Text channel    | Send Messages, plus Embed Links (embed) or Manage Webhooks (webhook)    |
 | Voice recording (`/record`)               | Voice channel   | View Channel, Connect (the bot records), see [Recording](audio/recording.md#permissions) |
 | Temporary voice channels                  | Server          | See [Permissions needed](audio/tempvoice.md#permissions-needed)         |
@@ -41,17 +41,12 @@ If the bot lacks *Manage Webhooks*, it falls back to a plain message. If it lack
 | Commands                                                                                                  | Who                                   |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | `/translate`, `/detect`, `/languages`, Apps > Translate / Detect, `/help`, `/about`, `/ping`, `/invite`, `/support`, `/documentation`, `/dashboard`, `/reminder`, `/ask` | Everybody |
-| `/tts`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`                    | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
-| Apps > **Transcribe voice message** | Everybody, on a premium server or with a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote) |
-| `/record` | Everybody (recording needs a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
-| `/limits`, `/privacy`, `/personal-language` | Everybody |
-| `/invites`, `/invite-leaderboard` | Everybody |
-| `/translation` (translation rules and their subcommands) | Members with **Manage Server** |
+| `/tts start`, `/tts say`, `/tts stop`, `/connect`, `/disconnect`, `/transcribe start`, `/transcribe stop`  | Everybody (voice features need a premium server or a recent [top.gg vote](https://top.gg/bot/893494390142697493/vote)) |
+| `/invites`, `/invite-leaderboard`, Apps > **Transcribe voice message** | Everybody |
 | `/ai setup`, `/tempvoice setup`, `/tempvoice config` | Members with **Manage Server** |
-| `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/check-permissions`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
-| `/premium add`                                                                          | A member with a Premium subscription (see [Usage](premium/usage.md)) |
-| `/premium remove`                                                                          | A member with **Administrator** on the server whose Premium is removed, or the Patreon owner of this Premium (see [Usage](premium/usage.md)) |
-| Dashboard                                                                                                  | Members with **Administrator** or **Manage Server**, and the server owner |
+| `/group`, `/faq`, `/flags`, `/tts-channel`, `/transcribe auto`, `/record auto`, `/check-permissions`, `/translation`, `/channel-translation`, `/role-translation`, `/category-translation`, `/flag-translation`, `/language-detection`, `/blacklist`, `/bot-language`, `/server-settings` | Members with **Manage Server** |
+| `/premium add`, `/premium remove`                                                                          | The member who owns the premium (see [Usage](premium/usage.md)) |
+| Dashboard                                                                                                  | Members with **Manage Server** or **Administrator** |
 
 Server administrators can change who sees a command in *Server Settings > Integrations > Interaction Bot*.
 

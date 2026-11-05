@@ -18,12 +18,12 @@ Use the _**Enabled / Disabled**_ toggle to enable the transcription on the serve
 
 * **Voice channel**: listen to a specific voice channel, or to _All voice channels_ (default).
 * **Text channel**: where the transcriptions are posted: a text channel, a forum, or the chat of a voice channel. Default: _Chat of the voice channel being transcribed_.
-* **Translate to** (**premium**): translate each transcription into this language. Only the translation is posted. Default: _No translation_. On a free server, the field is locked and its help text reads _Reserved for premium servers._
+* **Translate to** (**premium**): translate each transcription into this language. Default: _No translation_. On a free server, the field reads _Reserved for premium servers._
+* **Display** (shown when a translation is set): _Translation only_ (default: just the translation is posted) or _Original + translation_ (the transcription, then its translation).
 * **Style**:
   * _Embed_: a card with the speaker's name and avatar, and the transcription (or its translation). Needs *Embed Links*.
   * _Message_: a plain message, speaker name followed by the text. Needs no embed permission.
   * _Webhook_ (default): sent under the speaker's name and avatar. Needs the *Manage Webhooks* permission, otherwise a plain message is used.
-* **Display** (when a translation is set): _Translation only_ (default for a new configuration) posts only the translation; _Original + translation_ posts the transcription, then its translation.
 
 Click _**Remove**_ on a configuration to delete it. When there are unsaved changes, a bar at the bottom of the page says _You made changes, save them!_ with _Save_ and _Cancel_ buttons: _Save_ applies them, _Cancel_ restores the last saved configurations. The message _Configuration saved._ confirms the save.
 

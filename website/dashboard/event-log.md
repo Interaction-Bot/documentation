@@ -6,6 +6,8 @@ description: The Event log page - the bot writes what happens on your server to 
 
 The **Event log** page is in the **Management** section. The bot writes what happens on your server to the text channels you choose: edited or deleted messages, members who join or leave, voice, channels, roles, invites and bans. Nothing is stored by the bot: **the channel is the log**.
 
+<figure><img src="../../.gitbook/assets/dash-event-log.png" alt="Event log page"><figcaption><p>Event log page</p></figcaption></figure>
+
 The event log is **off by default**. To use it, choose a **default log channel**, then turn it on.
 
 ## Default log channel

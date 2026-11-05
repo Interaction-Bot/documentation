@@ -15,25 +15,25 @@ The optional `guild-id` is the ID of a server where the bot is. You can find the
 
 ## /premium add
 
-Before it works, your Discord account must have an active Premium subscription: a Stripe subscription, or an active Patreon offer linked to your account, see [Subscribe](subscribe.md). The command then uses a free slot.
+Before it works, your Discord account must have an active Premium offer: a subscription bought on the website, or a Patreon offer linked to your account (see [Subscribe](subscribe.md)). The command then uses a free slot of that offer.
 
 The bot answers with an embed. The possible messages are:
 
 * **Premium has been added to the server!**: the server is now Premium.
 * **This server is already premium.**: the server already has Premium.
-* The message says that you are not connected to Patreon, and links to the Premium page of the website: your Discord account is not linked to an active Patreon offer. If you linked your account less than 10 minutes ago, wait 10 minutes.
+* The message says that you are not connected, and links to the Premium page of the website: no active Premium offer is linked to your Discord account. If you have just linked a Patreon account, wait 10 minutes.
 * **You don't have enough premium slots to add premium to this guild. Upgrade your offer here.**: all your slots are used. Remove Premium from another server, or upgrade your offer.
 * **The guild ID is not valid.**: the `guild-id` is wrong, or the bot is not on this server.
 
 ## /premium remove
 
-The command is allowed to the Patreon owner of this Premium, and to the members with the **Administrator** permission on the server whose Premium is removed (the one where you type the command, or the one named by `guild-id`).
+The command is allowed to the member who linked the Patreon offer that gives this server its Premium, and to the members with the **Administrator** permission of the server whose Premium is removed (the server given by `guild-id`, or the one where the command is typed).
 
 The possible messages are:
 
 * **Premium removed!**: Premium is removed from the server, and its slot is free again.
 * **This server is not premium.**: there is nothing to remove.
-* **This server's premium comes from a Discord subscription: cancel the subscription on Discord to end it.**: a Premium that comes from a Discord subscription of the server cannot be removed with this command.
+* **This server's premium comes from a Discord subscription: cancel the subscription on Discord to end it.**: a Premium bought through Discord cannot be removed with this command.
 * **You don't have permission to delete the premium on this server.**: you are neither the owner of this Premium nor an administrator.
 * **The guild ID is not valid.**: the `guild-id` is wrong, or the bot is not on this server.
 

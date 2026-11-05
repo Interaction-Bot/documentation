@@ -14,7 +14,7 @@ A **flag shortcut** makes translation one click away. The bot adds 1 to 5 flag r
 | ------- | --- | ------------ |
 | `/flags set channel:<channel> flags:<flags>` | *Manage Server* | Set the flags of a channel. It replaces the previous list. |
 | `/flags clear channel:<channel>` | *Manage Server* | Stop adding flags in the channel. |
-| `/flags manage` | *Manage Server* | Open the flag shortcuts panel. |
+| `/flags manage` | *Manage Server* | Open a panel (buttons and menus) to set the flag shortcuts of the channels. |
 
 ### /flags set
 
@@ -103,7 +103,7 @@ The embed title is **Missing permissions**, and its footer says: `1 problem(s). 
 | Channel translation, target | Depends on the style (see below) |
 | Translation group | View Channel, Read Message History in each channel (source), and the style permissions of the group (target) |
 | Role or category translation, target | Depends on the style (see below) |
-| Flag translation (*Embed* style) | View Channel, Send Messages, Read Message History, Embed Links |
+| Flag translation | Depends on the style. Default (embed): View Channel, Read Message History, Send Messages, Embed Links |
 | TTS channel | View Channel, Read Message History |
 
 **Permissions by style** (for the target channels)

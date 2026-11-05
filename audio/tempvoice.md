@@ -85,7 +85,7 @@ Each command of this table can also be run from the buttons of the control panel
 
 | Command | Description |
 | --- | --- |
-| `/voice name <name>` | Renames the channel (64 characters at most). Two renames need **5 minutes** between them. |
+| `/voice name <name>` | Renames the channel (64 characters at most). A rename is accepted once every **5 minutes**. |
 | `/voice limit <0-99>` | Sets the user limit. `0` means no limit. |
 | `/voice privacy <mode>` | `Public`, `Locked` (lock), `Unlock`, `Hide`, `Unhide`, `Lock chat`, `Unlock chat`. Lock and hide are independent: both can be on at once. |
 | `/voice claim` | Takes over the channel when its owner has left (refused while the owner is still connected). Any member of the channel can run it. |

@@ -92,13 +92,13 @@ Yes, on the dashboard: change the question or the answer, then save. When you ch
 
 ### Can members see all the questions?
 
-Not with `/ask`: a member only sees the answer to the question they asked, and the questions that also match (under **See also**). The full list is for moderators: `/faq list` (*Manage Server* permission).
+Not with `/ask`: it shows the answer to the question asked, and the questions that also match (under **See also**). The full list is for moderators: `/faq list` (*Manage Server* permission).
 
 ## /ask
 
 ### Who can use /ask?
 
-Everybody. `/ask` is only visible to the member who uses it.
+Everybody. The answer of `/ask` is posted in the channel, like the answers of the other commands.
 
 ### How many answers can /ask show?
 
@@ -194,7 +194,7 @@ Yes. Click **Not helpful** as a moderator, or change the entry on the dashboard 
 
 | Feature | Permissions |
 | ------- | ----------- |
-| `/ask` and `/faq` | None in the channel: the answers are sent privately to the member. |
+| `/ask` and `/faq` | None: the answers are replies to the command. |
 | Automatic replies | *Send Messages* and *Embed Links* in the channel, plus *Send Messages in Threads* in threads. |
 
 Run `/check-permissions` to see the missing permissions of every configured channel. See [Permissions](../permissions.md) for the full list.

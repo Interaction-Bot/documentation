@@ -4,7 +4,7 @@ description: The four styles of translation and every option of the dashboard ex
 
 # Styles and options
 
-Channel, category and role translation and translation groups share the same options. This page explains them all, with examples. The options are in the **OPTIONS** dropdown of the popup of each configuration on the [dashboard](../website/dashboard/README.md).
+Channel, category and role translation and translation groups share the same options. This page explains them all, with examples. The options are in the **Options** of the popup of each configuration on the [dashboard](../website/dashboard/README.md) (in **More options** on the Translation rules page).
 
 ## The four styles
 
@@ -34,14 +34,14 @@ The bot never mentions anybody in the translations: `@everyone`, roles and membe
 | Option                    | Where                          | What it does                                                                                           |
 | ------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | **Channel / Category / Role** | Channel, category, role      | What the rule applies to.                                                                              |
-| **Sending channel**       | All                            | Where the translation is sent. Empty: the channel where the message was written (for a channel translation, the source channel). It must be a channel of the same server. |
+| **Sending channel**       | All                            | Where the translation is sent. Empty: the channel where the message was written (category and role). Required for a channel translation. It must be a channel of the same server. |
 | **Language**              | All                            | The target language. Every message that is not in this language is translated into it.                  |
 | **Style**                 | All (thread: channel, category, role) | Embed, webhook, message or thread (see above).                                                  |
 | **Look in the thread**, **Archive the thread after**, **Show the language** | Style thread | Look of the translations in the thread (webhook, message, embed), inactivity before archiving (1 hour to 7 days) and language written above each translation. See [Translation in threads](threads.md#the-options-of-the-thread-style). |
 | **Delete message**        | All (not with thread)          | The original message is deleted when it is translated. Only the translation stays. Needs *Manage Messages*. Not available with the thread style, which keeps the original message. |
 | **Delete translation**    | All                            | The bot deletes its translation after a delay. By default the delay depends on the length of the text (0.13 s per character, at least 25 s). |
-| **Keep it for (seconds, empty = reading time)** | All                            | With *Delete translation*, choose the delay yourself, from 5 s to 24 h.                                |
-| **Translate bot**         | Channel, category, group | Also translate the messages sent by bots. **Premium only.** Not offered for role translations.                                            |
+| **Keep it for (seconds)** | All                            | With *Delete translation*, choose the delay yourself, from 5 s to 24 h.                                |
+| **Translate bot**         | Channel, category, group | Also translate the messages sent by bots. **Premium only.**                                            |
 | **Always send**           | All                            | Send the translation even if the message already seems to be in the target language, or when the bot is not sure of the detected language. |
 | **Enabled**               | All                            | Turn a configuration off without deleting it.                                                          |
 

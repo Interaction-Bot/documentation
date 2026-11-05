@@ -36,12 +36,11 @@ The dashboard has a left sidebar, a top bar and a content area.
 
 * **Server picker** (top of the sidebar): shows the server you are configuring. Click it to switch to another server without going back to the list. The picker lists your servers.
 * **Sidebar**, organized in sections:
-  * **Overview**, **Journal** and **Premium** at the top.
-  * **Translation**: four pages on a server using the translation rules: **Translation rules** (whole server, channels, categories, roles, two languages in one channel, linked channels), **Flags** (react with a flag, flags added automatically), **Exceptions** (formerly Blacklist, with the minimum message size) and **Voice messages**. The former pages are no longer in the menu. Opening **Translation rules** converts the server to the new rules once. Servers that are not converted yet still open the former pages at their own addresses.
+  * **Overview**, **Journal** and **Premium** at the top. The Journal shows how many bot problems you have not seen yet, see [Journal](journal.md).
+  * **Translation**: four pages on a server using the translation rules: **Translation rules** (server, channel, two languages in a channel, linked channels), **Flags** (react with a flag, flags added automatically), **Exceptions** (formerly Blacklist, with the minimum message size) and **Voice messages**. The former pages (Channel, Role, Category and Mirror Translation) stay for the servers that are not converted yet.
   * **Audio & AI**: Transcription, Text to speech, FAQ, Voice recording and Temp voice.
   * **Management**: Welcome, Invitations, Honeypot and Event log.
-  * **Journal**: the history of the changes made to the bot on your server and its problems, see [Journal](journal.md).
-* **Top bar**: your name opens the user menu: **My servers**, the **language** of the website and **Log out**. The language only changes the website, not the language of the bot (see [Bot Language](overview.md#bot-language)).
+* **Top bar**: your name opens the user menu: **My servers**, **My account**, the **language** of the website and **Log out**. The language only changes the website, not the language of the bot (see [Bot Language](overview.md#bot-language)).
 
 You can fold a section of the sidebar with the arrow on its right. Click the **name of a section** to open its page.
 
@@ -85,7 +84,7 @@ Nothing is applied to the bot until you save. As soon as you change something on
 
 <figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
-If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved**. Some pages then show the reason under the bar. Check the page you are on, see the limits written on each page, then try again.
+If the bot refuses the change (for example a premium-only option on a server without Premium, or more configurations than allowed), **nothing is saved and the bar stays on the screen without any message**. Check the page you are on, see the limits written on each page, then try again. On the **Translation rules** page, the bar shows *Saving failed. Your changes are still here: try again.* instead.
 
 ## AI assistant
 
@@ -105,10 +104,10 @@ The **AI assistant** helps you configure the bot in plain words. Open it with th
 ## Pages of the dashboard
 
 * [Overview](overview.md): server information, bot language and the simultaneous translation warning.
-* [Premium](premium.md): enable Premium on this server with your Patreon offer.
-* [Translation rules](channel-translation.md) (whole server, channels, categories, roles, two languages in one channel, linked channels), [Flags](flag-translation.md) and [Flag shortcuts](flag-shortcuts.md), [Exceptions](blacklist.md) and [Minimum message size](language-identification.md), [Voice messages](voice-messages.md) (category *Translation*). The former pages for servers that are not converted yet: [Channel Translation](channel-translation.md), [Mirror Translation](translation-groups.md), [Role Translation](role-translation.md) and [Category Translation](category-translation.md).
+* [Premium](premium.md): enable Premium on this server, with a Stripe subscription or a Patreon offer.
+* Category *Translation*: [Translation rules](translation-rules.md), [Flags](flag-translation.md) (with [Flag shortcuts](flag-shortcuts.md)), [Exceptions](blacklist.md) (with [Language identification](language-identification.md)) and [Voice messages](voice-messages.md). The former pages [Channel Translation](channel-translation.md), [Mirror Translation](translation-groups.md), [Role Translation](role-translation.md) and [Category Translation](category-translation.md) stay for the servers that are not converted yet.
 * [Transcription](speech-to-text.md), [Text to speech](tts-channels.md), [FAQ](faq.md), [Voice recording](voice-recording.md) and [Temp voice](temp-voice.md) (category *Audio & AI*).
-* [Welcome](welcome.md), [Invitations](invites.md) and [Honeypot](honeypot.md) (category *Management*). The features behind them: [Welcome and goodbye](../../management/welcome-and-goodbye.md), [Invite tracker](../../management/invite-tracker.md) and [Honeypot](../../management/honeypot.md).
+* [Welcome](welcome.md), [Invitations](invites.md), [Honeypot](honeypot.md) and [Event log](event-log.md) (category *Management*). The features behind them: [Welcome and goodbye](../../management/welcome-and-goodbye.md), [Invite tracker](../../management/invite-tracker.md) and [Honeypot](../../management/honeypot.md).
 * The features of the voice messages: [Voice messages](../../audio/voice-messages.md).
 
 {% hint style="info" %}

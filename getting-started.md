@@ -40,7 +40,7 @@ There are three quick ways to translate, without any configuration:
 
 <figure><img src=".gitbook/assets/discord-flag-translation.png" alt="Translation by the bot"><figcaption><p>The bot answers with the translation</p></figcaption></figure>
 
-2. **The command** <mark style="color:green;">`/translate message [language]`</mark>. The result is visible to everyone in the channel.
+2. **The command** <mark style="color:green;">`/translate message [language]`</mark>. The result is posted in the channel.
 
 <figure><img src=".gitbook/assets/discord-translate.png" alt="/translate command"><figcaption><p>/translate command</p></figcaption></figure>
 
@@ -54,7 +54,7 @@ There are three quick ways to translate, without any configuration:
 
 To translate messages **without anybody doing anything**, configure the bot on the [dashboard](website/dashboard/): log in with Discord, select your server and pick:
 
-* [Link channels](website/dashboard/translation-groups.md), on the Translation Rules page: one channel per language, the easiest for an international community;
+* [Translation Groups](website/dashboard/translation-groups.md): one channel per language, the easiest for an international community;
 * [Channel translation](website/dashboard/channel-translation.md), [Role translation](website/dashboard/role-translation.md) or [Category translation](website/dashboard/category-translation.md).
 
 Not sure which one? Read the [translation overview](translation/overview.md) and the [setup guides](translation/guides.md).

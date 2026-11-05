@@ -6,6 +6,8 @@ description: The Journal page of the dashboard - the history of the changes made
 
 The **Journal** page has two tabs: **Actions** and **Bot problems**.
 
+<figure><img src="../../.gitbook/assets/dash-journal.png" alt="Journal page"><figcaption><p>Journal page</p></figcaption></figure>
+
 ## Actions
 
 The _**Actions**_ tab lists the changes made to the settings of the bot on your server, from the dashboard, with a slash command or with the AI assistant: who, when, from where (**Dashboard**, **Command**, **AI assistant** or **Automatic**), and what changed.

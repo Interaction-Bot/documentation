@@ -6,13 +6,9 @@ description: Configure the automatic translation of the messages of a channel.
 
 ## Localization
 
-This page is the first item of the **Translation** section of the navigation bar. Its title is **Translation rules**. Opening it converts the server to the rules engine (once). The rules are grouped by sections: **Channels**, **Categories**, **Two languages in one channel**, **Linked channels**, **Whole server** and **Roles**.
+On a server that uses the translation rules, this page redirects to **Translation rules**, the first item of the **Translation** section. For the servers that are not converted yet, the page is no longer in the menu: it is reached by its address. Its title is **Channel translation**.
 
 <figure><img src="../../.gitbook/assets/dash-channel-translation.png" alt="Channel translation page"><figcaption><p>Channel translation page</p></figcaption></figure>
-
-{% hint style="info" %}
-The sections **Running configurations**, **Add a configuration** and **Errors** below describe the former **Channel translation** page, which servers that are not converted yet still open at its own address. On the **Translation rules** page, click **Add a channel** in the **Channels** section and fill the form with the **Channel**, the **Languages**, the **Send the translations to** channel, the **Send style**, **Delete the translation after**, **Delete the original message**, **Translate bots** and **Always send** options.
-{% endhint %}
 
 ## What does channel translation do?
 
@@ -46,12 +42,11 @@ The list shows all the configurations of your server.
 ## Add a configuration
 
 {% hint style="info" %}
-You can also manage the rules in Discord, with `/translation`: see [Translation commands](../../commands/translation.md). On a server that is not converted yet, use `/channel-translation manage`, see [Configuration commands](../../commands/configuration.md#channel-translation).
+You can also manage the configurations in Discord, with `/channel-translation manage`: see [Configuration commands](../../commands/configuration.md#channel-translation).
 {% endhint %}
 
 Click on _**Add a configuration**_ (under the box *Add a channel*).
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
@@ -115,12 +110,9 @@ When you have configured all the channels that you want to be translated, don't 
 
 | | Free | Premium |
 | --- | --- | --- |
-| Rules | 30 | 200 |
-| Languages per rule | 5 | 20 |
+| Configurations | 20 | 500 |
 | Translations of one message | 3 | 20 |
 | TRANSLATE BOT | Not available | Available |
-
-On a server that is not converted yet, the former page allows 20 configurations (Free) and 500 (Premium).
 
 ## Tips
 

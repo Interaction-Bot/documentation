@@ -21,7 +21,7 @@ Nothing happens on a server until its administrators turn the honeypot on. The b
 
 ## Set up in 2 minutes
 
-1. **Invite the bot with the permissions of the feature.** The list is in [Permissions needed](#permissions-needed). The bot invitation link of the website includes them.
+1. **Invite the bot with the permissions of the feature.** The list is in [Permissions needed](#permissions-needed). The bot invitation link of the website includes them, except **Kick Members** and **Ban Members**: add them if you use the sanctions _**Kick and clean up**_ or _**Ban**_.
 2. **Open the dashboard**, section _**Management**_ > _**Honeypot**_, tab _**Status**_.
 3. **Create or choose a trap channel.**
    * Click _**Create #honeypot**_. The bot creates a `#honeypot` channel that everyone can see and write in, with threads closed.
@@ -99,7 +99,7 @@ Other rules:
 
 ## Permissions needed
 
-The bot needs these permissions on the server. The bot invitation link of the website includes them.
+The bot needs these permissions on the server. The bot invitation link of the website includes them, except Kick Members and Ban Members (see [Set up in 2 minutes](#set-up-in-2-minutes)).
 
 | Permission | Used for |
 | --- | --- |

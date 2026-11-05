@@ -98,7 +98,7 @@ While the bot cannot read a member's choice (a temporary database problem), it d
 
 1. Join a voice channel (not a stage channel).
 2. In a text channel where the bot can write, run `/record start`. Run `/record test` first if you want to check everything.
-3. The bot joins your channel, the panel appears, and it answers *Recording started.* Only you see that answer.
+3. The bot joins your channel, the panel appears, and it answers *🔴 Recording started. The panel in the text channel shows its status.* Only you see that answer.
 
 The command can be used once every 5 seconds per member. Only one recording runs per server at a time.
 

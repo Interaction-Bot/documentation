@@ -4,11 +4,11 @@ description: Add flag reactions under every message of a channel.
 
 # Flag shortcuts
 
-<figure><img src="../../.gitbook/assets/dash-flag-shortcuts.png" alt="Flag shortcuts page"><figcaption><p>Flag shortcuts page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-flags.png" alt="Flags page, with the automatically added flags"><figcaption><p>Flags page, with the automatically added flags</p></figcaption></figure>
 
 ## Localization
 
-Navbar > _**Translation**_ > _**Flags**_ > _**Automatically added flags**_.
+Navbar > category _**Translation**_ > _**Flags**_, section _**Automatically added flags**_.
 
 The bot adds the chosen flags under every new message of the channel, so a member only has to click a flag to get the translation. Between 1 and 5 flags per channel, on every plan. The same can be done with [`/flags`](../../commands/flags.md).
 
@@ -22,7 +22,7 @@ The bot adds the chosen flags under every new message of the channel, so a membe
 4. Add other channels the same way, if you need them.
 5. Click _**Save**_.
 
-Each row needs a channel and at least one flag, and no more than 5 flags. The popup checks each row before you can add it. _**Remove**_ removes a row, and _**Cancel**_ goes back to the last saved list.
+Each row needs a channel and at least one flag, and no more than 5 flags. The _**Save**_ button stays disabled until every row is valid. _**Remove**_ removes a row, and _**Cancel**_ goes back to the last saved list.
 
 {% hint style="info" %}
 Saving replaces the whole flag shortcut configuration of the server with the rows of the page. A channel that you removed from the page stops getting flags.

@@ -10,7 +10,7 @@ The answers are never generated: the bot only sends the answers your moderators 
 
 | Command | Who | What it does |
 | ------- | --- | ------------ |
-| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is only visible to the member who asked. |
+| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is posted in the channel. |
 | `/faq add group:<group>` | *Manage Server* | Open a form to add a question and its answer to a group. |
 | `/faq list [group]` | *Manage Server* | List the entries, with their numbers. |
 | `/faq remove entry:<entry>` | *Manage Server* | Remove an entry. |

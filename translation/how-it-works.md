@@ -13,12 +13,12 @@ When a message is posted, the bot goes through these steps. At any step, the bot
 1. **The message is eligible.** Direct messages, the bot's own messages, messages made only of a link and messages that repeat the same character (`hhhhhh`) are ignored.
 2. **The rules of the channel are loaded.** The bot looks for [channel](../website/dashboard/channel-translation.md), [category](../website/dashboard/category-translation.md), [role](../website/dashboard/role-translation.md) rules and [translation groups](../website/dashboard/translation-groups.md) that apply to this message. If there is none, nothing happens.
 3. **Filters.**
-   * The channel is in the [blacklist](../website/dashboard/blacklist.md) (premium).
-   * The author has a blacklisted role (premium).
-   * The message is shorter than the *minimum characters* set in [Language identification](../website/dashboard/language-identification.md) for this channel.
+   * The channel is excluded in the [Exceptions](../website/dashboard/blacklist.md) of the dashboard (premium).
+   * The author has an excluded role (premium).
+   * The message is shorter than the *minimum message size* set in [Minimum message size](../website/dashboard/language-identification.md) for this channel.
    * The message comes from a bot and *Translate bot* is off (messages of bots are translated on premium servers only).
-4. **Language detection.** The language of the message is detected automatically. If the bot is not sure (very short message, only emojis, mixed languages), the message is skipped, except for rules with *Always send*. If the language is in the blacklisted languages (premium), the message is skipped.
-5. **For each rule**, the bot checks that the message is not already in the target language (unless *Always send* is on), then translates it. If the translation is almost identical to the original (similarity of 60 % or more) it is considered "already translated" and is not sent.
+4. **Language detection.** The language of the message is detected automatically. If the bot is not sure (very short message, only emojis, mixed languages), the message is skipped, except for rules with *Always send*. If the language is excluded in the [Exceptions](../website/dashboard/blacklist.md) (premium), the message is skipped.
+5. **For each rule**, the bot checks that the message is not already in the target language (unless *Always send* is on), then translates it. If the translation is almost identical to the original (similarity of 60 % or more) it is considered "already translated" and is not sent. On a server that uses [translation rules](../commands/translation.md#translation-rules), only the most precise place rule applies, plus the role rules (see [Automatic translation](automatic.md)).
 6. **Sending.** The translation is sent in the target channel with the chosen [style](styles-and-options.md). *Delete message* and *Delete translation* are applied.
 
 {% hint style="info" %}
@@ -30,9 +30,10 @@ The bot shows **"Interaction Bot is typing…"** in the target channels while a 
 | Limit                                 | Free  | Premium |
 | ------------------------------------- | ----- | ------- |
 | Translations produced by one message  | 3     | 20      |
-| Configurations of each type           | 20    | 500     |
+| Translation rules and links per server | 30    | 200     |
+| Former configurations of each type (channel, role, category) | 20    | 500     |
 
-When a message needs more translations than the limit allows, the bot sends the translations in the order of the rules (channels, then groups, then categories, then roles) and stops at the limit, then posts a short notice. This notice can be turned off in the dashboard with the *Simultaneous translation warning* option of the [Overview](../website/dashboard/overview.md) page.
+When a message needs more translations than the limit allows, the bot sends the translations in the order of the rules (channels, then groups, then categories, then roles; on a server that uses translation rules: two languages in one channel, then channel, category, server, and roles) and stops at the limit, then posts a short notice. This notice can be turned off in the dashboard with the *Simultaneous translation warning* option of the [Overview](../website/dashboard/overview.md) page.
 
 To avoid floods, the bot also protects itself against servers that send an abnormal number of messages or reactions: translations are then paused for a short time. A normal community never reaches these protections.
 
@@ -41,8 +42,8 @@ To avoid floods, the bot also protects itself against servers that send an abnor
 1. A member adds a flag emoji (🇫🇷, 🇪🇸, 🇯🇵…) under a message. The flag decides the target language ([175 flags](languages.md) are supported).
 2. The bot checks the [flag translation](../website/dashboard/flag-translation.md) configuration of the channel. Without any configuration, the flags **work by default**.
 3. Bots are ignored, and messages written by bots are translated on premium servers only.
-4. In **One time** mode, a message is translated only the first time a flag is added. In **Each time** mode, every flag added produces a translation.
-5. The translation is posted as a **reply** to the message, in an embed that shows the source and target languages. It is deleted after a while unless *Auto delete* is turned off (about 0.13 s per character, at least 25 seconds).
+4. In **Once per message** mode, a message is translated only the first time a flag is added. In **Each time someone reacts** mode, every flag added produces a translation.
+5. The translation is posted as a **reply** to the message, by default in an embed that shows the source and target languages. It is deleted after a while unless *Auto delete* is turned off (about 0.13 s per character, at least 25 seconds).
 
 {% hint style="info" %}
 🏴‍☠️ the pirate flag translates the message in English and then in pirate speech.
@@ -50,9 +51,8 @@ To avoid floods, the bot also protects itself against servers that send an abnor
 
 ## Commands and menus, step by step
 
-* **`/translate`** detects the language of the text, translates it into the language you choose (or your Discord language) and posts the answer in the channel, visible to everyone.
-* **Apps > Translate** does the same for a message you right click, and answers privately (only you see it, and you can dismiss it).
-* **`/detect`** and **Apps > Detect** only tell you the detected language.
+* **`/translate`** detects the language of a text and translates it into the language you choose (or your personal language, or your Discord language). Its answer is **public**. **Apps > Translate** does the same for a message, with a **private** answer (ephemeral message: only you see it, and you can dismiss it).
+* **`/detect`** and **Apps > Detect** only tell you the detected language, privately.
 * They are limited to one use every few seconds per member.
 
 ## What is kept intact

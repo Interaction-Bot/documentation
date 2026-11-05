@@ -34,8 +34,8 @@ Automatic translation is skipped when:
 * the language of the message is **already the target language** (unless _Always send_ is on);
 * the detection is **not reliable** enough, for example a very short message (unless _Always send_ is on). You can set a [minimum size](language-detection.md#minimum-message-size) per channel;
 * the message was sent by **a bot** and _Translate bot_ is off (this option is [premium](../premium/premium.md));
-* the channel, or one of the author's roles, is in the [blacklist](../website/dashboard/blacklist.md) (premium);
-* the detected language is in the [language blacklist](../website/dashboard/blacklist.md) (premium);
+* the channel, or one of the author's roles, is excluded in the **Exceptions** of the dashboard (premium);
+* the detected language is excluded in the **Exceptions** of the dashboard (premium);
 * the translation would be identical to the original text;
 * the bot [lacks a permission](troubleshooting.md#permissions) in the channel.
 
@@ -53,7 +53,7 @@ The footer of an embed-style translation shows the source and target languages (
 ## Limits
 
 * **Translations per message**: when one message must be translated into several languages (several configurations apply), the bot stops after **3 translations on a free server and 20 on a premium server**. When this happens the bot posts a warning that you can turn off in the [Overview](../website/dashboard/overview.md) of the dashboard (_Simultaneous Translation Warning_).
-* **When the limit is reached**: the translations beyond the limit are **not sent**. On the **Translation rules** page of the dashboard, a notice says it ("A message is translated 3 times at most: the next translations are not sent. Affected channels: N", with a **See Premium** button on a free server), and the **Try** tool shows, for a channel, which rules are not applied or which languages are cut. In Discord, the [simultaneous translation warning](../website/dashboard/overview.md#warning) posts a message in the channel, at most once a day per server.
+* **When the limit is reached**: the translations beyond the limit are **not sent**. On the **Translation rules** page of the dashboard, a notice says it ("Without Premium, a message is translated 3 times at most: the next translations are not sent. Affected channels: N", with a **See Premium** button on a free server), and the **Try** tool shows, for a channel, which rules are not applied or which languages are cut. In Discord, the [simultaneous translation warning](../website/dashboard/overview.md#warning) posts a message in the channel, at most once a day per server.
 * **Configurations**: servers using the translation rules have 30 rules (200 on premium); servers still on the former configurations have 20 channel, role and category configurations (500 on premium). See [Premium](../premium/premium.md) for all the limits.
 
 ## Languages

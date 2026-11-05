@@ -69,7 +69,7 @@ Only the arrivals after the tracker is turned on are counted. Members who joined
 
 | Command | What it does |
 | --- | --- |
-| `/invites [user]` | Shows how many people a member invited: the total, and the joined, left, fake and added counts. The member is you by default. Only you see the answer. |
+| `/invites [user]` | Shows how many people a member invited: the total, and the joined, left, fake and added counts. The member is you by default. The answer is posted in the channel. |
 | `/invite-leaderboard` | Shows the top 10 inviters of the server. Members hidden from the leaderboard are left out. The answer is public, in the channel. |
 
 Both commands need no permission to use. When the tracker is off, they answer that it is off on this server.

@@ -6,7 +6,7 @@ description: Choose, per channel, the minimum size of a message that the bot tra
 
 ## Localization
 
-This page is in the **Translation** section of the navigation bar, under **Exceptions**. The section is called **Minimum message size** (formerly *Language identification*).
+This setting is on the **Exceptions** page of the **Translation** section of the navigation bar, in the card **Minimum message size**. The former **Language Identification** page redirects there.
 
 <figure><img src="../../.gitbook/assets/dash-language-identification.png" alt="Language identification page"><figcaption><p>Language identification page</p></figcaption></figure>
 
@@ -21,35 +21,25 @@ On this page, you choose for a channel the **minimum number of characters** that
 
 ## Running configurations
 
-The list shows one line for each channel that has a minimum, for example _In #general, messages shorter than 15 characters are not translated_. When no channel has a minimum, the list says _No channel has a minimum size. Add one to skip messages that are too short._
+The list shows the channels that have a minimum, with the **Channel** column.
 
 * _**Edit**_: opens the configuration in the popup. Clicking on the row does the same.
 * _**Delete**_: removes the minimum of this channel (applied after you click on _**Save**_).
 
-## Add a channel
+## Add a configuration
 
-Click on _**Add a channel**_. Without Premium, a server can have 20 channels at most.
+Click on _**Add a channel**_. On a server without Premium, when you already have 20 configurations, this button opens the Premium pop-up instead.
 
 The popup has two fields:
 
-* **Which channel?**: the channel where the minimum applies. Messages in this channel that are shorter than the minimum are not translated. Each channel can have only one minimum size: a channel that already has one is refused, and you edit it instead.
-* **How many characters at least?**: type a number from **0** to **500**. A new configuration starts with **5**. A message shorter than this number is not translated. It is a length threshold, not a language detection.
+* **Which channel?**: *Messages in this channel that are shorter than the minimum are not translated.* Each channel can have only one configuration.
+* **How many characters at least?**: *A message shorter than this number is not translated. It is a length threshold, not a language detection.* Type a number from **0** to **500**. A new configuration starts with **5**. Messages with fewer characters are ignored.
 
 Click on _**Save**_ in the popup, then click on _**Save**_ in the bar at the bottom of the page.
 
 ### Example
 
 In #general, many short messages are detected in the wrong language. Set **How many characters at least?** to `15` for #general: messages of fewer than 15 characters are no longer translated there, and longer messages are translated as before.
-
-## Command
-
-The same minimum can be set with the `/language-detection` command:
-
-* `/language-detection set`: set the minimum of a channel, from 0 to 500 characters.
-* `/language-detection reset`: remove the minimum of a channel.
-* `/language-detection list`: list the channels that have a minimum.
-
-By default, only members with the *Manage Server* permission can use these commands.
 
 ## Errors
 

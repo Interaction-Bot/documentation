@@ -8,9 +8,9 @@ description: Link several channels, each with its own language.
 
 ## Localization
 
-Navbar > _**Translation**_ > _**Translation rules**_ > _**Linked channels**_. Servers that are not converted yet still have the former _**Mirror Translation**_ page at its own address.
+This page is no longer in the menu. On a server that uses the translation rules, it redirects to **Translation rules**, where the mirrors are the **Linked channels** section. For the servers that are not converted yet, it is reached by its address. Its title is **Mirror Translation**.
 
-The counter at the top right shows how many mirrors you use, for example *1 group out of 1* on a free server.
+The counter at the top right shows how many mirrors you use, for example `1 group out of 1` on a free server.
 
 ## How it works
 
@@ -24,9 +24,9 @@ The same mirrors can be managed with the [`/group` commands](../../commands/grou
 
 1. Click _**Add a mirror**_. A new mirror named `Group 1` (or the next free number) appears.
 2. Change its settings (see the table below).
-3. Click _**+ Add a channel**_ and choose a channel. The new row uses the first channel not yet in the mirror, and English by default: change the language if needed.
+3. Click _**+ Add a channel**_ and choose a channel. The new row uses English by default: change the language if needed.
 4. Repeat step 3 for each channel of the mirror.
-5. Click _**Save**_ in the bar at the bottom of the page.
+5. Click _**Save**_ in the popup at the bottom of the page.
 
 If you click _**Add a mirror**_ or _**+ Add a channel**_ when you are at your limit, the Premium popup opens instead.
 
@@ -51,7 +51,7 @@ A channel that is deleted from the server is removed from its mirror automatical
 
 ## Saving
 
-Changes are not saved until you click _**Save**_ in the bar at the bottom of the page. _**Cancel**_ goes back to the last saved configuration.
+Changes are not saved until you click _**Save**_ in the popup at the bottom of the page. _**Cancel**_ goes back to the last saved configuration.
 
 If the save is refused, the page shows: `Invalid configuration (duplicated name or channel, limit reached, ...)`. Check the names (no two mirrors with the same name), the channels (no channel twice in a mirror, only text channels of this server) and the limits. If the page shows `Could not save, try again`, the server did not answer: try again in a moment.
 

@@ -15,7 +15,7 @@ Each guide starts from a server where the bot is installed, with the permissions
 5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves 30 seconds after nobody but bots is left in the channel.
 
 {% hint style="info" %}
-If the server is not premium and no member of the server has voted in the last 24 hours, `/tts say` answers *You need to vote for the bot to use this command.* A premium server needs no vote.
+If you have not voted in the last 24 hours, `/tts say` answers *You need to vote for the bot to use this command.* This is true even on a premium server: the vote of the member who runs the command is checked.
 {% endhint %}
 
 ## 2. Read a text channel aloud (TTS channel)
@@ -32,13 +32,13 @@ Every message of the channel is read in the voice channel of its author, for the
 **On the dashboard**
 
 1. Open the dashboard of the server, then the page **Text to speech** (category *Audio & AI*). The page has three tabs: *Reading channels*, *Settings* (the reading options and the voices) and *Permissions*.
-2. Click *Add a channel*, choose the channel, then set the *Voice channel for reading* (optional), the *Language*, the *Translate to* option (premium) and the *Enabled* switch.
+2. Click *Add a channel*, choose the channel, then set *Voice channel for reading* (optional), the *Language*, the *Automatic translation* option (premium) and the *Enabled* switch.
 3. Click *Save*.
 
 <figure><img src="../.gitbook/assets/dash-text-to-speech.png" alt="Text to speech page"><figcaption><p>Text to speech page</p></figcaption></figure>
 
 {% hint style="info" %}
-A message is read only if it has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the channel has a destination where someone is. A message is read up to 4000 characters, after links are removed. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
+A message is read only if it has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the channel has a destination where someone is. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
 {% endhint %}
 
 ## 3. Transcribe a voice channel manually (`/transcribe start`)
@@ -53,7 +53,7 @@ A message is read only if it has text, does not start with `/`, `!`, `.` or `$`,
 5. Run `/transcribe stop` when you are done. The transcription also stops when the daily time of the server is used up: 30 minutes on a free server, 3 hours on a premium server, counted per UTC day (the time starts again at midnight UTC; see [Daily time and stop](voice.md#daily-time-and-stop)).
 
 {% hint style="info" %}
-`/transcribe start` needs a premium server, or a vote in the last 24 hours from a member of the server. Only one transcription runs per server at a time.
+`/transcribe start` needs a premium server, or a vote in the last 24 hours from the member who runs it. Only one transcription runs per server at a time.
 {% endhint %}
 
 ## 4. Transcribe automatically when someone joins (`/transcribe auto`)
@@ -81,7 +81,7 @@ The translation of a transcription is a **premium** feature. Only the translatio
 
 1. Make sure the server is premium.
 2. For a one-time transcription, run `/transcribe start` with the option `translate-to`, and pick the target language from the suggestions.
-3. For an automatic transcription, run `/transcribe auto enable` with the same option (`translate-to`). You can also set *Translate to* on the dashboard page **Transcription**.
+3. For an automatic transcription, run `/transcribe auto enable` with the same option. You can also set *Translate to* on the dashboard page **Transcription**.
 4. What is said in the target language is not translated again. If the translation fails, the original text is posted.
 
 {% hint style="info" %}
@@ -90,7 +90,7 @@ On a free server, `/transcribe start translate-to:...` answers *The translation 
 
 ## 6. Follow the transcription live (`/transcribe live`)
 
-1. Join the voice channel. Make sure the server is premium, or that a member of the server has voted in the last 24 hours.
+1. Join the voice channel. Make sure the server is premium, or that you have voted in the last 24 hours.
 2. Run `/transcribe live`. If no transcription runs, the command starts one (same rules as `/transcribe start`). If one already runs in this channel, the view opens at once.
 3. Click **Open the live transcription**. The Activity opens with the sentences as they are said.
 4. On a premium server, choose the language you read in the **Translation** button. Only your view changes.
