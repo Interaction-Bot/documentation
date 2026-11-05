@@ -48,10 +48,10 @@ A message can contain variables. Each variable is replaced by the real value for
 | `{member_count.ordinal}` | The rank of the member: `1st`, `2nd`, `3rd`, `4th`… | Same. |
 | `{account_created}` | When the account of the member was created. In a message: a relative time, shown by Discord (for example "3 years ago"). In a banner: the date `YYYY-MM-DD`. | Same. |
 | `{date}` | Today's date. In a message: the date shown by Discord, in the reader's language. In a banner: `YYYY-MM-DD`. | Same. |
-| `{inviter}` | Who invited the member (a mention). | The name of the inviter, not a mention. |
-| `{inviter.name}` | The name of the inviter. | Same. |
-| `{invites}` | How many invitations of the inviter still count (see [Invite tracking](#invite-tracking)). | Same. |
-| `{invite_label}` | The name given to the invite link used. If the link has no name, its code is shown. | Same. |
+| `{inviter}` | Who invited the member (a mention). | `unknown`: the bot knows the inviter only when the member joins. |
+| `{inviter.name}` | The name of the inviter. | `unknown`. |
+| `{invites}` | How many invitations of the inviter still count (see [Invite tracking](#invite-tracking)). | `0`. |
+| `{invite_label}` | The name given to the invite link used. If the link has no name, its code is shown. | `unknown`. |
 
 Notes:
 
@@ -155,6 +155,7 @@ A test allows at most **6 tests per minute** for each person.
 | Title of a card | 256 characters |
 | Text of a card | 4096 characters |
 | Footer of a card | 2048 characters |
+| Title, text and footer of a card together | 6000 characters (Discord limit) |
 | Title and subtitle of a banner | 120 characters each |
 | Text element of a custom banner | 200 characters |
 | Elements in a custom banner | 20 |

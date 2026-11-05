@@ -48,7 +48,7 @@ Automatic translation is skipped when:
 | Text of embeds (title, description, fields, footer) | No | Yes |
 | Buttons and select menus labels      | No   | Yes     |
 
-The footer of an embed-style translation shows the source and target languages (for example `French (fr) -> English (en)`).
+The footer of an embed-style translation shows the source and target languages (for example `French (fr) -> English (en)`; flag translations show the codes in capitals, `French (FR) -> English (EN)`).
 
 ## Limits
 

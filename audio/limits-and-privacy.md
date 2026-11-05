@@ -52,8 +52,8 @@ The daily limits are only one part of the rule. A feature also needs a premium s
 
 | Feature | Premium server | Vote on top.gg (valid 24 hours) |
 | --- | --- | --- |
-| `/tts`, `/connect` | No, the vote is still required | The member who runs the command |
-| `/transcribe start`, `/transcribe live` | Yes | The member who runs the command |
+| `/tts say`, `/connect`, `/tts start` | Yes | A vote of any member of the server, for the whole server |
+| `/transcribe start`, `/transcribe live` | Yes | A vote of any member of the server, for the whole server |
 | TTS channels, automatic transcription | Yes | A vote of any member of the server, for the whole server |
 | Start of the live transcription from the Activity | Yes | A vote of any member of the server |
 | Recording (`/record`) | Yes | A vote of any member of the server |
@@ -76,6 +76,8 @@ The daily limits are only one part of the rule. A feature also needs a premium s
 | Your **voice** in the recordings (`/record`) where you speak | 24 hours. 7 days on a premium server. |
 | Your **notes** in the recordings | As long as the recording that holds them. |
 | Your **settings** (language, notifications, voice, preferences) | Until you change them or delete your account. |
+| **`/ai setup`** (administrators) | The messages written to the assistant are sent to an AI provider to answer, and are not kept once the conversation ends. |
+| **Invitation tracking** (only on servers that turned it on) | Which invitation you came with, who created it, and when you joined and left. Kept for the period the server chose. |
 
 The rest of what the bot handles:
 

@@ -65,7 +65,7 @@ What happens to someone who writes in a trap channel. Click one of the four card
 | Option | Default | Description shown |
 | --- | --- | --- |
 | _**Kick and clean up**_ | Selected | Kicks the member and deletes their recent messages. A real person caught by mistake can join again. |
-| _**Only report**_ | | Does not punish: only reports. Ideal to test the trap first. |
+| _**Only report**_ | | Does not punish the member: it reports the catch and removes the trigger message. Ideal to test the trap first. |
 | _**Ban**_ | | Bans the member and deletes their recent messages. For servers raided by bots that come back. |
 | _**Timeout**_ | | Mutes the member for a while and lets the moderators decide. |
 

@@ -113,7 +113,7 @@ A channel can belong to one group only.
 | `The question must contain between 1 and 200 characters.` | Shorten the question. |
 | `The answer must contain between 1 and 1800 characters.` | Shorten the answer. |
 | `Entry not found.` | The entry was already removed. Run `/faq list` again. |
-| `The translation api seems to be inaccessible. Please try again later.` | The bot could not analyze the question (its language detection failed). Try again later. |
+| `The translation api seems to be inaccessible. Please try again later.` | The bot could not reach its analysis service. Try again later. |
 
 {% hint style="info" %}
 Automatic replies only use the entries of the group, and only when the question is close enough. If the bot never answers, read [FAQ guides](faq-guides.md#why-does-the-bot-never-answer-automatically).

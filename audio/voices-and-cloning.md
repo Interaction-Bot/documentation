@@ -19,7 +19,7 @@ The bot reads text with a **voice**. A voice is chosen from the **catalogue** of
 | List and delete your cloned voices (`/tts clone list`, `/tts clone delete`) | Yes, for the voices you already have | Yes |
 | Use a cloned voice | No | Yes, see [Who can use a cloned voice](#who-can-create-and-use-a-cloned-voice) |
 
-Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**, as described in [Access](voice.md#access). `/tts voice` and the `/tts clone` commands need no vote. `/tts say` needs **your own** vote.
+Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**, as described in [Access](voice.md#access). `/tts voice` and the `/tts clone` commands need no vote. `/tts say` needs a premium server, or a vote from a member of the server.
 
 {% hint style="info" %}
 A voice is a feature of the speech service. The catalogue and the cloning depend on it: when the service does not answer, the last catalogue known is used, and a cloning request can be refused for the moment. Try again later.
