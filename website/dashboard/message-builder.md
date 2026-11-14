@@ -43,13 +43,13 @@ The **Add** button under the message adds at the end.
 
 ### What you can place where
 
-* In a **card** every part moves, the banner (large image) included: author, title and text (with its thumbnail), each field, the banner, the buttons or choices, the footer. The text above the message stays at the top. The bot sends the message in this order.
+* In a **card** every part moves, the banner (large image) included: author, title and text (with its thumbnail), each field, the banner, the buttons or choices, the footer. The text above the message is the first line of the card. The bot sends the message in this order.
 * In an **embed** the order is Discord's (author, title, text, fields, image, footer): only the fields have arrows. Fields side by side exist only here (the inline button of a field).
 * For a free order of everything with columns left out, use the [blocks](#blocks) form.
 
 ### The parts
 
-* **Text above the message**, outside the frame.
+* **Text above the message**: above an embed or a plain text; in a **card** it is the first line of the card itself (Discord accepts no text outside the components of a card).
 * **Author**: a name, an icon and a link.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
