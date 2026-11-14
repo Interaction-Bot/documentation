@@ -29,12 +29,15 @@ Only the title and the text are there at the start. Everything else is added wit
 
 ### The bar of a component
 
-Click or point at any component (the author, the title and text, a field, the banner, the buttons, the footer) and **its own bar** appears in its corner. A click **selects** the component: it stays outlined and keeps its bar, even when you move it up or down (the bar follows it), until you click another one or press _Esc_. From left to right:
+Click (or tap) any component (the author, the title and text, a field, the banner, the time, the buttons, the footer) to **select** it: **only the selected component shows its bar**, just above it, without any frame around it. The bar follows the component when you move it, until you select another one or press _Esc_. From left to right:
 
 * the **emoji** and **variable** buttons of the text you are writing (they are in this bar, never on top of the message);
 * **up** and **down arrows**: move the component;
 * **+**: add a component **right under this one** (the same Add menu);
-* the **cross**: remove the component.
+* the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
+* on a field, a **copy** button that duplicates it right under it.
+
+Keyboard: **Alt + ↑ / ↓** moves the selected component without touching the text.
 
 The **Add** button under the message adds at the end.
 
@@ -67,6 +70,16 @@ Every image slot (author icon, thumbnail, image, footer icon, and every image of
 * **Drag and drop** a file from your computer on the slot, or click the slot and drop it in the zone. PNG, JPEG or WebP, 4 MB at most; each server keeps up to 10 uploaded images (20 MB in all).
 * **A link**: click the slot, paste the address of the image (`https://…`) and apply. Dragging a link from a web page onto the slot works too.
 * **A variable**: the avatar of the owner, the icon of the server or the avatar of the bot, replaced by the real image at each message. In the dashboard they are shown with real images: your own avatar for the member, and the icon of the server you are setting up.
+
+## Every embed is an embed: move, duplicate, delete
+
+Each embed (or card) of a message, **the first one included**, has its own line above it: its number, _up_, _down_, _duplicate_ and _delete_. Moving the first one down swaps it with the next; deleting it makes the next one the first. Deleting the very last one leaves a **plain message** (the text above and the images of the message stay); the _Add_ menu of a plain message offers _Embed_ and _Card_ to bring one back.
+
+The **time** (_Sent at_) has its own cross, apart from the footer. The cross of the **title and text** removes them from the message (an empty title would be the text of the bot, a removed one is nothing); a dotted _Title and text_ place brings them back.
+
+## Undo and redo
+
+The two arrows at the top of the message (or **Ctrl + Z**, **Ctrl + Shift + Z** outside a text field) undo and redo what you did, step by step: a removed component, a moved one, an applied template, an import, the text you typed. A pause of a moment ends a step.
 
 ## Images of the message itself
 
