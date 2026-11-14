@@ -42,6 +42,7 @@
 * [Welcome and goodbye](management/welcome-and-goodbye.md)
 * [Invite tracker](management/invite-tracker.md)
 * [Honeypot](management/honeypot.md)
+* [Reaction roles](management/reaction-roles.md)
 * [AI setup](management/ai-setup.md)
 
 ## Q&A
@@ -69,6 +70,7 @@
   * [Welcome](website/dashboard/welcome.md)
   * [Invitations](website/dashboard/invites.md)
   * [Honeypot](website/dashboard/honeypot.md)
+  * [Reaction roles](website/dashboard/reaction-roles.md)
   * [Event log](website/dashboard/event-log.md)
   * [Journal](website/dashboard/journal.md)
   * [Account](website/dashboard/account.md)
