@@ -71,6 +71,7 @@
   * [Invitations](website/dashboard/invites.md)
   * [Honeypot](website/dashboard/honeypot.md)
   * [Reaction roles](website/dashboard/reaction-roles.md)
+  * [Message builder](website/dashboard/message-builder.md)
   * [Event log](website/dashboard/event-log.md)
   * [Journal](website/dashboard/journal.md)
   * [Account](website/dashboard/account.md)

@@ -91,6 +91,8 @@ When an owner creates a new room, the settings the owner had in their previous r
 
 The message is written in the chat of each new room.
 
+The text of the message and the control panel are written with the [message builder](message-builder.md): card, embed (up to ten), free layout with blocks or plain message, images by link or drag and drop.
+
 * **Sending**: _Off_ (the bot writes nothing), _With notification (mentions the owner)_ (mentions the owner, who gets a notification) or _Silent_ (writes the message without notifying anyone). Default: _Silent_.
 * **Message text**: 1900 characters at most. Empty: only the control panel is sent, if it is ticked. Click a placeholder to insert it at the cursor. The message also accepts `{OWNER_MENTION}`, `{OWNER_ID}`, `{GUILD_ID}` and `{CHANNEL_ID}`.
 * **Include the control panel** (on by default): adds the buttons to rename, lock or invite right in the message.
