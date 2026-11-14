@@ -1,5 +1,5 @@
 ---
-description: "Reaction roles page of the dashboard: the list of panels, the editor (the message and its choices on the left, the settings tabs Choice, Rules and Replies on the right), saving and publishing."
+description: "Reaction roles page of the dashboard: the list of panels, the editor (the channel, the message with its choices, then the settings tabs Choice, Rules and Replies under it), replies written as messages with variables, saving and publishing."
 ---
 
 # Reaction roles
@@ -29,25 +29,28 @@ The header has the **back arrow**, the **name** of the panel (click to rename) a
 
 A list at the top says what prevents publishing (no channel, a choice without role, an emoji used twice, a role the bot cannot give…). After a refused _Publish_, the first choice to fix opens in the settings.
 
-The editor has two columns (one under the other on a phone).
+The editor is a stack of cards, each with a title and a sentence like the other pages of the dashboard: **Channel of the message**, then **Message and choices** (the message, and under it its settings).
 
-### The message (left)
+### Channel of the message
 
-A Discord channel with its message, as members will see it:
+* **Channel**: the text channel of the message. For an emoji panel you can choose _**Existing message**_: paste the ID or the link of the message, and the bot only adds the reactions to it.
 
-* **Channel**: the text channel of the message (top bar). For an emoji panel you can choose _**Existing message**_: paste the ID or the link of the message, and the bot only adds the reactions to it.
+### Message and choices
+
+The message as members will see it, on the whole width of the card:
+
 * **Role templates**: the _**Role templates**_ list next to the type of choices builds a **complete panel** in one click: _Colors_, _Continents_, _Zodiac signs_, _Platforms_, _RPG roles_, _Pronouns_, _League of Legends_ and _Notifications_. A template **replaces the content** of the panel (choices, name, title, text, color of the message) with a ready message: a title, a sentence and a **legend** that tells what each emoji gives (`🔴 | Red`). The **bot creates the missing roles** on your server (the colors template gives each role its color); a role that already has the same name is used as it is. If the bot cannot (it lacks _Manage Roles_, or the server is at Discord's limit of roles), the choices stay and you pick their roles yourself. Another template replaces the first one, and the arrows at the top of the message undo it.
 * **Type of choices**: _Emoji_, _Buttons_ or _Dropdown_, with the counter of choices (how many you can still add).
-* **The message** is the [message builder](message-builder.md) of the dashboard (the same as for [temp voice](temp-voice.md)): you write the message where it will appear. _Card_ (one block, the choices inside), _Embed_ (the classic Discord embed: author with icon, fields side by side, footer icon, time; up to ten embeds), _Blocks_ (a free layout: texts, image galleries, sections, separators, link buttons, and the place of the choices) or _Plain message_ (only text). Images are set by link or by drag and drop. _Preview_ shows the message exactly as Discord displays it, _Add_ adds what is missing (text above, author, thumbnail, image, field, footer, time), the color bar is on the right. The text of the title can be a link: the **title link** makes the title clickable in Discord.
-* **The choices are edited in the message itself**: write the label inside a button (or in the open list), click _+_ to add a choice, the small cross on a choice removes it. A click on a choice selects it, and its settings open on the right. A red dot marks a choice to fix.
+* **The message** is the [message builder](message-builder.md) of the dashboard (the same as for [temp voice](temp-voice.md)): you write the message where it will appear. _Card_ (one block, the choices inside), _Embed_ (the classic Discord embed: author with icon, fields side by side, footer icon, time; up to ten embeds), _Blocks_ (a free layout: texts, image galleries, sections, separators, link buttons, and the place of the choices) or _Plain message_ (only text). Images are set by link or by drag and drop. _Preview_ shows the message exactly as Discord displays it, _Add_ adds what is missing (text above, author, thumbnail, image, field, footer, time), the color bar is on the right. The text of the title can be a link: the **title link** makes the title clickable in Discord. The **{ }** button of the bar of the text lists the variables of the message: `{SERVER}` (the name of the server), shown replaced by an example in the preview.
+* **The choices are edited in the message itself**: write the label inside a button (or in the open list); the small cross on a choice removes it, the arrows move it. A click on a choice selects it, and its settings open under the message. A red dot marks a choice to fix. The dropdown of a panel can be opened in the preview.
 
-### The settings (right)
+### The settings (under the message)
 
 Three tabs:
 
-* **Choice**: the selected choice. Its emoji, its label (buttons and dropdown), the roles it gives, the arrows to reorder and the bin to delete it. _More options_ opens the description (dropdown), the color of the button and the **duration** of the role.
+* **Choice**: the list of **all the choices**, each with its emoji, its label (buttons and dropdown), the roles it gives (and what the dropdown does: it gives the roles of the chosen line), the arrows to reorder and the bin to delete it. The selected one is open. _More options_ opens the description (dropdown), the color of the button and the **duration** of the role. _**Add a choice**_ is at the end of the list (it is not in the message).
 * **Rules**: _Allow members to take several roles_ (off: one role of the panel at a time), the mode (with an explanation and an example), the maximum number of roles per member, and _Allowed roles_ / _Denied roles_ (who can use the panel).
-* **Replies**: _Private message_ or _Nothing_, and your own texts for _role given_ and _role removed_.
+* **Replies**: _Private message_ or _Nothing_. The reply for _role given_ and the one for _role removed_ are **messages of their own**, written with the same [message builder](message-builder.md) as the panel: a text (by default), an embed, a card or blocks, with images, fields, color… Empty, the bot answers with its own sentence, in the language of the server. The **{ }** button lists the variables: `{ROLE}` (the role or roles given or removed), `{USER}` (the mention of the member), `{USER_NAME}` (their name) and `{SERVER}` (the name of the server). A reply that is an embed or a card is sent when every choice of a click went the same way (all given, or all removed); in a mixed case, and for the text form, the bot sends its notice.
 
 ## Messages of the page
 

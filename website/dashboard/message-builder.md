@@ -31,7 +31,7 @@ Only the title and the text are there at the start. Everything else is added wit
 
 Click (or tap) any component (the author, the title and text, a field, the banner, the time, the buttons, the footer) to **select** it: **only the selected component shows its bar**, just above it, without any frame around it. The bar follows the component when you move it, until you select another one or press _Esc_. From left to right:
 
-* the **emoji** and **variable** buttons of the text you are writing (they are in this bar, never on top of the message);
+* the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`;
 * **up** and **down arrows**: move the component;
 * **+**: add a component **right under this one** (the same Add menu);
 * the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
@@ -73,7 +73,7 @@ Every image slot (author icon, thumbnail, image, footer icon, and every image of
 
 ## Every embed is an embed: move, duplicate, delete
 
-Each embed (or card) of a message, **the first one included**, has its own line above it: its number, _up_, _down_, _duplicate_ and _delete_. Moving the first one down swaps it with the next; deleting it makes the next one the first. Deleting the very last one leaves a **plain message** (the text above and the images of the message stay); the _Add_ menu of a plain message offers _Embed_ and _Card_ to bring one back.
+Each embed (or card) of a message, **the first one included**, can be duplicated and deleted. A message with **one** embed shows no number: its _duplicate_ and _delete_ buttons are on its side. From **two** embeds on, each has its own line above it: its number, _up_, _down_, _duplicate_ and _delete_. Moving the first one down swaps it with the next; deleting it makes the next one the first. Deleting the very last one leaves a **plain message** (the text above and the images of the message stay); the _Add_ menu of a plain message offers _Embed_ and _Card_ to bring one back.
 
 The **time** (_Sent at_) has its own cross, apart from the footer. The cross of the **title and text** removes them from the message (an empty title would be the text of the bot, a removed one is nothing); a dotted _Title and text_ place brings them back.
 
