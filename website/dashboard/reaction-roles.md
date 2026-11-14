@@ -1,5 +1,5 @@
 ---
-description: "Reaction roles page of the dashboard: the list of panels, the editor sections (Channel, Message, Reactions and roles, Reaction mode, Who can use it, Replies), saving and publishing."
+description: "Reaction roles page of the dashboard: the list of panels, the editor (the message and its choices on the left, the settings tabs Choice, Rules and Replies on the right), saving and publishing."
 ---
 
 # Reaction roles
@@ -27,43 +27,30 @@ The header has the **back arrow**, the **name** of the panel (click to rename) a
 * _**Save**_: keeps your changes without touching the message.
 * _**Publish**_ (_**Update the message**_ once published): saves, then writes or edits the message. The button stays gray while something is missing; pressing it then shows what.
 
-A list at the top says what prevents publishing (no channel, a choice without role, an emoji used twice, a role the bot cannot give…).
+A list at the top says what prevents publishing (no channel, a choice without role, an emoji used twice, a role the bot cannot give…). After a refused _Publish_, the first choice to fix opens in the settings.
 
-Sections can be folded. **Channel**, **Message** and **Reactions and roles** are open; the others open on click.
+The editor has two columns (one under the other on a phone).
 
-### Channel
+### The message (left)
 
-Pick the text channel of the message. For an emoji panel you can choose _**Existing message**_: paste the ID or the link of the message, and the bot only adds the reactions to it.
+A Discord channel with its message, as members will see it:
 
-### Message
+* **Channel**: the text channel of the message (top bar). For an emoji panel you can choose _**Existing message**_: paste the ID or the link of the message, and the bot only adds the reactions to it.
+* **Type of choices**: _Emoji_, _Buttons_ or _Dropdown_, with the counter of choices (how many you can still add).
+* **The message** is the message builder of the dashboard (the same as for [temp voice](temp-voice.md)): you write the message where it will appear. _Card_ (one block, the choices inside), _Embed_ (the classic Discord embed: author with icon, fields side by side, footer icon, time) or _Plain message_ (only text). _Preview_ shows the message exactly as Discord displays it, _Add_ adds what is missing (text above, author, thumbnail, image, field, footer, time), the color bar is on the right. The text of the title can be a link: the **title link** makes the title clickable in Discord.
+* **The choices are edited in the message itself**: write the label inside a button (or in the open list), click _+_ to add a choice, the small cross on a choice removes it. A click on a choice selects it, and its settings open on the right. A red dot marks a choice to fix.
 
-The message builder of the dashboard (the same as for [temp voice](temp-voice.md)): you write the message where it will appear.
+### The settings (right)
 
-* **Type**: _Card_ (one block, the choices inside the message), _Embed_ (the classic Discord embed: author with icon, fields side by side, footer icon, time) or _Plain message_ (only text).
-* **Edit / Preview**: _Preview_ shows the message exactly as Discord displays it, with the Markdown rendered.
-* **Add** adds what is missing: text above the message, author, thumbnail, image, field, footer, time. Each part is removed with its cross.
-* Images: upload (cropped), an https address, or a variable (server icon, bot avatar).
-* The color bar is on the right.
+Three tabs:
 
-### Reactions and roles
-
-Pick the kind (_Emoji_, _Buttons_, _Dropdown_). _Allow members to take several roles_ turns the "one role at a time" rule on or off. Each choice has an emoji, a label and the roles it gives; _More options_ opens the description (dropdown), the color of the button and the **duration** of the role. The arrows reorder the choices, the bin deletes one. The counter shows how many choices you can still add.
-
-### Reaction mode
-
-The mode (with an explanation and an example) and the maximum number of roles per member.
-
-### Who can use it
-
-_Allowed roles_ and _Denied roles_.
-
-### Replies
-
-_Private message_ or _Nothing_, and, under _Customize the texts_, your own texts for _role given_ and _role removed_.
+* **Choice**: the selected choice. Its emoji, its label (buttons and dropdown), the roles it gives, the arrows to reorder and the bin to delete it. _More options_ opens the description (dropdown), the color of the button and the **duration** of the role.
+* **Rules**: _Allow members to take several roles_ (off: one role of the panel at a time), the mode (with an explanation and an example), the maximum number of roles per member, and _Allowed roles_ / _Denied roles_ (who can use the panel).
+* **Replies**: _Private message_ or _Nothing_, and your own texts for _role given_ and _role removed_.
 
 ## Messages of the page
 
 * _The role X is above the role of the bot_: move the role of the bot higher in Server settings > Roles.
-* _The role X has dangerous permissions_: a panel never gives such a role.
+* _The role X has dangerous permissions_: a panel never gives such a role (the same list as for the roles the bot gives on its own: administrator, manage server, roles, channels, webhooks, messages, nicknames, expressions, events and threads, kick, ban, timeout, mention everyone, view audit log, mute, deafen and move members).
 * _The bot cannot write in this channel_ (or see it, embed links, add reactions): fix the permissions of the channel.
 * _The bot does not answer right now_: try again in a moment.

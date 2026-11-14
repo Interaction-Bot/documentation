@@ -70,7 +70,7 @@ Each choice can give its roles for **1 hour up to 30 days**. The bot takes the r
 ## Safety rules
 
 * The bot only gives a role that is **below its own role**, that is not managed by an integration (bot, boosts…) and that is not `@everyone`.
-* A role with **dangerous permissions** can never be given by a panel: Administrator, Manage Server, Manage Roles, Manage Channels, Manage Webhooks, Kick Members, Ban Members, Mention Everyone, Manage Messages, Timeout Members, Manage Expressions, Manage Events. The bot checks again at **every** use: a permission added to the role later blocks it. Removing a role is always allowed.
+* A role with **dangerous permissions** can never be given by a panel: Administrator, Manage Server, Manage Roles, Manage Channels, Manage Webhooks, Manage Messages, Manage Nicknames, Manage Expressions, Manage Events, Manage Threads, Kick Members, Ban Members, Timeout Members, Mention Everyone, View Audit Log, Mute Members, Deafen Members, Move Members (the same list as for the roles the bot gives on its own). The bot checks again at **every** use: a permission added to the role later blocks it. Removing a role is always allowed.
 * A member can use a choice **once per second** at most.
 * The dashboard tells you before you publish when a role or the channel does not work (role too high, dangerous role, missing permission).
 
