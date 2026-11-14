@@ -19,17 +19,36 @@ _**Edit**_ and _**Preview**_ switch between writing and the exact rendering (Mar
 
 ## The parts of a message (card and embed)
 
-Only the title and the text are there at the start. Everything else is added with the **Add** menu (next to _Import / export_): a list that unfolds, like the emoji picker, with every part sorted by family (text, images, message frame, more), each with an icon and a sentence. A part that is already there is not offered again. Each embed of a message has the same menu. A part is removed with the small cross that appears when you point at it:
+Only the title and the text are there at the start. Everything else is added with the **Add** menu, a list that unfolds like the emoji picker, with every part sorted by family (text, images, message frame, more), each with an icon and a sentence. A part that is already there is not offered again.
+
+### The bar of a component
+
+Click or point at any component (the author, the title and text, a field, the banner, the buttons, the footer) and **its own bar** appears in its corner. From left to right:
+
+* the **emoji** and **variable** buttons of the text you are writing (they are in this bar, never on top of the message);
+* **up** and **down arrows**: move the component;
+* **+**: add a component **right under this one** (the same Add menu);
+* the **cross**: remove the component.
+
+The **Add** button under the message adds at the end.
+
+### What you can place where
+
+* In a **card** every part moves, the banner (large image) included: author, title and text (with its thumbnail), each field, the banner, the buttons or choices, the footer. The text above the message stays at the top. The bot sends the message in this order.
+* In an **embed** the order is Discord's (author, title, text, fields, image, footer): only the fields have arrows. Fields side by side exist only here (the inline button of a field).
+* For a free order of everything with columns left out, use the [blocks](#blocks) form.
+
+### The parts
 
 * **Text above the message**, outside the frame.
 * **Author**: a name, an icon and a link.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
-* **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side). Point at a field and use its up and down arrows to put it where you want.
-* **Free text**: a field without a title. It is how you add text _under_ the fields: Discord fixes the order of the parts of an embed (author, title, text, fields, image, footer), but fields can be moved, so a free text can sit anywhere among them.
+* **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side).
+* **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
 * **Color**: the bar at the left of the message (the round button at the right of it), or none.
-* **Free layout**: the last entry of the menu turns the message into [blocks](#blocks) (each part becomes a block, in the order you can then change with arrows). The original message is kept: pick _Card_ or _Embed_ again to get it back.
+* **Free layout**: the last entry of the menu turns the message into [blocks](#blocks) (each part becomes a block). The original message is kept: pick _Card_ or _Embed_ again to get it back.
 
 Server emojis (`<:name:id>`, the ones you pick in the emoji list) are shown as images in the text fields, as Discord displays them; what the bot sends is the written form.
 
