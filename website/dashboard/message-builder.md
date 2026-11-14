@@ -50,7 +50,7 @@ The **Add** button under the message adds at the end.
 ### The parts
 
 * **Text above the message**: above an embed or a plain text; in a **card** it is the first line of the card itself (Discord accepts no text outside the components of a card).
-* **Author**: a name, an icon and a link.
+* **Author** (the header) and **footer**: always there while you write, as fields with their icon slot (empty, nothing is sent). In a **card** they are small texts without icon.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
 * **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side).
