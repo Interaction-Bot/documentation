@@ -19,15 +19,19 @@ _**Edit**_ and _**Preview**_ switch between writing and the exact rendering (Mar
 
 ## The parts of a message (card and embed)
 
-Only the title and the text are there at the start. What is missing is added with the row of buttons under the switch (or the _**Add**_ menu) and removed with the small cross that appears when you point at a part:
+Only the title and the text are there at the start. Everything else is added with the **Add** menu (next to _Import / export_): a list that unfolds, like the emoji picker, with every part sorted by family (text, images, message frame, more), each with an icon and a sentence. A part that is already there is not offered again. Each embed of a message has the same menu. A part is removed with the small cross that appears when you point at it:
 
 * **Text above the message**, outside the frame.
 * **Author**: a name, an icon and a link.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
-* **Fields**: a name and a value, up to 25. In an embed a field can be _inline_ (up to three side by side); the arrows reorder them.
+* **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side). Point at a field and use its up and down arrows to put it where you want.
+* **Free text**: a field without a title. It is how you add text _under_ the fields: Discord fixes the order of the parts of an embed (author, title, text, fields, image, footer), but fields can be moved, so a free text can sit anywhere among them.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
 * **Color**: the bar at the left of the message (the round button at the right of it), or none.
+* **Free layout**: the last entry of the menu turns the message into [blocks](#blocks) (each part becomes a block, in the order you can then change with arrows). The original message is kept: pick _Card_ or _Embed_ again to get it back.
+
+Server emojis (`<:name:id>`, the ones you pick in the emoji list) are shown as images in the text fields, as Discord displays them; what the bot sends is the written form.
 
 ## Images: a link or drag and drop
 
@@ -35,7 +39,7 @@ Every image slot (author icon, thumbnail, image, footer icon, and every image of
 
 * **Drag and drop** a file from your computer on the slot, or click the slot and drop it in the zone. PNG, JPEG or WebP, 4 MB at most; each server keeps up to 10 uploaded images (20 MB in all).
 * **A link**: click the slot, paste the address of the image (`https://…`) and apply. Dragging a link from a web page onto the slot works too.
-* **A variable**: the avatar of the owner, the icon of the server or the avatar of the bot, replaced by the real image at each message.
+* **A variable**: the avatar of the owner, the icon of the server or the avatar of the bot, replaced by the real image at each message. In the dashboard they are shown with real images: your own avatar for the member, and the icon of the server you are setting up.
 
 ## Several embeds
 
