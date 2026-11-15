@@ -41,7 +41,7 @@ The first switch of each message tab turns the message on or off. While it is of
 Every message of the page is written with the **message builder**, the same editor as the [reaction roles](reaction-roles.md) and [temp voice](temp-voice.md) messages: the welcome, goodbye and private messages, the **variants**, the goodbye of a **kick** and of a **ban**, the **boost** and **role** messages, and the message of the **welcome hub**. You write the message where it appears: embed or card, several embeds, fields, images (by link or by drag and drop), link buttons, free layout with blocks, undo, import and export of JSON. See [Message builder](message-builder.md). The _{ }_ button lists the variables of the message with their description (`{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{inviter}`…; a boost message has `{boosts}`, a role message `{role}`, the hub only `{server}`), and the preview replaces them by an example. The avatar of the member, the icon of the server and the avatar of the bot can be used as images.
 
 * **Templates.** The _**Message templates**_ menu starts with the page's own templates (_Friendly_, _Gaming_, _Chill_, _Community_): one click **replaces** the message with a finished one (an embed with its text and color) and turns on the banner with the template's background. A template that writes a detail the message does not have (the inviter in a boost message) is not offered. The generic templates (card, announcement, rules, columns…) follow.
-* **Banner of the bot.** Under the message, a switch turns on the **welcome banner**: an image drawn by the bot (the member's avatar, a title and a subtitle, a background of your choice, or your own layout) attached to the message as its main picture. It has its own preview. The free layout has no place for it. On the hub, the same place holds the _background picture_ (one of the pictures of the bot).
+* **Banner of the bot.** Under the message, a switch turns on the **welcome banner**: an image drawn by the bot (the member's avatar, a title and a subtitle, a background of your choice, or your own layout) attached to the message as its main picture. It has its own preview. **You choose where it goes**: click any image of the message (thumbnail, large image, message image, an image block) and pick _**Welcome banner**_ in the list of variables; without a choice, it is the large image of the message. The free layout has no place for it. On the hub, the same place holds the _background picture_ (one of the pictures of the bot).
 * **Messages written before.** Their text, embed (title, text, footer, color, image, avatar as thumbnail) and banner are taken over by the builder when the page opens, and the page is not "modified" for that. A message turned on with nothing written starts as a real text to correct (an embed with a title and a text).
 * **Options.** _Mention the new member_ and _Delete the message automatically_ stay under the message of the arrival. The button _**Send me a test**_ posts a real message from the saved settings, with the case to simulate (it replaces the preview column: the builder has its own preview).
 * **Buttons.** The link buttons of the hub, « I accept » and « Read in my language » are under an embed or a text; in a card or a free layout they are rows of buttons in the layout itself. If Discord refuses to edit the hub message because it changed from an embed to a card (or back), the bot deletes it and sends a new one.
@@ -86,44 +86,14 @@ There is no automatic deletion on the Private message tab.
 
 ### Banner
 
-The banner is a picture of **1000 × 350 px**, with the avatar of the member, a title and a subtitle. It is turned on with the switch of the _**Welcome banner**_ section, under the message of each tab (and of each variant, goodbye by kind, boost and role message). The bot attaches it to the message as its main picture (the image of the first embed or card; the first picture of a plain message).
+The banner is a picture of **1000 × 350 px**, with the avatar of the member, a title and a subtitle. It is turned on with the switch of the _**Welcome banner**_ section, under the message of each tab (and of each variant, goodbye by kind, boost and role message). The bot draws it for **each** new member and attaches it to the message; you choose where it goes (see above), and without a choice it is the large image of the message.
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| **Classic layout** or **Custom layout** | Classic layout | Classic: the avatar, the title and the subtitle. Custom: the banner made in the banner editor. |
-| **Design my own layout** (or **Edit the layout**) | - | Opens the banner editor. _**Back to the classic layout**_ removes the custom layout. |
-| **Banner background** | _Aurora_ | One of the 8 designs: _Aurora_, _Sunset_, _Ocean_, _Forest_, _Midnight_, _Neon_, _Candy_ or _Slate_. Or one of your pictures, or a solid color (**Solid color**). |
-| **Your picture** | Empty | Drop a PNG, JPEG or WebP picture (4 MB at most). Up to **10** pictures per server. Delete one with its trash button. |
-| **Banner title** | Empty: _Welcome {user.display_name}!_ (goodbye and private message: see the tab) | The big text. Up to **120** characters. No emoji. |
-| **Banner subtitle** | Empty: _You are the {member_count.ordinal} member_ | The smaller text under the title. Up to **120** characters. |
+The section offers two ways:
 
-When a custom layout is saved, the title and subtitle are not used; the texts are written in the banner editor. The classic title and subtitle are kept if you go back to the classic layout.
+* **Ready-made templates**: _Classic_, _Neon_, _Sakura_, _Starry_, _Lo-fi_, _Sunset_, _Mountain_, _Glass_, _Candy_, _Minimal_, _Manga_ and _Invited_ (who invited the member, welcome only). Each one is a style: the background, the colors, the avatar frame, the fonts and the place of the texts go together, and each shows a live preview. One click chooses it. The _Banner title_ and _Banner subtitle_ fields then change the texts, and the layout follows as long as it is the one of the template.
+* **_Create my own layout_**: the free editor (avatar, texts, shapes, pictures placed where you want, every element movable). Once the layout has been changed there, no template follows it any more.
 
-Quick insertion buttons under the title and subtitle: _Member name_, _Server name_, _Member rank (1st, 2nd…)_, _Number of members_ and _Username_.
-
-#### Banner editor
-
-The editor opens with _**Design my own layout**_ and shows the banner at full size, the list of elements, the templates and the properties of the selected element.
-
-| Part | What it does |
-| --- | --- |
-| _**Add an element**_ toolbar | _**Text**_, _**Avatar**_, _**Shape**_ or _**Picture**_. At most **20** elements, and **4** pictures. |
-| **Templates** | _Classic_, _Centered_, _Minimal_, _Framed_ and _Invited by_. A template replaces the current layout. |
-| **Layers** | The list of elements. The first one is at the back. _**Bring forward**_, _**Send backward**_, _**Duplicate**_ and _**Delete**_ act on the selected element. |
-| **Real rendering** (_**Show the real rendering**_) | Asks the bot to draw the exact banner, about you. At most 30 times a minute. |
-| **Done** | Keeps the layout on the page. It is saved with _**Save**_. |
-| **Discard** | Asks _Discard your changes?_ with _**Discard**_ and _**Keep editing**_. |
-
-Element properties:
-
-| Element | Settings and defaults |
-| --- | --- |
-| **Text** | Text (variables allowed, up to 200 characters), font (_Sans_ by default, _Serif_, _Mono_), bold (Off), size (10 % of the banner height by default), color (`#FFFFFF`), alignment (_Left_ by default, _Center_, _Right_), vertical position (_Middle_ by default, _Top_, _Bottom_), shadow (On). |
-| **Avatar** | Whose picture (_The new member_ by default, _Who invited them_, _The server icon_), shape (_Circle_ by default, _Rounded square_, _Square_), border width (6 by default, 0 to 20), border color (`#FFFFFF`), shadow (On). |
-| **Shape** | Shape (_Rectangle_ by default, _Circle_), fill color (`#000000`), gradient with a second color (Off), opacity (35 % by default), rounded corners (Rectangle only), border width (0), border color (`#FFFFFF`). |
-| **Picture** | One of your pictures, fit (_Fill the box_ by default, or _Show it all_), rounded corners, opacity (100 % by default), border width (0), border color (`#FFFFFF`). |
-
-Every element has its position and size in percent of the banner: left, top, width and height. Use _**Center horizontally**_ and _**Center vertically**_ to center an element.
+_**Change the background or use a picture**_ (folded) holds the other backgrounds (gradients, pictures of the bot, a solid color, your own pictures, 10 per server) and _Use the picture as the whole banner_.
 
 ### Preview
 

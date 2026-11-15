@@ -6,7 +6,7 @@ description: "Invitations page of the dashboard: status lights, settings, rules 
 
 <figure><img src="../../.gitbook/assets/dash-invites.png" alt="Invitations page"><figcaption><p>Invitations page</p></figcaption></figure>
 
-The **Invitations** page turns the [invite tracker](../../management/invite-tracker.md) on and off, and manages it. The page has five tabs: _**Status**_, _**Rules**_, _**Ranking**_, _**Journal**_ and _**Corrections**_.
+The **Invitations** page turns the [invite tracker](../../management/invite-tracker.md) on and off, and manages it. The page is split in three groups, each with its own tabs, so only a small part is on screen at a time: _**Tracking**_ (_**Status**_, _**Rules**_, _**Links**_), _**Rankings**_ (_**Ranking**_, _**Growth**_) and _**History**_ (_**Journal**_, _**Corrections**_, _**Planned**_). Each click on a group or a tab is written in the browser history, so the back arrow goes back to the previous tab of the page. The _Status_ tab shows only the state and the checklist of what the bot can do; the details, what is kept, the tools and the arrival message are folded cards, one click away.
 
 ## Localization
 
