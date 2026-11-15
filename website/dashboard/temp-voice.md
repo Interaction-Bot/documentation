@@ -149,7 +149,11 @@ On the _**Control panel**_ tab, choose a **text channel**. The page shows the ch
 
 The bot needs the View Channel, Send Messages and Embed Links permissions in that channel.
 
-The preview shows the buttons the members will have. The buttons turned off in _Who can do what_ are crossed out, and a line gives the number of buttons available.
+The panel is laid out like a [reaction roles](reaction-roles.md) panel: a card with the message as members will see it (written with the [message builder](message-builder.md)), then under it, in the same card, the settings of the buttons.
+
+* **In the message**: the buttons are icons in rows of five, with the _More options_ menu under them. A click on a button **selects** it (its line is highlighted in the list below); the small cross on a button removes it; the **+** adds one.
+* **Panel buttons** (under the message): the list of what is **shown**, in the order of the panel, then the ones that are **available**. For each shown button: its icon (click it to pick another), the up and down arrows, and a switch to take it off the panel. A switch on an available button puts it on the panel (up to 25). The _More options_ menu has its own switch.
+* The buttons turned off in _Who can do what_ are crossed out, and a line gives the number of buttons available.
 
 ## Moderation
 
