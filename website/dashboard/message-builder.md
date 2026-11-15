@@ -107,9 +107,12 @@ The _Blocks_ form is a free layout, built like the editors of the Discord compon
 * **Section**: one to three texts and, next to them, a thumbnail, a link button or nothing.
 * **Separator**: a visible line or not, a small or a large space.
 * **Link buttons**: up to five buttons in a row, each with an emoji, a text and an address.
+* **Outside the card**: every block has a button in its bar that takes it **out of the card**. A block outside the card is a component of the message of its own (a banner, a text, a section…), so **the order of the blocks is the order of the message**: for example the banner, then a text, then the card with the rest. Blocks that follow each other inside share one card; a block outside between two of them splits the card in two. Converting an embed to the free layout keeps Discord's order (the text above and the pictures of the message become blocks outside the card, above it).
 * **Message buttons**: where the buttons of the feature go (the buttons of the control panel, the choices of a reaction roles panel). One at most; without it the buttons are at the end of the message.
 
 _**Add a block**_ adds a block at the end; each block has arrows (move), a copy icon and a cross. _Whole message as spoiler_ hides all of it, and the round button at the right sets the color of the bar. The counter shows the components (30 at most), the characters (4,000) and the images (10) used; it turns red when Discord would refuse the message. A message has 25 blocks at most.
+
+In the preview, pictures are drawn like Discord draws them: at most 400 px wide and 300 px tall, in their own proportions.
 
 ## Limits of Discord
 
