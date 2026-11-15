@@ -21,18 +21,33 @@ On a server where the Welcome page has never been saved, and where no message is
 
 After the quick start, the page shows the four tabs. Click _**Save**_ to keep the settings.
 
-## Tabs
+## Sections
 
-The page has four tabs. The tabs have no colored dot. The state of each message is its switch at the top of its tab.
+The page has two levels of navigation, so only one small part is on screen at a time.
 
-| Tab | Label | Turns on with |
-| --- | --- | --- |
-| Welcome | _**Welcome**_ | _Send a message when someone joins_ |
-| Goodbye | _**Goodbye**_ | _Send a message when someone leaves_ |
-| Private message | _**Private message**_ | _Send a private message to new members_ |
-| Roles | _**Roles**_ | Roles chosen in the tab |
+| Group | Sections |
+| --- | --- |
+| _**Messages**_ | _**Welcome**_, _**Goodbye**_, _**Private message**_ |
+| _**Roles and events**_ | _**Roles**_, _**Boost**_, _**Role gained or lost**_ |
+| _**Welcome hub and rules**_ | the welcome hub and the _**Rules**_ |
+| _**Settings**_ | _**Settings**_, _**Problems**_ |
 
-The first switch of each message tab turns the message on or off. While it is off, the rest of the tab is hidden, and the preview is hidden too.
+A small dot before a message tells if it is on. Each message is split into three parts: _**Message**_ (what is written), _**Sending**_ (delay, deletion, who and when) and _**Variants**_ (more texts drawn at random). The preview only shows next to the _Message_ part.
+
+**Browser history.** Each click on a group, a section or a part is written in the browser history: the back arrow goes back to the previous section of the page, not to another page of the dashboard. The address keeps it (`?tab=leave&part=sending`), so a link opens the same place.
+
+The first switch of each message tab turns the message on or off. While it is off, the rest of the tab is hidden, and the preview is hidden too. A message turned on with nothing written starts as a real text in the builder (an embed with a title and a text to correct), not as an empty field.
+
+## Write the message with the builder
+
+The _**Message**_ part of the welcome, goodbye and private messages has two ways of writing, chosen at the top:
+
+* **Builder** (the one a new message starts with): the same editor as the [reaction roles](reaction-roles.md) and [temp voice](temp-voice.md) messages. You write the message where it appears: embed or card, several embeds, fields, images (by link or by drag and drop), link buttons, free layout with blocks, templates, undo, import and export of JSON. See [Message builder](message-builder.md). The _{ }_ button lists the variables of the message with their description (`{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{inviter}`…), and the preview replaces them by an example. The avatar of the member, the icon of the server and the avatar of the bot can be used as images.
+* **Classic**: the former editor (text, embed and the banner drawn by the bot). It stays for messages written before.
+
+Going from _Classic_ to _Builder_ takes over the text, the embed (title, text, footer, color, image, the avatar of the member as thumbnail) and keeps the former message untouched. The banner has no equivalent in the builder: the page says so, and switching back to _Classic_ gives it back. While a message is written with the builder, the bot sends it and ignores the former one. _Mention the new member_ and _Delete the message automatically_ stay under the builder. The button _**Send me a test**_ posts a real message from the saved settings, with the case to simulate.
+
+The variants, the messages by kind of leave (kick, ban), the boost messages and the role messages are still written with the classic editor.
 
 ### Welcome
 

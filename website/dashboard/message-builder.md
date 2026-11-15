@@ -4,7 +4,7 @@ description: "The message builder of the dashboard: templates to start from, the
 
 # Message builder
 
-The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), and the message of a [reaction roles](reaction-roles.md) panel. You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
+The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), the message and the replies of a [reaction roles](reaction-roles.md) panel, the warning of the [honeypot](honeypot.md), and the welcome, goodbye and private messages of the [Welcome](welcome.md) page. You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
 
 ## Start from a template
 
@@ -31,7 +31,7 @@ Only the title and the text are there at the start. Everything else is added wit
 
 Click (or tap) any component (the author, the title and text, a field, the banner, the time, the buttons, the footer) to **select** it: **only the selected component shows its bar**, just above it, without any frame around it. The bar follows the component when you move it, until you select another one or press _Esc_. From left to right:
 
-* the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`;
+* the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
 * **up** and **down arrows**: move the component;
 * **+**: add a component **right under this one** (the same Add menu);
 * the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
