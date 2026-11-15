@@ -36,18 +36,15 @@ A small dot before a message tells if it is on. Each message is split into three
 
 **Browser history.** Each click on a group, a section or a part is written in the browser history: the back arrow goes back to the previous section of the page, not to another page of the dashboard. The address keeps it (`?tab=leave&part=sending`), so a link opens the same place.
 
-The first switch of each message tab turns the message on or off. While it is off, the rest of the tab is hidden, and the preview is hidden too. A message turned on with nothing written starts as a real text in the builder (an embed with a title and a text to correct), not as an empty field.
+The first switch of each message tab turns the message on or off. While it is off, the rest of the tab is hidden, and the preview is hidden too. ## Write the message with the builder
 
-## Write the message with the builder
+Every message of the page is written with the **message builder**, the same editor as the [reaction roles](reaction-roles.md) and [temp voice](temp-voice.md) messages: the welcome, goodbye and private messages, the **variants**, the goodbye of a **kick** and of a **ban**, the **boost** and **role** messages, and the message of the **welcome hub**. You write the message where it appears: embed or card, several embeds, fields, images (by link or by drag and drop), link buttons, free layout with blocks, undo, import and export of JSON. See [Message builder](message-builder.md). The _{ }_ button lists the variables of the message with their description (`{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{inviter}`…; a boost message has `{boosts}`, a role message `{role}`, the hub only `{server}`), and the preview replaces them by an example. The avatar of the member, the icon of the server and the avatar of the bot can be used as images.
 
-The _**Message**_ part of the welcome, goodbye and private messages has two ways of writing, chosen at the top:
-
-* **Builder** (the one a new message starts with): the same editor as the [reaction roles](reaction-roles.md) and [temp voice](temp-voice.md) messages. You write the message where it appears: embed or card, several embeds, fields, images (by link or by drag and drop), link buttons, free layout with blocks, templates, undo, import and export of JSON. See [Message builder](message-builder.md). The _{ }_ button lists the variables of the message with their description (`{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{inviter}`…), and the preview replaces them by an example. The avatar of the member, the icon of the server and the avatar of the bot can be used as images.
-* **Classic**: the former editor (text, embed and the banner drawn by the bot). It stays for messages written before.
-
-Going from _Classic_ to _Builder_ takes over the text, the embed (title, text, footer, color, image, the avatar of the member as thumbnail) and keeps the former message untouched. The banner has no equivalent in the builder: the page says so, and switching back to _Classic_ gives it back. While a message is written with the builder, the bot sends it and ignores the former one. _Mention the new member_ and _Delete the message automatically_ stay under the builder. The button _**Send me a test**_ posts a real message from the saved settings, with the case to simulate.
-
-The variants, the messages by kind of leave (kick, ban), the boost messages and the role messages are still written with the classic editor.
+* **Templates.** The _**Message templates**_ menu starts with the page's own templates (_Friendly_, _Gaming_, _Chill_, _Community_): one click **replaces** the message with a finished one (an embed with its text and color) and turns on the banner with the template's background. A template that writes a detail the message does not have (the inviter in a boost message) is not offered. The generic templates (card, announcement, rules, columns…) follow.
+* **Banner of the bot.** Under the message, a switch turns on the **welcome banner**: an image drawn by the bot (the member's avatar, a title and a subtitle, a background of your choice, or your own layout) attached to the message as its main picture. It has its own preview. The free layout has no place for it. On the hub, the same place holds the _background picture_ (one of the pictures of the bot).
+* **Messages written before.** Their text, embed (title, text, footer, color, image, avatar as thumbnail) and banner are taken over by the builder when the page opens, and the page is not "modified" for that. A message turned on with nothing written starts as a real text to correct (an embed with a title and a text).
+* **Options.** _Mention the new member_ and _Delete the message automatically_ stay under the message of the arrival. The button _**Send me a test**_ posts a real message from the saved settings, with the case to simulate (it replaces the preview column: the builder has its own preview).
+* **Buttons.** The link buttons of the hub, « I accept » and « Read in my language » are under an embed or a text; in a card or a free layout they are rows of buttons in the layout itself. If Discord refuses to edit the hub message because it changed from an embed to a card (or back), the bot deletes it and sends a new one.
 
 ### Welcome
 
@@ -55,13 +52,12 @@ The welcome message is posted in a channel when a member joins.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| **Send a message when someone joins** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _Welcome {user} to {server}! You are our {member_count.ordinal} member._ is written. |
+| **Send a message when someone joins** | Off | Turns the message on. A message turned on with nothing written starts as an embed with the title _Welcome!_ and the text _Welcome {user} to {server}! You are our {member_count.ordinal} member._, to correct. |
 | **Channel** | Nothing chosen | A text channel or an announcement channel. A channel is required when the message is on. |
-| **Message** | Empty | The text of the message. Up to **2000** characters. Click a variable button (for example _**Mention the member**_) to insert it where the cursor is. |
-| **Variables** | - | Buttons that insert `{user}`, `{user.display_name}`, `{server}`, `{member_count}`, `{member_count.ordinal}`, `{user.name}`, `{account_created}`, `{date}`, `{user.id}`, `{inviter}`, `{inviter.name}`, `{invites}` and `{invite_label}`. |
-| **Show the message as a card** | Off | Shows the text as a card: see [Card](#card-of-a-message) below. |
+| **Message** | The text above | Written with the [builder](#write-the-message-with-the-builder). Up to **4000** characters of text. |
+| **Mention the new member** | On | The member is mentioned and notified. Off: the name is written as text, nobody is notified. |
 | **Delete the message automatically** | Never | The welcome message is deleted after 10 seconds, 30 seconds, 1 minute, 5 minutes or 1 hour. _Never_ keeps it. This option is only on the Welcome tab. |
-| **Send a welcome banner** | Off | Sends a banner with the message: see [Banner](#banner). |
+| **Welcome banner** | Off | Sends a banner with the message: see [Banner](#banner). |
 
 ### Goodbye
 
@@ -71,9 +67,8 @@ The goodbye message is posted in a channel when a member leaves. The member is n
 | --- | --- | --- |
 | **Send a message when someone leaves** | Off | Turns the message on. When it is turned on with an empty text and no card, the text _{user.display_name} left the server._ is written. |
 | **Channel** | Nothing chosen | A text channel or an announcement channel. A channel is required when the message is on. |
-| **Message** | Empty | Up to **2000** characters. The variable buttons do not show `{user}`. Typing `{user}` still shows the name of the member. |
-| **Show the message as a card** | Off | Same as the Welcome tab. |
-| **Send a goodbye banner** | Off | Sends a banner with the message. Default texts: title _Goodbye {user.display_name}!_, subtitle _We are now {member_count} members_. |
+| **Message** | The text above | Written with the [builder](#write-the-message-with-the-builder). The member is named, not pinged: `{user}` shows the name. |
+| **Goodbye banner** | Off | Sends a banner with the message. Default texts: title _Goodbye {user.display_name}!_, subtitle _We are now {member_count} members_. |
 
 There is no automatic deletion on the Goodbye tab.
 
@@ -85,33 +80,16 @@ The private message is sent to the new member, in private messages. It needs no 
 | --- | --- | --- |
 | **Send a private message to new members** | Off | Turns the private message on. Nothing happens if the member closed their private messages. When it is turned on with an empty text and no card, the text _Welcome to {server}, {user.display_name}! Take a look at the rules and enjoy your stay._ is written. |
 | **Message** | Empty | Up to **2000** characters. |
-| **Show the message as a card** | Off | Same as the Welcome tab. |
-| **Send a banner with the private message** | Off | Sends a banner with the message. Default texts: title _Welcome to {server}!_, subtitle _Glad to have you with us_. |
+| **Banner with the private message** | Off | Sends a banner with the message. Default texts: title _Welcome to {server}!_, subtitle _Glad to have you with us_. |
 
 There is no automatic deletion on the Private message tab.
 
-### Card of a message
-
-The card is shown when _**Show the message as a card**_ is on.
-
-| Setting | Default | What it does |
-| --- | --- | --- |
-| **Title** | Empty | The title of the card. Up to **256** characters. |
-| **Message** (text of the card) | Empty | The body of the card. Up to **4096** characters. |
-| **Color** | `#3894FE` (blue) | The color of the edge of the card. Picked with the color picker. |
-| **Show the member's avatar** | On | Shows the avatar of the member as a small picture. |
-| **Picture of the card** | None | A large picture at the bottom of the card. Drop a picture in the area, or click it to choose one. The picture is removed with _**Remove**_. A card saved with an `https://` address keeps it, and can only be removed. |
-| **Small text at the bottom** | Empty | The footer of the card. Up to **2048** characters. |
-
-The page shows the recommended size of the picture: **1200 × 675 px** (16:9).
-
 ### Banner
 
-The banner is a picture of **1000 × 350 px**, with the avatar of the member, a title and a subtitle. It is turned on with the _**Send a … banner**_ switch of each tab.
+The banner is a picture of **1000 × 350 px**, with the avatar of the member, a title and a subtitle. It is turned on with the switch of the _**Welcome banner**_ section, under the message of each tab (and of each variant, goodbye by kind, boost and role message). The bot attaches it to the message as its main picture (the image of the first embed or card; the first picture of a plain message).
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| **Show the banner inside the card** | On | Shown only when the message is a card. On: the banner is the picture of the card. Off: the banner is sent under the message, and the card can have its own picture. |
 | **Classic layout** or **Custom layout** | Classic layout | Classic: the avatar, the title and the subtitle. Custom: the banner made in the banner editor. |
 | **Design my own layout** (or **Edit the layout**) | - | Opens the banner editor. _**Back to the classic layout**_ removes the custom layout. |
 | **Banner background** | _Aurora_ | One of the 8 designs: _Aurora_, _Sunset_, _Ocean_, _Forest_, _Midnight_, _Neon_, _Candy_ or _Slate_. Or one of your pictures, or a solid color (**Solid color**). |
@@ -149,7 +127,7 @@ Every element has its position and size in percent of the banner: left, top, wid
 
 ### Preview
 
-The right side of each message tab shows the message as Discord will display it. The server name is the name of your server, the member name is the example _Alex_, and the member count is the example 1,234. The banner is drawn in the page, so it can be a little different from the real one. Use _**Show the real rendering**_ in the banner editor to see the exact picture.
+The builder shows the message as Discord will display it (_**Preview**_): the server name is the name of your server, the member name is the example _Alex_, and the member count is the example 1,234. The banner has its own preview in its section; it is drawn in the page, so it can be a little different from the real one. Use _**Send me a test**_ to get the real message.
 
 ### Automatic roles
 
@@ -160,6 +138,7 @@ The Roles tab sets the roles given automatically.
 | **Roles for new members** | None | Roles given to every new member. At most **10**. |
 | **Wait until the member accepts the rules** | On | When the server uses membership screening, the roles are given after the member accepts the rules. Off: the roles are given when the member joins. |
 | **Roles for new bots** | None | Roles given to every new bot. At most **10**. |
+| **Roles for a member** | None | Extra roles for one member, given when they arrive. The _Member_ field **searches by name** from the first letter (the members of the server are proposed with their avatar); an identifier or a mention pasted also works. At most **50** members, **10** roles each. |
 
 You can only choose a role that you could give yourself (*Manage Roles*, below your highest role) and that has no moderation or administration permission. The page checks the roles you add when you save. The bot checks its own position when it gives a role, not when you save: a role that is not below the highest role of the bot is skipped, and the Journal of the dashboard says so.
 
