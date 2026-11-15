@@ -100,24 +100,16 @@ The owner, administrators, people who manage the server, bots, and members who c
 
 ## Tab Warning
 
-The message pinned in each trap channel. Choose one mode.
+The message pinned in each trap channel. Two choices only.
 
-| Mode | Default | What it does |
+| Choice | Default | What it does |
 | --- | --- | --- |
-| _**Standard**_ | Selected | The bot's own text: title _🍯 Do not write in this channel_ and a short explanation. |
-| _**Custom**_ | | Shows the fields below. |
-| _**None**_ | | No warning is posted. A note reminds you that a real person then has nothing telling them not to write there. |
+| _**Message**_ | Selected | The warning is a message written with the same [message builder](message-builder.md) as the [reaction roles](reaction-roles.md): the text of the bot is **already written** (title _🍯 Do not write in this channel_ and a short explanation), edit it as you like. |
+| _**Nothing**_ | | No warning is posted. A note reminds you that a real person then has nothing telling them not to write there. |
 
-Custom fields (shown only for _**Custom**_):
+In _**Message**_ you can turn the text into an embed or a card, add fields, a thumbnail or a banner (by link or by dropping an image), a footer, the color bar, or use the free layout with blocks. The **{ }** button lists the variables: `{SERVER}` (the name of the server). A title and a text left as they are stay _the text of the bot_, in the language of the server; removing the title and the text (their cross) removes them from the message. Up to 4,000 characters of text.
 
-| Field | Limit | Description |
-| --- | --- | --- |
-| Title | 256 characters | Title of the warning. |
-| Text | 4096 characters | Text of the warning. |
-| Footer | 2048 characters | Small text at the bottom. |
-| Color | - | Color bar of the warning, chosen with the color picker. |
-
-A **Preview** on the right shows the warning as Discord displays it, with the label _Pinned by the bot_. In _**None**_, the preview says that no warning is posted.
+The message is shown as Discord displays it (_Edit_ / _Preview_), with the label _Pinned by the bot_ under it. When you change the form of the message (embed to card), the bot posts a new message and pins it, as a message of one kind cannot be edited into the other. The pictures you drop are deleted when the warning no longer shows them.
 
 ## Tab History
 
