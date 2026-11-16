@@ -139,6 +139,8 @@ Any change makes a bar appear at the bottom of the page: _You made changes, save
 | _**Save**_ | Saves all the tabs at once. The bot uses the new settings right away. |
 | _**Cancel**_ | Restores the last saved settings. |
 
+The **rules**, the **welcome hub** and the **messages** (boost, roles) have no _Save_ button of their own: a change in one of them makes the **same bar** appear. When changes are waiting in several places, there is still one bar: _**Save**_ saves all of them, _**Cancel**_ cancels all of them. While changes are waiting in the rules, the hub or a message, the other tabs of the page stay closed (the bar shakes and says _Save or cancel your changes before moving on_), so that nothing is lost by changing tab. A new message that is not saved yet shows the bar; _**Cancel**_ abandons it. _**Back to the list**_ leaves a message that has no change.
+
 When the save fails, the page shows the reason of the error:
 
 | Message | Cause |

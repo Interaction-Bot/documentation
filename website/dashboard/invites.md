@@ -20,7 +20,8 @@ The page has no extension switch. The toggle on the _**Status**_ tab is the swit
 | --- | --- |
 | _**Status**_ | With the bar at the bottom of the page. The bar says _You made changes, save them!_, with _**Save**_ and _**Cancel**_. _**Cancel**_ restores the last saved settings. |
 | _**Rules**_ | Each add or remove is applied at once. There is no bar. |
-| _**Ranking**_, _**Journal**_, _**Corrections**_ | Each correction is applied at once. The reset is applied at once too. |
+| _**Ranking**_ (the pinned rankings) | With the same bar. Choose a channel for a pinned ranking: the bar appears, _**Save**_ sends the pinned rankings, _**Cancel**_ brings back the saved channels. There is no _Save the rankings_ button on the card. While the bar is shown, the other tabs of the page stay closed: save or cancel first, so that nothing is lost by changing tab. |
+| _**Ranking**_ (the list), _**Journal**_, _**Corrections**_ | Each correction is applied at once. The reset is applied at once too. |
 
 ## Status
 

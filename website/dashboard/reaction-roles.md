@@ -21,11 +21,10 @@ The switch of a row turns the panel on or off at once. _**Edit**_ opens the edit
 
 ## The editor
 
-The header has the **back arrow**, the **name** of the panel (click to rename) and three buttons:
+The header has the **back arrow**, the **name** of the panel (click to rename) and the **Publish** button. There is no _Save_ button in the header: saving and cancelling use the bar at the bottom of the page (see _Unsaved changes_ below).
 
-* _**Discard**_: goes back to the saved version.
-* _**Save**_: keeps your changes without touching the message.
 * _**Publish**_ (_**Update the message**_ once published): saves, then writes or edits the message. The button stays gray while something is missing; pressing it then shows what.
+* On the bar, _**Save**_ keeps your changes without touching the message, and _**Cancel**_ goes back to the saved version.
 
 A list at the top says what prevents publishing (no channel, a choice without role, an emoji used twice, a role the bot cannot give…). After a refused _Publish_, the first choice to fix opens in the settings.
 

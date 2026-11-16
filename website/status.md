@@ -44,6 +44,10 @@ The **Bot stats** section shows:
 * **Shards**: the total number of shards of the bot. A shard is a connection to Discord that carries a part of the servers.
 * **USERS**: the sum of the member counts of all the servers. A member who is in several servers is counted in each of them, so this is not the number of different people.
 
+## Last 7 days
+
+The section at the bottom of the page lists **every change of state of the last 7 days**, day by day (_Today_, _Yesterday_, then the date), the most recent first. Each line has the component (a cluster, the Website, the Dashboard, the link with the bot), its new state, the time of the change and **how long** this state lasted (_for 12 min_, _for 1 d 6 h_). The current state of each component says _Ongoing_. When nothing changed in the week, the page says so instead of hiding the section. The list scrolls inside its frame. The status service keeps the week of changes, and keeps it across its own restarts when it has a file to write it to.
+
 ## Server localization
 
 Use this section to find where your server runs: enter the **ID** of your server in the **Server ID** field (you can find it in the [Overview](dashboard/overview.md) page of the dashboard), then click on _**Calculate**_.
