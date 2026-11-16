@@ -12,54 +12,59 @@ There is no switch of form to choose before you write: the message takes the for
 
 * **Cards**: _Card_ (one block, the title and the text), _Announcement_ (the banner on top, a footer and the time), _Rules_ (three fields to fill), _Welcome_ (author with icon, thumbnail and footer).
 * **Embeds**: _Embed_ (the classic Discord embed with author and footer), _Columns_ (three fields side by side), _Several embeds_ (a main embed and two more in the same message).
-* **Other**: _Plain message_ (only text) and _Free layout_ ([blocks](#blocks)).
+* **Other**: _Plain message_ (only text).
 
-The four forms a message can take:
+The forms a message can take:
 
 * **Card**: one block with the text, the images and the buttons inside it. A message can hold several cards.
 * **Embed**: the classic Discord embed. Author with icon, title, text, fields side by side, thumbnail, image, footer with icon and time. The buttons are under the embed. It can hold up to **ten embeds**.
-* **Blocks**: a free layout, built block by block (see [Blocks](#blocks)).
 * **Plain message**: only text, without a frame. The buttons are under it.
 
 _**Edit**_ and _**Preview**_ switch between writing and the exact rendering (Markdown rendered, variables replaced by an example).
 
 ## The parts of a message (card and embed)
 
-Only the title and the text are there at the start. Everything else is added with the **Add** menu, a list that unfolds like the emoji picker, with every part sorted by family (text, images, message frame, more), each with an icon and a sentence. A part that is already there is not offered again.
+Only the title and the text are there at the start. Everything else is added with one of the **two Add buttons**, each a list that unfolds like the emoji picker, with an icon and a sentence for every entry. A part that is already there is not offered again.
+
+* **Add to the embed** (or _Add to the card_), **inside** the embed, at the bottom: what belongs to the embed. Author, thumbnail, large image, a field, a free text, a **separator**, the footer, the time.
+* **Add to the message**, **under** the message: what belongs to the message itself, outside the embed. The text of the message, an image of the message, another embed.
+
+The **+** of a component's bar follows the same rule: on a part of the embed it adds to the embed, right under that part; on the text or an image of the message it adds to the message.
 
 ### The bar of a component
 
 Click (or tap) any component (the author, the title and text, a field, the banner, the time, the buttons, the footer) to **select** it: **only the selected component shows its bar**, just above it, without any frame around it. The bar follows the component when you move it, until you select another one or press _Esc_. From left to right:
 
 * the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
-* **up** and **down arrows**: move the component;
-* **+**: add a component **right under this one** (the same Add menu);
+* **up** and **down arrows**: move the component (see [What you can place where](#what-you-can-place-where));
+* **+**: add a component **right under this one**;
+* on an image, a **pencil** that opens the choice of the image. A click on an image only selects it;
 * the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
 * on a field, a **copy** button that duplicates it right under it.
 
 Keyboard: **Alt + ↑ / ↓** moves the selected component without touching the text.
 
-The **Add** button under the message adds at the end.
-
 ### What you can place where
 
-* In a **card** every part moves, the banner (large image) included: author, title and text (with its thumbnail), each field, the banner, the buttons or choices, the footer. The text above the message is the first line of the card. The bot sends the message in this order.
-* In an **embed** the order is Discord's (author, title, text, fields, image, footer): the fields have arrows, and the **large image** can go **up** above the embed (it then becomes an image of the message, see [Images of the message itself](#images-of-the-message-itself)) and come back **down** into it with the arrows of the last image of the message. Fields side by side exist only here (the inline button of a field).
-* For a free order of everything with columns left out, use the [blocks](#blocks) form.
+Every component has arrows.
+
+* In a **card** every part moves: author, title and text (with its thumbnail), each field or separator, the large image, the buttons or choices, the footer. The **text** and the **images of the message** are outside the card: above it, or **under it** (move them down past the card). The bot sends the message in this order.
+* An **embed** has the order of Discord: the text of the message, its images, then the embed (author, title, text, fields, image, footer). Fields move among themselves. **Any other move** (the text under the embed, the image above the title…) switches the message to a **card**, where the order is free: a note says so, with **Undo**. Nothing is erased, but a card has no author icon, no footer icon and no fields side by side.
+* The **large image** has a button in its bar that takes it **out of the embed** (it becomes an image of the message); an image of the message has a button that puts it **into the embed**.
 
 ### The parts
 
-* **Text above the message**: above an embed or a plain text; in a **card** it is the first line of the card itself (Discord accepts no text outside the components of a card).
+* **Text of the message**: outside the embed or the card, above it. In a card it can also go under it.
 * **Author** (the header) and **footer**: always there while you write, as fields with their icon slot (empty, nothing is sent). In a **card** they are small texts without icon.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
 * **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side).
 * **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
+* **Separator**: a thin line between two parts (its bar switches it to a simple space). In a card it is Discord's own separator; in an embed, which has none, the bot writes a line of dashes.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
 * **Empty places**: the places of the header (author and icon), the thumbnail, the banner and the footer that are not filled yet appear as dotted places in the message; a click on one adds it right there. The cross of the header removes its title and text.
 * **Message images**: see [Images of the message itself](#images-of-the-message-itself).
 * **Color**: the bar at the left of the message (the round button at the right of it), or none.
-* **Free layout**: the last entry of the menu turns the message into [blocks](#blocks) (each part becomes a block). The original message is kept: pick _Card_ or _Embed_ again to get it back.
 
 Server emojis (`<:name:id>`, the ones you pick in the emoji list) are shown as images, as Discord displays them; what the bot sends is the written form. They are drawn where Discord draws them: in the text above the message, the title, the text and the **names and values of the fields**. Discord does not draw them in the **name of the author** nor in the **footer** (the code stays visible there, as it will be sent); a standard emoji (Unicode) works everywhere.
 
@@ -83,7 +88,7 @@ The two arrows at the top of the message (or **Ctrl + Z**, **Ctrl + Shift + Z** 
 
 ## Images of the message itself
 
-Besides the images of the embed (author icon, thumbnail, banner, footer icon), the _Embed_ form and the _Plain message_ form can carry **pictures of the message itself**, shown under the text and above the embeds, up to **ten**. Open the _**Add**_ menu (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). A card or a free layout has no such images: Discord does not accept a text or a file next to those components, so use the banner or an image gallery instead.
+Besides the images of the embed (author icon, thumbnail, banner, footer icon), a message can carry **pictures of its own**, outside the embed, up to **ten**. Open _**Add to the message**_ (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, pencil, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). With an embed they are under the text and above the embed (the order of Discord); with a card they go above the card or under it.
 
 An image you drop is **kept by Interaction Bot** for your server. It is deleted for you: as soon as the message no longer shows it, once the message is saved (and at once if you dropped it and removed it before saving), unless another message of the server still uses it. An image of the library that no message uses yet is never touched.
 
@@ -100,7 +105,7 @@ _**Import / export**_ (not in the _Blocks_ form) opens the message as JSON, the 
 
 ## Blocks
 
-The _Blocks_ form is a free layout, built like the editors of the Discord components: a stack of blocks you order as you want.
+A message built earlier with the former _Free layout_ keeps that form and is still edited block by block (a template brings it back to a card or an embed). New messages no longer need it: a card orders its parts freely.
 
 * **Text**: Markdown, up to 4,000 characters in all the texts of the message.
 * **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on an image only selects it (nothing opens): its bar has a **pencil** that opens the choice of the image (drop, address or variable), the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
