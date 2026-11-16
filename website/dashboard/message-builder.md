@@ -10,7 +10,7 @@ The message builder is where you write the messages the bot sends: the control p
 
 There is no switch of form to choose before you write: the message takes the form of what you build. To go faster, the _**Templates**_ list at the top starts the message for you, and everything stays editable afterwards. A template never erases the texts already written.
 
-* **Cards**: _Card_ (one block, the title and the text), _Announcement_ (the banner on top, a footer and the time), _Rules_ (three fields to fill), _Welcome_ (author with icon, thumbnail and footer).
+* **Cards**: _Card_ (one block, the title and the text), _Announcement_ (the banner on top, a footer and the time), _Rules_ (three fields to fill), _Welcome_ (author with icon and footer). A template never adds a thumbnail or a banner by itself: they come from the _Add_ menu, as a plain blue picture you then replace.
 * **Embeds**: _Embed_ (the classic Discord embed with author and footer), _Columns_ (three fields side by side), _Several embeds_ (a main embed and two more in the same message).
 * **Other**: _Plain message_ (only text).
 
@@ -57,7 +57,7 @@ Every component has arrows.
 * **Text of the message**: outside the embed or the card. An embed has **one** (above it); a **card** has as many as you want, placed where you want (a second text turns an embed into a card, with the note and **Undo**).
 * **Author** (the header) and **footer**: always there while you write, as fields with their icon slot (empty, nothing is sent). In a **card** they are small texts without icon.
 * **Title**: click the link icon next to it to make it clickable.
-* **Thumbnail** (small image at the right) and **image** (large banner).
+* **Thumbnail** (small image at the right) and **image** (large banner). A **card** can have a thumbnail too: Discord shows it at the right of the title and the text (85 px). The preview of a card has the **sizes of Discord**, measured on a real message: a card is 600 px wide, the title is a 20 px heading, the text is 14 px like in an embed, the images fill the card (566 px). A card looks larger than an embed only because its pictures fill the whole width, while an embed limits them to 400 px.
 * **Fields**: a title and a text, up to 25. In an embed, the field's bar has a labelled _**Side by side**_ button (columns icon): on, the field shares its row with the next ones (up to three side by side); off, it takes the whole row. A card has no side-by-side fields.
 * **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
 * **Separator**: a thin line between two parts (the **eye** button of its bar shows or hides the line, leaving a simple space). In a card it is Discord's own separator, which spans the whole card; an embed has none, so the bot writes a **fixed line of 24 dashes**, preceded by an empty line like any field: it never spans the whole embed. For a full-width line, use a card.
