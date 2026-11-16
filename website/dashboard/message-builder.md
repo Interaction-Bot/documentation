@@ -48,13 +48,13 @@ Keyboard: **Alt + ↑ / ↓** moves the selected component without touching the 
 
 Every component has arrows.
 
-* In a **card** every part moves: author, title and text (with its thumbnail), each field or separator, the large image, the buttons or choices, the footer. The **text** and the **images of the message** are outside the card: above it, or **under it** (move them down past the card). The bot sends the message in this order.
-* An **embed** has the order of Discord: the text of the message, its images, then the embed (author, title, text, fields, image, footer). Fields move among themselves. **Any other move** (the text under the embed, the image above the title…) switches the message to a **card**, where the order is free: a note says so, with **Undo**. Nothing is erased, but a card has no author icon, no footer icon and no fields side by side.
+* In a **card** every part moves: author, title and text (with its thumbnail), each field or separator, the large image, the buttons or choices, the footer. Around the card, the message is **as free as in Discord**: _**Add to the message**_ adds as many **texts**, **images** and **separators** as you want (ten at most) and **other cards**, and each one goes **anywhere**: above the card, under it, **between two cards**. Move them with their arrows; they pass the cards. The other cards keep their own order (use their own arrows). The bot sends the message in exactly this order.
+* An **embed** has the order of Discord (one text above it, its pictures, the embeds): the text of the message, its images, then the embed (author, title, text, fields, image, footer). Fields move among themselves. **Any other move or addition** (the text under the embed, the image above the title, a **second text**, a separator outside the embed…) switches the message to a **card**, where the order is free: a note says so, with **Undo**. Nothing is erased, but a card has no author icon, no footer icon and no fields side by side.
 * The **large image** has a button in its bar that takes it **out of the embed** (it becomes an image of the message); an image of the message has a button that puts it **into the embed**.
 
 ### The parts
 
-* **Text of the message**: outside the embed or the card, above it. In a card it can also go under it.
+* **Text of the message**: outside the embed or the card. An embed has **one** (above it); a **card** has as many as you want, placed where you want (a second text turns an embed into a card, with the note and **Undo**).
 * **Author** (the header) and **footer**: always there while you write, as fields with their icon slot (empty, nothing is sent). In a **card** they are small texts without icon.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
@@ -88,7 +88,7 @@ The two arrows at the top of the message (or **Ctrl + Z**, **Ctrl + Shift + Z** 
 
 ## Images of the message itself
 
-Besides the images of the embed (author icon, thumbnail, banner, footer icon), a message can carry **pictures of its own**, outside the embed, up to **ten**. Open _**Add to the message**_ (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, +, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). With an embed they are under the text and above the embed (the order of Discord); with a card they go above the card or under it.
+Besides the images of the embed (author icon, thumbnail, banner, footer icon), a message can carry **pictures of its own**, outside the embed or the card. With an embed or a plain message they are attached together, up to **ten**; in a **card** each one is a component of its own that goes anywhere in the message, and it fills the width of the message as in Discord. Open _**Add to the message**_ (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, +, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). With an embed they are under the text and above the embed (the order of Discord); with a card they go above the card or under it.
 
 An image you drop is **kept by Interaction Bot** for your server. It is deleted for you: as soon as the message no longer shows it, once the message is saved (and at once if you dropped it and removed it before saving), unless another message of the server still uses it. An image of the library that no message uses yet is never touched.
 
