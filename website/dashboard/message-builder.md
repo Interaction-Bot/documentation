@@ -33,12 +33,12 @@ The **+** of a component's bar follows the same rule: on a part of the embed it 
 
 ### The bar of a component
 
-Click (or tap) any component (the author, the title and text, a field, the banner, the time, the buttons, the footer) to **select** it: **only the selected component shows its bar**, just above it, without any frame around it. The bar follows the component when you move it, until you select another one or press _Esc_. From left to right:
+**Point at** a component (the author, the title and text, a field, the banner, the time, the buttons, the footer) and its bar appears just above it; **click or tap** it to **select** it and keep the bar (on a touch screen, a tap is the only way). The bar is an **overlay**: it never moves the message. It follows the component when you move it, until you select another one or press _Esc_. From left to right:
 
 * the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
 * **up** and **down arrows**: move the component (see [What you can place where](#what-you-can-place-where));
 * **+**: add a component **right under this one**;
-* on an image, a **pencil** that opens the choice of the image. A click on an image only selects it;
+* on an image, a **pencil** that opens the choice of the image. A click on an **empty** place opens that choice at once; a click on a picture already there only selects it (so its bar, with the pencil, shows on a touch screen too). **One choice window at a time**: opening one closes the other;
 * the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
 * on a field, a **copy** button that duplicates it right under it.
 
@@ -108,7 +108,7 @@ _**Import / export**_ (not in the _Blocks_ form) opens the message as JSON, the 
 A message built earlier with the former _Free layout_ keeps that form and is still edited block by block (a template brings it back to a card or an embed). New messages no longer need it: a card orders its parts freely.
 
 * **Text**: Markdown, up to 4,000 characters in all the texts of the message.
-* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on an image only selects it (nothing opens): its bar has a **pencil** that opens the choice of the image (drop, address or variable), the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
+* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on a picture only selects it (an empty one opens the choice): its bar has a **pencil** that opens the choice of the image (drop, address or variable), the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
 * **Section**: one to three texts and, next to them, a thumbnail, a link button or nothing.
 * **Separator**: a visible line or not, a small or a large space.
 * **Link buttons**: up to five buttons in a row, each with an emoji, a text and an address.
