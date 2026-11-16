@@ -20,7 +20,7 @@ The forms a message can take:
 * **Embed**: the classic Discord embed. Author with icon, title, text, fields side by side, thumbnail, image, footer with icon and time. The buttons are under the embed. It can hold up to **ten embeds**.
 * **Plain message**: only text, without a frame. The buttons are under it.
 
-_**Edit**_ and _**Preview**_ switch between writing and the exact rendering (Markdown rendered, variables replaced by an example).
+_**Edit**_ and _**Preview**_ switch between writing and the exact rendering (Markdown rendered, variables replaced by an example). The preview follows Discord's own layout, checked by sending the same messages to a test server: fields in rows of three at most (a row of two splits in two), the empty line of a field without a title, the embed shrinking to its content, and the addresses of the message's pictures written at the end of the text of an embed or a plain message.
 
 ## The parts of a message (card and embed)
 
@@ -38,7 +38,7 @@ The **+** of a component's bar follows the same rule: on a part of the embed it 
 * the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
 * **up** and **down arrows**: move the component (see [What you can place where](#what-you-can-place-where));
 * **+**: add a component **right under this one**;
-* on an image, no pencil: an image that is not there yet is a **blue frame** (the color of the bot) with an **upload icon** in its corner, as in MEE6: the icon opens the choice. A click on the frame itself, or on a picture already there, only selects it (so its bar shows on a touch screen too); the same icon sits over a picture to change it. The small round icons of the author and of the footer open on a click. **One choice window at a time**: opening one closes the other;
+* on an image, no pencil: a **banner** or a **message image** you add is first a **plain blue picture** (the color of the bot, 1000 × 350): it shows in the preview and the bot sends it, until you replace it; a thumbnail not chosen yet is a blue square. Every picture has an **upload icon** in its corner, as in MEE6: the icon opens the choice. A click on the frame itself, or on a picture already there, only selects it (so its bar shows on a touch screen too); the same icon sits over a picture to change it. The small round icons of the author and of the footer open on a click. **One choice window at a time**: opening one closes the other;
 * the **cross**: remove the component (the component itself goes away, not only what it contained; a **thumbnail** or **image** leaves for good, and the _Add_ menu brings it back; the author, the title and text and the footer keep a dotted place);
 * on a field, a **copy** button that duplicates it right under it.
 
@@ -60,7 +60,7 @@ Every component has arrows.
 * **Thumbnail** (small image at the right) and **image** (large banner).
 * **Fields**: a title and a text, up to 25. In an embed, the field's bar has a labelled _**Side by side**_ button (columns icon): on, the field shares its row with the next ones (up to three side by side); off, it takes the whole row. A card has no side-by-side fields.
 * **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
-* **Separator**: a thin line between two parts (its bar switches it to a simple space). In a card it is Discord's own separator; in an embed, which has none, the bot writes a line of dashes.
+* **Separator**: a thin line between two parts (the **eye** button of its bar shows or hides the line, leaving a simple space). In a card it is Discord's own separator, which spans the whole card; an embed has none, so the bot writes a **fixed line of 24 dashes**, preceded by an empty line like any field: it never spans the whole embed. For a full-width line, use a card.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
 * **Empty places**: the places of the title and text, the author and the footer that are not filled yet appear as dotted places in the message; a click on one adds it right there. The **thumbnail** and the **image** are not there at the start: add them from the _Add_ menu. The cross of the header removes its title and text.
 * **Message images**: see [Images of the message itself](#images-of-the-message-itself).
