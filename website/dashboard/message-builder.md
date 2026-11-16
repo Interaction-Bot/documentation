@@ -58,7 +58,7 @@ Every component has arrows.
 * **Author** (the header) and **footer**: always there while you write, as fields with their icon slot (empty, nothing is sent). In a **card** they are small texts without icon.
 * **Title**: click the link icon next to it to make it clickable.
 * **Thumbnail** (small image at the right) and **image** (large banner).
-* **Fields**: a title and a text, up to 25. In an embed a field can be _inline_ (up to three side by side).
+* **Fields**: a title and a text, up to 25. In an embed, the field's bar has a labelled _**Side by side**_ button (columns icon): on, the field shares its row with the next ones (up to three side by side); off, it takes the whole row. A card has no side-by-side fields.
 * **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
 * **Separator**: a thin line between two parts (its bar switches it to a simple space). In a card it is Discord's own separator; in an embed, which has none, the bot writes a line of dashes.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
