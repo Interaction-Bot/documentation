@@ -103,7 +103,7 @@ _**Import / export**_ (not in the _Blocks_ form) opens the message as JSON, the 
 The _Blocks_ form is a free layout, built like the editors of the Discord components: a stack of blocks you order as you want.
 
 * **Text**: Markdown, up to 4,000 characters in all the texts of the message.
-* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler.
+* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on an image only selects it (nothing opens): its bar has a **pencil** that opens the choice of the image (drop, address or variable), the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
 * **Section**: one to three texts and, next to them, a thumbnail, a link button or nothing.
 * **Separator**: a visible line or not, a small or a large space.
 * **Link buttons**: up to five buttons in a row, each with an emoji, a text and an address.
