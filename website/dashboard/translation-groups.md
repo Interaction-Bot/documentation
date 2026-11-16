@@ -42,6 +42,7 @@ If you click _**Add a mirror**_ or _**+ Add a channel**_ when you are at your li
 | **Delete translations after a while** | The translations are deleted after the duration you give in **Keep for (seconds)**, from 5 to 86400. Leave it empty (*auto*) to use the reading time of the text, with a minimum of 25 seconds. |
 | **Translate bots** (Premium) | Also translate messages sent by bots. Locked on free servers. |
 | **Always send** | Send the translations even when the message looks already translated, or is in the language of the channel. |
+| **Translate in the original channel too** | A message written in another language than the one of its channel is first translated in that channel, into the language of the channel, then sent to the other channels as usual (a channel already in the language of the message receives it as it is). Only when the language is detected with confidence. |
 
 The **Delete mirror** button removes the mirror, with its channels. Nothing else is changed.
 

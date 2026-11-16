@@ -49,6 +49,7 @@ The popup asks for the channel (or category, or role) and the languages, then th
 * **Delete the original message**: needs the **Manage Messages** permission.
 * **Translate bots**: Premium.
 * **Send even if the text seems already translated**.
+* **Translate in the original channel too** (linked channels only): a message written in another language than the one of its channel is first translated in that channel, into the channel's language, then sent to the other channels of the link as usual. Only when the language is detected with confidence.
 
 Every rule is shown with a sentence that describes it, and can be paused, copied to other channels, edited or deleted. A rule that needs a permission the bot does not have is flagged, with the missing permissions.
 
