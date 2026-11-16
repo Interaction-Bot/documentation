@@ -86,6 +86,8 @@ There is no automatic deletion on the Private message tab.
 
 ### Banner
 
+**Studio templates.** The banner window offers 13 _Studio_ templates (cosmic cliffs, northern lights, Tokyo neon, crimson gothic, pixel lake, cotton clouds, cherry moon, starry night, dream dusk, arena, city dusk, mystic mountain, monochrome blossom): a background made for the template (free-licence photographs and artworks, or drawn by code), a frame around the avatar and a layout with a styled title. Pick one, then change the title and the subtitle; _Create my own layout_ opens the free editor. In the editor, a **text** has 14 fonts (Sans, Serif, Mono, Poster, Modern, Elegant, Tech, Rounded, Script, Extra bold, Pixel, Bubble, Comic, Gothic), the **letter spacing**, **capitals**, a **glow**, a **gradient** (top to bottom), an **outline** and a **3D edge**; the preview follows the real banner drawn by the bot. The fonts only have Latin letters: any other character (Japanese, Arabic...) is drawn with the standard fonts, with no spacing.
+
 The banner is a picture of **1000 × 350 px**, with the avatar of the member, a title and a subtitle. It is turned on by placing it in the message (see above), in each tab and each variant, goodbye by kind, boost and role message. The bot draws it for **each** new member and attaches it to the message, where you placed it.
 
 The banner settings window offers two ways:
