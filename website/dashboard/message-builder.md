@@ -4,7 +4,7 @@ description: "The message builder of the dashboard: templates to start from, the
 
 # Message builder
 
-The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), the message and the replies of a [reaction roles](reaction-roles.md) panel, the warning of the [honeypot](honeypot.md), and the welcome, goodbye and private messages of the [Welcome](welcome.md) page. You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
+The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), the message and the replies of a [reaction roles](reaction-roles.md) panel, the warning of the [honeypot](honeypot.md), and the welcome, goodbye and private messages of the [Welcome](welcome.md) page. The Welcome page uses the same component; its only particularity is the _Welcome banner_, an image of the message set from the pencil of an image (see [Welcome](welcome.md)). You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
 
 ## Start from a template
 
