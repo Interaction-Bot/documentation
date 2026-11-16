@@ -38,8 +38,8 @@ The **+** of a component's bar follows the same rule: on a part of the embed it 
 * the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
 * **up** and **down arrows**: move the component (see [What you can place where](#what-you-can-place-where));
 * **+**: add a component **right under this one**;
-* on an image, a **pencil** that opens the choice of the image. A click on an **empty** place opens that choice at once; a click on a picture already there only selects it (so its bar, with the pencil, shows on a touch screen too). **One choice window at a time**: opening one closes the other;
-* the **cross**: remove the component (the component itself goes away, not only what it contained; an empty place stays where it was so you can bring it back);
+* on an image, a **pencil** that opens the choice of the image. An image that is not there yet is a **blue frame** (the color of the bot) with an **upload icon** in its corner, as in MEE6: the icon opens the choice. A click on the frame itself, or on a picture already there, only selects it (so its bar, with the pencil, shows on a touch screen too); the same icon sits over a picture to change it. **One choice window at a time**: opening one closes the other;
+* the **cross**: remove the component (the component itself goes away, not only what it contained; a **thumbnail** or **image** leaves for good, and the _Add_ menu brings it back; the author, the title and text and the footer keep a dotted place);
 * on a field, a **copy** button that duplicates it right under it.
 
 Keyboard: **Alt + ↑ / ↓** moves the selected component without touching the text.
@@ -62,7 +62,7 @@ Every component has arrows.
 * **Free text**: a field without a title. In a card it is a text you place anywhere; in an embed it sits among the fields.
 * **Separator**: a thin line between two parts (its bar switches it to a simple space). In a card it is Discord's own separator; in an embed, which has none, the bot writes a line of dashes.
 * **Footer**: a text and an icon. **Time** shows the time the message was sent.
-* **Empty places**: the places of the header (author and icon), the thumbnail, the banner and the footer that are not filled yet appear as dotted places in the message; a click on one adds it right there. The cross of the header removes its title and text.
+* **Empty places**: the places of the title and text, the author and the footer that are not filled yet appear as dotted places in the message; a click on one adds it right there. The **thumbnail** and the **image** are not there at the start: add them from the _Add_ menu. The cross of the header removes its title and text.
 * **Message images**: see [Images of the message itself](#images-of-the-message-itself).
 * **Color**: the bar at the left of the message (the round button at the right of it), or none.
 
