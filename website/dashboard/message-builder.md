@@ -78,7 +78,7 @@ Every image slot (author icon, thumbnail, image, footer icon, and every image of
 
 ## Every embed is an embed: move, duplicate, delete
 
-Each embed (or card) of a message, **the first one included**, can be duplicated and deleted. A message with **one** embed shows no number: its _duplicate_ and _delete_ buttons are on its side. From **two** embeds on, each has its own line above it: its number, _up_, _down_, _duplicate_ and _delete_. Moving the first one down swaps it with the next; deleting it makes the next one the first. Deleting the very last one leaves a **plain message** (the text above and the images of the message stay); the _Add_ menu of a plain message offers _Embed_ and _Card_ to bring one back.
+Each embed (or card) of a message, **the first one included**, can be duplicated and deleted: its _duplicate_ and _delete_ buttons are **on its side**, under the color button, whether the message has one embed or several. A message with **one** embed shows no number. From **two** embeds on, each has its own line above it: its number and the _up_ and _down_ arrows. Moving the first one down swaps it with the next; deleting it makes the next one the first. Deleting the very last one leaves a **plain message** (the text above and the images of the message stay); the _Add_ menu of a plain message offers _Embed_ and _Card_ to bring one back.
 
 The **time** (_Sent at_) has its own cross, apart from the footer. The cross of the **title and text** removes them from the message (an empty title would be the text of the bot, a removed one is nothing); a dotted _Title and text_ place brings them back.
 
@@ -94,7 +94,7 @@ An image you drop is **kept by Interaction Bot** for your server. It is deleted 
 
 ## Several embeds and several cards
 
-In the _Embed_ form, _**Add an embed**_ adds a complete embed under the first one, up to **ten in all**. In the _Card_ form the same entry adds a card under the first one (up to ten cards; Discord counts 4,000 characters in all the cards). Each embed has every part above (author, title with link, text, fields, thumbnail, image, footer with icon, time, its own color). Point at an embed for its arrows (move up or down), its copy icon (duplicate) and its cross. A counter shows the characters used: Discord accepts 6,000 characters in all the embeds of one message, the counter keeps a margin of 200 for the bot's own texts.
+In the _Embed_ form, _**Add an embed**_ adds a complete embed under the first one, up to **ten in all**. In the _Card_ form the same entry adds a card under the first one (up to ten cards; Discord counts 4,000 characters in all the cards). Each embed has every part above (author, title with link, text, fields, thumbnail, image, footer with icon, time, its own color). Each embed has its arrows above it (move up or down) and, on its side, its copy icon (duplicate) and its bin (delete). A counter shows the characters used: Discord accepts 6,000 characters in all the embeds of one message, the counter keeps a margin of 200 for the bot's own texts.
 
 ## JSON import and export
 
