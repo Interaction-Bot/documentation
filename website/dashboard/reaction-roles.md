@@ -58,3 +58,5 @@ Three tabs:
 * _The role X has dangerous permissions_: a panel never gives such a role (the same list as for the roles the bot gives on its own: administrator, manage server, roles, channels, webhooks, messages, nicknames, expressions, events and threads, kick, ban, timeout, mention everyone, view audit log, mute, deafen and move members).
 * _The bot cannot write in this channel_ (or see it, embed links, add reactions): fix the permissions of the channel.
 * _The bot does not answer right now_: try again in a moment.
+
+**Unsaved changes.** As soon as you edit a panel, the usual bar _You made changes, save them!_ appears at the bottom of the page (_Save_ or _Cancel_). You cannot leave the page for another one without choosing, and closing or reloading the tab asks for a confirmation.
