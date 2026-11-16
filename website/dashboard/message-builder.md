@@ -4,7 +4,7 @@ description: "The message builder of the dashboard: templates to start from, the
 
 # Message builder
 
-The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), the message and the replies of a [reaction roles](reaction-roles.md) panel, the warning of the [honeypot](honeypot.md), and the welcome, goodbye and private messages of the [Welcome](welcome.md) page. The Welcome page uses the same component; its only particularity is the _Welcome banner_, an image of the message set from the pencil of an image (see [Welcome](welcome.md)). You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
+The message builder is where you write the messages the bot sends: the control panel and the welcome message of [temp voice](temp-voice.md), the message and the replies of a [reaction roles](reaction-roles.md) panel, the warning of the [honeypot](honeypot.md), and the welcome, goodbye and private messages of the [Welcome](welcome.md) page. The Welcome page uses the same component; its only particularity is the _Welcome banner_, an image of the message set from the upload icon of an image (see [Welcome](welcome.md)). You write the message where it will appear, as Discord displays it. Nothing is a form: click a text and type.
 
 ## Start from a template
 
@@ -38,7 +38,7 @@ The **+** of a component's bar follows the same rule: on a part of the embed it 
 * the **emoji** and **variable** (**{ }**) buttons of the text you are writing (they are in this bar, never on top of the message). The variable button lists the variables the message accepts, each with its description, and the preview shows them replaced by an example. Reaction roles replies have their own: `{ROLE}`, `{USER}`, `{USER_NAME}` and `{SERVER}`; the Welcome page has `{user}`, `{server}`, `{member_count}`, `{inviter}`… (see [Welcome](welcome.md));
 * **up** and **down arrows**: move the component (see [What you can place where](#what-you-can-place-where));
 * **+**: add a component **right under this one**;
-* on an image, a **pencil** that opens the choice of the image. An image that is not there yet is a **blue frame** (the color of the bot) with an **upload icon** in its corner, as in MEE6: the icon opens the choice. A click on the frame itself, or on a picture already there, only selects it (so its bar, with the pencil, shows on a touch screen too); the same icon sits over a picture to change it. **One choice window at a time**: opening one closes the other;
+* on an image, no pencil: an image that is not there yet is a **blue frame** (the color of the bot) with an **upload icon** in its corner, as in MEE6: the icon opens the choice. A click on the frame itself, or on a picture already there, only selects it (so its bar shows on a touch screen too); the same icon sits over a picture to change it. The small round icons of the author and of the footer open on a click. **One choice window at a time**: opening one closes the other;
 * the **cross**: remove the component (the component itself goes away, not only what it contained; a **thumbnail** or **image** leaves for good, and the _Add_ menu brings it back; the author, the title and text and the footer keep a dotted place);
 * on a field, a **copy** button that duplicates it right under it.
 
@@ -88,7 +88,7 @@ The two arrows at the top of the message (or **Ctrl + Z**, **Ctrl + Shift + Z** 
 
 ## Images of the message itself
 
-Besides the images of the embed (author icon, thumbnail, banner, footer icon), a message can carry **pictures of its own**, outside the embed, up to **ten**. Open _**Add to the message**_ (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, pencil, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). With an embed they are under the text and above the embed (the order of Discord); with a card they go above the card or under it.
+Besides the images of the embed (author icon, thumbnail, banner, footer icon), a message can carry **pictures of its own**, outside the embed, up to **ten**. Open _**Add to the message**_ (or the _+_ of the text) and choose _**Message image**_; each image has its own bar (up, down, +, remove) and takes an image by link, by drag and drop, or a variable (the avatar of the member, the icon of the server, the avatar of the bot). With an embed they are under the text and above the embed (the order of Discord); with a card they go above the card or under it.
 
 An image you drop is **kept by Interaction Bot** for your server. It is deleted for you: as soon as the message no longer shows it, once the message is saved (and at once if you dropped it and removed it before saving), unless another message of the server still uses it. An image of the library that no message uses yet is never touched.
 
@@ -108,7 +108,7 @@ _**Import / export**_ (not in the _Blocks_ form) opens the message as JSON, the 
 A message built earlier with the former _Free layout_ keeps that form and is still edited block by block (a template brings it back to a card or an embed). New messages no longer need it: a card orders its parts freely.
 
 * **Text**: Markdown, up to 4,000 characters in all the texts of the message.
-* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on a picture only selects it (an empty one opens the choice): its bar has a **pencil** that opens the choice of the image (drop, address or variable), the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
+* **Image gallery**: up to 10 images in all. A single image is a banner. Each image has a description (alternative text) and can be hidden as a spoiler. A click on a picture only selects it (an empty one opens the choice): its **upload icon** opens the choice of the image (drop, address or variable) and its bar has the **description**, the **spoiler** button, and, for a single image (a banner), the buttons of the block too (move, duplicate, remove), all in one bar. With several images each one has its own bar, and the block's bar is reached from the space around them.
 * **Section**: one to three texts and, next to them, a thumbnail, a link button or nothing.
 * **Separator**: a visible line or not, a small or a large space.
 * **Link buttons**: up to five buttons in a row, each with an emoji, a text and an address.
