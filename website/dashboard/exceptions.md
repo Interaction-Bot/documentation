@@ -1,5 +1,5 @@
 ---
-description: The Exceptions page of the dashboard: channels, roles and languages that are never translated (Premium), and the minimum size of a message per channel.
+description: "The Exceptions page of the dashboard: channels, roles and languages that are never translated (Premium), and the minimum size of a message per channel."
 ---
 
 # Exceptions

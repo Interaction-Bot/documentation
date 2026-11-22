@@ -1,5 +1,5 @@
 ---
-description: The Translation rules page of the dashboard: choose what is translated, where, into which language, and check that it works.
+description: "The Translation rules page of the dashboard: choose what is translated, where, into which language, and check that it works."
 ---
 
 # Translation rules
