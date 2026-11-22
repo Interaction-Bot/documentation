@@ -1,76 +1,83 @@
 ---
-description: The four styles of translation and every option of the dashboard explained.
+description: The styles of translation and every option of the translation rules and flags explained.
 ---
 
 # Styles and options
 
-Channel, category and role translation and translation groups share the same options. This page explains them all, with examples. The options are in the **Options** of the popup of each configuration on the [dashboard](../website/dashboard/README.md) (in **More options** on the Translation rules page).
+The translation rules and the flag reactions share the same styles and options. This page explains them, with examples. The options are in the popup of each rule on the [Translation rules](../website/dashboard/translation-rules.md) page (**More options**), and on the [Flags](../website/dashboard/flag-translation.md) page.
 
-## The four styles
+## The styles
 
 The *style* is how the translation looks in the channel.
 
-| Style       | What members see                                                                                   | Needs on the bot |
-| ----------- | -------------------------------------------------------------------------------------------------- | ---------------- |
-| **Embed**   | A card with the translation, the name and avatar of the author at the top, and a footer such as *English (en) -> French (fr).* | Embed Links |
-| **Webhook** | The translation as if the **author wrote it**: same name, same avatar, no "bot" label. It reads like a natural conversation. | Manage Webhooks |
-| **Message** | A plain message sent by the bot, without any decoration.                                           | Send Messages |
-| **Thread**  | The translations are in a **thread under the original message**, which stays in the channel. All the languages of a message are in the same thread. See [Translation in threads](threads.md). | Create Public Threads, Send Messages in Threads |
+| Style (name on the dashboard)           | What members see                                                                                                    | Needs on the bot         |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| **As the author** (*Webhook*)           | The translation as if the **author wrote it**: same name, same avatar, no "bot" label. It reads like a natural conversation. | Manage Webhooks          |
+| **Bot message** (*Message*)             | A plain message sent by the bot, without any decoration.                                                            | Send Messages            |
+| **Bot card** (*Embed*)                  | A card with the translation, and a footer such as *English (en) -> French (fr)*.                                    | Embed Links              |
+| **In a thread** (*Thread*)              | The translations are in a **thread under the original message**, which stays in the channel. All the languages of a message are in the same thread. See [Translation in threads](threads.md). | Create Public Threads, Send Messages in Threads |
+
+Flag reactions have one more style, **Private message**: the translation is sent to the member who added the flag, and nothing is posted in the channel.
 
 {% hint style="success" %}
-**Webhook** is the best choice for a conversation between languages, **Embed** for an announcement channel where you want to see the languages, and **Message** for the most discreet display.
+**As the author** is the best choice for a conversation between languages. **Bot card** is for an announcement channel where you want to see the languages. **Bot message** is the most discreet display.
 {% endhint %}
 
-If the bot cannot create the webhook (missing permission), it falls back to a plain message, so the translation is never lost. In the same way, if it cannot create the thread, the translation is sent as a webhook message in the channel.
+If the bot cannot create the webhook (missing permission), it sends a plain bot message, so the translation is never lost. In the same way, if it cannot create the thread, the translation is sent as a webhook message in the channel.
 
-{% hint style="info" %}
-**Thread** is available for channel, category and role translations, from the dashboard or with the [configuration commands](../commands/configuration.md). It keeps the channel clean when you translate into several languages: [Translation in threads](threads.md).
-{% endhint %}
+The bot never pings anybody in a translation: `@everyone`, roles and members appear as text.
 
-The bot never mentions anybody in the translations: `@everyone`, roles and members appear as text without pinging.
+## Options of the translation rules
 
-## Options of the configurations
+| Option                                  | Where            | What it does                                                                                                                  |
+| --------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Channel, category, role, server**     | The rule         | What the rule applies to.                                                                                                     |
+| **Languages**                           | The rule         | The target language(s). Every message that is not in this language is translated into it.                                    |
+| **Send the translations to**            | Sending          | The channel where the translation is posted. *The same channel* by default. Not used by linked channels.                      |
+| **Send style**                          | Sending          | As the author, bot message, bot card, or thread (channel rules only, see below).                                              |
+| **Look in the thread**, **Archive the thread after**, **Show the language** | Advanced, with the thread style | How the translations look in the thread (as the author, bot message or bot card), the inactivity before the thread is archived (1 h, 24 h, 3 d or 7 d), and whether the language is written above each translation (on by default). |
+| **Delete the original message**         | Deletion         | The original message is deleted when a translation is really sent. Needs *Manage Messages*. Not available with the thread style, which keeps the original message. |
+| **Delete the translation after**        | Deletion         | *Never*, *Automatic (reading time)* (0.13 second per character, at least 25 seconds), or *After N seconds* (from 5 seconds to 24 hours). |
+| **Translate bots**                      | Advanced         | Also translate the messages of bots. **Premium only.**                                                                        |
+| **Send even if the text seems already translated** | Advanced | Send the translation even if the message already seems to be in the target language, or when the bot is not sure of the detected language. |
+| **Translate in the original channel too** | Advanced, linked channels | A message written in another language than the one of its channel is first translated into the language of that channel. |
+| **Enabled** (switch)                    | The rules page   | Pause a rule without deleting it.                                                                                             |
 
-| Option                    | Where                          | What it does                                                                                           |
-| ------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| **Channel / Category / Role** | Channel, category, role      | What the rule applies to.                                                                              |
-| **Sending channel**       | All                            | Where the translation is sent. Empty: the channel where the message was written (category and role). Required for a channel translation on the dashboard (with `/channel-translation set`, leaving it empty sends the translation in the same channel). It must be a channel of the same server. |
-| **Language**              | All                            | The target language. Every message that is not in this language is translated into it.                  |
-| **Style**                 | All (thread: channel, category, role) | Embed, webhook, message or thread (see above).                                                  |
-| **Look in the thread**, **Archive the thread after**, **Show the language** | Style thread | Look of the translations in the thread (webhook, message, embed), inactivity before archiving (1 hour to 7 days) and language written above each translation. See [Translation in threads](threads.md#the-options-of-the-thread-style). |
-| **Delete message**        | All (not with thread)          | The original message is deleted when it is translated. Only the translation stays. Needs *Manage Messages*. Not available with the thread style, which keeps the original message. |
-| **Delete translation**    | All                            | The bot deletes its translation after a delay. By default the delay depends on the length of the text (0.13 s per character, at least 25 s). |
-| **Keep it for (seconds)** | All                            | With *Delete translation*, choose the delay yourself, from 5 s to 24 h.                                |
-| **Translate bot**         | Channel, category, group | Also translate the messages sent by bots. **Premium only.**                                            |
-| **Always send**           | All                            | Send the translation even if the message already seems to be in the target language, or when the bot is not sure of the detected language. |
-| **Enabled**               | All                            | Turn a configuration off without deleting it.                                                          |
-
-### "Delete message" in practice
+### "Delete the original message" in practice
 
 The original message is deleted **only when a translation was really sent**. If the message is already in the target language, it stays. This avoids members losing their messages.
 
-### "Always send" in practice
+### "Send even if the text seems already translated" in practice
 
-By default the bot does not translate a message that is already in the target language. This is what you want 99 % of the time. Turn *Always send* on when:
+By default, the bot does not translate a message that is already in the target language. This is what you want almost always. Turn the option on when:
 
 * your members write short messages and the detection is often unsure;
 * you want a **tone or style check**: the bot translates even if the language is the same.
 
+## Options of the flag reactions
+
+| Option                                     | What it does                                                                                                                                                                    |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Style**                                  | *Embed* (default), *Webhook*, *Message*, *Thread* or *Private message* (see above).                                                                                             |
+| **How often is it translated?**            | *Each time someone reacts* (default), or *Once per message*.                                                                                                                    |
+| **Delete the translation automatically**   | The translation is deleted after the reading time (0.13 second per character, at least 25 seconds). A new configuration starts with it off.                                  |
+| **Look in the thread**, **Archive the thread after**, **Show the language** | The same as for the translation rules, for the *Thread* style.                                                                                    |
+
 ## Permissions needed
 
-Give the bot these permissions in the source channel **and** in the sending channel:
+Give the bot these permissions in the source channel **and** in the channel where the translations are sent:
 
-| Permission                | Used for                                          |
-| ------------------------- | ------------------------------------------------- |
-| View Channel              | Reading the messages                              |
-| Send Messages             | Sending the translation (style message)           |
-| Embed Links               | Sending the translation (style embed)             |
-| Manage Webhooks           | Sending the translation (style webhook)           |
-| Manage Messages           | Deleting the original message (*Delete message*)  |
-| Read Message History      | Flag translation (reading the message)            |
-| Add Reactions             | Flag shortcuts                                    |
-| Create Public Threads     | Creating the thread (style thread)                |
-| Send Messages in Threads  | Writing in the thread (style thread)              |
-| Manage Threads            | Reopening a locked archived thread (style thread, optional) |
+| Permission                  | Used for                                                       |
+| --------------------------- | -------------------------------------------------------------- |
+| View Channel                | Reading the messages                                           |
+| Read Message History        | Reading the message of a flag reaction                         |
+| Send Messages               | Sending the translation (bot message)                          |
+| Embed Links                 | Sending the translation (bot card)                             |
+| Manage Webhooks             | Sending the translation as the author (otherwise a bot message) |
+| Manage Messages             | Deleting the original message                                  |
+| Add Reactions               | Automatically added flags                                      |
+| Create Public Threads       | Creating the thread (thread style)                             |
+| Send Messages in Threads    | Writing the translations in the thread (thread style)          |
+| Manage Threads              | Reopening a **locked** archived thread (thread style, optional) |
 
-The command `/check-permissions` lists the permissions that are missing in a channel (see [Flags and diagnostics](../commands/flags.md)).
+`/check-permissions` lists the permissions that are missing, and the [Translation rules](../website/dashboard/translation-rules.md) page flags the rules that lack one.

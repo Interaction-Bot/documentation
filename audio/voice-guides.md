@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step guides for the voice features: read a message aloud, TTS channels, manual and automatic transcription, and transcription with translation."
+description: "Step-by-step guides for the voice features: read a message aloud, TTS rules, manual and automatic transcription, and transcription with translation."
 ---
 
 # Voice guides
@@ -10,7 +10,7 @@ Each guide starts from a server where the bot is installed, with the permissions
 
 1. Join a voice channel of the server.
 2. Run `/tts say` and type the text in `query`. The text can have up to 500 characters.
-3. Optional: in `language`, start typing a language name and pick it from the suggestions. Leave it empty to detect the language automatically.
+3. Optional: in `language`, start typing a language name and pick it from the suggestions. Leave it empty to detect the language automatically. Optional: `voice`, to pick a voice for this message.
 4. The bot joins your voice channel and reads the text. It answers with the embed *The bot is saying `...` in the voice channel.*
 5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves 30 seconds after nobody but bots is left in the channel.
 
@@ -18,27 +18,21 @@ Each guide starts from a server where the bot is installed, with the permissions
 On a premium server, `/tts say` needs no vote. Otherwise, if no member of the server has voted in the last 24 hours, it answers *You need to vote for the bot to use this command.* One vote from any member unlocks it for the whole server.
 {% endhint %}
 
-## 2. Read a text channel aloud (TTS channel)
+## 2. Read a text channel aloud (TTS rule)
 
-Every message of the channel is read in the voice channel of its author, for the members who are in a voice channel.
-
-**With the command**
+Every message of the channel is read in the voice channel of its author, for the members who are in a voice channel. A rule can also cover a whole category, or the whole server.
 
 1. Make sure you have the *Manage Server* permission.
-2. Run `/tts-channel set channel:#chat`. Optional: `language` (detected for each message if empty), `translate-to` (translate each message before reading it), and `voice-channel` (the voice channel where the messages are read, instead of the voice channel of their author).
-3. The bot confirms: *The messages of #chat will be read aloud for the members who are in a voice channel.*
-4. Check the list with `/tts-channel list`. To stop reading the channel, run `/tts-channel remove channel:#chat`.
+2. Open the dashboard of the server, then the page **Text to speech** (category *Audio & AI*). The tab **Read-aloud rules** is open.
+3. Click **Add a channel** (or **Add a category**, or **Add** for the whole server). In the window, choose the channel.
+4. Optional: set **Voice channel for reading** (where the messages are read; by default, the voice channel of the author), **Language** (automatic by default), and **Automatic translation** (premium).
+5. Optional: turn on **Only members whose mic is muted** if only the members who cannot talk should be read.
+6. Click **Add this rule**, then **Save** in the bar at the bottom of the page.
 
-**On the dashboard**
-
-1. Open the dashboard of the server, then the page **Text to speech** (category *Audio & AI*). The page has three tabs: *Reading channels*, *Settings* (the reading options and the voices) and *Permissions*.
-2. Click *Add a channel*, choose the channel, then set *Voice channel for reading* (optional), the *Language*, the *Automatic translation* option (premium) and the *Enabled* switch.
-3. Click *Save*.
-
-<figure><img src="../.gitbook/assets/dash-text-to-speech.png" alt="Text to speech page"><figcaption><p>Text to speech page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/tts-rule-window.png" alt="Adding a text to speech rule"><figcaption><p>Adding a text to speech rule</p></figcaption></figure>
 
 {% hint style="info" %}
-A message is read only if it has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the channel has a destination where someone is. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
+A message is read only if it has text, does not start with `/`, `!`, `.` or `$`, and either its author is in a voice channel, or the rule has a destination where someone is. Limits and anti-spam rules are in [Voice](voice.md#tts-channels).
 {% endhint %}
 
 ## 3. Transcribe a voice channel manually (`/transcribe start`)
@@ -56,20 +50,19 @@ A message is read only if it has text, does not start with `/`, `!`, `.` or `$`,
 `/transcribe start` needs a premium server, or a vote in the last 24 hours from a member of the server. Only one transcription runs per server at a time.
 {% endhint %}
 
-## 4. Transcribe automatically when someone joins (`/transcribe auto`)
+## 4. Transcribe automatically when someone joins
 
 1. Make sure you have the *Manage Server* permission.
 2. Check the permissions: the bot must be able to **Connect** and **Speak** in the voice channel, and to **Send Messages** in the text channel. The `embed` style also needs **Embed Links**. The `webhook` style (the default) needs **Manage Webhooks**; without it, plain messages are posted.
-3. Run `/transcribe auto enable`. Optional options:
-   * `voice-channel`: the voice channel that starts the transcription (any voice channel if empty);
-   * `text-channel`: where the transcriptions are posted (this channel if empty);
-   * `language`, `translate-to` and `style`, as in guide 3.
-4. When a member joins the voice channel, the bot says *Transcription started* in the voice channel (spoken) and transcribes the channel. Nothing is posted in the text channel for the start.
-5. The bot leaves 30 seconds after the last human left. To turn the feature off, run `/transcribe auto disable`.
+3. Open the dashboard of the server, then the page **Transcription** (category *Audio & AI*). The tab **Transcribed channels** is open.
+4. Click **Add a voice channel** (or **Add a category**, or **Add** for the whole server). Choose the voice channel to listen to, then the **Text channel** where the transcriptions are posted (the chat of the voice channel by default). Optional: **Translate to**, **Display** and **Style**.
+5. Click **Add this rule**, then **Save** in the bar at the bottom of the page.
+6. When a member joins the voice channel, the bot says *Transcription started.* in the voice channel (spoken) and transcribes the channel. Nothing is posted in the text channel for the start.
+7. The bot leaves 30 seconds after the last human left.
 
-The same settings are on the dashboard page **Transcription**: switch on *Enabled*, click *Add a configuration*, set the fields, then *Save*. A free server has **one** configuration on this page; a premium server has no limit. Up to 3 configurations can listen to the same voice channel.
+A free server has **one** rule on this page; a premium server can have up to 25. The most precise rule of a voice channel wins: a rule of the voice channel, then of its category, then the rules of the whole server. Up to 3 rules can listen to the same voice channel.
 
-<figure><img src="../.gitbook/assets/dash-speech-to-text.png" alt="Transcription page"><figcaption><p>Transcription page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/stt-page-overview.png" alt="The transcription rules of a server"><figcaption><p>The transcription rules of a server</p></figcaption></figure>
 
 {% hint style="info" %}
 If the bot does not start, the permissions of the channels are the first thing to check: when a permission is missing, nothing is posted. See [Voice troubleshooting](voice-troubleshooting.md).
@@ -77,11 +70,11 @@ If the bot does not start, the permissions of the channels are the first thing t
 
 ## 5. Transcribe with a translation (premium)
 
-The translation of a transcription is a **premium** feature. Only the translation is posted.
+The translation of a transcription is a **premium** feature. By default only the translation is posted; the *Display* option of a rule can post the original too.
 
 1. Make sure the server is premium.
 2. For a one-time transcription, run `/transcribe start` with the option `translate-to`, and pick the target language from the suggestions.
-3. For an automatic transcription, run `/transcribe auto enable` with the same option. You can also set *Translate to* on the dashboard page **Transcription**.
+3. For an automatic transcription, open the page **Transcription**, and set **Translate to** in the rule (the field is locked on a free server).
 4. What is said in the target language is not translated again. If the translation fails, the original text is posted.
 
 {% hint style="info" %}
@@ -93,11 +86,11 @@ On a free server, `/transcribe start translate-to:...` answers *The translation 
 1. Join the voice channel. Make sure the server is premium, or that you have voted in the last 24 hours.
 2. Run `/transcribe live`. If no transcription runs, the command starts one (same rules as `/transcribe start`). If one already runs in this channel, the view opens at once.
 3. Click **Open the live transcription**. The Activity opens with the sentences as they are said.
-4. On a premium server, choose the language you read in the **Translation** button. Only your view changes.
-5. A member with *Manage Server* can stop the transcription from the Activity: click **Stop transcription**, then **Confirm the stop?** within 4 seconds.
+4. On a premium server, choose the language you read in the **Translate** button. Only your view changes.
+5. A member with *Manage Server* can stop the transcription from the Activity: click **Stop transcription**, then **Click again to stop** within 8 seconds.
 
 {% hint style="info" %}
-The live view can be turned off or limited to members who can manage the server on the dashboard page Transcription. See [Live transcription](live-transcription.md).
+The live view can be turned off, or limited to members who can manage the server, on the dashboard page **Transcription**, in the tab **Live transcription (Activity)**. See [Live transcription](live-transcription.md).
 {% endhint %}
 
 ## Next steps

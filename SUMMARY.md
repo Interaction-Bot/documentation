@@ -9,7 +9,7 @@
 ## Translation
 
 * [Overview](translation/overview.md)
-* [Automatic translation](translation/automatic.md)
+* [Translation rules](translation/automatic.md)
 * [Flag translation](translation/flags.md)
 * [Commands and menus](translation/commands.md)
 * [Language detection](translation/language-detection.md)
@@ -32,46 +32,49 @@
 * [Voice messages](audio/voice-messages.md)
 * [Voice guides](audio/voice-guides.md)
 * [Voice troubleshooting](audio/voice-troubleshooting.md)
-* [Transcription (dashboard)](website/dashboard/speech-to-text.md)
-* [Text to speech (dashboard)](website/dashboard/tts-channels.md)
-* [Voice recording (dashboard)](website/dashboard/voice-recording.md)
-* [Temp voice (dashboard)](website/dashboard/temp-voice.md)
 
 ## Server management
 
+* [Quick setup](management/quick-setup.md)
+* [AI setup](management/ai-setup.md)
 * [Welcome and goodbye](management/welcome-and-goodbye.md)
 * [Invite tracker](management/invite-tracker.md)
+* [Reaction roles](management/reaction-roles.md)
 * [Honeypot](management/honeypot.md)
-* [AI setup](management/ai-setup.md)
+* [Event log](management/event-log.md)
+* [Bot profile](management/bot-profile.md)
 
 ## Q&A
 
 * [Overview](qa/overview.md)
 * [FAQ and /ask](qa/faq.md)
 * [FAQ guides](qa/faq-guides.md)
-* [FAQ (dashboard)](website/dashboard/faq.md)
 
-## Website
+## Dashboard
 
 * [🌐 Dashboard](website/dashboard/README.md)
   * [Overview](website/dashboard/overview.md)
+  * [Journal](website/dashboard/journal.md)
   * [Premium](website/dashboard/premium.md)
   * [Translation rules](website/dashboard/translation-rules.md)
-  * [Channel Translation](website/dashboard/channel-translation.md)
-  * [Role Translation](website/dashboard/role-translation.md)
-  * [Mirror Translation](website/dashboard/translation-groups.md)
-  * [Flag translation](website/dashboard/flag-translation.md)
-  * [Category Translation](website/dashboard/category-translation.md)
-  * [Language identification](website/dashboard/language-identification.md)
-  * [Blacklist (Exceptions)](website/dashboard/blacklist.md)
-  * [Flag shortcuts](website/dashboard/flag-shortcuts.md)
+  * [Flags](website/dashboard/flag-translation.md)
+  * [Exceptions](website/dashboard/exceptions.md)
   * [Voice messages](website/dashboard/voice-messages.md)
-  * [Welcome](website/dashboard/welcome.md)
+  * [Transcription](website/dashboard/speech-to-text.md)
+  * [Text to speech](website/dashboard/tts-channels.md)
+  * [FAQ](website/dashboard/faq.md)
+  * [Voice recording](website/dashboard/voice-recording.md)
+  * [Temp voice](website/dashboard/temp-voice.md)
+  * [Welcome & goodbye](website/dashboard/welcome.md)
   * [Invitations](website/dashboard/invites.md)
   * [Honeypot](website/dashboard/honeypot.md)
+  * [Reaction roles](website/dashboard/reaction-roles.md)
+  * [Bot profile](website/dashboard/bot-profile.md)
   * [Event log](website/dashboard/event-log.md)
-  * [Journal](website/dashboard/journal.md)
   * [Account](website/dashboard/account.md)
+
+## Website
+
 * [Feature pages](website/features.md)
 * [Commands page](website/commands.md)
 * [My recordings](website/recordings.md)
@@ -80,14 +83,11 @@
 
 ## Commands
 
+* [All commands](commands/all-commands.md)
 * [General](commands/general.md)
 * [Translation commands](commands/translation.md)
-* [Configuration commands](commands/configuration.md)
-* [User app](commands/user-app.md)
-* [All commands](commands/all-commands.md)
-* [Translation groups](commands/groups.md)
-* [Flags and diagnostics](commands/flags.md)
 * [Audio commands](commands/audio.md)
+* [User app](commands/user-app.md)
 
 ## Premium
 
@@ -98,6 +98,7 @@
 ## Changelogs
 
 * [Changelogs](changelogs/README.md)
+  * [November 2026](changelogs/2026-11.md)
   * [October 2026 - server management](changelogs/2026-10-management.md)
   * [October 2026 - audio update](changelogs/2026-10-audio.md)
   * [October 2026](changelogs/2026-10.md)
@@ -105,6 +106,6 @@
 ## Links
 
 * [Website](https://interaction-bot.com)
-* [Premium](https://www.patreon.com/interactionbot)
+* [Premium](https://interaction-bot.com/premium)
 * [Support](https://discord.gg/wjWjf6mCjf)
 * [Invite](https://interaction-bot.com/invite)

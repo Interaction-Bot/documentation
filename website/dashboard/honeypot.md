@@ -4,13 +4,13 @@ description: "Honeypot page of the dashboard: the Status, Settings, Warning and 
 
 # Honeypot
 
-<figure><img src="../../.gitbook/assets/dash-honeypot.png" alt="Honeypot page"><figcaption><p>Honeypot page</p></figcaption></figure>
-
 The Honeypot page sets up the trap channels that remove spam bots. How the feature works, the permissions it needs and its rules are explained in [Honeypot](../../management/honeypot.md).
+
+<figure><img src="../../.gitbook/assets/dash-honeypot-status.png" alt="The Honeypot page, Status tab"><figcaption><p>The Honeypot page, Status tab</p></figcaption></figure>
 
 Navbar > category _**Management**_ > _**Honeypot**_.
 
-The page has four tabs: _**Status**_, _**Settings**_, _**Warning**_ and _**History**_.
+The page has four tabs: _**Status**_, _**Settings**_, _**Warning**_ and _**History**_. The tab is written in the address (`?tab=status`, `?tab=settings`, `?tab=warning` or `?tab=history`), so the browser back button goes back to the previous tab.
 
 ## Saving
 
@@ -18,6 +18,10 @@ The page has four tabs: _**Status**_, _**Settings**_, _**Warning**_ and _**Histo
 * **Everything else**: when you change a setting, a bar at the bottom of the page says _You made changes, save them!_ with _**Cancel**_ and _**Save**_ buttons. _**Save**_ applies the changes, _**Cancel**_ restores the last saved settings.
 
 If a save is refused, the page shows the reason under the bar (see [Messages of the page](#messages-of-the-page)).
+
+## Turning it on
+
+The toggle next to the title of the page turns the honeypot on or off, from any tab. Turning it on also turns on the feature for the server if it was off. The change is saved with the bar at the bottom of the page, like the other settings. The honeypot needs at least one trap channel to be turned on.
 
 ## Tab Status
 
@@ -28,7 +32,7 @@ The tab shows whether the honeypot works, and what is missing.
 | Toggle (top of the page, next to the title) | Off | Turns the honeypot on or off, from any tab. Needs at least one trap channel. Saved with the bar at the bottom. |
 | State | _The honeypot is off_ | One of: _The honeypot is watching_ (on and ready), _The honeypot is off_, _The honeypot cannot work yet_ (a check fails), _The honeypot is paused_ (see below). |
 | _**Start again**_ | Shown only when paused | Starts the honeypot again after the protection against false alarms paused it. Check the trap channel first. |
-| Checks | Shown in the box _The honeypot cannot work yet_, when the honeypot is on | Only the conditions that are missing are listed, each with the fix written under it: a trap channel, the permission of the sanction (Kick Members, Ban Members or Timeout Members), Manage Messages and Pin Messages. The list has no colored dots. |
+| Checks | Shown in the box _The honeypot cannot work yet_, when the honeypot is on | Only the conditions that are missing are listed, each with the fix written under it: a trap channel, the permission of the sanction (Kick Members, Ban Members or Timeout Members), Manage Messages and Pin Messages. |
 
 ### Trap channels
 
@@ -37,7 +41,7 @@ The list of the trap channels of the server. Each one shows its name, _Ready_ wh
 | Control | Default | What it does |
 | --- | --- | --- |
 | _**Remove**_ (per channel) | None | Asks _**Remove it**_ or _**Keep**_. Removing deletes the warning of the channel. When the last trap channel is removed, the honeypot is turned off. |
-| Use an existing channel | Empty | Dropdown of the text channels of the server. Choose one, then click _**Add**_. |
+| Use an existing channel | Empty | Dropdown of the text channels of the server. Choose one, then click _**Add**_. The bot does not change the permissions of this channel. |
 | _**Add**_ | Disabled until a channel is chosen | Adds the chosen channel as a trap. |
 | _**Create #honeypot**_ | - | The bot creates a `#honeypot` channel: visible to everyone, everyone can write, threads closed, and the topic _Trap for spam bots: do not write here._ The channel becomes a trap. Needs the Manage Channels permission of the bot. |
 | Counter | `0 / 5` | Number of trap channels, out of the limit. |
@@ -69,16 +73,14 @@ What happens to someone who writes in a trap channel. Click one of the four card
 | _**Ban**_ | | Bans the member and deletes their recent messages. For servers raided by bots that come back. |
 | _**Timeout**_ | | Mutes the member for a while and lets the moderators decide. |
 
-When _**Timeout**_ is selected, two sliders are shown.
+The _**Messages deleted**_ slider is always shown in this section, whatever the sanction. When _**Timeout**_ is selected, a second slider is shown.
 
 | Field | Default | Range | Description |
 | --- | --- | --- | --- |
 | Messages deleted | 24 h | 0 to 168 hours, step 1 | When someone is caught, their messages of the last hours are deleted in every channel. 0 keeps them. Shown in hours. |
 | Timeout length | 24 h | 1 to 672 hours, step 1 | How long a caught member stays muted. Shown in hours below 48 hours, then in days. Shown only for _**Timeout**_. |
 
-The _**Messages deleted**_ slider is always shown in this section, whatever the sanction.
-
-To save _**Kick and clean up**_, _**Ban**_ or _**Timeout**_, you need the matching Discord permission yourself (Kick Members, Ban Members or Timeout Members). _**Only report**_ needs no permission.
+To save _**Kick and clean up**_, _**Ban**_ or _**Timeout**_ while the honeypot is turned on, you need the matching Discord permission yourself (Kick Members, Ban Members or Timeout Members). _**Only report**_ needs no permission.
 
 ### Exceptions
 
@@ -100,28 +102,18 @@ The owner, administrators, people who manage the server, bots, and members who c
 
 ## Tab Warning
 
-The message pinned in each trap channel. Choose one mode.
+The message pinned in each trap channel.
 
-| Mode | Default | What it does |
+| Option | Default | What it does |
 | --- | --- | --- |
-| _**Standard**_ | Selected | The bot's own text: title _🍯 Do not write in this channel_ and a short explanation. |
-| _**Custom**_ | | Shows the fields below. |
-| _**None**_ | | No warning is posted. A note reminds you that a real person then has nothing telling them not to write there. |
+| _**Message**_ | Selected | The warning is posted and pinned. A message builder shows it as it will appear, with the variable `{SERVER}` (the name of the server) available in the texts. |
+| _**Nothing**_ | | No warning is posted, and the warnings already pinned are removed. A note reminds you that a real person then has nothing telling them not to write there. |
 
-Custom fields (shown only for _**Custom**_):
-
-| Field | Limit | Description |
-| --- | --- | --- |
-| Title | 256 characters | Title of the warning. |
-| Text | 4096 characters | Text of the warning. |
-| Footer | 2048 characters | Small text at the bottom. |
-| Color | - | Color bar of the warning, chosen with the color picker. |
-
-A **Preview** on the right shows the warning as Discord displays it, with the label _Pinned by the bot_. In _**None**_, the preview says that no warning is posted.
+With _**Message**_, the title and the text are the bot's standard ones, in the language of the server, as long as you leave them empty. Write your own to replace them. The builder also gives the look of the message (embed, card or blocks), its color, its fields and its pictures, from the same gallery as the welcome message. The label _Pinned by the bot_ shows under the message.
 
 ## Tab History
 
-_Recent catches_: the last catches of the server, newest first, over the last 30 days. The page says how many are shown, for example _The last 20 catches over 30 days._, and gives the total for the period.
+_Recent catches_: the last 20 catches of the server, newest first, over the last 30 days. The page says how many are shown, for example _The last 20 catches over 30 days._, and gives the total for the period.
 
 Each line shows the avatar and name of the member, the date and time, and the sanction (_Kicked_, _Reported_, _Banned_ or _Timed out_), and a badge:
 
@@ -141,7 +133,7 @@ Reasons shown for a failed catch:
 
 | Reason | Meaning |
 | --- | --- |
-| _The member has a role above the bot's._ | The bot cannot punish this member. |
+| _The member has a role above the bot's._ | The bot cannot punish this member: their highest role is equal to or above the highest role of the bot. |
 | _The bot lacks the Ban Members permission._ | Give the bot Ban Members. |
 | _The bot lacks the Kick Members permission._ | Give the bot Kick Members. |
 | _The bot lacks the Timeout Members permission._ | Give the bot Timeout Members. |
@@ -160,7 +152,7 @@ The history is kept for 30 days, and the list shows the last 20 catches.
 | _The log channel must be a text channel of this server._ | Choose a text channel. |
 | _One of the roles no longer exists._ | Remove this role from the exceptions or from the mention. |
 | _Too many exempt roles or members for this server._ | Remove some entries. |
-| _To use this action you need the matching Discord permission yourself (Kick, Ban or Time out members)._ | You do not have the permission of the sanction. |
+| _To use this action you need the matching Discord permission yourself (Kick, Ban or Time out members)._ | You do not have the permission of the sanction. Only refused when the honeypot is turned on. |
 | _The bot does not answer right now. Try again in a moment._ | The bot cannot be reached. Try again later. |
 | _The settings could not be saved. Try again._ | Try again. |
 | _The history could not be loaded._ | Reload the page. |

@@ -25,7 +25,7 @@ Run **`/ai setup`** in the channel where you want the conversation. The command 
 | --- | --- |
 | `/ai setup` | Start a conversation with the AI in this channel to configure the bot. |
 
-The button **Set up with AI** of `/help` (in a server) starts the same conversation in the channel.
+The button **Set up with AI** of `/help` and of `/config` (in a server) starts the same conversation in the channel.
 
 ### Requirements
 
@@ -36,7 +36,11 @@ The button **Set up with AI** of `/help` (in a server) starts the same conversat
 | Your message processing | You must not have opted out of message processing. See [Privacy](#privacy). |
 | One conversation per server | While a conversation runs, `/ai setup` says where it runs and who started it. |
 
-After the command, the bot posts the **AI setup** message: write your request below it. Only the messages of the person who started the conversation, in that channel, are read.
+After the command, the bot posts the **AI setup** message, with the **Stop** button under it: write your request below it. Only the messages of the person who started the conversation, in that channel, are read.
+
+<figure><img src="../.gitbook/assets/ai-setup-channel-start.png" alt="The message of /ai setup, with the Stop button"><figcaption><p>The message of /ai setup, with the Stop button</p></figcaption></figure>
+
+The bot shows the message **as a notice**: a title with the icon of the bot, the examples, and the rules of the conversation (who is read, the five minutes, and the Stop button).
 
 ## How a conversation works
 
@@ -51,7 +55,7 @@ A plan stays valid for **10 minutes**. A yes sent after that does not confirm th
 
 ## Stop and endings
 
-Under the last message of the assistant there is a **Stop** button.
+The **Stop** button is on the **AI setup** message posted by the command, not under each answer. It stays there while the conversation runs.
 
 * **Who can press it:** the person who started the conversation, or any member with Manage Server.
 * **What it does:** the conversation ends. The changes already made stay in place.
@@ -86,8 +90,8 @@ If you start a conversation and then stop it with **Stop**, you can start a new 
 
 * **Each request to the assistant uses one credit.** A request is one of your messages that the assistant answers.
 * **The credit is per server, per day.** The `/ai setup` conversations and the dashboard assistant share the same credit for a server.
-* **Free and Premium servers have different daily credits.** A free server has **15** requests a day, a Premium server **150**. The number of requests left is shown in the status line of the dashboard assistant. The conversation in the channel ends when the credit is used up.
-* **Each person has a daily limit too, across all servers:** **40** requests a day. It applies to the dashboard and to `/ai setup` together.
+* **Free and Premium servers have different daily credits.** A free server has **50** requests a day, a Premium server **1000**. The number of requests left is shown in the status line of the dashboard assistant (*n requests left*). The conversation in the channel ends when the credit is used up.
+* **Each person has a daily limit too, across all servers:** **40** requests a day, Premium or not. It applies to the dashboard and to `/ai setup` together. Premium does not raise it.
 * **The AI service has a daily budget shared by all servers.** When it is used up, the assistant is not available until the next day.
 * **A longer message is cut to 4000 characters.** The assistant reads only the first 4000 characters.
 * **One answer at a time.** Send the next message when the assistant has answered.
@@ -96,19 +100,20 @@ The `/ai setup` command itself does not need Premium. The settings the assistant
 
 ## What the assistant can change
 
-The assistant reads and changes the **settings of the dashboard**, for this server only. For example:
+The assistant reads and changes the **settings of the dashboard**, for this server only. Nearly everything a page of the dashboard can change is open to it (the exceptions are listed below). For example:
 
-* translations: channels, mirrors, categories, roles, flags, and flag shortcuts;
-* languages, language identification and the blacklist;
-* transcription of voice channels, voice messages, text to speech and voice recording;
-* FAQ, welcome and leave messages, invites and the honeypot;
+* translation: rules of the server, channels, categories, roles, mirrors, flags and their shortcuts, exceptions, and voice messages;
+* transcription of voice channels, text to speech (rules and voices), voice recording;
+* FAQ, welcome, goodbye and private messages, the welcome hub, invitations, honeypot, reaction roles and event log;
+* the bot profile (nickname and bio; the pictures are sent from the page only);
 * temporary voice channels;
 * turning features on or off.
 
 The assistant **cannot**:
 
 * change the Premium status of the server, or buy Premium;
-* give or invite permissions;
+* give or invite permissions, or change the invitation link of the bot;
+* send the pictures of the bot profile;
 * answer questions that are not about Interaction Bot, such as general knowledge, programming, or writing a text for you;
 * change its own rules from the conversation. A message that asks it to ignore them is refused.
 
@@ -128,14 +133,20 @@ On the dashboard, the assistant is in a panel on the right side of the page.
 * **Suggestions:** an empty conversation shows four examples: *Translate my main channel into French*, *Turn on transcription for voice channels*, *Set voice messages to automatic transcription* and *What can you do?*.
 * **Plan and confirmation:** the same as in a channel. Reply in the box below.
 * **Steps:** each change appears as a line: *Checking*, *Changing* or *Deleting in* the feature. A change made in this panel has an _**Undo**_ button for one hour. _**Undo**_ restores the settings as they were before that change.
-* **Stop:** while the assistant answers, a square _**Stop**_ button replaces the send button. It stops the answer. The changes already made stay in place.
+* **Stop:** while the assistant answers, the _**Stop**_ button stops the answer. The changes already made stay in place.
+
+<figure><img src="../.gitbook/assets/ai-setup-dashboard-panel.png" alt="The AI assistant panel: a request, the checks, then the plan to confirm"><figcaption><p>The AI assistant panel: a request, the checks, then the plan to confirm</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/ai-setup-overview-card.png" alt="The « Set up your server with AI » card of the Overview page"><figcaption><p>The « Set up your server with AI » card of the Overview page</p></figcaption></figure>
+
+
 * **Limits:** when the daily limit is reached, the box is locked and a banner says *Daily limit reached. Come back tomorrow or go premium for more requests.* The banner has a _**Go premium**_ link. When the budget is used up, the message is *The assistant is busy right now. Try again later.*
 
 The assistant can make mistakes. Check the steps of each change, and the settings page of the feature if you want to be sure.
 
 ## Privacy
 
-* **What is sent to an AI provider.** While a conversation runs, the messages of the person who started it, the answers of the assistant, and the settings the assistant reads are sent to an AI model provider to produce each answer. The dashboard says it too: *Your requests are processed by an AI provider.*
+* **What is sent to an AI provider.** While a conversation runs, the messages of the person who started it, the earlier messages of the same conversation, and the settings the assistant reads or changes are sent to an AI model provider (OpenRouter, which forwards the request to the host of the model) to produce each answer. Nothing else you write on Discord is sent to it. The dashboard says it too: *Your requests are processed by an AI provider.*
 * **What the bot keeps.** The bot keeps the conversation in its memory while it runs. It is not written to a database. When the conversation ends, it is forgotten.
 * **What the website keeps.** It keeps counters of requests per server and per day, and per person and per day, and the cost of the day. It also keeps a log of the changes made (the feature, a short label of the change, and the result) for **90 days**. The log does not keep the text of the conversation.
-* **Opt-out.** A person who opted out of message processing is not read by the assistant. The conversation ends with the notice shown in [Stop and endings](#stop-and-endings). The opt-out is set on the **Account** page of the dashboard. `/privacy` shows its state, see [Limits and privacy](../audio/limits-and-privacy.md#privacy-opt-outs).
+* **Opt-out.** A person who opted out of message processing is not read by the assistant. The conversation ends with the notice shown in [Stop and endings](#stop-and-endings). The opt-out is set on the **Account** page of the dashboard. `/privacy` shows its state. See [Security and privacy](../security.md).

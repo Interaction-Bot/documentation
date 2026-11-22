@@ -4,13 +4,13 @@ description: Create the FAQ of your server for /ask and automatic replies.
 
 # FAQ
 
-<figure><img src="../../.gitbook/assets/dash-faq.png" alt="FAQ page"><figcaption><p>FAQ page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dash-faq-page.png" alt="The FAQ page"><figcaption><p>The FAQ page</p></figcaption></figure>
 
 ## Localization
 
 Navbar > category _**Audio & AI**_ > _**FAQ**_. Members use it with [`/ask`](../../qa/faq.md).
 
-The counter at the top right shows how many groups you have out of your plan's limit, for example `1 group out of 1` on a free server.
+The header shows the active groups out of your plan's limit, for example `1 active group out of 1` on a free server, and a line under the title gives the limits of your plan (groups, channels and questions per group).
 
 ## How it works
 
@@ -26,15 +26,15 @@ Click _**Create group**_. The new group appears with these settings:
 
 1. **Name**: up to 40 characters. Two groups cannot have the same name.
 2. **Enabled**: the toggle pauses the whole group without deleting it.
-3. **Channels**: the text channels where the bot uses this group. A channel belongs to one group only: if you select a channel that another group already uses, the save is refused with the message `A channel can only belong to one group.` (see below). The counter shows how many channels you use, for example `2/3`.
+3. **Channels**: the text channels where the bot uses this group. A channel belongs to one group only: if you select a channel that another group already uses, the save is refused with the message `A channel can only belong to one group.` (see below). The channel list is limited by your plan (3 on a free server, 10 on Premium).
 4. **Auto reply**: off by default. When it is on, the bot answers by itself in the channels of this group, only when it is confident enough.
 5. **Minimum confidence**: the slider goes from **80%** to **95%**, and the default is **85%**. See below.
-6. **Questions and answers**: click _**+ Add a question**_, write the question and its answer, then repeat. Each question needs an answer. The counter shows how many questions the group has, for example `3/5`.
+6. **Questions and answers**: click _**+ Add a question**_, write the question and its answer, then repeat. Each question needs an answer. The group shows how many questions it has, against the limit of your plan.
 
 Click _**Save**_ in the popup at the bottom of the page. _**Cancel**_ goes back to the last saved configuration. You can also delete a question with _**Delete this question**_, or a whole group with _**Delete group**_.
 
 {% hint style="info" %}
-Make sure the bot can send messages and embeds in the channels you select, otherwise it cannot answer there. Run [`/check-permissions`](../../commands/flags.md#diagnostics-check-permissions) on your server to see what is missing.
+Make sure the bot can send messages and embeds in the channels you select, otherwise it cannot answer there. Run `/check-permissions` on your server to see what is missing (see [Permissions](../../permissions.md)).
 {% endhint %}
 
 ## Minimum confidence
@@ -54,7 +54,6 @@ The default of 85% is a good start. Change it only after you have read some auto
 | **Answer** | Up to 1800 characters. Put the most useful information first. Links and channel mentions are kept when the answer is translated. |
 
 Each question needs an answer: the page shows `Every question needs an answer.` if one is missing. The complete advice is in [How do I write a good question?](../../qa/faq-guides.md#how-do-i-write-a-good-question).
-
 ## Limits
 
 | Free                                              | Premium                                              |
@@ -80,5 +79,5 @@ When you try to go beyond your plan's limits, a popup suggests Premium instead.
 ## Good to know
 
 * Members see the answer in the language of their question.
-* Deleting a group deletes its channels and questions.
+* Deleting a group deletes its questions and its channel links.
 * Changes are sent to the bot when you save, and the bot uses them straight away in most cases.

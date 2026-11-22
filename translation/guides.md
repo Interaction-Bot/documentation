@@ -1,64 +1,94 @@
 ---
-description: Ready-to-use setups for common situations.
+description: Ready-to-use setups for common situations, step by step on the dashboard or with the AI assistant.
 ---
 
 # Setup guides
 
+Step by step recipes. Each one uses the [dashboard](../website/dashboard/) (**Translation** section), and the [AI assistant](../management/ai-setup.md) when it can help.
+
 {% hint style="info" %}
-On a server converted to the [translation rules](../commands/translation.md#translation-rules), use `/translation` (`setup`, `channel`, `link`, `options`...) instead of the former commands named here. The result is the same; the former commands then answer with the matching `/translation` command.
+On a server that uses the translation rules, the AI assistant can **read** the rules but cannot change them yet: make the changes on the [Translation rules](../website/dashboard/translation-rules.md) page. Each guide below uses that page.
 {% endhint %}
 
-Step by step recipes. Each one uses the [dashboard](../website/dashboard/) unless a command is mentioned.
+Before you start, check that the bot has its permissions in every channel involved. The [Check a channel](../website/dashboard/translation-rules.md#tools) tool of the Translation rules page, or `/check-permissions`, lists what is missing.
 
 ## 1. An international community: one channel per language
 
-**Goal**: members write in their own language, in their own channel, and read everybody.
+**Goal**: members write in their own language, in their own channel, and everybody reads all of them.
 
 1. Create the channels `#english`, `#francais`, `#espanol`.
-2. Use a [translation group](../commands/groups.md): `/group create name:Community`, then `/group set-channel` for each channel with its language (or use the dashboard page _Mirror Translation_).
-3. Check with `/check-permissions` that the bot can read and write in the three channels.
+2. On the **Translation rules** page, click **Add a rule**, then choose **Linked channels**.
+3. Choose the three channels, and the language of each one (English, French, Spanish). Save.
+4. Check with the **Check a channel** tool that the bot can read and write in the three channels.
 
-A message in any of the channels is translated into the other two. Free servers can have 1 group of 3 channels, premium servers 5 groups of 5.
+A message in any of the channels is translated into the languages of the two other channels, and sent there. A free server can have **one link of 3 channels**; a Premium server **5 links of 5 channels**.
 
-## 2. Translate a single channel into another
+## 2. Translate one channel into another
 
 **Goal**: staff write in English in `#announcements`, and French members read `#annonces`.
 
-1. _Channel translation_ > _Add a configuration_.
-2. **Channel** `#announcements`, **Sending channel** `#annonces`, **Language** French.
-3. Style _Webhook_ for a natural look. Save.
+1. On the **Translation rules** page, click **Add a rule**, then choose **Channels**.
+2. Choose `#announcements`, the language **French**, and **Send the translations to** `#annonces`.
+3. Keep the style **As the author** for a natural look. Save.
 
-## 3. Translate what some members write
+## 3. A bilingual channel
 
-**Goal**: Japanese speakers (role `@japanese`) write anywhere, everybody reads English.
+**Goal**: in `#general`, French messages are translated into English, and English messages into French.
 
-1. _Role translation_ > _Add a configuration_.
-2. **Role** `@japanese`, **Language** English, choose a **Sending channel** or leave it empty to answer in the same channel.
-3. Add an [exception](../website/dashboard/blacklist.md) for the channels where you don't want translations (premium).
+1. Click **Add a rule**, then choose **Two languages in one channel**.
+2. Choose `#general`, then the two languages (English and French).
+3. Choose what happens to a message written in another language: translated into one of the two languages, or not translated. Save.
 
-## 4. One-click translation for everybody
+This replaces two channel rules.
+
+## 4. Translate what some members write
+
+**Goal**: Japanese speakers (role `@japanese`) write anywhere, and everybody reads English.
+
+1. Click **Add a rule**, then choose **Roles**.
+2. Choose the role `@japanese` and the language **English**.
+3. Leave **Send the translations to** on *The channel where the message was written*, so the answer appears in the same channel. Save.
+
+Add an [exception](../website/dashboard/exceptions.md) (Premium) for the channels where you don't want translations.
+
+## 5. One-click translation for everybody
 
 **Goal**: any member can translate any message of `#general`.
 
-* Run `/flags set channel:#general flags:🇬🇧 🇫🇷 🇪🇸`: the bot adds the flags under each message, one click translates.
-* Or do nothing: members can add any flag reaction themselves, see [Flag translation](flags.md).
+* Do nothing: members can already add any flag reaction under a message, see [Flag translation](flags.md).
+* To show the flags under every new message, go to **Translation** > **Flags** > **Automatically added flags**, choose `#general`, and choose from 1 to 5 flags, for example 🇬🇧 🇫🇷 🇪🇸. The bot adds them under the new messages, and a member only clicks one.
 
-## 5. Translate a whole section of the server
+## 6. Translate a whole section of the server
 
 **Goal**: all the channels of the category "International" are translated into English.
 
-1. _Category translation_ > _Add a configuration_ with the category and the language English.
-2. Optionally set a **Sending channel** and _Delete translation_ so translations don't pile up.
+1. Click **Add a rule**, then choose **Categories**.
+2. Choose the category, and the language **English**. Save.
 
-## 6. Read the messages of a channel aloud
+The channels of the category that have their own rule keep it: a channel rule is more precise than a category rule.
 
-1. Join a voice channel and run `/connect`, then `/tts start` in the text channel (or `/tts say` to read one text).
-2. For a channel read automatically: `/tts-channel set channel:#chat` (or the dashboard page _Text to speech_). See [Voice](../audio/voice.md).
+## 7. Translate every message of a server
 
-## 7. Transcribe a voice channel
+**Goal**: everything written in the server is readable in English.
 
-Run `/transcribe start` in a text channel while in a voice channel, or enable `/transcribe auto enable` to start it when someone joins. See [Voice](../audio/voice.md) and the dashboard page [Transcription](../website/dashboard/speech-to-text.md).
+1. Click **Add a rule**, then choose **Whole server**.
+2. Choose the language **English**. Save.
 
-## 8. A FAQ that answers by itself
+Use the exceptions to leave some channels alone, for example a channel that is already multilingual.
 
-Create a group on the dashboard page [FAQ](../website/dashboard/faq.md), add questions and answers, choose the channels and turn on _Auto reply_. See [FAQ and /ask](../qa/faq.md).
+## 8. Exclude a channel, a role or a language
+
+**Goal**: messages of `#bot-logs`, of the members with the role `@Bots`, or written in Latin are never translated (Premium).
+
+1. Open **Translation** > **Exceptions**.
+2. In **Never translate**, add the channel, the role or the language.
+
+Exceptions apply before the rules. See [Exceptions](../website/dashboard/exceptions.md).
+
+## 9. Read the messages of a channel aloud, or transcribe a voice channel
+
+These are not translations, but they are often set up together. See [Voice](../audio/voice.md) and the dashboard pages [Text to speech](../website/dashboard/tts-channels.md) and [Speech to text](../website/dashboard/speech-to-text.md).
+
+## 10. A FAQ that answers by itself
+
+Create a group on the dashboard page [FAQ](../website/dashboard/faq.md), add questions and answers, choose the channels, and turn on automatic answers. See [FAQ and /ask](../qa/faq.md).

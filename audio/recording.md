@@ -4,9 +4,7 @@ description: Record the audio of a voice channel with /record, one encrypted tra
 
 # Voice recording
 
-The bot can record a voice channel: it joins the channel, keeps the voice of each speaker on **its own track**, and keeps a **mix** of the whole channel. The recording is encrypted while it is kept, and the people who started it get a link to listen to and download it.
-
-<figure><img src="../.gitbook/assets/discord-record-panel.png" alt="Recording panel posted in a text channel"><figcaption><p>The recording panel, posted in the text channel when a recording starts</p></figcaption></figure>
+The bot can record a voice channel: it joins the channel, keeps the voice of each speaker on **its own track**, and keeps a **mix** of the whole channel. The recording is encrypted while it is kept, and the member who started it gets a link to listen to and download it.
 
 * Recording a server's voice channels is set up on the dashboard: [Voice recording](../website/dashboard/voice-recording.md).
 * The recordings of a member are listed and played on the website: [My recordings](../website/recordings.md).
@@ -19,14 +17,13 @@ Recording a voice channel means recording people. Only record when everyone in t
 
 ## Access
 
-Recording needs a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. One vote by a member of the server unlocks recording for the whole server for 24 hours. The rule depends on the command:
+Recording needs a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. One vote by a member of the server unlocks recording for the whole server for 24 hours. The rule depends on the feature:
 
 | Feature | Who can use it |
 | --- | --- |
-| `/record start` | The server is premium, **or** a member of the server has voted in the last 24 hours. Also, the member must be allowed to record (see [Who can start a recording](#who-can-start-a-recording)). |
-| `/record start continuous` | Premium server only. |
-| `/record auto on` | Premium server only. |
-| `/record auto off`, `/record auto view` | Members with *Manage Server*. |
+| `/record start` | The server is premium, **or** a member of the server has voted in the last 24 hours. The member must also be allowed to record (see [Who can start a recording](#who-can-start-a-recording)). |
+| `/record start continuous:True` | Premium server only. |
+| [Automatic recording](#automatic-recording) | Premium server only. Set on the dashboard. |
 | `/record stop` | The member who started the recording, *Manage Server* or *Move Members*. See [Stopping](#stopping). |
 | `/record test`, `/record list`, `/record note`, `/record transcribe`, `/record transcribe-cancel` | No vote needed. See [Notes](#notes) and [Transcription](#transcription-of-a-recording) for their own rules. |
 
@@ -42,10 +39,10 @@ The bot needs these permissions. See also [Permissions](../permissions.md).
 
 | Where | Permission | Used for |
 | --- | --- | --- |
-| Voice channel | **Connect** (required) | Joining the channel to record it |
-| Voice channel | **View Channel**, **Speak** | `/record test` checks them. Speak is used for the spoken welcome and announcement. |
+| Voice channel | **Connect** (required) | Joining the channel to record it. Stage channels cannot be recorded. |
+| Voice channel | **View Channel**, **Speak** | `/record test` checks them. |
 | Text channel of the command | **Send Messages** and **Embed Links** | The recording panel is an embed. Without them the recording does not start. |
-| Server | **Change Nickname** | The bot's nickname shows *Recording...* while it records. Without it, the nickname does not change. |
+| Server | **Change Nickname** | The bot's nickname shows *Recording...* while it records. Without it, the nickname does not change (a warning in `/record test`). |
 
 ## Commands
 
@@ -53,14 +50,13 @@ The bot needs these permissions. See also [Permissions](../permissions.md).
 | --- | --- |
 | `/record start [continuous]` | Start recording the voice channel you are in. The bot joins it, and the panel is posted in the text channel where the command was run. `continuous` keeps the recording going when the channel is empty (premium, see [Stopping](#stopping)). |
 | `/record stop` | Stop the recording of the server. The link is sent in private messages to the member who started it. The Stop button of the panel does the same. |
-| `/record test` | Checks that a recording will work in your channel, without starting one. One line per check, only you see the answer. |
-| `/record list` | Your recent recordings on this server (10 at most), with their status, duration, tracks and a link to each one. Only you see the answer. Expired recordings are not listed. |
+| `/record test` | Checks that a recording will work in your channel, without starting one. One line per check, posted in the channel. |
+| `/record list` | Your recent recordings on this server (10 at most), with their status, duration, tracks and a link to each one. Only you see the answer. Only the finished or interrupted recordings that have not expired are listed. |
 | `/record note message` | Add a timestamped note to the running recording. See [Notes](#notes). |
 | `/record transcribe [recording]` | Start the transcription of one of your recordings on this server. Without `recording`, your latest one is used. See [Transcription](#transcription-of-a-recording). |
 | `/record transcribe-cancel` | Cancel your running transcription on this server. |
-| `/record auto on` | Turn the automatic recording on (premium, *Manage Server*). See [Automatic recording](#automatic-recording). |
-| `/record auto off` | Turn the automatic recording off. |
-| `/record auto view` | Show the automatic recording settings of the server. |
+
+The automatic recording has no command: it is set on the dashboard, see [Automatic recording](#automatic-recording).
 
 ## What is recorded
 
@@ -70,24 +66,24 @@ The bot needs these permissions. See also [Permissions](../permissions.md).
 * The **voice of the bot** (text to speech) is not recorded, unless the server chose *Record the bot's voice* on the [dashboard](../website/dashboard/voice-recording.md). When it is on, it is a track of its own. The announcements of the recording itself are never recorded.
 * Members who **opted out** are not recorded. See [Opt-out](#opt-out).
 
-Each track and the mix are stored as Ogg Opus, at about 64 kb/s. Recordings made before October 2026 are stored as FLAC.
+Each track and the mix are stored as Ogg Opus, at about 64 kb/s, the bitrate of a Discord voice channel. Recordings made before the switch to Opus are stored as FLAC.
 
 ## Announcement and consent
 
 When a recording starts, the bot:
 
 1. posts the **recording panel** in the text channel. It says *Recording in progress*, shows the consent line (*Stay only if you agree: arrivals and departures are announced here.*), and lists the last arrivals and departures, with the time;
-2. says out loud, in the voice channel, that the audio of the channel is being recorded (the message is in English, whatever the language of the server);
+2. says out loud, in the voice channel, that the audio of the channel is being recorded;
 3. when a member joins the channel while it is recorded, posts a welcome line in the text channel and says it out loud. The same member is welcomed again at most once a minute.
 
 The panel has two buttons: **Stop recording** (same rules as `/record stop`) and **Add a note**. Its last line is a link to **My recordings**. When the recording ends, the panel changes to *Recording finished* or *Recording interrupted*, with the duration and the number of tracks.
 
 ### Opt-out
 
-A member who does not want to be recorded can turn on **Do not record me (opt-out)** on the website, on the Account page, in the **Privacy** section (see [Security and privacy](../security.md)). From then on:
+A member who does not want to be recorded can turn on **Do not record me (opt-out)** on the website, on the Account page, in the **Privacy** section (see [Limits and privacy](limits-and-privacy.md#privacy-opt-outs)). From then on:
 
 * the bot does not record the member's voice;
-* the audio of that member already kept in a recording in progress is removed at once;
+* the audio of that member already kept in a recording in progress is removed;
 * the recordings already made are not changed by the switch. To remove them, use **Delete my data** on the same page: it removes the member's voice from the recordings where they speak, and deletes the recordings they started.
 
 While the bot cannot read a member's choice (a temporary database problem), it does not record that member's voice either.
@@ -98,7 +94,7 @@ While the bot cannot read a member's choice (a temporary database problem), it d
 
 1. Join a voice channel (not a stage channel).
 2. In a text channel where the bot can write, run `/record start`. Run `/record test` first if you want to check everything.
-3. The bot joins your channel, the panel appears, and it answers *🔴 Recording started. The panel in the text channel shows its status.* Only you see that answer.
+3. The bot joins your channel, the panel appears, and it answers *🔴 Recording started. The panel in the text channel shows its status.* That answer is posted in the channel.
 
 The command can be used once every 5 seconds per member. Only one recording runs per server at a time.
 
@@ -112,6 +108,7 @@ Possible refusals:
 | *The bot is already in another voice channel of this server. Join that channel to use it.* | The bot is in a channel where someone is served. Join it, or wait. |
 | *Recording is disabled on this server.* | The server switched recording off on the dashboard. |
 | *Recording needs a vote on top.gg ... or a premium server.* | See [Access](#access). |
+| *Keeping the recording when the channel is empty is a premium feature.* | `continuous` needs a premium server. |
 | *This server has used all its daily Recording time ...* | See [Limits](#limits). |
 | *Recording needs a text channel to post its announcement ...* | The bot cannot send messages and embeds in the channel where you ran the command. |
 
@@ -137,12 +134,12 @@ A note is a short text placed at the current moment of the recording. It helps t
 
 * Add one with `/record note message` (200 characters at most), or with the **Add a note** button of the panel.
 * Who can add a note: the member who started the recording, the members of the recorded channel, and members with *Manage Server*.
-* A member waits 3 seconds between two notes. A recording holds 200 notes at most.
-* The notes are shown on the recording's page on the website, where a click jumps to that moment. They can also be exported in the ZIP (see [Downloads](#downloads-and-export)).
+* A member waits a few seconds between two notes. A recording holds 200 notes at most.
+* The notes are shown on the recording's page on the website, where a click jumps to that moment. They can also be downloaded in the ZIP (see [Downloads and export](#downloads-and-export)).
 
 ## Recordings, links and retention
 
-When a recording is saved, the bot sends a **private message** to the member who started it, with a **Download** button that opens the recording's page on the website. If the member's private messages are closed, no link is sent: the member finds the recording with `/record list`, or on the Account page of the [website](../website/recordings.md).
+When a recording is saved, the bot sends a **private message** to the member who started it, with the link to the recording's page on the website. If the member's private messages are closed, no link is sent: the member finds the recording with `/record list`, or on the [My recordings](../website/recordings.md) page.
 
 | | Free server | Premium server |
 | --- | --- | --- |
@@ -156,18 +153,14 @@ Transcriptions are deleted with the audio they come from.
 
 On the website, the page of a recording offers:
 
-* **Listen and download**, track by track, and the mix. Choose the download format in the list (FLAC by default; M4A, MP3, OGG or WAV are also offered).
+* **Listen and download**, track by track, and the mix. Choose the download format above the tracks (see below).
 * **Download all (ZIP)**: one file per track and the mix, plus `notes.txt` (the notes with their time) and `labels.txt` (labels for Audacity: *File > Import > Labels*).
 * **Export as video**: an MP4 that reproduces the call, with a tile per person, a border around the person who speaks, and the audio of the mix. The mix must be 2 hours or less. Only one export runs per server at a time.
 * **Transcription**, with the exports TXT, SRT, VTT and JSON.
 
-About the formats:
+The download formats are **FLAC**, **M4A** (AAC, 128 kb/s), **MP3** (192 kb/s), **OGG** (Opus, 96 kb/s) and **WAV** (uncompressed). The default is set on the [dashboard](../website/dashboard/voice-recording.md#recording) of the server, and FLAC is used when none is set.
 
-* The stored file is Ogg Opus, about 64 kb/s. The **OGG** download is that file, without a new encoding.
-* FLAC, M4A, MP3 and WAV files are made from the stored Ogg Opus file. Their quality is the quality of the stored file, not of the original voice. A FLAC download of a recent recording is therefore not lossless.
-* Recordings made before October 2026 are stored as FLAC, and their FLAC download is the stored file.
-
-For the website side, see [My recordings](../website/recordings.md).
+The audio of every format comes from the stored file, which is Ogg Opus at about 64 kb/s. Its quality is therefore the quality of the stored file, not of the original voice: a FLAC or WAV download of a recording is a faithful copy of that file, not a lossless capture of the call.
 
 ## Transcription of a recording
 
@@ -178,7 +171,7 @@ A recording can be turned into text, one speaker at a time, merged by time.
 * The spoken language is **detected automatically**. Each speaker is named after their track.
 * The progress is shown on the website. The bot sends a **private message** when the transcription is ready or has failed.
 * Cancel it with `/record transcribe-cancel`, or with the **Cancel** button on the website.
-* The server can switch transcription off for its recordings: *Allow transcription of recordings* on the [dashboard](../website/dashboard/voice-recording.md).
+* The server can switch transcription off for its recordings: *Allow transcription of recordings* on the [dashboard](../website/dashboard/voice-recording.md#recording).
 
 Each member can ask for a number of transcriptions, counted in a sliding window. The window depends on the plan of the server **when the recording started**:
 
@@ -186,21 +179,18 @@ Each member can ask for a number of transcriptions, counted in a sliding window.
 | --- | --- | --- |
 | Transcriptions per member | 1 every **30 days** | 1 every **24 hours** |
 
-Only one transcription of a member runs at a time. A request counts toward the limit even if it is cancelled or fails.
+Only one transcription of a member runs at a time.
 
 ## Automatic recording
 
-*Premium only.* The bot starts a recording by itself when members join a voice channel, and posts the same panel and announcements as `/record start`.
+*Premium only.* The bot starts a recording by itself when members join a voice channel, and posts the same panel and announcements as `/record start`. It is set on the [dashboard](../website/dashboard/voice-recording.md#automatic-recording), where you choose:
 
-* Turn it on with `/record auto on` or on the [dashboard](../website/dashboard/voice-recording.md), where you also choose:
-  * the **watched voice channels** (none chosen: every voice channel of the server);
-  * the **minimum number of members** (bots excluded) needed to start, from 1 to 25;
-  * the **trigger roles**: a member with one of these roles starts the recording alone, whatever the minimum;
-  * the **panel channel**: where the panel is posted (the first text channel the bot can write in, by default).
-* The check runs about 2 seconds after the last arrival or departure in the channel.
-* The recording starts on behalf of a member who is allowed to start one (trigger role first). If nobody is allowed, nothing starts.
-* An automatic recording stops **30 seconds after the channel is empty**, like a normal one. If it was stopped while members stayed, it does not start again until the channel is empty.
-* `/record auto view` shows whether the feature is on, whether the server is premium, the minimum, the watched channels, the trigger roles and the panel channel.
+* the **watched voice channels** (none chosen: every voice channel of the server);
+* the **minimum number of members** (bots excluded) needed to start, from 1 to 25;
+* the **trigger roles**: a member with one of these roles starts the recording alone, whatever the minimum;
+* the **panel channel**: where the panel is posted (the first text channel the bot can write in, by default).
+
+The check runs about 2 seconds after the last arrival or departure in the channel. The recording starts on behalf of a member who is allowed to start one (trigger role first). If nobody is allowed, nothing starts. An automatic recording stops **30 seconds after the channel is empty**, like a normal one.
 
 ## Limits
 
@@ -214,7 +204,7 @@ Only one transcription of a member runs at a time. A request counts toward the l
 | Transcriptions per member | 1 every 30 days | 1 every 24 hours |
 | Start without premium | With a top.gg vote of a member of the server | Always |
 
-* The **daily time** counts the time actually recorded, for all the recordings of the server, and starts again at **midnight UTC**. When the bot reaches the limit it stops the recording, and the server sees when the time starts again.
+* The **daily time** counts the time actually recorded, for all the recordings of the server, and starts again at **midnight UTC**. When the bot reaches the limit it stops the recording.
 * A warning is posted in the text channel when 80 % of the day is used.
 * `/limits` shows the time used, the time left and the time of the next reset, for transcription, text to speech and recording.
 * Premium raises these limits. See [Premium](../premium/premium.md).
@@ -226,7 +216,7 @@ Only one transcription of a member runs at a time. A request counts toward the l
 * you are in a voice channel, and the bot can see, join and speak in it;
 * the bot can write and send embeds in this text channel;
 * the bot can change its nickname (a warning only);
-* recording is on for the server;
+* recording is on for the server and its service is configured;
 * no recording is running;
 * the voice announcements (text to speech) are loaded (a warning only);
 * your role may start a recording;

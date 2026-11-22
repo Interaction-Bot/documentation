@@ -24,7 +24,7 @@ Limits are checked by the dashboard and by the bot when you save. See [Premium](
 
 ### How do I create a group?
 
-Groups are created on the dashboard, or in Discord with the **Create a group** button of `/faq manage`. `/faq add` needs an existing group, and `/faq list` tells you to create one when there is none.
+Groups are created on the [FAQ page of the dashboard](../website/dashboard/faq.md). There is no command for it.
 
 1. Open the [FAQ](../website/dashboard/faq.md) page and click **Create group**.
 2. Give it a name (up to 40 characters, unique).
@@ -33,7 +33,7 @@ Groups are created on the dashboard, or in Discord with the **Create a group** b
 
 ### Can a channel belong to two groups?
 
-No. A channel belongs to one group at most. To move a channel to another group, select it in the new group on the dashboard and save: the dashboard removes it from the old group in the same save.
+No. A channel belongs to one group at most. To move a channel to another group, first remove it from the old group on the dashboard and save. Then add it to the new group and save. If you select a channel that another group already uses, the save is refused with `A channel can only belong to one group.`
 
 ### Can I use threads?
 
@@ -41,7 +41,7 @@ Yes. A thread uses the group of its parent channel, so questions asked in a thre
 
 ### Can I rename a group or delete one?
 
-Yes, on the dashboard. Change the name and save. Deleting a group also deletes its channels and its questions, so keep a copy of the answers you need.
+Yes, on the dashboard. Change the name and save. Deleting a group also deletes its questions and its channel links, so keep a copy of the answers you need.
 
 ### Do my changes apply at once?
 
@@ -51,7 +51,7 @@ When you save on the dashboard, the bot is told to reload the FAQ of your server
 
 ### How long can a question and an answer be?
 
-A question can be up to **200 characters**, and an answer up to **1800 characters**. The dashboard and the `/faq add` form both enforce these limits.
+A question can be up to **200 characters**, and an answer up to **1800 characters**. The dashboard enforces these limits.
 
 ### How do I write a good question?
 
@@ -92,13 +92,13 @@ Yes, on the dashboard: change the question or the answer, then save. When you ch
 
 ### Can members see all the questions?
 
-Not with `/ask`: it shows the answer to the question asked, and the questions that also match (under **See also**). The full list is for moderators: `/faq list` (*Manage Server* permission).
+Not with `/ask`: it shows the answer to the question asked, and the questions that also match (under **See also**). The full list is for moderators: it is on the [FAQ page of the dashboard](../website/dashboard/faq.md).
 
 ## /ask
 
 ### Who can use /ask?
 
-Everybody. The answer of `/ask` is posted in the channel, like the answers of the other commands.
+Everybody. The answer is posted in the channel.
 
 ### How many answers can /ask show?
 
@@ -194,14 +194,14 @@ Yes. Click **Not helpful** as a moderator, or change the entry on the dashboard 
 
 | Feature | Permissions |
 | ------- | ----------- |
-| `/ask` and `/faq` | None: the answers are replies to the command. |
+| `/ask` | None: the answer is posted in the channel. |
 | Automatic replies | *Send Messages* and *Embed Links* in the channel, plus *Send Messages in Threads* in threads. |
 
 Run `/check-permissions` to see the missing permissions of every configured channel. See [Permissions](../permissions.md) for the full list.
 
 ### Who can manage the FAQ?
 
-Members with *Manage Server* can use `/faq`, and the dashboard can be used by members with *Manage Server* or *Administrator*. Anybody can use `/ask`.
+Groups, questions and channels are managed on the [FAQ page of the dashboard](../website/dashboard/faq.md), by the people who can use the dashboard of the server. Anybody can use `/ask`.
 
 ### How are the automatic replies limited?
 
@@ -239,10 +239,6 @@ The channel does not belong to any group. Add it to a group on the dashboard, or
 ### I changed the FAQ, but /ask still shows the old answer.
 
 Changes made on the dashboard are sent to the bot right away. If the bot could not be reached at that moment, the changes may take longer to apply. Save the configuration again on the dashboard, and if the old answer persists, contact the [support server](https://discord.gg/wjWjf6mCjf).
-
-### /faq list shows `No entry yet.` for my group.
-
-The group has no question. Add questions on the dashboard, or with `/faq add` (the form), then run `/faq list` again.
 
 ### The bot does not reply to a question in a group channel, but /ask finds it.
 

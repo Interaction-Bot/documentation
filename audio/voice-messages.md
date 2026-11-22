@@ -8,7 +8,7 @@ A **voice message** is a voice note sent in a Discord channel (the recording wit
 
 * **transcribe** a voice message, privately, with the menu _**Transcribe voice message**_;
 * **transcribe every voice message** of the server automatically, under the message;
-* **translate** the voice messages with the translation features (flag, channel, mirror, category and role), **Premium**;
+* **translate** the voice messages with the translation features of the server (flag, channel, mirror, category and role translations), **Premium**;
 * **read the translation aloud** as a new voice message, **Premium**.
 
 Settings: [Voice messages](../website/dashboard/voice-messages.md) on the dashboard.
@@ -29,7 +29,7 @@ The button works for 5 minutes after the answer.
 | Requirement | Detail |
 | --- | --- |
 | Transcription on | The transcription feature of the server must be on. |
-| Vote or Premium | Premium servers need no vote. Other servers need a vote from a member of the server in the last 24 hours, like the other voice features (see [Transcription](../website/dashboard/speech-to-text.md#limits)). |
+| Vote or Premium | Premium servers need no vote. Other servers need a vote from a member of the server in the last 24 hours, like the other voice features (see [Access](voice.md#access)). |
 | Cooldown | One use every 5 seconds for each person. |
 | Length | See [Limits](#limits). |
 
@@ -41,23 +41,15 @@ The option _**Transcribe voice messages**_ on the dashboard transcribes **every*
 * The transcript is **not translated**.
 * The bot posts nothing when a voice message cannot be transcribed (too long, quota used up, no speech, opt-out). No error message is shown in the channel.
 
-The transcription feature of the server must be on for this option to work.
+The transcription feature of the server must be on for this option to work. It uses the transcription quota of the server.
 
 ## Translate voice messages (Premium)
 
-On a Premium server, a voice message is translated like a written message, through its transcript, by these translation features:
+On a Premium server, a voice message is translated like a written message, through its transcript, by the translation features of the server: flag translation (reaction with a flag), channel translation, mirror, category and role translations. Set them on the dashboard: [Translation rules](../website/dashboard/translation-rules.md) and [Flags](../website/dashboard/flag-translation.md).
 
-| Feature | Where to set it |
-| --- | --- |
-| Flag translation (reaction with a flag) | [Flag translation](../website/dashboard/flag-translation.md) |
-| Channel translation | [Channel translation](../website/dashboard/channel-translation.md) |
-| Mirror (group of channels) | [Translation groups](../website/dashboard/translation-groups.md) |
-| Category translation | [Category translation](../website/dashboard/category-translation.md) |
-| Role translation | [Role translation](../website/dashboard/role-translation.md) |
+A voice message that has written text is not transcribed: only its text is translated.
 
-A voice message is translated from its transcript, and the translation is posted like the translation of a written message. A voice message that has written text is not transcribed: only its text is translated.
-
-On a free server, voice messages are not translated. The option _**Translate voice messages**_ cannot be turned on for a free server.
+On a free server, voice messages are not translated. The option _**Translate voice messages**_ is reserved for premium servers.
 
 ## Voice dubbing (Premium)
 
@@ -73,7 +65,7 @@ The text is not read aloud when one of these is true:
 
 Other rules:
 
-* **Voice:** the default voice of the server is used when it speaks the target language. Otherwise the first voice of the server that speaks it is used.
+* **Voice:** a voice of the server that speaks the target language is used.
 * **Maximum 3 voices per voice message**, one for each target language.
 * Dubbing uses the **text to speech quota** of the server, see [Text to speech](../website/dashboard/tts-channels.md).
 
@@ -82,7 +74,7 @@ Other rules:
 | | Free | Premium |
 | --- | --- | --- |
 | Length of one voice message | 2 minutes | 15 minutes |
-| Daily speech to text quota of the server | Same quota as the transcription of voice channels, see [Transcription](../website/dashboard/speech-to-text.md#limits) | Same quota as the transcription of voice channels |
+| Daily quota of the server | Same quota as the transcription of voice channels, see [Transcription](voice.md#daily-time-and-stop) | Same quota as the transcription of voice channels |
 | Translation of voice messages | No | Yes |
 | Voice dubbing | No | Yes |
 

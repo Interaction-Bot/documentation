@@ -65,13 +65,14 @@ In Discord, `/languages` shows the same list.
 
 ## Flags
 
-Flag translation understands **175 flag emojis**. A flag stands for the main language chosen for the country, for example 🇫🇷 gives French, 🇬🇧, 🇺🇸 and 🇨🇦 give English, 🇧🇷 and 🇵🇹 give Portuguese, 🇨🇭 gives German and 🇧🇪 gives Dutch.
+Flag translation understands **175 flags**. A flag stands for the main language of the country, for example 🇫🇷 gives French, 🇬🇧, 🇺🇸 and 🇨🇦 give English, 🇧🇷 and 🇵🇹 give Portuguese, 🇨🇭 gives German and 🇧🇪 gives Dutch. The flags reach **68 of the 100 languages**. The other languages are reached with [`/translate`](commands.md#translate) or with the translation rules, which take a language by its name.
 
 Special flags:
 
 * 🏴‍☠️ **Pirate flag**: the message is translated in English, then written in pirate speech.
-* 🇮🇱 **Israel**: Hebrew.
+* 🇮🇱 **Israel**: Hebrew. 🇧🇩 **Bangladesh**: Bengali. 🇧🇼 **Botswana**: Tswana.
+* 🏴 **Wales** and 🏴 **Scotland** (the regional flags): Welsh and Scottish Gaelic.
 
 {% hint style="info" %}
-If a flag does nothing, check that flag translation is not disabled for the channel in [Flag translation](../website/dashboard/flag-translation.md).
+If a flag does nothing, check that flag translation is not switched off for the channel on the [Flags](../website/dashboard/flag-translation.md) page, and that the message has some text to read. Flags are not affected by the exceptions of the server.
 {% endhint %}
