@@ -1,5 +1,5 @@
 ---
-description: The Flags page of the dashboard: let members translate a message with a flag reaction, configure it per channel, and add flags automatically under the messages.
+description: "The Flags page of the dashboard: let members translate a message with a flag reaction, configure it per channel, and add flags automatically under the messages."
 ---
 
 # Flags
