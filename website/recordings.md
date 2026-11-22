@@ -6,7 +6,7 @@ description: My recordings on the website - list and play the recordings you sta
 
 My recordings is the page of the website where the member who started a [voice recording](../audio/recording.md) listens to it, downloads it, exports it as a video and transcribes it.
 
-<figure><img src="../.gitbook/assets/dash-my-recordings.png" alt="My recordings page"><figcaption><p>My recordings page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/my-recordings-list.png" alt="The My recordings page (no recording yet)"><figcaption><p>The My recordings page (no recording yet)</p></figcaption></figure>
 
 ## Localization
 
@@ -22,7 +22,7 @@ There is no link to share a recording: a recording page cannot be opened by anyo
 
 ## The list
 
-The list shows your last 100 recordings, newest first. Each card gives:
+The list shows your last **100** recordings, newest first. Each card gives:
 
 * the date and the time it started;
 * the duration;
@@ -30,9 +30,10 @@ The list shows your last 100 recordings, newest first. Each card gives:
 * the number of tracks (one per speaker, the mix not counted) and a waveform of the mix;
 * when the files will be deleted (*Expires in 6 d*). The time turns amber when less than 24 hours are left.
 
+Expired recordings stay in the list with the status *Expired*: their files are gone.
+
 ## A recording
 
-<figure><img src="../.gitbook/assets/dash-recording-detail.png" alt="Page of a recording with its tracks"><figcaption><p>Page of a recording, with the mix and the tracks</p></figcaption></figure>
 
 The page of a recording shows the date, the status, and four boxes: **Duration**, **Tracks**, **Type** (*Standard* or *Continuous*) and **Available until**.
 
@@ -61,11 +62,12 @@ If notes were added during the recording (with `/record note` or the panel), the
 
 * Each track and the mix have a **download** button. The file is named after the recording and the speaker.
 * **Download all (ZIP)** gets every track and the mix in one ZIP file, with `notes.txt` (the notes with their time) and `labels.txt` (labels for Audacity: *File > Import > Labels*). It appears when the recording has more than one track.
-* Choose the **format** above the tracks: FLAC (the default of the server), M4A, MP3, OGG or WAV. The files are stored as Ogg Opus (recent recordings) or FLAC (older recordings). For a recent recording, OGG is the stored file itself, without a new encoding. The other formats are made from the stored file, so their quality is that of the stored file. See [Downloads and export](../audio/recording.md#downloads-and-export).
+* Choose the **format** above the tracks: **FLAC** (the default of the server, unless it chose another one), **M4A** (AAC, 128 kb/s), **MP3** (192 kb/s), **OGG** (Opus, 96 kb/s) or **WAV** (uncompressed).
+* The formats are made from the stored file, which is Ogg Opus at about 64 kb/s. Their quality is the quality of that file. See [Downloads and export](../audio/recording.md#downloads-and-export).
 
 ### Video export
 
-**Export as video** makes an MP4 that reproduces the call: a tile per person, a border around the person speaking, and the audio of the mix. Choose the layout (*Call grid* or *Vertical list*), the theme (dark or light), the resolution (720p or 1080p), whether names are shown, and the border colour. The starting values are the defaults of the server (see the [dashboard](dashboard/voice-recording.md)).
+**Export as video** makes an MP4 that reproduces the call: a tile per person, a border around the person speaking, and the audio of the mix. Choose the layout (*Call grid* or *Vertical list*), the theme (dark or light), the resolution (720p or 1080p), whether names are shown, and the border colour. The starting values are the defaults of the server (see the [dashboard](dashboard/voice-recording.md#video-export-defaults)).
 
 * The mix must be 2 hours or less.
 * Only one export runs per server at a time: a second one is refused until the first has ended.
@@ -87,9 +89,9 @@ Messages you can see:
 | --- | --- |
 | *Transcription is turned off on this server.* | The server does not allow transcriptions of its recordings. |
 | *A transcription of this recording is already running.* | Wait for it, or cancel it. |
-| *You have reached today's limit.* / *One transcription per month on a free server, one per day with Premium.* | The limit of your account is reached. The page says when it starts again. |
+| *You have reached today's limit. Try again tomorrow.* / *One transcription per month on a free server, one per day with Premium.* | The limit of your account is reached. The page says when it starts again. |
 | *This recording is too long to be transcribed.* | A track is longer than 4 hours. |
-| *No speech was found in this recording.* | The transcription is complete, and nothing was heard in the recording. |
+| *There is no speech to transcribe in this recording.* | Nothing was heard in the recording. |
 | *The transcription could not be started. Try again.* | Any other error. Try again later. |
 
 ## Privacy

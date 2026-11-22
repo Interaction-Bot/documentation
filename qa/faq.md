@@ -4,26 +4,24 @@ description: Let your members get answers from a FAQ made by your moderators.
 
 # FAQ and /ask
 
-Moderators create a FAQ for the server: questions and their answers, organized in **groups**. Members use `/ask` to search it. The bot can also **answer by itself** to questions asked in the channels linked to a group, in any language, when it is confident enough of the answer.
+Moderators create a FAQ for the server on the [FAQ page of the dashboard](../website/dashboard/faq.md): questions and their answers, organized in **groups**. Members use `/ask` to search it. The bot can also **answer by itself** to questions asked in the channels linked to a group, in any language, when it is confident enough of the answer.
 
 The answers are never generated: the bot only sends the answers your moderators wrote. If a question is asked in another language than the answer, the answer is translated, and Discord mentions, channel links and URLs are kept as they are.
 
 | Command | Who | What it does |
 | ------- | --- | ------------ |
-| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is posted in the channel. |
-| `/faq add group:<group>` | *Manage Server* | Open a form to add a question and its answer to a group. |
-| `/faq list [group]` | *Manage Server* | List the entries, with their numbers. |
-| `/faq remove entry:<entry>` | *Manage Server* | Remove an entry. |
-| `/faq manage` | *Manage Server* | Open a panel (buttons and menus) to manage the groups and the entries without typing options. See [Configuration commands](../commands/configuration.md#faq). |
+| `/ask question:<text> [group]` | Everybody | Search the FAQ. The answer is shown only to the member who asked. |
 
-Groups, linked channels and the automatic replies are managed on the dashboard, see [FAQ](../website/dashboard/faq.md). For everything step by step, from A to Z, read [FAQ guides](faq-guides.md).
+There is no `/faq` command. Groups, questions, linked channels and the automatic replies are managed on the dashboard, see [FAQ](../website/dashboard/faq.md). For everything step by step, read [FAQ guides](faq-guides.md).
 
 ## /ask
 
 Example: a member types `/ask question:How do I change my nickname?` in a channel linked to a group called `Support`.
 
-* If the FAQ has a matching question, the member sees an embed titled **FAQ**, with the answer as its text. The footer says which question matched: `Matched question: How do I change my nickname on this server?`. If other close questions exist, a **See also** field lists them.
+* If the FAQ has a matching question, the member sees an embed titled **FAQ**, with the answer as its text. The footer says which question matched: `Matched question: How do I change my nickname on this server?`. If other close questions exist, a **See also** field lists up to two of them.
 * If nothing matches well enough: `I did not find an answer in the FAQ. Try other words or ask the moderators.`
+
+The answer is posted in the channel, so everybody there can read it.
 
 Rules:
 
@@ -33,38 +31,6 @@ Rules:
 * In a channel that is not linked to any group: `This channel is not linked to a FAQ. Choose a group with the group option.`
 * If the server has no FAQ yet: `This server has no FAQ yet. A moderator can create one on the dashboard.`
 * Threads use the group of the channel they belong to.
-
-## /faq add
-
-Example: `/faq add group:Support`.
-
-The bot opens a form titled **New FAQ entry** with two fields, **Question** (up to 200 characters) and **Answer** (up to 1800 characters). When you submit it, the bot replies:
-
-```
-✅ Entry added. The bot uses it for /ask and for the automatic replies of its group.
-```
-
-The new entry is used at once, by `/ask` and by the automatic replies.
-
-## /faq list
-
-Example: `/faq list` (or `/faq list group:Support` for one group).
-
-The bot shows an embed titled **FAQ entries**. For each group, the field title gives the group name and its number of entries, and each line shows the entry number and its question:
-
-```
-Support (2)
-`12` How do I change my nickname on this server?
-`15` Where are the server rules?
-```
-
-The first 25 entries of each group are listed. If a group has no entry, it shows `No entry yet.` If the server has no group, it shows `This server has no FAQ group yet. Create one on the dashboard.`
-
-## /faq remove
-
-Example: `/faq remove entry:` then type `nickname`. The list suggests the matching questions, each with its group, for example `How do I change my nickname on this server? · Support`. Pick one.
-
-The reply is `✅ Entry removed.`. If the entry no longer exists, it is `Entry not found.`
 
 ## Automatic replies
 
@@ -100,19 +66,14 @@ These are the limits of the [dashboard](../website/dashboard/faq.md).
 
 A channel can belong to one group only.
 
-## Errors and what to do
+## Messages of /ask
 
 | Message shown | What to do |
 | ------------- | ---------- |
-| `FAQ group not found.` | The group does not exist anymore, or the name is wrong. Pick it from the suggestions. |
-| `A FAQ group with this name already exists.` | Choose another name. |
-| `This server reached the maximum number of FAQ groups of its plan.` | Delete a group, or go premium. |
-| `This group reached the maximum number of entries of its plan.` | Remove an entry, or go premium. |
-| `This group reached the maximum number of channels of its plan.` | Remove a channel from the group, or go premium. |
-| `One of these channels already belongs to another FAQ group.` | A channel can belong to one group only. Remove it from the other group first. |
-| `The question must contain between 1 and 200 characters.` | Shorten the question. |
-| `The answer must contain between 1 and 1800 characters.` | Shorten the answer. |
-| `Entry not found.` | The entry was already removed. Run `/faq list` again. |
+| `This server has no FAQ yet. A moderator can create one on the dashboard.` | Ask a moderator to create a group on the dashboard. |
+| `This channel is not linked to a FAQ. Choose a group with the group option.` | Use `/ask` with the `group` option, or ask a moderator to link the channel. |
+| `FAQ group not found.` | The group was deleted or renamed. Pick a group from the suggestions. |
+| `I did not find an answer in the FAQ. Try other words or ask the moderators.` | Try other words, or ask a moderator. |
 | `The translation api seems to be inaccessible. Please try again later.` | The bot could not reach its analysis service. Try again later. |
 
 {% hint style="info" %}

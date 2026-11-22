@@ -1,55 +1,58 @@
 ---
-description: How to buy a Premium offer and activate it on your server.
+description: How to subscribe to a Premium offer with Stripe, change or cancel it, and activate it on your servers.
 ---
 
 # Subscribe
 
 {% hint style="info" %}
-Premium is bought on the [Premium page](../website/dashboard/premium.md) of the website, with Stripe. You pay for one plan, monthly: 1 server (€3.99), 3 servers (€9.99) or 10 servers (€19.99). You have one subscription at a time: you can change plan from **My subscription** (the difference is prorated; going down is refused while more servers than the new plan allows have Premium) and manage payment and cancellation from the **Manage my subscription** button. Premium stays until the end of the paid period after a cancellation. A full refund or a lost dispute suspends Premium. Patreon is no longer used for new subscriptions: the Patreon steps of this page are for existing Patreon subscribers only.
+Premium is bought on the [Premium page](https://interaction-bot.com/premium) of the website, with Stripe, with your Discord account. The offers are monthly: **1 server €3.99**, **3 servers €9.99** or **10 servers €19.99** per month. You have one subscription at a time. Premium is reserved for people aged **18 or over**.
 {% endhint %}
 
-## Subscribe with Stripe (new subscriptions)
+## Subscribe with Stripe
 
 1. Log in to the [Premium page](https://interaction-bot.com/premium) of the website with your Discord account.
-2. Choose your plan (1, 3 or 10 servers) and click **Subscribe**. Stripe opens the payment page.
-3. Pay. When you come back to the website, the page confirms the payment and shows _Activating your Premium…_ until your subscription is active.
+2. Choose your offer (1, 3 or 10 servers) and click **Subscribe**. Stripe opens the payment page, in your language.
+3. Pay. When you come back to the website, a **Thank you!** window shows _Payment received. Activating your Premium…_ until your subscription is active, then **Choose my servers** takes you to the servers.
 
-To change plan later, use **Change plan** in **My subscription**. The difference is charged at once, or credited if you go down.
+The payment is attached to the Discord account you are signed in with. It is activated on that account a few seconds after the payment: no Patreon link is needed.
 
-Then activate Premium on your server: see [Activate Premium on your server](#activate-premium-on-your-server).
+Then turn Premium on for your servers, see [Activate Premium on your server](#activate-premium-on-your-server).
 
-## Existing Patreon subscriptions
+## My subscription
 
-Patreon is no longer used for new subscriptions. If you already have a Patreon offer, follow these steps.
+The **My subscription** block of the Premium page (and of the [Account page](../website/dashboard/account.md)) shows your offer, the number of servers that use Premium out of the number your offer allows, and when it renews or ends. From there you can:
 
-## 1. Patreon offer
+* **Change plan**: choose another offer. The change applies at once. Stripe prorates it: you pay the difference for the rest of the month, or get a credit if you go down, then the new price at each renewal. There is still one subscription.
+* **Manage my subscription**: opens the Stripe portal, to change the payment method, see the invoices, or cancel.
 
-1. Go to [Patreon](https://www.patreon.com/interactionbot).
-2. Your offer (1, 3 or 10 servers) is the one you already have.
+Going down is refused while more servers than the new offer allows have Premium: turn Premium off on the extra servers first. A plan cannot be changed while a cancellation is pending or a payment is due: resume the subscription, or settle the payment, with **Manage my subscription**, then change plan.
 
-<figure><img src="../.gitbook/assets/patreon-join.png" alt="Patreon: choose a plan and click Join"><figcaption></figcaption></figure>
+## Cancel, a failed payment, a refund
 
-3. Nothing to buy again.
+* **Cancelling** keeps Premium until the end of the period you have paid for. Premium then ends, and it is removed from your servers.
+* **A failed payment** keeps Premium for a few days, while Stripe retries the payment. If the payment is not made in that time, Premium ends.
+* **A full refund** suspends Premium and removes it from your servers. A partial refund has no effect.
+* **A dispute** (a chargeback) suspends Premium until the dispute is won.
 
-The offers of the dashboard are monthly. The yearly option is not available yet.
-
-## 2. Link your Discord account to Patreon
-
-Once the purchase is done, connect your Discord account on the [Patreon connections page](https://www.patreon.com/settings/apps).
-
-The bot finds your offer through this link: it only reads the Discord account that is connected to your Patreon account.
-
-## 3. Wait for the bot to update
-
-The website checks Patreon every **10 minutes**. If you linked your Discord account less than 10 minutes ago, wait a little. Then refresh the dashboard page.
+In case of any problem, contact the support.
 
 ## Activate Premium on your server
 
 Use one of these two ways:
 
-* the **Premium** toggle of the [Premium page](../website/dashboard/premium.md) of the dashboard, then click on _**Save**_. You need the **Administrator** or **Manage Server** permission on this server;
-* the `/premium add` command, typed in the server, see [Usage](usage.md). Your Discord account must have an active subscription (Stripe) or be linked to Patreon.
+* the **Premium** switch of the [Premium page](../website/dashboard/premium.md) of the dashboard, then click on _**Save**_. You need the **Administrator** or the **Manage Server** permission on this server;
+* the `/premium add` command, typed in the server, see [Usage](usage.md). Your Discord account must have an active subscription.
 
-If all your slots are used, the bot refuses: remove Premium from one of your servers first (the Premium toggle, or `/premium remove`), then activate it on the new server.
+If all your slots are used, the bot refuses: turn Premium off on one of your servers first (the switch, or `/premium remove`), then activate it on the new server.
 
-Premium is now active on the server: the server shows the **Premium** badge, instead of **Free**, on the [Overview](../website/dashboard/overview.md) page of the dashboard.
+Premium is active on the server when the [Overview](../website/dashboard/overview.md) page of the dashboard shows the **Premium** badge, instead of **Free**.
+
+## Existing Patreon subscriptions
+
+Patreon is no longer used for new subscriptions. The steps below are for people who already have a Patreon offer. They still work.
+
+1. Keep your offer on [Patreon](https://www.patreon.com/interactionbot). There is nothing to buy again.
+2. Connect your Discord account on the [Patreon connections page](https://www.patreon.com/settings/apps). The bot only reads the Discord account that is connected to your Patreon account.
+3. Wait for the bot to update. The website checks Patreon every **10 minutes**: if you linked your Discord account less than 10 minutes ago, wait a little, then refresh the dashboard page or click **Refresh my Patreon status** in the **Premium** page.
+
+The offers on Patreon and on the Premium page are the same: 1, 3 or 10 servers. Activate them on your servers as above.

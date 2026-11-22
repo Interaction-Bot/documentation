@@ -4,7 +4,7 @@ description: Configure the voice recording of your server - who can record, the 
 
 # Voice recording
 
-<figure><img src="../../.gitbook/assets/dash-voice-recording.png" alt="Voice recording page"><figcaption><p>Voice recording page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rec-page-settings.png" alt="The Voice recording page"><figcaption><p>The Voice recording page</p></figcaption></figure>
 
 The Voice recording page controls the [`/record`](../../audio/recording.md) command of your server: whether members can record, who can start a recording, what the default downloads and video exports look like, and the automatic recording.
 
@@ -12,18 +12,25 @@ The Voice recording page controls the [`/record`](../../audio/recording.md) comm
 
 Navbar > category _**Audio & AI**_ > _**Voice recording**_.
 
-The switch next to the title of the page turns recording on or off for the server. It is on by default. When it is off, `/record start` is refused with *Recording is disabled on this server.* A recording that is already running goes on.
+The switch next to the title of the page turns recording on or off for the server. When it is off, `/record start` is refused with *Recording is disabled on this server.* A recording that is already running goes on.
 
-## Settings
+The page has three tabs:
+
+* **Recording**: the bot's voice, the transcriptions, the download format and the video export defaults.
+* **Who can start a recording**: the rule of `/record start`.
+* **Automatic recording** (premium): the recording that starts by itself.
 
 The settings are saved with the _**Save**_ button of the bar at the bottom of the page. _**Cancel**_ restores the last saved values.
 
-### Recording
+## Recording
 
 * **Record the bot's voice**: the text to speech of the bot is added as a separate track. Off by default. The announcements of the recording itself are never recorded.
 * **Allow transcription of recordings**: members who started a recording can have it transcribed (see [Transcription of a recording](../../audio/recording.md#transcription-of-a-recording)). On by default. Turn it off to refuse all transcriptions on the server.
-* **Default download format**: the format selected on the page of each recording. FLAC by default. The choices are FLAC, M4A, MP3, OGG and WAV.
-* **Everyone is warned**: a reminder of what the bot does when a recording starts (the members are warned in the text channel and out loud). Nothing to set.
+* **Everyone is warned**: a reminder of what the bot does when a recording starts: the members are told in the text channel and out loud, and they can leave the channel. Nothing to set.
+
+### Default download format
+
+The format selected on the page of each recording. The choices are **FLAC** (the default), **M4A**, **MP3**, **OGG** and **WAV**. See [Downloads and export](../../audio/recording.md#downloads-and-export) for the quality of each one.
 
 ### Video export defaults
 
@@ -37,7 +44,7 @@ The starting values of the video export of each recording. They can still be cha
 | Show names | On, Off | On |
 | Border colour | Any colour (colour picker) | `#23A559` (green) |
 
-### Who can start a recording
+## Who can start a recording
 
 The rule of `/record start`:
 
@@ -46,7 +53,7 @@ The rule of `/record start`:
 
 Members with *Manage Server* can always start a recording. To add a member to the list, enter their Discord ID (Developer Mode, right-click on the member, Copy ID), then click _**Add**_. The list holds up to 100 members.
 
-### Automatic recording
+## Automatic recording
 
 *Premium only.* The bot starts a recording when members join a voice channel. See [Automatic recording](../../audio/recording.md#automatic-recording) for how it behaves.
 
@@ -58,7 +65,7 @@ Members with *Manage Server* can always start a recording. To add a member to th
 | Trigger roles | A member with one of these roles starts a recording alone, whatever the minimum. | None |
 | Panel channel | Where the recording panel is posted. _Automatic_: the first text channel where the bot can write. | Automatic |
 
-On a free server the switch cannot be turned on: the page shows *Automatic recording is a premium feature. Get premium to turn it on.* with a _See premium_ link to [Premium](../../premium/premium.md).
+On a free server the switch cannot be turned on: the window *Automatic recording needs a premium server.* opens, with a link to [Premium](../../premium/premium.md).
 
 ## Limits
 
