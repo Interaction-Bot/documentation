@@ -68,7 +68,7 @@ The commands that set the rules of the reading and of the transcription (`/tts s
 * **Move vote**: if the bot is already in another channel of the server, `/connect` asks the members of that channel to vote (60 seconds). The vote is only needed when at least 4 members (not bots) are in the bot's channel: 2 votes are then required for 4 to 6 members, and the number grows with the members.
 * **Disconnect vote**: `/disconnect` uses the same rule and the same number of votes.
 * **Administrators** do not need a vote, for `/connect` and `/disconnect`.
-* **Automatic leave**: the bot leaves its voice channel **30 seconds after the last human left it**. If someone comes back before that, it stays.
+* **Automatic leave**: the bot leaves its voice channel as soon as no feature uses it any more, and when nobody but bots is left in it for the delay of the server (**30 seconds** by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)). If someone comes back before that, it stays.
 * **Text to speech**: the bot leaves the same way. It also leaves on `/tts stop`, and when the daily text to speech time of the server is used up (once the queue is read).
 
 ## Text to speech (TTS)
@@ -177,7 +177,7 @@ The most precise rule applies: the rules of the voice channel, else those of its
 * A **free** server has **one** rule. A **premium** server can have up to **25 rules**. At most **3** rules can listen to the same voice channel, and a voice channel can be posted to up to 3 places at once on a premium server (1 on a free server).
 * When a session starts, the bot says *Transcription started.* in the voice channel (spoken). It posts no start message in the text channel.
 * It only starts when the bot can connect and speak in the voice channel, and can send messages in the text channel. **If a permission is missing, nothing is posted**: check the permissions first.
-* The automatic transcription **leaves 30 seconds after the last human** left the channel, and stays if someone comes back.
+* The automatic transcription stops and the bot leaves when nobody is left in the channel for the delay of the server (**30 seconds** by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)), and stays if someone comes back.
 * A change of style, language, translation or text channel applies to a running session at once. A change of voice channel applies to the next session.
 
 ## Live transcription (Activity)

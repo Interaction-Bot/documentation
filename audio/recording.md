@@ -119,7 +119,7 @@ A recording ends for one of these reasons. The panel and the channel say which o
 | Reason | When |
 | --- | --- |
 | Stopped by a member | `/record stop` or the Stop button, by the member who started it, *Manage Server* or *Move Members*. |
-| Nobody left in the channel | A recording that is not `continuous` stops **30 seconds** after the last member left. |
+| Nobody left in the channel | A recording that is not `continuous` stops when the channel stays empty for the delay of the server (**30 seconds** by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)), then the bot leaves. |
 | Maximum length | **24 hours** at most, for any recording. |
 | Daily time used up | The server reached its daily recording time. A warning is posted at 80 %. |
 | The bot left the channel | The bot was disconnected from the voice channel. |

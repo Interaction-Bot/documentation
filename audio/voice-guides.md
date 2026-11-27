@@ -12,7 +12,7 @@ Each guide starts from a server where the bot is installed, with the permissions
 2. Run `/tts say` and type the text in `query`. The text can have up to 500 characters.
 3. Optional: in `language`, start typing a language name and pick it from the suggestions. Leave it empty to detect the language automatically. Optional: `voice`, to pick a voice for this message.
 4. The bot joins your voice channel and reads the text. It answers with the embed *The bot is saying `...` in the voice channel.*
-5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves 30 seconds after nobody but bots is left in the channel.
+5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves when nobody but bots is left in the channel for the delay of the server (30 seconds by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)).
 
 {% hint style="info" %}
 On a premium server, `/tts say` needs no vote. Otherwise, if you have not voted in the last 24 hours, it answers *You need to vote for the bot to use this command.* The vote is personal: the vote of another member does not count.

@@ -10,7 +10,7 @@ description: The bot does not join, does not speak, or does not transcribe? Chec
 2. **Is the feature allowed?** `/tts say`, `/tts start`, `/connect`, `/transcribe start`, `/transcribe live`, the TTS rules and the automatic transcription need a premium server or a vote from a member of the server (valid 24 hours). Starting the live transcription from the Activity also needs *Manage Server*. `/tts voice` and `/tts clone` need no vote. See [Access](voice.md#access).
 3. **Is the bot already busy?** It can be connected to another voice channel of the server, or already transcribing.
 4. **Is the text short enough?** `/tts say` refuses texts over 500 characters.
-5. **Is the bot still in the channel?** It leaves 30 seconds after the last human left.
+5. **Is the bot still in the channel?** It leaves when no feature uses it any more, and when nobody is left in the channel for the delay of the server (30 seconds by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)).
 6. **Is the daily time used up?** `/limits` shows the time left for transcription, text to speech and recording, and when it resets (midnight UTC).
 
 ## Permissions
