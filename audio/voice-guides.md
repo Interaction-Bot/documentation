@@ -15,7 +15,7 @@ Each guide starts from a server where the bot is installed, with the permissions
 5. To stop the speech and empty the queue, run `/tts stop`. To make the bot leave, run `/tts stop` or `/disconnect`, or wait: it leaves 30 seconds after nobody but bots is left in the channel.
 
 {% hint style="info" %}
-On a premium server, `/tts say` needs no vote. Otherwise, if you have not voted in the last 24 hours, it answers *You need to vote for the bot to use this command.* One vote from any member unlocks it for the whole server.
+On a premium server, `/tts say` needs no vote. Otherwise, if you have not voted in the last 24 hours, it answers *You need to vote for the bot to use this command.* The vote is personal: the vote of another member does not count.
 {% endhint %}
 
 ## 2. Read a text channel aloud (TTS rule)
