@@ -26,6 +26,8 @@ Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/
 | `/tts voice`, `/tts clone create`, `/tts clone list`, `/tts clone delete` | No vote needed. Creating a cloned voice needs Premium, see [Voices and cloning](voices-and-cloning.md). |
 | `/tts stop`, `/disconnect`, `/transcribe stop` | No vote needed. |
 
+**New servers**: during the first 24 hours after the bot is added to a server, no vote is needed. The time counts from the moment the bot joined the server (removing the bot also removes the settings of the server).
+
 When a member runs a command that needs a vote, the bot replies (only to that member) that a vote is needed, with a *Top.gg* button. When an automatic feature is blocked by the rule, the bot asks for a vote in the text channel, at most once a day per server.
 
 ## Permissions

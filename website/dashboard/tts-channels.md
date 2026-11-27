@@ -68,12 +68,12 @@ The **Settings** tab holds the reading options. Each has a switch, and all the s
 | Ignore the audience of stages | On | Messages from the audience of a stage channel are not read. |
 | The author must be in the voice channel | Off | Only reads the members who are in the voice channel where the bot is. |
 | Skip emojis | Off | Emojis are removed before reading. |
-| Members can choose their voice | Off | `/tts voice` works on the server. |
+| Members can choose their voice | On | `/tts voice` works on the server. |
 | Cloned voices allowed | On | Premium members can read with their own cloned voice. |
 | Read translations aloud | On | **Premium.** On a premium server, the translations made by the bot are read after the original message, with the voice of the server. |
 | Read mentions as words | On | A mention is read "mention <name>" in the language of the server, instead of "@name". |
 | Expand chat abbreviations | On | Abbreviations like *idk*, *lol* or *vc* are read as full words, because the voices do not know them. |
-| Different voice for each member | Off | In a `/tts start` session, every member is read with a voice of their own. Off: everybody has the voice of the server. |
+| Different voice for each member | On | In a `/tts start` session, every member is read with a voice of their own. Off: everybody has the voice of the server. |
 
 **Prefix** (optional): when set, only the messages that start with it are read, and the prefix itself is not read. Leave it empty to read every message.
 

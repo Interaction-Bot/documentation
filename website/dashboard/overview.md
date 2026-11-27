@@ -57,7 +57,7 @@ When a member edits a message that was translated, its translations are edited t
 
 ### Vote and promo messages
 
-When a voice feature is locked, the bot invites the members to vote on top.gg, and reminds each member once a day after a command. Turn this switch off to hide these messages. The vote is still required to use the voice features, so a locked feature stays silent. It is on by default.
+When a voice feature is locked, the bot invites the members to vote on top.gg. Turn this switch off to hide these messages. (The private reminder that followed a command once a day is no longer sent since 27 November 2026.) The vote is still required to use the voice features, so a locked feature stays silent. It is on by default.
 
 ## Your feedback
 

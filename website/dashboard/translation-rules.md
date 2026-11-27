@@ -42,6 +42,10 @@ Click **Add a rule**, or the **Add** button of a section, and choose the type of
 
 A channel can have only one channel rule: if it already has one, the page offers to **Replace** it.
 
+### The rule of a new server
+
+When the bot joins a server that has no translation rule, it creates one **Whole server** rule into the language of the server on Discord (for example English for an English server). A message written in another language is translated into that language; the others are left alone. It is an ordinary rule: change it, pause it or delete it on this page, with `/rules` or with the AI setup. The welcome message of the bot says so.
+
 The popup asks first for what the rule applies to (the channel, the category, the role, or the languages), then for the languages. Then you can open **More options**.
 
 ## Options of a rule

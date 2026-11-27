@@ -50,6 +50,8 @@ The limits are the same for every server of the bot, and they are not configurab
 
 The daily limits are only one part of the rule. A feature also needs a premium server or a vote on top.gg, and the rule depends on the feature. Details are in [Voice: Access](voice.md#access).
 
+**New servers**: during the first 24 hours after the bot is added to a server, no vote is needed. The time counts from the moment the bot joined the server (removing the bot also removes the settings of the server).
+
 | Feature | Premium server | Vote on top.gg (valid 24 hours) |
 | --- | --- | --- |
 | `/tts say`, `/connect`, `/tts start` | Yes | A vote of any member of the server, for the whole server |

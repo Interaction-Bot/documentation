@@ -22,6 +22,10 @@ Translation is configured on the [dashboard](../website/dashboard/) or with the 
 | Translate a whole category, or the whole server              | [Translation rules](automatic.md#categories-and-the-whole-server)                     | Yes                 |
 | Link several channels, each in its own language              | [Translation rules](automatic.md#linked-channels) (linked channels)                  | Yes                 |
 
+## Translation from the first minute
+
+A new server gets one rule when the bot joins it: the whole server is translated into the language of the server on Discord. Change it or delete it in the [Translation rules](../website/dashboard/translation-rules.md#the-rule-of-a-new-server) page.
+
 ## How the bot translates a message
 
 1. A message is posted in a channel that has a translation rule, or a member adds a flag, or someone runs a command or a menu.
