@@ -4,7 +4,7 @@ description: The voice commands of Interaction Bot - text to speech, transcripti
 
 # Audio commands
 
-`<arg>` is a required option, `[arg]` an optional one. The **Needs** column tells what a command needs: **Vote** = a recent [top.gg](https://top.gg/bot/893494390142697493/vote) vote, of a member of the server, or a server with [Premium](../premium/premium.md); **Premium** = the command, or one of its options, needs a server with Premium.
+`<arg>` is a required option, `[arg]` an optional one. The **Needs** column tells what a command needs: **Vote** = your own [top.gg](https://top.gg/bot/893494390142697493/vote) vote in the last 24 hours, or a server with [Premium](../premium/premium.md); **Premium** = the command, or one of its options, needs a server with Premium.
 
 The daily limits (text to speech, transcription and recording time) are explained in [Limits and privacy](../audio/limits-and-privacy.md). The settings of the voice features are on the dashboard, in the **Audio & AI** section: [Transcription](../website/dashboard/speech-to-text.md), [Text to speech](../website/dashboard/tts-channels.md), [FAQ](../website/dashboard/faq.md), [Voice recording](../website/dashboard/voice-recording.md) and [Temp voice](../website/dashboard/temp-voice.md).
 
@@ -14,7 +14,7 @@ See [Voice](../audio/voice.md) and [Voices and voice cloning](../audio/voices-an
 
 | Command | Description | Needs |
 | --- | --- | --- |
-| `/connect [channel]` | Connects the bot to a voice channel. | Vote |
+| `/connect [channel]` | Connects the bot to a voice channel. | — |
 | `/disconnect` | Disconnects the bot from the voice channel. | — |
 | `/tts say <query> [language] [voice]` | Sends a message in your voice channel. The language is detected when you leave it empty. | Vote |
 | `/tts start` | Joins your voice channel and reads the messages of this chat aloud. | Vote |

@@ -54,11 +54,13 @@ The daily limits are only one part of the rule. A feature also needs a premium s
 
 | Feature | Premium server | Vote on top.gg (valid 24 hours) |
 | --- | --- | --- |
-| `/tts say`, `/connect`, `/tts start` | Yes | A vote of any member of the server, for the whole server |
-| `/transcribe start`, `/transcribe live` | Yes | A vote of any member of the server, for the whole server |
-| TTS channels, automatic transcription | Yes | A vote of any member of the server, for the whole server |
-| Start of the live transcription from the Activity | Yes | A vote of any member of the server |
-| Recording (`/record`) | Yes | A vote of any member of the server |
+| `/tts say`, `/tts start` | Yes | Your own vote |
+| `/transcribe start`, `/transcribe live` | Yes | Your own vote |
+| TTS channels | Yes | The vote of the author of the message |
+| Automatic transcription | Yes | The vote of someone in the voice channel |
+| Start of the live transcription from the Activity | Yes | Your own vote |
+| Recording (`/record`) | Yes | Your own vote |
+| `/connect` | Not needed | Not needed |
 
 ## Vote reminder (`/reminder`)
 

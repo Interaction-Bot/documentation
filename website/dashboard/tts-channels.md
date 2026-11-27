@@ -134,7 +134,7 @@ For *Only the chosen roles and members*, choose roles, or add members by their D
 | Reading translations aloud | No | Yes |
 | Cloned voices | No | Yes, see [Voices and cloning](../../audio/voices-and-cloning.md) |
 
-Voice features need a **premium server**, or a **[top.gg vote](https://top.gg/bot/893494390142697493/vote)** from a member of the server in the last 24 hours. When neither is true, the bot asks for a vote in the channel, at most once a day.
+Voice features need a **premium server**, or a **[top.gg vote](https://top.gg/bot/893494390142697493/vote)** of the author of the message in the last 24 hours: the messages of members who did not vote are not read. The bot asks for a vote in the channel, at most once a day.
 
 ## What is read
 
