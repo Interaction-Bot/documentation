@@ -29,7 +29,7 @@ Temporary voice channels are **free**: no vote on [top.gg](https://top.gg/bot/89
 | --- | --- |
 | Members with **Manage Server** | Everything, in every room, whatever the function rules of the dashboard. |
 | Owner of a temporary channel | The `/voice` commands and the control panel, as allowed by the [function rules](../website/dashboard/temp-voice.md#who-can-use-each-function) of the server. |
-| Other members of a temporary channel | `/voice user kick` and the vote kick (see [Vote kick](#vote-kick)), `/voice info` and `/voice request` (when the rules allow it), `/voice claim` once the owner has left, `/find`, `/join`. |
+| Other members of a temporary channel | `/voice user kick` and the vote kick (see [Vote kick](#vote-kick)), `/voice info` and `/voice request` (when the rules allow it), `/voice claim` once the owner has left, `/find`, `/tempvoice join`. |
 | Members without an access role | Cannot create a room, when the server limits who can create one (see [Who can create a room](../website/dashboard/temp-voice.md#who-can-create-a-room)). |
 
 The owner can also be given some server permissions while the owner controls the room, if the server chose it on the dashboard (**Permissions of the owner**). Those permissions are taken back when the ownership changes.
@@ -70,7 +70,7 @@ Each command of this table can also be run from the buttons of the control panel
 | `/voice info` | Shows the owner, the creation date, whether there is a password, the locks, the chat lock, the waiting room, the limit, and the trusted and blocked members. The answer is posted in the channel. |
 | `/voice status [text]` | Sets the status shown under the channel (500 characters at most). Empty clears it. |
 | `/voice waiting` | Turns the waiting room on or off. The channel stays locked while it is on. |
-| `/voice password [password]` | Sets a password for `/join` (8 characters at most). It needs a locked channel, and it must be unique on the server. Empty removes it. |
+| `/voice password [password]` | Sets a password for `/tempvoice join` (8 characters at most). It needs a locked channel, and it must be unique on the server. Empty removes it. |
 | `/voice invite [message] [channel]` | Posts the message and an invite link in a **public** text channel (see [Invitations](#invitations)). |
 | `/voice region <region>` | Sets the voice region, or automatic. |
 | `/voice bitrate <kbps>` | Sets the audio quality, from **8** to **384** kbps. |
@@ -90,12 +90,12 @@ Each command of this table can also be run from the buttons of the control panel
 | `/voice user invite <member>` | Sends the member a private message with a one-use invite (see [Invitations](#invitations)). |
 | `/voice user kick <member> [member2] [member3]` | The owner disconnects up to **3** members at once. Any other member of the channel starts a [vote kick](#vote-kick) against one member. |
 
-### `/find` and `/join`
+### `/find` and `/tempvoice join`
 
 | Command | Description |
 | --- | --- |
 | `/find [member] [language]` | Tells you in which temporary channel a member is, or which channels have a language spoken in them, when you can see and join them. |
-| `/join <password>` | Gives you access to the channel of this password, and moves you there when you are connected. Too many wrong tries block it for a while. |
+| `/tempvoice join <password>` | Gives you access to the channel of this password, and moves you there when you are connected. Too many wrong tries block it for a while. |
 
 ### Context menus (right click on a member)
 
@@ -226,7 +226,7 @@ The dashboard says when a permission is missing. The bot also needs its own perm
 | *This channel has no owner: the server manages it, nobody can change it.* | The rooms are not managed by their owner on this server ("Rooms managed by their owner" is off on the dashboard). Ask an admin. |
 | *A waiting room cannot be turned on while the channel is hidden.* | Unhide the channel first. |
 | *Lock the channel first: a password only works on a locked channel.* | Lock the channel, then set the password. |
-| *No temporary channel has this password.* | Check the password with the owner. Too many wrong tries block `/join` for a while. |
+| *No temporary channel has this password.* | Check the password with the owner. Too many wrong tries block `/tempvoice join` for a while. |
 | *A vote kick is already running in this channel.* | Wait for the running vote to end. |
 | *A member can be kicked only when the channel is locked, hidden or has a user limit.* | Lock or hide the channel, or set a user limit. |
 | *Moderators cannot be kicked.* | Moderators are never kicked, neither by vote nor by the owner. |

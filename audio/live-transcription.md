@@ -149,7 +149,7 @@ When the daily transcription time is used up, the transcription stops, the bot l
 | *I'm transcribing another voice channel. Join it to open the live transcription.* | The bot is busy in another voice channel of the server. Join that channel. |
 | *The bot lacks the permissions needed in this voice channel or text channel.* | Give the bot **Connect** and **Speak** in the voice channel, and the permissions of the text channel (see [Requirements](#requirements)). |
 | *The daily transcription time of this server is used up.* | Wait for the reset at midnight UTC, or get [premium](../premium/premium.md). |
-| *Not a premium server: a member must vote for the bot (top.gg) to start the transcription.* | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote), or get premium. |
+| *Not a premium server: you must vote for the bot (top.gg) to start the transcription.* | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote), or get premium. |
 | *Too many transcriptions running, or the request was too soon.* | Wait a few seconds and try again. |
 | The lines do not appear while people speak | Nobody is heard by the bot (the **Halo** does not light up): check that the speakers are in the voice channel and that the bot is connected to it. Very quiet speech is ignored. |
 | Only one language is translated for some viewers | The server translates at most 4 languages at the same time (see [Reading in your own language](#reading-in-your-own-language-premium)). |

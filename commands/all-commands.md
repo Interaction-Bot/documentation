@@ -101,7 +101,7 @@ The bot has no configuration command: the settings are made on the [dashboard](.
 | `/voice invite [message] [channel]` | Posts an invite to your channel in its chat | Everybody |
 | `/voice limit <limit>` | Sets the user limit (0 = no limit) | Everybody |
 | `/voice name <name>` | Renames your temporary channel | Everybody |
-| `/voice password [password]` | Sets a password for /join (empty = remove it) | Everybody |
+| `/voice password [password]` | Sets a password for /tempvoice join (empty = remove it) | Everybody |
 | `/voice privacy <mode>` | Locks, hides or locks the chat of your channel | Everybody |
 | `/voice profile delete <name>` | Deletes one of your saved profiles | Everybody |
 | `/voice profile list` | Lists your saved profiles | Everybody |
@@ -121,7 +121,7 @@ The bot has no configuration command: the settings are made on the [dashboard](.
 | `/voice user untrust <member> [member2] [member3]` | Removes the trust of a member | Everybody |
 | `/voice waiting` | Turns the waiting room on or off (the channel stays locked) | Everybody |
 | `/find [member] [language]` | Finds the temporary channel where a member is | Everybody |
-| `/join <password>` | Gets access to a temporary channel with its password | Everybody |
+| `/tempvoice join <password>` | Gets access to a temporary channel with its password | Everybody |
 
 ## Management
 

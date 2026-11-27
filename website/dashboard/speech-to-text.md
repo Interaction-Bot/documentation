@@ -58,7 +58,7 @@ When there are unsaved changes, the bar at the bottom of the page offers **Save*
 | Translation of the transcription | No | Yes |
 | Daily transcription time (per server, UTC day) | 30 minutes | 3 hours |
 
-Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/893494390142697493/vote) from a member of the server in the last 24 hours. A session stops when the daily time is used up, and the bot leaves the voice channel. The rules are explained in [Transcription](../../audio/voice.md#automatic-transcription).
+Voice features need a premium server, or a [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours: for an automatic transcription, from someone in the voice channel; for a command, from the person who runs it. A session stops when the daily time is used up, and the bot leaves the voice channel. The rules are explained in [Transcription](../../audio/voice.md#automatic-transcription).
 
 ## Live transcription (Activity)
 

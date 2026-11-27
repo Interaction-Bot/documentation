@@ -50,7 +50,7 @@ Members with the *Manage Server* or *Administrator* permission of the server can
 ## Voice
 
 ### How do I use `/tts say` or `/connect`?
-On a Premium server these commands work without a vote. On other servers, they need a [top.gg vote](https://top.gg/bot/893494390142697493/vote) by any member of the server in the last 24 hours. See [Voice](audio/voice.md).
+On a Premium server these commands work without a vote. On other servers, they need your own [top.gg vote](https://top.gg/bot/893494390142697493/vote) in the last 24 hours (the vote of another member does not count). No vote is needed during the first 24 hours after the bot is added to a server. See [Voice](audio/voice.md).
 
 ### How long can a transcription last?
 The limit is per server: 30 minutes per day on a free server, 3 hours per day on Premium. The time of all the transcriptions adds up. The "day" is the UTC calendar day: the counter starts again at midnight UTC. When the time is used up, the bot leaves the voice channel and says when it can transcribe again. See [Daily time and stop](audio/voice.md#daily-time-and-stop).

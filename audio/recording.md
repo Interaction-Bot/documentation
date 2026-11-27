@@ -17,17 +17,17 @@ Recording a voice channel means recording people. Only record when everyone in t
 
 ## Access
 
-Recording needs a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. One vote by a member of the server unlocks recording for the whole server for 24 hours. The rule depends on the feature:
+Recording needs a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. The vote is personal: the member who starts the recording must have voted in the last 24 hours. The rule depends on the feature:
 
 | Feature | Who can use it |
 | --- | --- |
-| `/record start` | The server is premium, **or** a member of the server has voted in the last 24 hours. The member must also be allowed to record (see [Who can start a recording](#who-can-start-a-recording)). |
+| `/record start` | The server is premium, **or** you voted in the last 24 hours. The member must also be allowed to record (see [Who can start a recording](#who-can-start-a-recording)). |
 | `/record start continuous:True` | Premium server only. |
 | [Automatic recording](#automatic-recording) | Premium server only. Set on the dashboard. |
 | `/record stop` | The member who started the recording, *Manage Server* or *Move Members*. See [Stopping](#stopping). |
 | `/record test`, `/record list`, `/record note`, `/record transcribe`, `/record transcribe-cancel` | No vote needed. See [Notes](#notes) and [Transcription](#transcription-of-a-recording) for their own rules. |
 
-When a member runs `/record start` without the vote or the premium server, the bot answers *Recording needs a vote on top.gg (for the whole server, valid 24 hours) or a premium server.* with a *Vote on top.gg* button. The server can be asked to vote, at most once a day.
+When a member runs `/record start` without the vote or the premium server, the bot answers *Recording needs your own vote on top.gg (valid 24 hours), or a premium server.* with a *Vote on top.gg* button. The server can be asked to vote, at most once a day.
 
 ### Who can start a recording
 
@@ -202,7 +202,7 @@ The check runs about 2 seconds after the last arrival or departure in the channe
 | Automatic recording | No | Yes |
 | Retention of a recording | 24 hours | 7 days |
 | Transcriptions per member | 1 every 30 days | 1 every 24 hours |
-| Start without premium | With a top.gg vote of a member of the server | Always |
+| Start without premium | With your own top.gg vote | Always |
 
 * The **daily time** counts the time actually recorded, for all the recordings of the server, and starts again at **midnight UTC**. When the bot reaches the limit it stops the recording.
 * A warning is posted in the text channel when 80 % of the day is used.
@@ -226,7 +226,7 @@ The check runs about 2 seconds after the last arrival or departure in the channe
 
 | Symptom | What to check |
 | --- | --- |
-| The command answers with the vote message | The server needs premium, or a member must vote on top.gg. |
+| The command answers with the vote message | The server needs premium, or you must vote on top.gg. |
 | *Recording needs a text channel ...* | Give the bot **Send Messages** and **Embed Links** in the channel where you run the command. |
 | *The bot could not join the voice channel.* | Give the bot **Connect** in that channel, then try again. |
 | No link in private messages | Your private messages are closed. Use `/record list`. |

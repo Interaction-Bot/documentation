@@ -29,7 +29,7 @@ The button works for 5 minutes after the answer.
 | Requirement | Detail |
 | --- | --- |
 | Transcription on | The transcription feature of the server must be on. |
-| Vote or Premium | Premium servers need no vote. Other servers need a vote from a member of the server in the last 24 hours, like the other voice features (see [Access](voice.md#access)). |
+| Vote or Premium | Premium servers need no vote. On other servers, the person who transcribes must have voted in the last 24 hours, like the other voice features (see [Access](voice.md#access)). |
 | Cooldown | One use every 5 seconds for each person. |
 | Length | See [Limits](#limits). |
 

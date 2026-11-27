@@ -104,7 +104,7 @@ These features are available without Premium, on every server:
 * the [AI setup](../management/ai-setup.md), within its free daily requests;
 * the personal language, the [user app](../commands/user-app.md) and the live transcription Activity (without its live translation).
 
-Without a top.gg vote, a free server can use speech to text, text to speech and recording when a member of the server has voted for the bot in the last 24 hours. See [Limits and privacy](../audio/limits-and-privacy.md).
+On a free server, each member who voted for the bot on top.gg in the last 24 hours can use speech to text, text to speech and recording. No vote is needed during the first 24 hours after the bot is added to a server. See [Limits and privacy](../audio/limits-and-privacy.md).
 
 Example: with the role @french translated into English, Japanese, Brazilian and Spanish, a message of a member with this role produces 4 translations. A free server is limited to 3 translations per message, a Premium server to 20. The warning shown when the limit is exceeded is explained on the [Overview](../website/dashboard/overview.md) page.
 

@@ -16,15 +16,19 @@ The rules of the reading and of the transcription (which channels, which voice c
 
 ## Access
 
-Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. A vote is valid for 24 hours, and one vote from a member of the server unlocks the feature for the whole server. The rule depends on the command:
+Voice features need a **premium server** or a **vote on [top.gg](https://top.gg/bot/893494390142697493/vote)**. The vote is **personal**: each person who uses a voice feature must have voted in the last 24 hours. The vote of another member does not count. The rule depends on the command:
 
 | Feature | Who can use it |
 | --- | --- |
-| `/connect`, `/tts say`, `/tts start` | The server is premium, **or** a member of the server has voted in the last 24 hours. |
-| `/transcribe start`, `/transcribe live` | The server is premium, **or** a member of the server has voted in the last 24 hours. |
-| TTS rules and automatic transcription (set on the dashboard) | The server is premium, **or** a member of the server has voted in the last 24 hours. |
+| `/tts say`, `/tts start` | The server is premium, **or** you voted in the last 24 hours. |
+| `/transcribe start`, `/transcribe live` | The server is premium, **or** you voted in the last 24 hours. |
+| TTS rules (set on the dashboard) | The server is premium, **or** the author of the message voted in the last 24 hours: the messages of the others are not read. |
+| Automatic transcription (set on the dashboard) | The server is premium, **or** someone in the voice channel voted in the last 24 hours. |
+| `/connect` | Everyone: no vote and no Premium. |
 | `/tts voice`, `/tts clone create`, `/tts clone list`, `/tts clone delete` | No vote needed. Creating a cloned voice needs Premium, see [Voices and cloning](voices-and-cloning.md). |
 | `/tts stop`, `/disconnect`, `/transcribe stop` | No vote needed. |
+
+**New servers**: during the first 24 hours after the bot is added to a server, no vote is needed. The time counts from the moment the bot joined the server (removing the bot also removes the settings of the server).
 
 When a member runs a command that needs a vote, the bot replies (only to that member) that a vote is needed, with a *Top.gg* button. When an automatic feature is blocked by the rule, the bot asks for a vote in the text channel, at most once a day per server.
 

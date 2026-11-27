@@ -41,7 +41,7 @@ The voices come from the speech service. When the service does not answer, the l
 | `/tts voice voice:<name or id>` | Chooses a voice. The name is not case sensitive. The autocompletion lists the voices you can choose. |
 | `/tts voice reset:True` | Removes your choice: you get an automatic voice again. |
 
-* The command works only if the server allows members to choose a voice (**Members can choose their voice** in the *Settings* tab, off by default) and if you have the permission **Choose a voice** (see [Who can do what](#who-can-do-what)).
+* The command works only if the server allows members to choose a voice (**Members can choose their voice** in the *Settings* tab, on by default) and if you have the permission **Choose a voice** (see [Who can do what](#who-can-do-what)).
 * In a session started with `/tts start`, your voice is used from your next message, when no one else in the channel has it. Otherwise you keep the voice you have, and your choice is applied the next time you join the channel.
 * A voice that does not exist on the server, or that is switched off, is refused: *This voice does not exist on this server, or it is switched off.*
 
@@ -128,7 +128,7 @@ The settings of the voice features are on the dashboard page [Text to speech](..
 
 | Setting | Default | What it controls |
 | --- | --- | --- |
-| Members can choose their voice | Off | Whether `/tts voice` works on the server |
+| Members can choose their voice | On | Whether `/tts voice` works on the server |
 | Cloned voices allowed | On | Whether the cloned voices of the members are used on the server |
 | Choose a voice (permission) | Everyone | Who can use `/tts voice` (everyone, or a list of roles and members) |
 

@@ -4,7 +4,7 @@ description: The voice commands of Interaction Bot - text to speech, transcripti
 
 # Audio commands
 
-`<arg>` is a required option, `[arg]` an optional one. The **Needs** column tells what a command needs: **Vote** = a recent [top.gg](https://top.gg/bot/893494390142697493/vote) vote, of a member of the server, or a server with [Premium](../premium/premium.md); **Premium** = the command, or one of its options, needs a server with Premium.
+`<arg>` is a required option, `[arg]` an optional one. The **Needs** column tells what a command needs: **Vote** = your own [top.gg](https://top.gg/bot/893494390142697493/vote) vote in the last 24 hours, or a server with [Premium](../premium/premium.md); **Premium** = the command, or one of its options, needs a server with Premium.
 
 The daily limits (text to speech, transcription and recording time) are explained in [Limits and privacy](../audio/limits-and-privacy.md). The settings of the voice features are on the dashboard, in the **Audio & AI** section: [Transcription](../website/dashboard/speech-to-text.md), [Text to speech](../website/dashboard/tts-channels.md), [FAQ](../website/dashboard/faq.md), [Voice recording](../website/dashboard/voice-recording.md) and [Temp voice](../website/dashboard/temp-voice.md).
 
@@ -14,7 +14,7 @@ See [Voice](../audio/voice.md) and [Voices and voice cloning](../audio/voices-an
 
 | Command | Description | Needs |
 | --- | --- | --- |
-| `/connect [channel]` | Connects the bot to a voice channel. | Vote |
+| `/connect [channel]` | Connects the bot to a voice channel. | — |
 | `/disconnect` | Disconnects the bot from the voice channel. | — |
 | `/tts say <query> [language] [voice]` | Sends a message in your voice channel. The language is detected when you leave it empty. | Vote |
 | `/tts start` | Joins your voice channel and reads the messages of this chat aloud. | Vote |
@@ -63,7 +63,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | Command | Description | Needs |
 | --- | --- | --- |
 | `/find [member] [language]` | Finds the temporary channel where a member is. | — |
-| `/join <password>` | Gets access to a temporary channel with its password. | — |
+| `/tempvoice join <password>` | Gets access to a temporary channel with its password. | — |
 | `/tempvoice panel` | Posts the control panel in the chat of your channel. | Manage Server |
 | `/tempvoice stats [days]` | Statistics of the temporary channels of the server, for 7, 30 or 90 days. | Manage Server |
 | `/tempvoice link list` / `/tempvoice link sync` | Lists the voice links of the server, or checks again who is in the voice channels and fixes the roles. | Manage Server |
@@ -71,7 +71,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | `/voice name <name>` | Renames your temporary channel. | — |
 | `/voice limit <limit>` | Sets the number of members (0 = no limit). | — |
 | `/voice privacy <mode>` | Locks, hides or unlocks your channel, or locks or unlocks its chat. | — |
-| `/voice password [password]` | Sets the password of `/join` (empty = removes it). | — |
+| `/voice password [password]` | Sets the password of `/tempvoice join` (empty = removes it). | — |
 | `/voice bitrate <kbps>` | Sets the audio quality, from 8 to 384 kbps (capped by the boost level of the server). | — |
 | `/voice region <region>` | Sets the voice region of your channel. | — |
 | `/voice status [text]` | Sets the status shown under your channel (empty = clears it). | — |
