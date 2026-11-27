@@ -59,6 +59,18 @@ When a member edits a message that was translated, its translations are edited t
 
 When a voice feature is locked, the bot invites the members to vote on top.gg. Turn this switch off to hide these messages. (The private reminder that followed a command once a day is no longer sent since 27 November 2026.) The vote is still required to use the voice features, so a locked feature stays silent. It is on by default.
 
+### Leave the voice channel
+
+The bot leaves a voice channel as soon as no feature uses it any more: text to speech, transcription, recording, or the bot brought by `/connect` or `/tts say`. When **nobody but bots** is left in the channel, it waits the delay you choose here, then stops what it was doing there (each feature tells its usual end) and leaves:
+
+| Choice | |
+| --- | --- |
+| After 30 seconds | the default |
+| After 1, 5, 15 or 30 minutes | |
+| After 1 hour | |
+
+If someone comes back before the end of the delay, the bot stays. A **continuous recording** (Premium) goes on in an empty channel, within its 24 hours. The daily limits of each feature still apply. The AI setup can change this setting too.
+
 ## Your feedback
 
 The **Your feedback** section is at the bottom of the page. It has four choices:

@@ -53,7 +53,7 @@ The Activity can also be turned off on the dashboard (**Live view enabled**). Th
 * **Start transcription**: shown on the start screen while no transcription runs. Starting from the Activity needs the *Manage Server* permission. Other members get *You are not allowed to start the transcription on this server.* They can still start it with `/transcribe live`.
 * **Stop transcription**: shown to members with *Manage Server* only, while a transcription runs. It asks for a second click: the first click changes the button to **Click again to stop** with a countdown of 8 seconds, and the second click stops the transcription for everyone.
 
-A stop from the Activity works like `/transcribe stop`: the transcription ends for everyone. The bot stays in the voice channel until it is empty (30 seconds after the last member left).
+A stop from the Activity works like `/transcribe stop`: the transcription ends for everyone. The bot leaves the voice channel once nothing else uses it, or when it is empty for the delay of the server (30 seconds by default, see [Leave the voice channel](../website/dashboard/overview.md#leave-the-voice-channel)).
 
 ## What you see
 
