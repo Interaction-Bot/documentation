@@ -63,7 +63,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | Command | Description | Needs |
 | --- | --- | --- |
 | `/find [member] [language]` | Finds the temporary channel where a member is. | — |
-| `/join <password>` | Gets access to a temporary channel with its password. | — |
+| `/tempvoice join <password>` | Gets access to a temporary channel with its password. | — |
 | `/tempvoice panel` | Posts the control panel in the chat of your channel. | Manage Server |
 | `/tempvoice stats [days]` | Statistics of the temporary channels of the server, for 7, 30 or 90 days. | Manage Server |
 | `/tempvoice link list` / `/tempvoice link sync` | Lists the voice links of the server, or checks again who is in the voice channels and fixes the roles. | Manage Server |
@@ -71,7 +71,7 @@ See [Temporary voice channels](../audio/tempvoice.md).
 | `/voice name <name>` | Renames your temporary channel. | — |
 | `/voice limit <limit>` | Sets the number of members (0 = no limit). | — |
 | `/voice privacy <mode>` | Locks, hides or unlocks your channel, or locks or unlocks its chat. | — |
-| `/voice password [password]` | Sets the password of `/join` (empty = removes it). | — |
+| `/voice password [password]` | Sets the password of `/tempvoice join` (empty = removes it). | — |
 | `/voice bitrate <kbps>` | Sets the audio quality, from 8 to 384 kbps (capped by the boost level of the server). | — |
 | `/voice region <region>` | Sets the voice region of your channel. | — |
 | `/voice status [text]` | Sets the status shown under your channel (empty = clears it). | — |

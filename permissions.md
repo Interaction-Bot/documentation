@@ -66,7 +66,7 @@ The list of the commands is in [All commands](commands/all-commands.md).
 | `/invite-info who`, `/invite-info codes` | Everybody, or only the members with **Manage Server**, as the server chose on the [Invitations](website/dashboard/invites.md) page |
 | `/ai setup` | Members with **Manage Server** (or Administrator) |
 | `/check-permissions`, `/invite-admin` (all its subcommands), `/tempvoice` (panel, stats, link list and link sync) | Members with **Manage Server** |
-| `/voice …` (its settings) | The owner of a temporary voice channel, for their own channel. `/join` and `/find` are for everybody |
+| `/voice …` (its settings) | The owner of a temporary voice channel, for their own channel. `/tempvoice join` and `/find` are for everybody |
 | `/premium add` | A member who holds a Premium subscription (see [Usage](premium/usage.md)) |
 | `/premium remove` | The member who holds the Premium of the server, or an administrator of that server |
 | `/limits` | Everybody (daily audio limits of the server) |
