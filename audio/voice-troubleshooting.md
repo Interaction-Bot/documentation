@@ -42,7 +42,7 @@ These are the messages the bot shows, with the exact text.
 | *⛔ Nobody is in that voice channel. Join it yourself, or choose a channel where other members are.* | `/connect` was given an empty channel. |
 | *⛔ I can't join a voice channel that you can't join yourself.* | `/connect` was given a channel you cannot join. |
 | *⛔ You need to vote for the bot to use this command.* | Vote on [top.gg](https://top.gg/bot/893494390142697493/vote) (valid 24 hours), or ask for a premium server. Shown for the commands that need a vote. |
-| *Reading aloud needs a vote on top.gg (for the whole server, valid 24 hours) or a premium server.* | Shown by `/tts start`. Vote, or get a premium server. |
+| *Reading aloud needs your own vote on top.gg (valid 24 hours), or a premium server.* | Shown by `/tts start`. Vote, or get a premium server. |
 | *Vote to unlock speech to text, text to speech and recording* (a message in a text channel) | An automatic feature is blocked: one vote from a member of the server unlocks it for 24 hours. The message is posted at most once a day. Admins can turn it off on the dashboard (Overview). |
 | *🗳️ Vote for the bot on top.gg (or use a premium server) to transcribe voice messages.* | The menu *Transcribe voice message* needs a vote or a premium server. |
 | *⛔ You are on cooldown. Try again in {time} seconds.* | The voice commands have a short cooldown per member: 5 seconds for `/tts say` and `/tts start`, 3 seconds for `/tts stop` and `/tts voice`. Wait and run the command again. |
